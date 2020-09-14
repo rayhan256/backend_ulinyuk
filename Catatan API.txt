@@ -1,0 +1,25 @@
+base url			: http://127.0.0.1:8000/api
+
+*mst_customer
+API getAll customer		: http://127.0.0.1:8000/api/customer
+API insertData customer		: http://127.0.0.1:8000/api/customer/post
+API updateData customer		: http://127.0.0.1:8000/api/customer/update/{id}
+API deleteData customer		: http://127.0.0.1:8000/api/customer/delete/{id}
+
+*mst_admin
+API getAll admin		: http://127.0.0.1:8000/api/admin
+API insertData admin		: http://127.0.0.1:8000/api/admin/post
+API updateData admin		: http://127.0.0.1:8000/api/admin/update/{id}
+API deleteData admin		: http://127.0.0.1:8000/api/admin/delete/{id}
+
+*mst_hotel
+API getAll hotel		: http://127.0.0.1:8000/api/hotel
+API insertData hotel		: http://127.0.0.1:8000/api/hotel/post
+API updateData hotel		: http://127.0.0.1:8000/api/hotel/update/{id}
+API deleteData hotel		: http://127.0.0.1:8000/api/hotel/delete/{id}
+
+*mst_galeri_hotel
+API getAll galeri_hotel		: http://localhost:8000/api/galeri
+API insertData galeri_hotel	: http://localhost:8000/api/galeri/post
+API updateData galeri_hotel	: http://localhost:8000/api/galeri/update/{id}
+API deleteData galeri_hotel	: http://localhost:8000/api/galeri/delete/{id}
