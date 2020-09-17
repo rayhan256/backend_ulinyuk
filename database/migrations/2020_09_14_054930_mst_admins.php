@@ -15,7 +15,7 @@ class MstAdmins extends Migration
     {
         Schema::create('mst_admins', function (Blueprint $table) {
             //
-            $table->id();
+            $table->id(); //pk
             $table->string("nama_admin");
             $table->date("tanggal_lahir_admin");
             $table->string("jenis_kelamin_admin");

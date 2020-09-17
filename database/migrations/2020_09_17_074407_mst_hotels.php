@@ -22,8 +22,6 @@ class MstHotels extends Migration
             $table->string("area_hotel");
             $table->string("telepon_hotel");
             $table->string("alamat_hotel");
-            $table->string("kategori_kamar_hotel");
-            $table->integer("harga_kamar_hotel");
             $table->string("review_hotel");
             $table->timestamps();
         });

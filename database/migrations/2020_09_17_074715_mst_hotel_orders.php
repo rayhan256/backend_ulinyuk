@@ -16,11 +16,11 @@ class MstHotelOrders extends Migration
         Schema::create('mst_hotel_orders', function (Blueprint $table) {
             //
             $table->id(); //primary key            
-            $table->string("kode_booking_kamar");
-            $table->unsignedBigInteger('id_customer')->nullable; //join ke mst_customers
-            $table->unsignedBigInteger('id_hotel')->nullable; //join ke mst_hotels
-            $table->string("kategori_kamar_hotel")->nullable; //join ke mst_hotels
-            $table->unsignedBigInteger('harga_kamar_hotel')->nullable; //join ke mst_hotels
+            $table->integer("kode_booking_kamar");
+            $table->unsignedBigInteger("id_customer")->nullable; //foreign key ke mst_customers
+            $table->unsignedBigInteger("id_hotel")->nullable; //foreign key ke mst_hotels
+            $table->unsignedBigInteger("id_kategori_kamar_hotel")->nullable; //foreign key ke mst_hotel_details
+            $table->integer("harga_kamar_hotel"); //join ke mst_hotel_details
             $table->integer("jumlah_booking_kamar");
             $table->date("tanggal_checkin");
             $table->date("tanggal_checkout");
@@ -28,8 +28,9 @@ class MstHotelOrders extends Migration
 
             $table->timestamps();
 
-            $table->foreign('id_customer')->references('id')->on('mst_customers');
-            $table->foreign('id_hotel')->references('id')->on('mst_hotels');
+            //$table->foreign('id_customer')->references('id')->on('mst_customers');
+            //$table->foreign('id_hotel')->references('id')->on('mst_hotels');
+            //$table->foreign('id_kategori_kamar_hotel')->references('id')->on('mst_hotel_details');
         });
     }
 

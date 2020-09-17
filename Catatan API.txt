@@ -1,25 +1,43 @@
 base url			: http://127.0.0.1:8000/api
 
 *mst_customer
-API getAll customer		: http://127.0.0.1:8000/api/customer
+API getAll customers		: http://127.0.0.1:8000/api/customer
 API insertData customer		: http://127.0.0.1:8000/api/customer/post
 API updateData customer		: http://127.0.0.1:8000/api/customer/update/{id}
 API deleteData customer		: http://127.0.0.1:8000/api/customer/delete/{id}
+API getId customer		: http://127.0.0.1:8000/api/customer/{id}
 
-*mst_admin
+*mst_admins
 API getAll admin		: http://127.0.0.1:8000/api/admin
 API insertData admin		: http://127.0.0.1:8000/api/admin/post
 API updateData admin		: http://127.0.0.1:8000/api/admin/update/{id}
 API deleteData admin		: http://127.0.0.1:8000/api/admin/delete/{id}
+API getId admin			: http://127.0.0.1:8000/api/admin/{id}
 
-*mst_hotel
+*mst_hotels
 API getAll hotel		: http://127.0.0.1:8000/api/hotel
 API insertData hotel		: http://127.0.0.1:8000/api/hotel/post
 API updateData hotel		: http://127.0.0.1:8000/api/hotel/update/{id}
 API deleteData hotel		: http://127.0.0.1:8000/api/hotel/delete/{id}
+API getId hotel			: http://127.0.0.1:8000/api/hotel/{id}
 
-*mst_galeri_hotel
+*mst_galeri_hotels
 API getAll galeri_hotel		: http://localhost:8000/api/galeri
 API insertData galeri_hotel	: http://localhost:8000/api/galeri/post
 API updateData galeri_hotel	: http://localhost:8000/api/galeri/update/{id}
 API deleteData galeri_hotel	: http://localhost:8000/api/galeri/delete/{id}
+API getId galeri_hotel		: http://127.0.0.1:8000/api/galeri/{id}
+
+*mst_restaurants
+API getAll restaurant		: http://127.0.0.1:8000/api/restaurant
+API insertData restaurant	: http://127.0.0.1:8000/api/restaurant/post
+API updateData restaurant	: http://127.0.0.1:8000/api/restaurant/update/{id}
+API deleteData restaurant	: http://127.0.0.1:8000/api/restaurant/delete/{id}
+API getId restaurant		: http://127.0.0.1:8000/api/restaurant/{id}
+
+*mst_destinations
+API getAll destination		: http://127.0.0.1:8000/api/destination
+API insertData destination	: http://127.0.0.1:8000/api/destination/post
+API updateData destination	: http://127.0.0.1:8000/api/destination/update/{id}
+API deleteData destination	: http://127.0.0.1:8000/api/destination/delete/{id}
+API getId destination		: http://127.0.0.1:8000/api/destination/{id}
