@@ -15,9 +15,10 @@ class MstGaleriRestaurants extends Migration
     {
         Schema::create('mst_galeri_restaurants', function (Blueprint $table) {
             //
-            $table->id(); //pk
-            $table->integer("id_galeri_restaurant");
-            $table->string("galeri_restaurant");
+            $table->bigIncrements('id'); //pk
+            $table->integer('id_galeri_restaurant');
+            $table->text('galeri_restaurant');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

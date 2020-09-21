@@ -15,9 +15,9 @@ class MstGaleriDestinations extends Migration
     {
         Schema::create('mst_galeri_destinations', function (Blueprint $table) {
             //
-            $table->id(); //pk
-            $table->integer("id_galeri_objek_wisata");
-            $table->string("galeri_objek_wisata");
+            $table->bigIncrements('id'); //pk
+            $table->integer('id_galeri_objek_wisata');
+            $table->string('galeri_objek_wisata');
             $table->timestamps();
         });
     }
@@ -29,8 +29,12 @@ class MstGaleriDestinations extends Migration
      */
     public function down()
     {
-        Schema::table('mst_galeri_destinations', function (Blueprint $table) {
-            //
+        Schema::create('mst_galeri_destinations', function (Blueprint $table) {
+            $table->bigIncrements('id'); //pk
+            $table->integer('id_galeri_objek_wisata');
+            $table->text('galeri_objek_wisata');
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 }

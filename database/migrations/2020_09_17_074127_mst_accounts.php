@@ -15,10 +15,10 @@ class MstAccounts extends Migration
     {
         Schema::create('mst_accounts', function (Blueprint $table) {
             //
-            $table->id(); //pk
-            $table->string("username");
-            $table->string("password");
-            $table->string("role");
+            $table->bigIncrements('id'); //pk
+            $table->string('username');
+            $table->string('password');
+            $table->enum('role', ['super_admin', 'admin', 'user']);
             $table->timestamps();
         });
     }

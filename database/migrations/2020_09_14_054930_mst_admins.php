@@ -15,15 +15,16 @@ class MstAdmins extends Migration
     {
         Schema::create('mst_admins', function (Blueprint $table) {
             //
-            $table->id(); //pk
-            $table->string("nama_admin");
-            $table->date("tanggal_lahir_admin");
-            $table->string("jenis_kelamin_admin");
-            $table->string("alamat_admin");
-            $table->string("kota_admin");
-            $table->string("telepon_admin");
-            $table->string("email_admin");
-            $table->string("foto_admin");
+            $table->bigIncrements('id'); //pk
+            $table->string('nama_admin');
+            $table->date('tanggal_lahir_admin');
+            $table->string('jenis_kelamin_admin');
+            $table->string('alamat_admin');
+            $table->string('kota_admin');
+            $table->string('telepon_admin');
+            $table->string('email_admin');
+            $table->string('foto_admin');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

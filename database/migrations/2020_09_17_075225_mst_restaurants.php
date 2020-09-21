@@ -15,14 +15,15 @@ class MstRestaurants extends Migration
     {
         Schema::create('mst_restaurants', function (Blueprint $table) {
             //
-            $table->id(); //primary key
-            $table->integer("id_restaurant");
-            $table->string("nama_restaurant");
-            $table->string("area_restaurant");
-            $table->string("telepon_restaurant");
-            $table->string("alamat_restaurant");
-            $table->string("jadwal_restaurant");
-            $table->string("review_restaurant");
+            $table->bigIncrements('id'); //primary key
+            $table->integer('id_restaurant');
+            $table->string('nama_restaurant');
+            $table->string('area_restaurant');
+            $table->string('telepon_restaurant');
+            $table->string('alamat_restaurant');
+            $table->string('jadwal_restaurant');
+            $table->text('review_restaurant');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

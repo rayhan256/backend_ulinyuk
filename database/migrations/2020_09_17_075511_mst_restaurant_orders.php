@@ -15,13 +15,18 @@ class MstRestaurantOrders extends Migration
     {
         Schema::create('mst_restaurant_orders', function (Blueprint $table) {
             //
-            $table->id(); //pk
-            $table->integer("kode_booking_restaurant");
-            $table->unsignedBigInteger("id_customer")->nullable(); //fk mst_customer
-            $table->unsignedBigInteger("id_restaurant")->nullable(); //fk mst_restaurant
-            $table->unsignedBigInteger("id_kategori_restaurant")->nullable(); //fk mst_restaurant_orders
-            $table->date("tanggal_booking");
+            $table->bigIncrements('id'); //pk
+            $table->integer('kode_booking_restaurant');
+            $table->unsignedBigInteger('id_customer')->nullable(); //fk mst_customers
+            $table->unsignedBigInteger('id_restaurant')->nullable(); //fk mst_restaurants
+            $table->unsignedBigInteger('id_kategori_restaurant')->nullable(); //fk mst_restaurant_details
+            $table->date('tanggal_booking');
+            $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_customer')->references('id')->on('mst_customers');
+            $table->foreign('id_restaurant')->references('id')->on('mst_restaurants');
+            $table->foreign('id_kategori_restaurant')->references('id')->on('mst_restaurant_details');
         });
     }
 

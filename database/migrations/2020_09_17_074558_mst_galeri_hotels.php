@@ -15,9 +15,10 @@ class MstGaleriHotels extends Migration
     {
         Schema::create('mst_galeri_hotels', function (Blueprint $table) {
             //
-            $table->id(); //pk
-            $table->integer("id_galeri_hotel");
-            $table->string("galeri_hotel");
+            $table->bigIncrements('id'); //pk
+            $table->integer('id_galeri_hotel');
+            $table->text('galeri_hotel');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

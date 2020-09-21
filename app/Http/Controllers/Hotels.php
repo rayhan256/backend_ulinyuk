@@ -25,8 +25,6 @@ class Hotels extends Controller
         $hotel->area_hotel = $request->area_hotel;
         $hotel->telepon_hotel = $request->telepon_hotel;
         $hotel->alamat_hotel = $request->alamat_hotel;
-        $hotel->kategori_kamar_hotel = $request->kategori_kamar_hotel;
-        $hotel->harga_kamar_hotel = $request->harga_kamar_hotel;
         $hotel->review_hotel = $request->review_hotel;
 
         $hotel->save();
@@ -46,8 +44,6 @@ class Hotels extends Controller
         $find_hotel_by_id->area_hotel = $request->area_hotel;
         $find_hotel_by_id->telepon_hotel = $request->telepon_hotel;
         $find_hotel_by_id->alamat_hotel = $request->alamat_hotel;
-        $find_hotel_by_id->kategori_kamar_hotel = $request->kategori_kamar_hotel;
-        $find_hotel_by_id->harga_kamar_hotel = $request->harga_kamar_hotel;
         $find_hotel_by_id->review_hotel = $request->review_hotel;
 
         $find_hotel_by_id->save();

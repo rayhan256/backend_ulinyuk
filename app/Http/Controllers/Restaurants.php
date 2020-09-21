@@ -22,7 +22,6 @@ class Restaurants extends Controller
 
         $restaurant->id_restaurant = $request->id_restaurant;
         $restaurant->nama_restaurant = $request->nama_restaurant;
-        $restaurant->kategori_restaurant = $request->kategori_restaurant;
         $restaurant->area_restaurant = $request->area_restaurant;
         $restaurant->telepon_restaurant = $request->telepon_restaurant;
         $restaurant->alamat_restaurant = $request->alamat_restaurant;
@@ -39,7 +38,6 @@ class Restaurants extends Controller
 
         $find_restaurant_by_id->id_restaurant = $request->id_restaurant;
         $find_restaurant_by_id->nama_restaurant = $request->nama_restaurant;
-        $find_restaurant_by_id->kategori_restaurant = $request->kategori_restaurant;
         $find_restaurant_by_id->area_restaurant = $request->area_restaurant;
         $find_restaurant_by_id->telepon_restaurant = $request->telepon_restaurant;
         $find_restaurant_by_id->alamat_restaurant = $request->alamat_restaurant;

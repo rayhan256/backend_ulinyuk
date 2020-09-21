@@ -15,11 +15,12 @@ class MstHistoriBookingRestaurants extends Migration
     {
         Schema::create('mst_histori_booking_restaurants', function (Blueprint $table) {
             //
-            $table->id(); //pk
-            $table->unsignedBigInteger("id_booking_restaurant")->nullable(); //fk mst_restaurant_orders
-            $table->unsignedBigInteger("id_restaurant")->nullable(); //fk mst_restaurant
-            $table->unsignedBigInteger("id_customer")->nullable(); //fk mst_customers
-            $table->date("tanggal_booking_restaurant");
+            $table->bigIncrements('id'); //pk
+            $table->unsignedBigInteger('id_booking_restaurant')->nullable(); //fk mst_restaurant_orders
+            $table->unsignedBigInteger('id_restaurant')->nullable(); //fk mst_restaurant
+            $table->unsignedBigInteger('id_customer')->nullable(); //fk mst_customers
+            $table->date('tanggal_booking_restaurant');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

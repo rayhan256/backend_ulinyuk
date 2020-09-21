@@ -15,10 +15,11 @@ class MstDestinationDetails extends Migration
     {
         Schema::create('mst_destination_details', function (Blueprint $table) {
             //
-            $table->id(); //pk            
-            $table->integer("id_kategori_objek_wisata");
-            $table->string("kategori_objek_wisata");
-            $table->integer("harga_tiket");
+            $table->bigIncrements('id'); //pk            
+            $table->integer('id_kategori_objek_wisata');
+            $table->string('kategori_objek_wisata');
+            $table->integer('harga_tiket');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

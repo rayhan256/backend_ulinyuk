@@ -15,17 +15,18 @@ class MstCustomers extends Migration
     {
         Schema::create('mst_customers', function (Blueprint $table) {
             //
-            $table->id(); // primary key
-            $table->integer("id_customer");
-            $table->string("nama_customer");
-            $table->date("tanggal_lahir_customer");
-            $table->string("jenis_kelamin_customer");
-            $table->string("alamat_customer");
-            $table->string("kota_customer");
-            $table->string("negara_customer");
-            $table->string("telepon_customer");
-            $table->string("email_customer");
-            $table->string("foto_customer");
+            $table->bigIncrements('id'); // primary key
+            $table->integer('id_customer');
+            $table->string('nama_customer');
+            $table->date('tanggal_lahir_customer');
+            $table->string('jenis_kelamin_customer');
+            $table->string('alamat_customer');
+            $table->string('kota_customer');
+            $table->string('negara_customer');
+            $table->string('telepon_customer');
+            $table->string('email_customer');
+            $table->string('foto_customer');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

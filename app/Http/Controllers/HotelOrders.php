@@ -10,7 +10,7 @@ class HotelOrders extends Controller
     //
     public function getAll()
     {
-        $data = ModelHotelOrders::with('Hotel', 'Customer')->get();
+        $data = ModelHotelOrders::with('hotel', 'customer', 'hoteldetail')->get();
         return $data;
     }
 }

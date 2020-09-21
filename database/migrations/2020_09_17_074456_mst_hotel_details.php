@@ -15,12 +15,13 @@ class MstHotelDetails extends Migration
     {
         Schema::create('mst_hotel_details', function (Blueprint $table) {
             //
-            $table->id(); //pk            
-            $table->integer("id_kategori_kamar_hotel");
-            $table->string("kategori_kamar_hotel");
-            $table->string("fasilitas_kamar_hotel");
-            $table->string("aminities_kamar_hotel");
-            $table->integer("harga_kamar_hotel");
+            $table->bigIncrements('id'); //pk            
+            $table->integer('id_kategori_kamar_hotel');
+            $table->string('kategori_kamar_hotel');
+            $table->integer('harga_kamar_hotel');
+            $table->string('fasilitas_kamar_hotel');
+            $table->string('aminities_kamar_hotel');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

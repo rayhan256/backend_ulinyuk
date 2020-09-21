@@ -15,11 +15,12 @@ class MstPayments extends Migration
     {
         Schema::create('mst_payments', function (Blueprint $table) {
             //
-            $table->id();
-            $table->integer("id_pembayaran");
-            $table->unsignedBigInteger("id_customer")->nullable(); //fk mst_customers
-            $table->string("foto_bukti_pembayaran");
-            $table->string("via_bank");
+            $table->bigIncrements('id');
+            $table->integer('id_pembayaran');
+            $table->unsignedBigInteger('id_customer')->nullable(); //fk mst_customers
+            $table->string('foto_bukti_pembayaran');
+            $table->string('via_bank');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

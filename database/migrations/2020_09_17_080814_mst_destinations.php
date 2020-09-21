@@ -15,14 +15,15 @@ class MstDestinations extends Migration
     {
         Schema::create('mst_destinations', function (Blueprint $table) {
             //
-            $table->id(); //primary key
-            $table->integer("id_objek_wisata");
-            $table->string("nama_objek_wisata");
-            $table->string("area_objek_wisata");
-            $table->string("telepon_objek_wisata");
-            $table->string("alamat_objek_wisata");
-            $table->string("jadwal_objek_wisata");
-            $table->string("review_objek_wisata");
+            $table->bigIncrements('id'); //primary key
+            $table->integer('id_objek_wisata');
+            $table->string('nama_objek_wisata');
+            $table->string('area_objek_wisata');
+            $table->string('telepon_objek_wisata');
+            $table->string('alamat_objek_wisata');
+            $table->string('jadwal_objek_wisata');
+            $table->text('review_objek_wisata');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
