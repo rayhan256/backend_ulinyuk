@@ -17,7 +17,8 @@ class MstGaleriRestaurants extends Migration
             //
             $table->bigIncrements('id'); //pk
             $table->integer('id_galeri_restaurant');
-            $table->text('galeri_restaurant');
+            $table->unsignedBigInteger('id_restaurant'); //fk ke mst_restaurant
+            $table->text('gambar_restaurant');
             $table->softDeletes();
             $table->timestamps();
         });

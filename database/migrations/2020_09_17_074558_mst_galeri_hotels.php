@@ -17,7 +17,8 @@ class MstGaleriHotels extends Migration
             //
             $table->bigIncrements('id'); //pk
             $table->integer('id_galeri_hotel');
-            $table->text('galeri_hotel');
+            $table->unsignedBigInteger('id_hotel')->nullable(); //fk ke mst_hotels
+            $table->text('gambar_hotel');
             $table->softDeletes();
             $table->timestamps();
         });

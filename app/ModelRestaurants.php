@@ -11,7 +11,8 @@ class ModelRestaurants extends Model
         'id_restaurant', 'nama_restaurant', 'kategori_restaurant', 'area_restaurant', 'telepon_restaurant', 'alamat_restaurant', 'jadwal_restaurant', 'review_restaurant',
     ];
 
-    public function restaurantorders()
+    //relasi agar data bisa diambil oleh mst_restaurant_orders
+    public function restaurant_order()
     {
         return $this->hasMany(ModelRestaurantOrders::class, 'id_restaurant', 'id');
     }

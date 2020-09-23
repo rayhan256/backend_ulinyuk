@@ -22,6 +22,8 @@ class MstPayments extends Migration
             $table->string('via_bank');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_customer')->references('id')->on('mst_customers');
         });
     }
 

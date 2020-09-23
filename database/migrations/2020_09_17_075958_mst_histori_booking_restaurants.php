@@ -17,11 +17,13 @@ class MstHistoriBookingRestaurants extends Migration
             //
             $table->bigIncrements('id'); //pk
             $table->unsignedBigInteger('id_booking_restaurant')->nullable(); //fk mst_restaurant_orders
-            $table->unsignedBigInteger('id_restaurant')->nullable(); //fk mst_restaurant
-            $table->unsignedBigInteger('id_customer')->nullable(); //fk mst_customers
+            $table->unsignedBigInteger('id_restaurant')->nullable();
+            $table->unsignedBigInteger('id_customer')->nullable();
             $table->date('tanggal_booking_restaurant');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_booking_restaurant')->references('id')->on('mst_restaurant_orders');
         });
     }
 

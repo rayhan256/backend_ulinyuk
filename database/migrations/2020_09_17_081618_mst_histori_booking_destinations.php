@@ -16,13 +16,15 @@ class MstHistoriBookingDestinations extends Migration
         Schema::create('mst_histori_booking_destinations', function (Blueprint $table) {
             //
             $table->bigIncrements('id'); //pk
-            $table->integer('id_booking_tiket');
-            $table->integer('id_objek_wisata')->nullable(); //fk mst_destinations
-            $table->integer('id_customer')->nullable(); //fk mst_destinations
+            $table->unsignedBigInteger('id_booking_tiket')->nullable(); //fk mst_destination_orders
+            $table->unsignedBigInteger('id_objek_wisata')->nullable();
+            $table->unsignedBigInteger('id_customer')->nullable();
             $table->date('tanggal_booking_tiket');
             $table->integer('jumlah_booking_tiket');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_booking_tiket')->references('id')->on('mst_destination_orders');
         });
     }
 

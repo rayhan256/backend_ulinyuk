@@ -11,7 +11,7 @@ class DestinationOrders extends Controller
     //
     public function getAll()
     {
-        $data = ModelDestinationOrders::with('customer', 'destination', 'destinationdetail')->get();
+        $data = ModelDestinationOrders::with('customer', 'destination', 'destination_detail')->get();
         return $data;
     }
 }

@@ -32,7 +32,8 @@ class MstGaleriDestinations extends Migration
         Schema::create('mst_galeri_destinations', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
             $table->integer('id_galeri_objek_wisata');
-            $table->text('galeri_objek_wisata');
+            $table->integer('id_objek_wisata'); // fk ke mst_destination
+            $table->text('gambar_objek_wisata');
             $table->softDeletes();
             $table->timestamps();
         });
