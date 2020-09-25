@@ -21,6 +21,8 @@ class MstGaleriRestaurants extends Migration
             $table->text('gambar_restaurant');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_restaurant')->references('id')->on('mst_restaurants');
         });
     }
 

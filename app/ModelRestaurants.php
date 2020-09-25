@@ -16,4 +16,10 @@ class ModelRestaurants extends Model
     {
         return $this->hasMany(ModelRestaurantOrders::class, 'id_restaurant', 'id');
     }
+
+    //relasi agar data bisa diambil oleh mst_galeri_restaurants
+    public function galeri_restaurant()
+    {
+        return $this->hasMany(ModelGaleriRestaurants::class, 'id_restaurant', 'id');
+    }
 }

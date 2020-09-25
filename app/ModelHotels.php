@@ -17,7 +17,7 @@ class ModelHotels extends Model
         return $this->hasMany(ModelHotelOrders::class, 'id_hotel', 'id');
     }
 
-    //relasi agar data bisa diambil oleh mst_hotel_orders
+    //relasi agar data bisa diambil oleh mst_galeri_hotels
     public function galeri_hotel()
     {
         return $this->hasMany(ModelGaleriHotels::class, 'id_hotel', 'id');
