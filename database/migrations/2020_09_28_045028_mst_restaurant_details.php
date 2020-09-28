@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MstHotelDetails extends Migration
+class MstRestaurantDetails extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class MstHotelDetails extends Migration
      */
     public function up()
     {
-        Schema::create('mst_hotel_details', function (Blueprint $table) {
-            //
+        Schema::create('mst_restaurant_details', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk            
-            $table->integer('id_kategori_kamar_hotel');
-            $table->string('kategori_kamar_hotel');
-            $table->integer('harga_kamar_hotel');
-            $table->string('fasilitas_kamar_hotel');
-            $table->string('aminities_kamar_hotel');
+            $table->integer('id_kategori_restaurant');
+            $table->string('kategori_restaurant');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -33,7 +29,7 @@ class MstHotelDetails extends Migration
      */
     public function down()
     {
-        Schema::table('mst_hotel_details', function (Blueprint $table) {
+        Schema::table('mst_restaurant_details', function (Blueprint $table) {
             //
         });
     }

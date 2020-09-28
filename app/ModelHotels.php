@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelHotels extends Model
 {
+    protected $table = 'mst_hotels';
 
     protected $fillable = [
-        'id_hotel', 'nama_hotel', 'kategori_hotel', 'area_hotel', 'telepon_hotel', 'alamat_hotel', 'kategori_kamar_hotel', 'harga_kamar_hotel', 'review_hotel',
+        'id_hotel', 'nama_hotel', 'kategori_hotel', 'id_kategori_kamar_hotel', 'area_hotel', 'telepon_hotel', 'alamat_hotel', 'review_hotel'
     ];
 
     //relasi agar data bisa diambil oleh mst_hotel_orders
@@ -23,9 +24,9 @@ class ModelHotels extends Model
         return $this->hasMany(ModelGaleriHotels::class, 'id_hotel', 'id');
     }
 
-    /*relasi agar data dapa diambil oleh mst_histori_booking_hotels
-    public function histori_booking_hotels()
+    //ambil data id mst_hotel_details
+    public function hotel_detail()
     {
-        return $this->hasMany(ModelHotelOrders::class, 'id_hotel', 'id');
-    }*/
+        return $this->hasMany(ModelHotelDetails::class, 'id_kategori_kamar_hotel', 'id');
+    }
 }

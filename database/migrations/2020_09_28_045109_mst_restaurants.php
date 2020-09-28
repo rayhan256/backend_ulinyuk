@@ -14,9 +14,9 @@ class MstRestaurants extends Migration
     public function up()
     {
         Schema::create('mst_restaurants', function (Blueprint $table) {
-            //
             $table->bigIncrements('id'); //primary key
             $table->integer('id_restaurant');
+            $table->unsignedBigInteger('id_kategori_restaurant'); //fk ke mst_restaurant_details
             $table->string('nama_restaurant');
             $table->string('area_restaurant');
             $table->string('telepon_restaurant');
@@ -25,6 +25,8 @@ class MstRestaurants extends Migration
             $table->text('review_restaurant');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_kategori_restaurant')->references('id')->on('mst_restaurant_details');
         });
     }
 

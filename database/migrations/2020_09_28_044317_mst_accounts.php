@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MstRestaurantDetails extends Migration
+class MstAccounts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class MstRestaurantDetails extends Migration
      */
     public function up()
     {
-        Schema::create('mst_restaurant_details', function (Blueprint $table) {
-            //
-            $table->bigIncrements('id'); //pk            
-            $table->integer('id_kategori_restaurant');
-            $table->string('kategori_restaurant');
-            $table->softDeletes();
+        Schema::create('mst_accounts', function (Blueprint $table) {
+            $table->bigIncrements('id'); //pk
+            $table->string('username');
+            $table->string('password');
+            $table->enum('role', ['super_admin', 'admin', 'user']);
             $table->timestamps();
         });
     }
@@ -30,7 +29,7 @@ class MstRestaurantDetails extends Migration
      */
     public function down()
     {
-        Schema::table('mst_restaurant_details', function (Blueprint $table) {
+        Schema::table('mst_accounts', function (Blueprint $table) {
             //
         });
     }

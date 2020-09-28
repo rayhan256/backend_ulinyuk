@@ -6,29 +6,28 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelDestinations extends Model
 {
+    protected $table = 'mst_destinations';
 
     protected $fillable = [
-        'id_objek_wisata', 'nama_objek_wisata', 'kategori_objek_wisata', 'area_objek_wisata', 'telepon_objek_wisata', 'alamat_objek_wisata', 'jadwal_objek_wisata', 'harga_tiket', 'review_objek_wisata',
+        'id_objek_wisata', 'id_kategori_objek_wisata', 'nama_objek_wisata', 'area_objek_wisata', 'telepon_objek_wisata', 'alamat_objek_wisata', 'jadwal_objek_wisata', 'review_objek_wisata'
     ];
 
-    //relasi agar data dapa diambil oleh mst_destination_orders
+    //relasi agar data bisa diambil oleh mst_destination_orders
     public function destination_order()
     {
         return $this->hasMany(ModelDestinationOrders::class, 'id_objek_wisata', 'id');
     }
 
 
-    //relasi agar data dapa diambil oleh mst_destination_orders
+    //relasi agar data bisa diambil oleh mst_destination_orders
     public function galeri_destination()
     {
         return $this->hasMany(ModelGaleriDestinations::class, 'id_objek_wisata', 'id');
     }
 
-
-
-    /*relasi agar data dapa diambil oleh mst_hitsori_booking_destinations
-    public function histori_booking_destination()
+    //ambil data id mst_destination_details
+    public function destination_detail()
     {
-        return $this->hasMany(ModelDestinationOrders::class, 'id_kategori_objek_wisata', 'id');
-    }*/
+        return $this->hasMany(ModelDestinationDetails::class, 'id_kategori_objek_wisata', 'id');
+    }
 }

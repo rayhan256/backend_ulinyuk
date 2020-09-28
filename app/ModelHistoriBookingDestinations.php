@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelHistoriBookingDestinations extends Model
 {
+    protected $table = 'mst_histori_booking_destinations';
+
     protected $fillable = [
         'id_booking_tiket', 'id_objek_wisata', 'id_customer', 'tanggal_booking_tiket', 'jumlah_booking_tiket'
     ];

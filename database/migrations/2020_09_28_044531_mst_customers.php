@@ -14,7 +14,6 @@ class MstCustomers extends Migration
     public function up()
     {
         Schema::create('mst_customers', function (Blueprint $table) {
-            //
             $table->bigIncrements('id'); // primary key
             $table->integer('id_customer');
             $table->string('nama_customer');

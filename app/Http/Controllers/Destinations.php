@@ -11,7 +11,7 @@ class Destinations extends Controller
     //Ambil data
     public function getAll()
     {
-        $destination = ModelDestinations::all();
+        $destination = ModelDestinations::with('destination_detail')->get();
         return $destination;
     }
 
@@ -21,6 +21,7 @@ class Destinations extends Controller
         $destination = new ModelDestinations();
 
         $destination->id_objek_wisata = $request->id_objek_wisata;
+        $destination->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $destination->nama_objek_wisata = $request->nama_objek_wisata;
         $destination->area_objek_wisata = $request->area_objek_wisata;
         $destination->telepon_objek_wisata = $request->telepon_objek_wisata;
@@ -35,9 +36,10 @@ class Destinations extends Controller
     //Update data
     public function updateData(Request $request, $id)
     {
-        $find_destination_by_id = ModelRestaurants::find($id);
+        $find_destination_by_id = ModelDestinations::find($id);
 
         $find_destination_by_id->id_objek_wisata = $request->id_objek_wisata;
+        $find_destination_by_id->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $find_destination_by_id->nama_objek_wisata = $request->nama_objek_wisata;
         $find_destination_by_id->area_objek_wisata = $request->area_objek_wisata;
         $find_destination_by_id->telepon_objek_wisata = $request->telepon_objek_wisata;

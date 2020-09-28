@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelGaleriRestaurants extends Model
 {
+    protected $table = 'mst_galeri_restaurants';
+
     protected $fillable = [
         'id_galeri_restaurant', 'id_restaurant', 'gambar_restaurant'
     ];

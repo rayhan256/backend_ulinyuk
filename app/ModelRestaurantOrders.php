@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelRestaurantOrders extends Model
 {
+    protected $table = 'mst_restaurant_orders';
+
     protected $fillable = [
         'id_booking_restaurant', 'id_customer', 'id_restaurant', 'id_kategori_restaurant', 'tanggal_booking'
     ];
@@ -26,11 +28,5 @@ class ModelRestaurantOrders extends Model
     public function restaurant()
     {
         return $this->hasMany(ModelRestaurants::class, 'id_restaurant', 'id');
-    }
-
-    //ambil data id mst_restaurant_details
-    public function restaurant_detail()
-    {
-        return $this->hasMany(ModelRestaurantDetails::class, 'id_kategori_restaurant', 'id');
     }
 }

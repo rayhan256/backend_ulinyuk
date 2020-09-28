@@ -14,7 +14,6 @@ class MstAdmins extends Migration
     public function up()
     {
         Schema::create('mst_admins', function (Blueprint $table) {
-            //
             $table->bigIncrements('id'); //pk
             $table->string('nama_admin');
             $table->date('tanggal_lahir_admin');

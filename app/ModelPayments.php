@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelPayments extends Model
 {
+    protected $table = 'mst_payments';
+
     protected $fillable = [
         'id_pembayaran', 'id_customer', 'foto_bukti_pembayaran', 'via_bank'
     ];
