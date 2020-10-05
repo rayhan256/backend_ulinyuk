@@ -1,43 +1,126 @@
+API TRAVEL
+
 base url			: http://127.0.0.1:8000/api
 
-*mst_customer
-API getAll customers		: http://127.0.0.1:8000/api/customer
-API insertData customer		: http://127.0.0.1:8000/api/customer/post
-API updateData customer		: http://127.0.0.1:8000/api/customer/update/{id}
-API deleteData customer		: http://127.0.0.1:8000/api/customer/delete/{id}
-API getId customer		: http://127.0.0.1:8000/api/customer/{id}
+*mst_accounts
+API getAll 		: http://127.0.0.1:8000/api/account
+API insertData 		: http://127.0.0.1:8000/api/account/post
+API updateData 		: http://127.0.0.1:8000/api/account/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/account/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/account/{id}
 
 *mst_admins
-API getAll admin		: http://127.0.0.1:8000/api/admin
-API insertData admin		: http://127.0.0.1:8000/api/admin/post
-API updateData admin		: http://127.0.0.1:8000/api/admin/update/{id}
-API deleteData admin		: http://127.0.0.1:8000/api/admin/delete/{id}
-API getId admin			: http://127.0.0.1:8000/api/admin/{id}
+API getAll 		: http://127.0.0.1:8000/api/admin
+API insertData 		: http://127.0.0.1:8000/api/admin/post
+API updateData 		: http://127.0.0.1:8000/api/admin/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/admin/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/admin/{id}
 
-*mst_hotels
-API getAll hotel		: http://127.0.0.1:8000/api/hotel
-API insertData hotel		: http://127.0.0.1:8000/api/hotel/post
-API updateData hotel		: http://127.0.0.1:8000/api/hotel/update/{id}
-API deleteData hotel		: http://127.0.0.1:8000/api/hotel/delete/{id}
-API getId hotel			: http://127.0.0.1:8000/api/hotel/{id}
+*mst_customer
+API getAll 		: http://127.0.0.1:8000/api/customer
+API insertData 		: http://127.0.0.1:8000/api/customer/post
+API updateData 		: http://127.0.0.1:8000/api/customer/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/customer/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/customer/{id}
 
-*mst_galeri_hotels
-API getAll galeri_hotel		: http://localhost:8000/api/galeri
-API insertData galeri_hotel	: http://localhost:8000/api/galeri/post
-API updateData galeri_hotel	: http://localhost:8000/api/galeri/update/{id}
-API deleteData galeri_hotel	: http://localhost:8000/api/galeri/delete/{id}
-API getId galeri_hotel		: http://127.0.0.1:8000/api/galeri/{id}
 
-*mst_restaurants
-API getAll restaurant		: http://127.0.0.1:8000/api/restaurant
-API insertData restaurant	: http://127.0.0.1:8000/api/restaurant/post
-API updateData restaurant	: http://127.0.0.1:8000/api/restaurant/update/{id}
-API deleteData restaurant	: http://127.0.0.1:8000/api/restaurant/delete/{id}
-API getId restaurant		: http://127.0.0.1:8000/api/restaurant/{id}
+
+*mst_destination_details
+API getAll 		: http://127.0.0.1:8000/api/destination_detail
+API insertData 		: http://127.0.0.1:8000/api/destination_detail/post
+API updateData 		: http://127.0.0.1:8000/api/destination_detail/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/destination_detail/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/destination_detail/{id}
 
 *mst_destinations
-API getAll destination		: http://127.0.0.1:8000/api/destination
-API insertData destination	: http://127.0.0.1:8000/api/destination/post
-API updateData destination	: http://127.0.0.1:8000/api/destination/update/{id}
-API deleteData destination	: http://127.0.0.1:8000/api/destination/delete/{id}
-API getId destination		: http://127.0.0.1:8000/api/destination/{id}
+API getAll 		: http://127.0.0.1:8000/api/destination
+API insertData 		: http://127.0.0.1:8000/api/destination/post
+API updateData 		: http://127.0.0.1:8000/api/destination/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/destination/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/destination/{id}
+
+*mst_destination_orders
+API getAll 		: http://127.0.0.1:8000/api/destination_order
+API insertData 		: http://127.0.0.1:8000/api/destination_order/post
+API updateData 		: http://127.0.0.1:8000/api/destination_order/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/destination_order/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/destination_order/{id}
+
+*mst_galeri_destinations
+API getAll 		: http://127.0.0.1:8000/api/galeri_destination
+API insertData 		: http://127.0.0.1:8000/api/galeri_destination/post
+API updateData 		: http://127.0.0.1:8000/api/galeri_destination/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/galeri_destination/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/galeri_destination/{id}
+
+
+
+
+
+*mst_hotel_details
+API getAll 		: http://127.0.0.1:8000/api/hotel_detail
+API insertData 		: http://127.0.0.1:8000/api/hotel_detail/post
+API updateData 		: http://127.0.0.1:8000/api/hotel_detail/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/hotel_detail/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/hotel_detail/{id}
+
+*mst_hotels
+API getAll 		: http://127.0.0.1:8000/api/hotel
+API insertData 		: http://127.0.0.1:8000/api/hotel/post
+API updateData 		: http://127.0.0.1:8000/api/hotel/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/hotel/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/hotel/{id}
+
+*mst_hotel_orders
+API getAll 		: http://127.0.0.1:8000/api/hotel_order
+API insertData 		: http://127.0.0.1:8000/api/hotel_order/post
+API updateData 		: http://127.0.0.1:8000/api/hotel_order/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/hotel_order/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/hotel_order/{id}
+
+*mst_galeri_hotels
+API getAll 		: http://127.0.0.1:8000/api/galeri_hotel
+API insertData 		: http://127.0.0.1:8000/api/galeri_hotel/post
+API updateData 		: http://127.0.0.1:8000/api/galeri_hotel/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/galeri_hotel/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/galeri_hotel/{id}
+
+
+
+
+*mst_restaurant_details
+API getAll 		: http://127.0.0.1:8000/api/restaurant_detail
+API insertData 		: http://127.0.0.1:8000/api/restaurant_detail/post
+API updateData 		: http://127.0.0.1:8000/api/restaurant_detail/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/restaurant_detail/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/restaurant_detail/{id}
+
+*mst_restaurants
+API getAll 		: http://127.0.0.1:8000/api/restaurant
+API insertData 		: http://127.0.0.1:8000/api/restaurant/post
+API updateData 		: http://127.0.0.1:8000/api/restaurant/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/restaurant/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/restaurant/{id}
+
+*mst_restaurant_orders
+API getAll 		: http://127.0.0.1:8000/api/restaurant_order
+API insertData 		: http://127.0.0.1:8000/api/restaurant_order/post
+API updateData 		: http://127.0.0.1:8000/api/restaurant_order/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/restaurant_order/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/restaurant_order/{id}
+
+*mst_restaurant_hotels
+API getAll 		: http://127.0.0.1:8000/api/galeri_restaurant
+API insertData 		: http://127.0.0.1:8000/api/galeri_restaurant/post
+API updateData 		: http://127.0.0.1:8000/api/galeri_restaurant/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/galeri_restaurant/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/galeri_restaurant/{id}
+
+
+
+*mst_payments
+API getAll 		: http://127.0.0.1:8000/api/payment
+API insertData 		: http://127.0.0.1:8000/api/payment/post
+API updateData 		: http://127.0.0.1:8000/api/payment/update/{id}
+API deleteData 		: http://127.0.0.1:8000/api/payment/delete/{id}
+API getId 		: http://127.0.0.1:8000/api/payment/{id}

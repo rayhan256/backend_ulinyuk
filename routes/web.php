@@ -14,7 +14,38 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/get-data', 'HotelOrderController@index');
+//HOTELS
+Route::get('/hotels', function () {
+    return view('hotels/dashboard');
+});
+Route::get('/hotel-list', function () {
+    return view('hotels/list');
+});
+Route::get('/hotel-detail', function () {
+    return view('hotels/detail');
+});
+
+//RESTAURANTS
+Route::get('/restaurants', function () {
+    return view('restaurants/dashboard');
+});
+Route::get('/restaurant-list', function () {
+    return view('restaurants/list');
+});
+Route::get('/restaurant-detail', function () {
+    return view('restaurants/detail');
+});
+
+//DESTINATIONS
+Route::get('/destinations', function () {
+    return view('destinations/dashboard');
+});
+Route::get('/destination-list', function () {
+    return view('destinations/list');
+});
+Route::get('/destination-detail', function () {
+    return view('destinations/detail');
+});

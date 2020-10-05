@@ -124,12 +124,12 @@ Route::put('/restaurant_order/update/{id}', 'RestaurantOrders@updateData');
 Route::delete('/restaurant_order/delete/{id}', 'RestaurantOrders@deleteData');
 Route::get('/restaurant_order/{id}', 'RestaurantOrders@getDataId');
 
-//mst_galeri_hotels
-Route::get('/galeri_restaurant', 'RestaurantHotels@getAll');
-Route::post('/galeri_restaurant/post', 'RestaurantHotels@insertData');
-Route::put('/galeri_restaurant/update/{id}', 'RestaurantHotels@updateData');
-Route::delete('/galeri_restaurant/delete/{id}', 'RestaurantHotels@deleteData');
-Route::get('/galeri_restaurant/{id}', 'RestaurantHotels@getDataId');
+//mst_galeri_restaurants
+Route::get('/galeri_restaurant', 'GaleriRestaurants@getAll');
+Route::post('/galeri_restaurant/post', 'GaleriRestaurants@insertData');
+Route::put('/galeri_restaurant/update/{id}', 'GaleriRestaurants@updateData');
+Route::delete('/galeri_restaurant/delete/{id}', 'GaleriRestaurants@deleteData');
+Route::get('/galeri_restaurant/{id}', 'GaleriRestaurants@getDataId');
 
 
 //mst_payments
