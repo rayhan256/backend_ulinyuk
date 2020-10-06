@@ -33,7 +33,7 @@
             <div class="col-lg-2">
                 <div class="col mt-3">
                     <center>
-                    <a href="/destinations" class="btn btn-lg btn-primary">Add <i class="fa fa-plus"></i></a>
+                    <a href="/destination-add-data" class="btn btn-lg btn-primary">Add <i class="fa fa-plus"></i></a>
                     </center>
                 </div>
                 <br>
@@ -110,11 +110,7 @@
             </div>
         </div>
 
-        <div class="footer">
-            <div>
-                <strong>Copyright</strong> Example Company © 2014-2018
-            </div>
-        </div>
+        @include('layouts/footer')
 
     </div>
 

@@ -13,8 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+//LOGIN
+Route::get('/login', function () {
+    return view('logins/login');
+});
+
+//HOME-DASHBOARD
+Route::get('/dashboard', function () {
+    return view('layouts/master');
+});
+
+//ADMINS
+Route::get('/profile', function () {
+    return view('admins/profile');
+});
+Route::get('/update-profile', function () {
+    return view('admins/update');
 });
 
 //HOTELS
@@ -27,6 +41,9 @@ Route::get('/hotel-list', function () {
 Route::get('/hotel-detail', function () {
     return view('hotels/detail');
 });
+Route::get('/hotel-add-data', function () {
+    return view('hotels/add');
+});
 
 //RESTAURANTS
 Route::get('/restaurants', function () {
@@ -38,6 +55,9 @@ Route::get('/restaurant-list', function () {
 Route::get('/restaurant-detail', function () {
     return view('restaurants/detail');
 });
+Route::get('/restaurant-add-data', function () {
+    return view('restaurants/add');
+});
 
 //DESTINATIONS
 Route::get('/destinations', function () {
@@ -48,4 +68,7 @@ Route::get('/destination-list', function () {
 });
 Route::get('/destination-detail', function () {
     return view('destinations/detail');
+});
+Route::get('/destination-add-data', function () {
+    return view('destinations/add');
 });
