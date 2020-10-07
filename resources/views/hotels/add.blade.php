@@ -47,7 +47,7 @@
                         <div class="ibox-content">
                             <form method="get">
                                 <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">Id Hotel</label>
+                                    <label class="col-sm-2 col-form-label">Hotel ID</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control">
                                     </div>

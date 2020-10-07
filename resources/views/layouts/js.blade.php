@@ -39,12 +39,6 @@
     <!-- Toastr -->
     <script src="assets/js/plugins/toastr/toastr.min.js"></script>
 
-    <script>
-        $('.custom-file-input').on('change', function() {
-            let fileName = $(this).val().split('\\').pop();
-            $(this).next('.custom-file-label').addClass("selected").html(fileName);
-        }); 
-    </script>
     
     <script>
         $(document).ready(function () {
@@ -190,3 +184,11 @@
         });
 
     </script>
+
+    
+<script>
+    $('.custom-file-input').on('change', function() {
+        let fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    }); 
+</script>

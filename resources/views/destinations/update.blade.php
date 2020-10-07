@@ -28,7 +28,7 @@
             
         <div class="row wrapper white-bg page-heading">
             <div class="col-lg-12">
-                <h2>Add Restaurant Data</h2>                
+                <h2>Update Destination Data</h2>                
             </div>
         </div>
 
@@ -37,7 +37,7 @@
                 <div class="col-lg-12">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Form Add Data</h5>
+                            <h5>Form Update Data</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -46,27 +46,26 @@
                         </div>
                         <div class="ibox-content">
                             <form method="get">
-                                <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">Restaurant ID</label>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Destination ID</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="001">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Id Restaurant Kategories</label>
+                                    <label class="col-sm-2 col-form-label">Destination Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Resto 101-Best Restaurants" class="form-control">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    
-                                    <label class="col-sm-2 col-form-label">Restaurant Name</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Destination A">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
+                                    <label class="col-sm-2 col-form-label">Id Destination Kategories</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" placeholder="Destination 101-Best Destinations" class="form-control">
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Area</label>
+                                    <label class="col-sm-2 col-form-label">Destination Area</label>
                                     <div class="col-sm-10">
                                         <select class="form-control m-b" name="account">
                                             <option value="Bandung">Bandung</option>
@@ -92,27 +91,27 @@
                                         </select>
                                     </div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Telephone</label>
+                                    <label class="col-sm-2 col-form-label">Destination Telephone</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="987654336712">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Address</label>
+                                    <label class="col-sm-2 col-form-label">Destination Address</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Lembang, Bandung">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Schedule</label>
+                                    <label class="col-sm-2 col-form-label">Destination Schedule</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" placeholder="Open Everyday, 10.00 AM - 10.00 PM">
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     
-                                    <label class="col-sm-2 col-form-label">Restaurant Review</label>
+                                    <label class="col-sm-2 col-form-label">Destination Review</label>
                                     <div class="col-sm-10">
-                                        <textarea name="" cols="119" rows="5"></textarea>
+                                        <textarea name="" cols="119" rows="5" placeholder="-"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 

@@ -33,7 +33,7 @@
             <div class="col-lg-2">
                 <div class="col mt-3">
                     <center>
-                    <a href="/destination-add-data" class="btn btn-lg btn-primary">Add <i class="fa fa-plus"></i></a>
+                    <a href="/destination-add-data" class="btn btn-sm btn-primary">Add <i class="fa fa-plus"></i></a>
                     </center>
                 </div>
                 <br>

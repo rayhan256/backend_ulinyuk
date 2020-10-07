@@ -31,11 +31,6 @@
                 <h2>Dashboard Destinations</h2>                
             </div>
             <div class="col-lg-2">
-                <div class="col mt-3">
-                    <center>
-                    <a href="/destination-add-data" class="btn btn-lg btn-primary">Add <i class="fa fa-plus"></i></a>
-                    </center>
-                </div>
                 <br>
                 <center>
                     <a href="/destinations" class="btn btn-sm btn-outline btn-primary"> <i
@@ -68,41 +63,29 @@
                                     
                                     <h4>Destination description</h4>
 
-                                    <div class="small text-muted">
+                                    <div class="">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam quidem quibusdam nam tenetur, rerum, maxime nostrum, commodi assumenda facere illum quis. Quas pariatur libero tempore molestiae totam beatae? Dolor.
                                         <br>
                                         <br>
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla consectetur nostrum nesciunt est temporibus deleniti quo sit iusto expedita fugit omnis quod, odit suscipit, a aspernatur! Ratione amet incidunt libero..
                                     </div>
-                                    <dl class="small m-t-md">
-                                        <dt>Description lists</dt>
-                                        <dd>A description list is perfect for defining terms.</dd>
-                                        <dt>Euismod</dt>
-                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-                                        <dt>Malesuada porta</dt>
-                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-                                    </dl>
 
                                 </div>
-                                        <div class="col-md-4 mt-5">
-                                            <hr>
-                                            <i class="fa fa-map-marker"></i> Locations
-                                            <hr>
-                                            <div>
-                                                <button class="btn btn-primary float-right">Add to cart</button>
-                                                <h1 class="product-main-price">$406,602 <small class="text-muted">Exclude Tax</small> </h1>
-                                            </div>
-                                            <hr>
-                                        </div>
+                                <div class="col-md-4 mt-5">
+                                    <div></div>
+                                    <hr>
+                                    <i class="fa fa-map-marker"></i> Lembang, Bandung
+                                    <hr>
+                                    <i class="fa fa-clock-o"></i> Open Everyday 10.00 AM - 10.00 PM                                    
+                                    <hr>
+                                    <i class="fa fa-phone"></i> 0987654334567                                    
+                                    <hr>
+                                    <div>                                                
+                                        <a href="/destination-update-data" class="btn btn-primary">Update Data</a>
+                                    </div>
+                                </div>
                             </div>
 
-                        </div>
-                        <div class="ibox-footer">
-                            <span class="float-right">
-                                Full stock - <i class="fa fa-clock-o"></i> 14.04.2016 10:04 pm
-                            </span>
-                            The generated Lorem Ipsum is therefore always free
                         </div>
                     </div>
 

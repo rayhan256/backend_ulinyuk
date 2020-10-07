@@ -47,13 +47,13 @@
                         <div class="ibox-content">
                             <form method="get">
                                 <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">Id Destination</label>
+                                    <label class="col-sm-2 col-form-label">Destination ID</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Id Destination Kategories</label>
+                                    <label class="col-sm-2 col-form-label">Destination Kategories ID</label>
                                     <div class="col-sm-10">
                                         <input type="text" placeholder="Destination 101-Best Destinations" class="form-control">
                                     </div>
