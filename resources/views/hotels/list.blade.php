@@ -1,55 +1,26 @@
-<!DOCTYPE html>
-<html>
+@include('layouts/css')
+    @include('layouts/sidebar')
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    @include('layouts/css')
-
-</head>
-
-<body>
-    <div id="wrapper">
-        <!-- SIDEBAR -->
-        @include('layouts/sidebar')
-        <!-- END SIDEBAR -->
-
-        <div id="page-wrapper" class="gray-bg">
-            <div class="row border-bottom">
-                <!-- END NAVBAR -->
-                @include('layouts/navbar')
-                <!-- END NAVBAR -->
-
-                <!-- CONTENT -->
-            </div>
-
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-10">
-                <h2>Dashboard Hotels</h2>                
-            </div>
-            <div class="col-lg-2">
-                <div class="col mt-3">
-                    <center>
-                    <a href="/hotel-add-data" class="btn btn-lg btn-primary">Add <i class="fa fa-plus"></i></a>
-                    </center>
+        @include('layouts/navbar')
+        <div class="mt-3">
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Daftar Detail Hotel</h2>                
                 </div>
-                <br>
-                <center>
-                    <a href="/hotels" class="btn btn-sm btn-outline btn-primary"> <i
-                        class="fa fa-th-large"></i> </a>
-                    <td>  </td>
-                    <a href="/list" class="btn btn-sm btn-outline btn-primary"> <i
-                        class="fa fa-bars"></i> </a>
-                </center>
+                <div class="col-md-2">
+                    <br>
+                    <div style="float: right">
+                        <a href="/hotels" class="btn btn-sm btn-outline btn-primary"> <i
+                            class="fa fa-th-large"></i> </a>
+                        <td>  </td>
+                        <a href="/hotel-list" class="btn btn-sm btn-outline btn-primary"> <i
+                            class="fa fa-bars"></i> </a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="wrapper wrapper-content animated fadeInRight ecommerce">
-
-
             <div class="ibox-content m-b-sm border-bottom">
                 <div class="row">
                     <div class="col-sm-4">

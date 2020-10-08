@@ -47,6 +47,9 @@ Route::get('/hotel-add-data', function () {
 Route::get('/hotel-update-data', function () {
     return view('hotels/update');
 });
+Route::get('/hotel-order', function () {
+    return view('hotels/order');
+});
 
 //RESTAURANTS
 Route::get('/restaurants', function () {
@@ -64,6 +67,9 @@ Route::get('/restaurant-add-data', function () {
 Route::get('/restaurant-update-data', function () {
     return view('restaurants/update');
 });
+Route::get('/restaurant-order', function () {
+    return view('restaurants/order');
+});
 
 //DESTINATIONS
 Route::get('/destinations', function () {
@@ -80,4 +86,7 @@ Route::get('/destination-add-data', function () {
 });
 Route::get('/destination-update-data', function () {
     return view('destinations/update');
+});
+Route::get('/destination-order', function () {
+    return view('destinations/order');
 });

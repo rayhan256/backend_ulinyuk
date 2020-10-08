@@ -1,34 +1,12 @@
-<!DOCTYPE html>
-<html>
+@include('layouts/css')
+    @include('layouts/sidebar')
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    @include('layouts/css')
-
-</head>
-
-<body>
-    <div id="wrapper">
-        <!-- SIDEBAR -->
-        @include('layouts/sidebar')
-        <!-- END SIDEBAR -->
-
-        <div id="page-wrapper" class="gray-bg">
-            <div class="row border-bottom">
-                <!-- END NAVBAR -->
-                @include('layouts/navbar')
-                <!-- END NAVBAR -->
-
-                <!-- CONTENT -->
-            </div>
-            
-        <div class="row wrapper white-bg page-heading">
-            <div class="col-lg-12">
-                <h2>Update Destination Data</h2>                
+        @include('layouts/navbar')
+        <div class="mt-3">
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Update Data Objek Wisata</h2>                
+                </div>
             </div>
         </div>
 
@@ -111,7 +89,7 @@
                                     
                                     <label class="col-sm-2 col-form-label">Destination Review</label>
                                     <div class="col-sm-10">
-                                        <textarea name="" cols="119" rows="5" placeholder="-"></textarea>
+                                        <textarea name="" placeholder="-"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
