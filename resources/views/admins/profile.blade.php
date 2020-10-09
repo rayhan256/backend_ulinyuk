@@ -1,38 +1,16 @@
-<!DOCTYPE html>
-<html>
+@include('layouts/css')
+    @include('layouts/sidebar')
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    @include('layouts/css')
-
-</head>
-
-<body>
-    <div id="wrapper">
-        <!-- SIDEBAR -->
-        @include('layouts/sidebar')
-        <!-- END SIDEBAR -->
-
-        <div id="page-wrapper" class="gray-bg">
-            <div class="row border-bottom">
-                <!-- END NAVBAR -->
-                @include('layouts/navbar')
-                <!-- END NAVBAR -->
-
-                <!-- CONTENT -->
+        @include('layouts/navbar')
+        <div class="mt-3">
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Profile</h2>                
+                </div>
             </div>
-            
-        <div class="row wrapper border-bottom white-bg page-heading">            
-            <h2>Profile</h2>                            
         </div>
 
         <div class="wrapper wrapper-content animated fadeInRight">
-
-
             <div class="row m-b-lg m-t-lg">
                 <div class="col-md-6">
 

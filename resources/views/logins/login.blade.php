@@ -18,7 +18,7 @@
                     <div>
                         <div>
             
-                            <h1 class="logo-name"><i class="fa fa-superpowers"></i></h1>
+                            <h1 class="logo-name"><i class="fa fa-google-wallet"></i></h1>
             
                         </div>
                         <h3>Welcome to UlinYuk</h3> <br>                    
