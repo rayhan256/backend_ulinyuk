@@ -10,15 +10,15 @@
                 <div class="col-lg-2">
                     <div style="float: right">
                         <div class="col mt-3">                       
-                            <a href="/destination-add-data" class="btn btn-sm btn-primary"><i class="fa fa-plus-square"></i> Tambah Data</a>                        
+                            <a href="/destination-add-data" class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn"><i class="fa fa-plus-square"></i> Tambah Data</a>                        
                         </div>
                         <br>
                         <div style="float: right">
                             <div class="mr-3">
-                                <a href="/destinations" class="btn btn-sm btn-outline btn-primary"> <i
+                                <a href="/destinations" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                                     class="fa fa-th-large"></i> </a>
                                 <td>  </td>
-                                <a href="/destination-list" class="btn btn-sm btn-outline btn-primary"> <i
+                                <a href="/destination-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                                     class="fa fa-bars"></i> </a>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="m-t text-righ">
     
-                                        <a href="/destination-detail" class="btn btn-xs btn-outline btn-primary">Info <i
+                                        <a href="/destination-detail" class="btn btn-xs" style="background-color: #0096C7; color:white" class="btn">Info <i
                                                 class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>

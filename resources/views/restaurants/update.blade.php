@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Form Update Data</h5>
+                            <h5>Form Update Data Restaurant</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -25,27 +25,27 @@
                         <div class="ibox-content">
                             <form method="get">
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Restaurant ID</label>
+                                    <label class="col-sm-2 col-form-label">ID Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="001">
+                                        <input type="text" id="id_restaurant" class="form-control" placeholder="001">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Name</label>
+                                    <label class="col-sm-2 col-form-label">Kategori Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Restaurant A">
+                                        <input type="text" placeholder="Resto 101-Best Restaurants" id="id_kategori_restoran" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Id Restaurant Kategories</label>
+                                    <label class="col-sm-2 col-form-label">Nama Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Resto 101-Best Restaurants" class="form-control">
+                                        <input type="text" class="form-control" id="nama_restaurant" placeholder="Restaurant A">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Area</label>
+                                    <label class="col-sm-2 col-form-label">Area Restaurant</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
+                                        <select class="form-control m-b" id="area_restaurant">
                                             <option value="Bandung">Bandung</option>
                                             <option value="Banjar">Banjar</option>
                                             <option value="Bekasi">Bekasi</option>
@@ -69,27 +69,21 @@
                                         </select>
                                     </div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Telephone</label>
+                                    <label class="col-sm-2 col-form-label">Telepon Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="987654336712">
+                                        <input type="text" class="form-control" id="telepon_restaurant" placeholder="987654336712">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Address</label>
+                                    <label class="col-sm-2 col-form-label">Alamat Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Cihampelas, Bandung">
+                                        <input type="text" class="form-control" id="alamat_restaurant" placeholder="Cihampelas, Bandung">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Restaurant Schedule</label>
+                                    <label class="col-sm-2 col-form-label">Jadwal Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Open Everyday, 10.00 AM - 10.00 PM">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    
-                                    <label class="col-sm-2 col-form-label">Restaurant Review</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="" placeholder="-"></textarea>
+                                        <input type="text" class="form-control" id="jadwal_restaurant" placeholder="Open Everyday, 10.00 AM - 10.00 PM">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -97,8 +91,8 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-white btn-sm" type="reset">Cancel</button>
-                                        <button class="btn btn-primary btn-sm" type="submit">Save Changes</button>
+                                        <button class="btn btn-white btn-sm" type="reset">Batal</button>
+                                        <button class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn" id="submit_update_resto" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>
@@ -113,5 +107,20 @@
     </div>
 
 </div>
+
+<script>
+    const id_resto = document.querySelector('#id_restaurant').value
+    const kategori_resto = document.querySelector('#id_kategori_restoran').value
+    const nama_resto = document.querySelector('#nama_restaurant').value
+    const telepon_resto = document.querySelector('#telepon_restaurant').value
+    const alamat_resto = document.querySelector('#alamat_restaurant').value
+    const jadwal_resto = document.querySelector('#jadwal_restaurant').value
+    const btn_submit = document.querySelector('#submit_update_resto')
+
+    button_submit.addEventListener('click', () => {
+        if (id_resto == "" && kategori_resto == "" && nama_resto == "" && telepon_resto == "" && alamat_resto == "" && jadwal_resto == "" ) alert("Data Tidak Boleh Kosong!")
+    })
+
+</script>
 
 @include('layouts/js')

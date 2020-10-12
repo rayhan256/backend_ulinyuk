@@ -10,10 +10,10 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/destinations" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/destinations" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-th-large"></i> </a>
                         <td>  </td>
-                        <a href="/destination-list" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/destination-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-bars"></i> </a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                                         Objek Wisata A
                                     </h3>
                                     <hr>
-                                    <h4>Objek Wisata Description</h4>
+                                    <h4>Deskripsi Objek Wisata</h4>
                                     <div class="">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam quidem quibusdam nam tenetur, rerum, maxime nostrum, commodi assumenda facere illum quis. Quas pariatur libero tempore molestiae totam beatae? Dolor.
                                         <br>
@@ -93,8 +93,8 @@
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
-                                        <a href="/destination-update-data" class="btn btn-primary">Edit Data</a>
-                                        <a href="/destination-gallery" class="btn btn-primary">Tambah Gambar</a>
+                                        <a href="/destination-update-data" class="btn btn-info">Edit Data</a>
+                                        <a href="/destination-gallery" class="btn" style="background-color: #0096C7; color:white" class="btn">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>
@@ -114,5 +114,9 @@
     </div>
 
 </div>
+
+<script>
+    
+</script>
 
 @include('layouts/js')

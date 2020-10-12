@@ -10,11 +10,8 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/destinations" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/destinations" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-th-large"></i> </a>
-                        <td>  </td>
-                        <a href="/destination-list" class="btn btn-sm btn-outline btn-primary"> <i
-                            class="fa fa-bars"></i> </a>
                     </div>
                 </div>
             </div>
@@ -43,7 +40,7 @@
                                 <tr>
 
                                     <th class="footable-visible footable-sortable footable-first-column">
-                                        ID Booking Kamar
+                                        ID Booking Tiket
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable"> 
@@ -51,27 +48,23 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Nama Hotel
+                                        Nama Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Kategori Kamar Hotel
+                                        Kategori Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Harga Kamar
+                                        Tanggal Booking Tiket
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Jumlah Booking Kamar
+                                        Harga Tiket
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Tanggal CheckIn
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Tanggal CheckOut
+                                        Jumlah Booking Tiket
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
@@ -104,13 +97,10 @@
                                         Customer example
                                     </td>
                                     <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
                                         03/04/2015
                                     </td>
                                     <td class="footable-visible">
-                                        03/04/2015
+                                        10
                                     </td>
                                     <td class="footable-visible">
                                         $100.00
@@ -141,13 +131,10 @@
                                         Customer example
                                     </td>
                                     <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
                                         03/04/2015
                                     </td>
                                     <td class="footable-visible">
-                                        03/04/2015
+                                        10
                                     </td>
                                     <td class="footable-visible">
                                         $100.00

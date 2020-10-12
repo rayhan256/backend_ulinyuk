@@ -10,11 +10,8 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/restaurants" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/restaurants" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-th-large"></i> </a>
-                        <td>  </td>
-                        <a href="/restaurant-list" class="btn btn-sm btn-outline btn-primary"> <i
-                            class="fa fa-bars"></i> </a>
                     </div>
                 </div>
             </div>
@@ -43,7 +40,7 @@
                                 <tr>
 
                                     <th class="footable-visible footable-sortable footable-first-column">
-                                        ID Booking Kamar
+                                        ID Booking Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable"> 
@@ -51,31 +48,15 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Nama Hotel
+                                        Nama Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Kategori Kamar Hotel
+                                        Kategori Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Harga Kamar
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Jumlah Booking Kamar
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Tanggal CheckIn
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Tanggal CheckOut
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Total Bayar
+                                        Tanggal Booking
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="text-right footable-visible footable-sortable footable-last-column">
@@ -101,19 +82,7 @@
                                         Customer example
                                     </td>
                                     <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
                                         03/04/2015
-                                    </td>
-                                    <td class="footable-visible">
-                                        03/04/2015
-                                    </td>
-                                    <td class="footable-visible">
-                                        $100.00
                                     </td>
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
@@ -138,19 +107,7 @@
                                         Customer example
                                     </td>
                                     <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
                                         03/04/2015
-                                    </td>
-                                    <td class="footable-visible">
-                                        03/04/2015
-                                    </td>
-                                    <td class="footable-visible">
-                                        $100.00
                                     </td>
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">

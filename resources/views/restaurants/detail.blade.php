@@ -10,10 +10,10 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/restaurants" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/restaurants" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-th-large"></i> </a>
                         <td>  </td>
-                        <a href="/restaurant-list" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/restaurant-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-bars"></i> </a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                                         Restaurant A
                                     </h3>
                                     <hr>
-                                    <h4>Restaurant Description</h4>
+                                    <h4>Deskripsi Restaurant</h4>
                                     <div class="">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam quidem quibusdam nam tenetur, rerum, maxime nostrum, commodi assumenda facere illum quis. Quas pariatur libero tempore molestiae totam beatae? Dolor.
                                         <br>
@@ -93,8 +93,8 @@
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
-                                        <a href="/restaurant-update-data" class="btn btn-primary">Edit Data</a>
-                                        <a href="/restaurant-gallery" class="btn btn-primary">Tambah Gambar</a>
+                                        <a href="/restaurant-update-data" class="btn btn-info">Edit Data</a>
+                                        <a href="/restaurant-gallery" class="btn" style="background-color: #0096C7; color:white" class="btn">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>

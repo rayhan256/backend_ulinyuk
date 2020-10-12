@@ -21,27 +21,27 @@
                 </li>
                 
                 <li>
-                    <a href="/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    <a href="/dashboard"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li>
-                    <a href="/hotels"><i class="fa fa-diamond"></i> <span class="nav-label">Master Hotel</span></a>
+                    <a href="/hotels"><i class="fa fa-building"></i> <span class="nav-label">Master Hotel</span></a>
                 </li>
                 <li>
-                    <a href="/restaurants"><i class="fa fa-diamond"></i> <span class="nav-label">Master Restaurant</span></a>
+                    <a href="/restaurants"><i class="fa fa-cutlery"></i> <span class="nav-label">Master Restaurant</span></a>
                 </li>
                 <li>
-                    <a href="/destinations"><i class="fa fa-laptop"></i> <span class="nav-label">Master Objek Wisata</span></a>
+                    <a href="/destinations"><i class="fa fa-tree"></i> <span class="nav-label">Master Objek Wisata</span></a>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li>
-                    <a href="/hotel-order"><i class="fa fa-diamond"></i> <span class="nav-label">Data Order Hotel</span></a>
+                    <a href="/hotel-order"><i class="fa fa-th-list"></i> <span class="nav-label">Data Order Hotel</span></a>
                 </li>
                 <li>
-                    <a href="/restaurant-order"><i class="fa fa-diamond"></i> <span class="nav-label">Data Order Restaurant</span></a>
+                    <a href="/restaurant-order"><i class="fa fa-th-list"></i> <span class="nav-label">Data Order Restaurant</span></a>
                 </li>
                 <li>
-                    <a href="/destination-order"><i class="fa fa-laptop"></i> <span class="nav-label">Data Order Objek Wisata</span></a>
+                    <a href="/destination-order"><i class="fa fa-th-list"></i> <span class="nav-label">Data Order Objek Wisata</span></a>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li class="landing_link">

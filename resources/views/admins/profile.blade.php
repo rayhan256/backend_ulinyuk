@@ -5,7 +5,7 @@
         <div class="mt-3">
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Profile</h2>                
+                    <h2>Profile Admin</h2>                
                 </div>
             </div>
         </div>
@@ -21,9 +21,9 @@
                         <div class="">
                             <div>
                                 <h2 class="no-margins">
-                                    <b> Example Admin </b>
+                                    <b>Nama Admin </b>
                                 </h2>
-                                <h4>Administrator Hotel A</h4>
+                                <h4>Administrator</h4>
                                 <small>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam adipisci ut facere iure quaerat excepturi magni, cupiditate veritatis, eius aperiam consectetur nemo fugiat facilis, tempora architecto laboriosam dicta et nesciunt.
                                 </small>
@@ -37,24 +37,24 @@
                         <tbody>
                         <tr>
                             <td>
-                                <strong>Date of Birth</strong>
+                                <strong>Tanggal Lahir</strong>
                             </td>
                             <td>
-                                1999, July 26
+                                26 Juli 1999
                             </td>
 
                         </tr>
                         <tr>
                             <td>
-                                <strong>Gender</strong>
+                                <strong>Jenis Kelamin</strong>
                             </td>
                             <td>
-                                Male
+                                Laki-Laki
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <strong>Address</strong>
+                                <strong>Alamat</strong>
                             </td>
                             <td>
                                 Arcamanik Permai No. E9
@@ -62,7 +62,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <strong>City</strong>
+                                <strong>Kota</strong>
                             </td>
                             <td>
                                 Bandung
@@ -70,7 +70,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <strong>Telephone</strong>
+                                <strong>Telepon</strong>
                             </td>
                             <td>
                                 098765456756
@@ -87,7 +87,7 @@
                         </tbody>
                         <tr>
                             <td>
-                                <a href="/update-profile" class="btn btn-primary">Update Profile</a>
+                                <a href="/update-profile" style="background-color: #0096C7; color:white" class="btn">Edit Profile</a>
                             </td>
                         </tr>
                     </table>

@@ -10,11 +10,8 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/hotels" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/hotels" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-th-large"></i> </a>
-                        <td>  </td>
-                        <a href="/hotel-list" class="btn btn-sm btn-outline btn-primary"> <i
-                            class="fa fa-bars"></i> </a>
                     </div>
                 </div>
             </div>

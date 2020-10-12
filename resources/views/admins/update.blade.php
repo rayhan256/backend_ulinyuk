@@ -5,7 +5,7 @@
         <div class="mt-3">
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Update Profile</h2>                
+                    <h2>Update Data Profile</h2>                
                 </div>
             </div>
         </div>
@@ -29,63 +29,63 @@
                                     <div class="col-sm-12">
                                         <input type="hidden" placeholder="Id Admin" class="form-control">
                                     </div>                                    
-                                    <label class="col-sm-2 col-form-label">Name</label>
+                                    <label class="col-sm-2 col-form-label">Nama Lengkap</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Example Admin" class="form-control">
+                                        <input type="text" placeholder="Example Admin" class="form-control" id="nama_admin">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Date of Birth</label>
+                                    <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="1999, July 26" class="form-control">
+                                        <input type="text" placeholder="1999, July 26" class="form-control" id="tanggal_lahir_admin">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Gender</label>
+                                    <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
+                                        <select class="form-control m-b">
+                                            <option value="Laki-Laki">Laki-Laki</option>
+                                            <option value="Perempuan">Perempuan</option>
                                         </select>
                                     </div>
 
-                                    <label class="col-sm-2 col-form-label">Address</label>
+                                    <label class="col-sm-2 col-form-label">Alamat</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Arcamanik Permai No. E9" class="form-control">
+                                        <input type="text" placeholder="Arcamanik Permai No. E9" class="form-control" id="alamat_admin">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">City</label>
+                                    <label class="col-sm-2 col-form-label">Kota</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Bandung" class="form-control">
+                                        <input type="text" placeholder="Bandung" class="form-control" id="kota_admin">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Telephone</label>
+                                    <label class="col-sm-2 col-form-label">Telepon</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="098765456756" class="form-control">
+                                        <input type="text" placeholder="098765456756" class="form-control" id="telepon_admin">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="email_example@gmail.com" class="form-control">
+                                        <input type="text" placeholder="email_example@gmail.com" class="form-control" id="email_admin">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Photo</label>
                                     <div class="col-sm-10">
                                         <div class="custom-file">
-                                            <input id="logo" type="file" class="custom-file-input">
-                                            <label for="logo" class="custom-file-label">Choose file...</label>
+                                            <input id="photo" type="file" class="custom-file-input">
+                                            <label for="photo" class="custom-file-label">Choose file...</label>
                                         </div> 
                                     </div>
 
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-white btn-sm" type="reset">Cancel</button>
-                                        <button class="btn btn-primary btn-sm" type="submit">Save Changes</button>
+                                        <button class="btn btn-white btn-sm" type="reset">Batal</button>
+                                        <button class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn" id="submit_update_admin" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>
@@ -100,5 +100,20 @@
     </div>
 
 </div>
+
+<script>
+    const nama = document.querySelector('#nama_admin').value 
+    const tanggal_lahir = document.querySelector('#tanggal_lahir_admin').value
+    const alamat = document.querySelector('#alamat_admin').value
+    const kota = document.querySelector('#kota_admin').value
+    const telepon = document.querySelector('#telepon_admin').value
+    const email = document.querySelector('#email_admin').value
+    const photo = document.querySelector('#photo').value
+    const btn_submit = document.querySelector('#submit_update_admin')
+
+    btn_submit.addEventListener('click', () => {
+        if (nama == "" && tanggal_lahir == "" && alamat == "" && kota == "" && telepon == "" && email == "" && photo == "") alert("Data Tidak Boleh Kosong!")
+    })
+</script>
 
 @include('layouts/js')

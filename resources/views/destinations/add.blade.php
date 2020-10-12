@@ -15,38 +15,37 @@
                 <div class="col-lg-12">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Form Add Data</h5>
+                            <h5>Form Tambah Data Objek Wisata</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="ibox-content">
+                        <div action="" class="ibox-content">
                             <form method="get">
                                 <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">Destination ID</label>
+                                    <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="id_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Destination Kategories ID</label>
+                                    <label class="col-sm-2 col-form-label">Kategori Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Destination 101-Best Destinations" class="form-control">
+                                        <input type="text" placeholder="Destination 101-Best Destinations" class="form-control" id="id_kategori_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     
-                                    <label class="col-sm-2 col-form-label">Destination Name</label>
+                                    <label class="col-sm-2 col-form-label">Nama Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="nama_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-
-                                    <label class="col-sm-2 col-form-label">Destination Area</label>
+                                    <label class="col-sm-2 col-form-label">Area Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
+                                        <select class="form-control m-b" id="area_objek_wisata">
                                             <option value="Bandung">Bandung</option>
                                             <option value="Banjar">Banjar</option>
                                             <option value="Bekasi">Bekasi</option>
@@ -70,27 +69,21 @@
                                         </select>
                                     </div>
 
-                                    <label class="col-sm-2 col-form-label">Destination Telephone</label>
+                                    <label class="col-sm-2 col-form-label">Telepon Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="telepon_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Destination Address</label>
+                                    <label class="col-sm-2 col-form-label">Alamat Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="alamat_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Destination Schedule</label>
+                                    <label class="col-sm-2 col-form-label">Jadwal Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    
-                                    <label class="col-sm-2 col-form-label">Destination Review</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="" ></textarea>
+                                        <input type="text" class="form-control" id="jadwal_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -98,8 +91,8 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-white btn-sm" type="reset">Cancel</button>
-                                        <button class="btn btn-primary btn-sm" type="submit">Save Changes</button>
+                                        <button class="btn btn-white btn-sm" type="reset">Batal</button>
+                                        <button class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn" id="submit_add_objek_wisata" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>
@@ -114,5 +107,19 @@
     </div>
 
 </div>
+
+<script>
+    const id_obwis = document.querySelector('#id_objek_wisata').value 
+    const id_kategori_obwis = document.querySelector('#id_kategori_objek_wisata').value
+    const nama_obwis = document.querySelector('#nama_objek_wisata').value
+    const telepon_obwis = document.querySelector('#telepon_objek_wisata').value
+    const alamat_obwis = document.querySelector('#alamat_objek_wisata').value
+    const jadwal_obwis = document.querySelector('#jadwal_objek_wisata').value
+    const btn_submit = document.querySelector('#submit_add_objek_wisata')
+
+    btn_submit.addEventListener('click', () => {
+        if (id_obwis == "" && id_kategori_obwis == "" && nama_obwis == "" && telepon_obwis == "" && alamat_obwis == "" && jadwal_obwis == "") alert("Data Tidak Boleh Kosong!")
+    })
+</script>
 
 @include('layouts/js')

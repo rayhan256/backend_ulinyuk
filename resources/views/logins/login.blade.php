@@ -31,7 +31,7 @@
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Password" required="">
                                     </div>
-                                    <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                                    <button type="submit" class="btn block full-width m-b" style="background-color: #0096C7; color:white" class="btn">Login</button>
                                 </form>                                
                             </div>
                         <p class="mt-5">

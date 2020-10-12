@@ -10,7 +10,7 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/destination-detail" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/destination-detail" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-chevron-left"></i> </a>
                     </div>
                 </div>
@@ -35,29 +35,29 @@
 
                                     <label class="col-sm-2 col-form-label">ID Galeri Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="ID Galeri objek wisata" class="form-control">
+                                        <input type="text" id="id_galeri_objek_wisata" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="ID objek wisata" class="form-control">
+                                        <input type="text" id="id_objek_wisata" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Gambar Hotel</label>
                                     <div class="col-sm-10">
                                         <div class="custom-file">
-                                            <input id="logo" type="file" class="custom-file-input">
-                                            <label for="logo" class="custom-file-label">Choose file...</label>
+                                            <input id="gambar" type="file" class="custom-file-input">
+                                            <label for="gambar" class="custom-file-label">Choose file...</label>
                                         </div> 
                                     </div>
 
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-white btn-sm" type="reset">Cancel</button>
-                                        <button class="btn btn-primary btn-sm" type="submit">Save Changes</button>
+                                        <button class="btn btn-white btn-sm" type="reset">Batal</button>
+                                        <button class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn" id="submit_add_galeri" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>
@@ -72,5 +72,16 @@
     </div>
 
 </div>
+
+<script>
+    const id_galeri_obwis = document.querySelector('#id_galeri_objek_wisata').value 
+    const id_obwis = document.querySelector('#id_objek_wisata').value
+    const gambar_obwis = document.querySelector('#gambar').value
+    const btn_submit = document.querySelector('#submit_add_galeri')
+
+    btn_submit.addEventListener('click', () => {
+        if (id_galeri_obwis == "" && id_obwis == "" && gambar_obwis == "") alert("Data Tidak Boleh Kosong!")
+    })
+</script>
 
 @include('layouts/js')

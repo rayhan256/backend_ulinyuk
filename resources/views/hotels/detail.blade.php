@@ -10,10 +10,10 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/hotels" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/hotels" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-th-large"></i> </a>
                         <td>  </td>
-                        <a href="/hotel-list" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="/hotel-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
                             class="fa fa-bars"></i> </a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                                         Hotel A
                                     </h3>
                                     <hr>
-                                    <h4>Hotel Description</h4>
+                                    <h4>Deskripsi Hotel</h4>
                                     <div class="">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam quidem quibusdam nam tenetur, rerum, maxime nostrum, commodi assumenda facere illum quis. Quas pariatur libero tempore molestiae totam beatae? Dolor.
                                         <br>
@@ -75,21 +75,7 @@
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla consectetur nostrum nesciunt est temporibus deleniti quo sit iusto expedita fugit omnis quod, odit suscipit, a aspernatur! Ratione amet incidunt libero..
                                     </div>
 
-                                    <dl class="m-t-md">
-                                        <dt>Featured Aminities</dt>
-                                        <div class="Collapse__more__amenities">
-                                            <div class="content-amenities">
-                                                <ul>
-                                                    <li>Free self parking</li>
-                                                    <li>Free WiFi</li> 
-                                                    <li>Number of restaurants - 5</li> 
-                                                    <li>Number of outdoor pools - 3</li> 
-                                                    <li>Swimming pool</li> 
-                                                    <li>Number of poolside bars - 3</li> <li>Waterslide</li> 
-                                                    <li>Bar/lounge</li>
-                                                </ul>
-                                            </div>                                            
-                                        </div>
+                                    <dl class="m-t-md">                                        
                                         <dt>Hotel Facility</dt>
                                         <div class="Collapse__more__amenities">
                                             <div class="content-amenities">
@@ -116,16 +102,12 @@
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> Open Everyday 10.00 AM - 10.00 PM
-                                    </h3>                                   
-                                    <hr>
-                                    <h3>
                                         <i class="fa fa-phone"></i> 0987654334567
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
-                                        <a href="/destination-update-data" class="btn btn-primary">Edit Data</a>
-                                        <a href="/destination-gallery" class="btn btn-primary">Tambah Gambar</a>
+                                        <a href="/hotel-update-data" class="btn btn-info">Edit Data</a>
+                                        <a href="/hotel-gallery" class="btn" style="background-color: #0096C7; color:white" class="btn">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>

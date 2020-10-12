@@ -2,7 +2,7 @@
     <div class="row border-bottom">
     <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
-        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        <a class="navbar-minimalize minimalize-styl-2 btn " style="background-color: #0096C7; color:white" class="btn" href="#"><i class="fa fa-bars"></i> </a>
     </div>
         <ul class="nav navbar-top-links navbar-right">
             <li>
@@ -10,7 +10,7 @@
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                    <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                    <i class="fa fa-bell"></i>  <span class="label label-info">8</span>
                 </a>
                 <ul class="dropdown-menu dropdown-alerts">
                     <li>
@@ -26,7 +26,7 @@
 
 
             <li>
-                <a href="login.html">
+                <a href="/login">
                     <i class="fa fa-sign-out"></i> Log out
                 </a>
             </li>

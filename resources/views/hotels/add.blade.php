@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Form Add Data</h5>
+                            <h5>Form Tambah Data Hotel</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -25,21 +25,21 @@
                         <div class="ibox-content">
                             <form method="get">
                                 <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">Hotel ID</label>
+                                    <label class="col-sm-2 col-form-label">ID Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="id_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Hotel Name</label>
+                                    <label class="col-sm-2 col-form-label">Nama Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="nama_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Hotel Kategories</label>
+                                    <label class="col-sm-2 col-form-label">Kategori Hotel</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
+                                        <select class="form-control m-b" id="kategori_hotel">
                                             <option value="Bintang 1">*1</option>
                                             <option value="Bintang 2">*2</option>
                                             <option value="Bintang 3">*3</option>
@@ -48,15 +48,15 @@
                                         </select>
                                     </div>
 
-                                    <label class="col-sm-2 col-form-label">Id Hotel Room Kategories</label>
+                                    <label class="col-sm-2 col-form-label">Kategori Kamar Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Room 101" class="form-control">
+                                        <input type="text" placeholder="Room 101" class="form-control" id="id_kategori_kamar_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Hotel Area</label>
+                                    <label class="col-sm-2 col-form-label">Area Hotel</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" name="account">
+                                        <select class="form-control m-b">
                                             <option value="Bandung">Bandung</option>
                                             <option value="Banjar">Banjar</option>
                                             <option value="Bekasi">Bekasi</option>
@@ -80,21 +80,15 @@
                                         </select>
                                     </div>
 
-                                    <label class="col-sm-2 col-form-label">Hotel Telephone</label>
+                                    <label class="col-sm-2 col-form-label">Telepon Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="telepon_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Hotel Address</label>
+                                    <label class="col-sm-2 col-form-label">Alamat Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    
-                                    <label class="col-sm-2 col-form-label">Hotel Review</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="" ></textarea>
+                                        <input type="text" class="form-control" id="alamat_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -102,8 +96,8 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-white btn-sm" type="reset">Cancel</button>
-                                        <button class="btn btn-primary btn-sm" type="submit">Save Changes</button>
+                                        <button class="btn btn-white btn-sm" type="reset">Batal</button>
+                                        <button class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn" id="submit_add_hotel" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>
@@ -118,5 +112,19 @@
     </div>
 
 </div>
+
+<script>
+    const id_hotel = document.querySelector('#id_hotel').value
+    const nama_hotel = document.querySelector('#nama_hotel').value
+    //const kategori_hotel = document.querySelector('#kategori_hotel').value
+    const kategori_kamar = document.querySelector('#id_kategori_kamar_hotel').value
+    const telepon_hotel = document.querySelector('#telepon_hotel').value
+    const alamat_hotel = document.querySelector('#alamat_hotel').value
+    const btn_submit = document.querySelector('#submit_add_hotel')
+
+    btn_submit.addEventListener('click', () => {
+        if (id_hotel == "" && nama_hotel == "" && kategori_kamar == "" && telepon_hotel == "" && alamat_hotel == "") alert("Data Tidak Boleh Kosong!")
+    })
+</script>
 
 @include('layouts/js')
