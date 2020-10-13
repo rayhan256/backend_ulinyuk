@@ -24,78 +24,35 @@ Route::get('/dashboard', function () {
 });
 
 //ADMINS
-Route::get('/profile', function () {
-    return view('admins/profile');
-});
-Route::get('/update-profile', function () {
-    return view('admins/update');
-});
-
-//HOTELS
-Route::get('/hotels', function () {
-    return view('hotels/dashboard');
-});
-Route::get('/hotel-list', function () {
-    return view('hotels/list');
-});
-Route::get('/hotel-detail', function () {
-    return view('hotels/detail');
-});
-Route::get('/hotel-add-data', function () {
-    return view('hotels/add');
-});
-Route::get('/hotel-update-data', function () {
-    return view('hotels/update');
-});
-Route::get('/hotel-order', function () {
-    return view('hotels/order');
-});
-Route::get('/hotel-gallery', function () {
-    return view('hotels/gallery');
-});
-
-//RESTAURANTS
-Route::get('/restaurants', function () {
-    return view('restaurants/dashboard');
-});
-Route::get('/restaurant-list', function () {
-    return view('restaurants/list');
-});
-Route::get('/restaurant-detail', function () {
-    return view('restaurants/detail');
-});
-Route::get('/restaurant-add-data', function () {
-    return view('restaurants/add');
-});
-Route::get('/restaurant-update-data', function () {
-    return view('restaurants/update');
-});
-Route::get('/restaurant-order', function () {
-    return view('restaurants/order');
-});
-Route::get('/restaurant-gallery', function () {
-    return view('restaurants/gallery');
-});
+Route::get('/profile', 'Admins@index');
+Route::get('/update-profile', 'Admins@update_profile');
 
 //DESTINATIONS
-Route::get('/destinations', function () {
-    return view('destinations/dashboard');
-});
-Route::get('/destination-list', function () {
-    return view('destinations/list');
-});
-Route::get('/destination-detail', function () {
-    return view('destinations/detail');
-});
-Route::get('/destination-add-data', function () {
-    return view('destinations/add');
-});
-Route::get('/destination-update-data', function () {
-    return view('destinations/update');
-});
-Route::get('/destination-order', function () {
-    return view('destinations/order');
-});
-Route::get('/destination-gallery', function () {
-    return view('destinations/gallery');
-});
+Route::get('/objek-wisata', 'Destinations@index');
+Route::get('/list-detail-objek-wisata', 'Destinations@list_objek_wisata');
+Route::get('/tambah-data-objek-wisata', 'Destinations@add_objek_wisata');
+Route::get('/edit-data-objek-wisata', 'Destinations@update_objek_wisata');
+
+Route::get('/detail-objek-wisata', 'DestinationDetails@detail_objek_wisata');
+Route::get('/data-order-objek-wisata', 'DestinationOrders@order_objek_wisata');
+Route::get('/tambah-galeri-objek-wisata', 'GaleriDestinations@galeri_objek_wisata');
+
+//HOTELS
+Route::get('/hotel', 'Hotels@index');
+Route::get('/list-detail-hotel', 'Hotels@list_hotel');
+Route::get('/tambah-data-hotel', 'Hotels@add_hotel');
+Route::get('/edit-data-hotel', 'Hotels@update_hotel');
+
+Route::get('/detail-hotel', 'HotelDetails@detail_hotel');
+Route::get('/data-order-hotel', 'HotelOrders@order_hotel');
+Route::get('/tambah-galeri-hotel', 'GaleriHotels@galeri_hotel');
+
+//RESTAURANTS
+Route::get('/restaurant', 'Restaurants@index');
+Route::get('/list-detail-restaurant', 'Restaurants@list_restaurant');
+Route::get('/tambah-data-restaurant', 'Restaurants@add_restaurant');
+Route::get('/edit-data-restaurant', 'Restaurants@update_restaurant');
+
+Route::get('/detail-restaurant', 'RestaurantDetails@detail_restaurant');
+Route::get('/data-order-restaurant', 'RestaurantOrders@order_restaurant');
+Route::get('/tambah-galeri-restaurant', 'GaleriRestaurants@galeri_restaurant');

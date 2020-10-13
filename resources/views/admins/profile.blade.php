@@ -87,7 +87,7 @@
                         </tbody>
                         <tr>
                             <td>
-                                <a href="/update-profile" style="background-color: #0096C7; color:white" class="btn">Edit Profile</a>
+                                <a href="/update-profile" class="btn btn-primary">Edit Profile</a>
                             </td>
                         </tr>
                     </table>

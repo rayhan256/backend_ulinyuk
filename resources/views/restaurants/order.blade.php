@@ -10,7 +10,7 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/restaurants" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/restaurant" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                     </div>
                 </div>
@@ -59,10 +59,6 @@
                                         Tanggal Booking
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th class="text-right footable-visible footable-sortable footable-last-column">
-                                        Action
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
 
                                 </tr>
                                 </thead>
@@ -70,52 +66,21 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                       3214
+                                        1
                                     </td>
                                     <td class="footable-visible">
-                                        Customer example
+                                        Customer A
                                     </td>
                                     <td class="footable-visible">
-                                        Customer example
+                                        Restaurant A
                                     </td>
                                     <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
-                                        03/04/2015
-                                    </td>
-                                    <td class="text-right footable-visible footable-last-column">
-                                        <div class="btn-group">
-                                            <button class="btn-white btn btn-xs">View</button>
-                                            <button class="btn-white btn btn-xs">Edit</button>
-                                            <button class="btn-white btn btn-xs">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="footable-visible footable-first-column">
-                                        <span class="footable-toggle"></span>
-                                       3214
-                                    </td>
-                                    <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
-                                        Customer example
-                                    </td>
-                                    <td class="footable-visible">
-                                        Customer example
+                                        001 - Best Restaurant
                                     </td>
                                     <td class="footable-visible">
                                         03/04/2015
                                     </td>
-                                    <td class="text-right footable-visible footable-last-column">
-                                        <div class="btn-group">
-                                            <button class="btn-white btn btn-xs">View</button>
-                                            <button class="btn-white btn btn-xs">Edit</button>
-                                            <button class="btn-white btn btn-xs">Delete</button>
-                                        </div>
-                                    </td>
+                                    
                                 </tr>
                                 </tbody>
                                 <tfoot>

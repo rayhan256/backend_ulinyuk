@@ -10,15 +10,15 @@
                 <div class="col-lg-2">
                     <div style="float: right">
                         <div class="col mt-3">                       
-                            <a href="/restaurant-add-data" class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn"><i class="fa fa-plus-square"></i> Tambah Data</a>                        
+                            <a href="/tambah-data-restaurant" class="btn btn-sm btn-primary"><i class="fa fa-plus-square"></i> Tambah Data</a>                        
                         </div>
                         <br>
                         <div style="float: right">
                             <div class="mr-3">
-                                <a href="/restaurants" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                                <a href="/restaurant" class="btn btn-sm btn-outline btn-primary"> <i
                                     class="fa fa-th-large"></i> </a>
                                 <td>  </td>
-                                <a href="/restaurant-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                                <a href="/list-detail-restaurant" class="btn btn-sm btn-outline btn-primary"> <i
                                     class="fa fa-bars"></i> </a>
                             </div>
                         </div>
@@ -39,13 +39,13 @@
                                     <span class="product-price">
                                         $10
                                     </span>
-                                    <a href="/restaurant-detail" class="product-name"> Restaurant A</a>
+                                    <a href="/detail-restaurant" class="product-name"> Restaurant A</a>
                                     <div class="small m-t-xs">
                                         Many desktop publishing packages and web page editors now.
                                     </div>
                                     <div class="m-t text-righ">
     
-                                        <a href="/restaurant-detail" class="btn btn-xs" style="background-color: #0096C7; color:white" class="btn">Info <i
+                                        <a href="/detail-restaurant" class="btn btn-xs btn-outline btn-primary">Info <i
                                                 class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>

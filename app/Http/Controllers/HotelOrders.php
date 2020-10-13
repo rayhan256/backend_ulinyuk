@@ -67,4 +67,10 @@ class HotelOrders extends Controller
         $order = ModelHotelOrders::find($id);
         return $order;
     }
+
+    public function order_hotel()
+    {
+        $order = ModelHotelOrders::all();
+        return view('/hotels/order');
+    }
 }

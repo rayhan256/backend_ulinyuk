@@ -58,4 +58,10 @@ class DestinationDetails extends Controller
         $detail = ModelDestinationDetails::find($id);
         return $detail;
     }
+
+    public function detail_objek_wisata()
+    {
+        $detail = ModelDestinationDetails::all();
+        return view('/destinations/detail');
+    }
 }

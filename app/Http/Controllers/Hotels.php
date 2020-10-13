@@ -68,4 +68,28 @@ class Hotels extends Controller
         $hotel = ModelHotels::find($id);
         return $hotel;
     }
+
+    public function index()
+    {
+        $hotel = ModelHotels::all();
+        return view('/hotels/dashboard');
+    }
+
+    public function list_hotel()
+    {
+        $hotel = ModelHotels::all();
+        return view('/hotels/list');
+    }
+
+    public function add_hotel()
+    {
+        $hotel = ModelHotels::all();
+        return view('/hotels/add');
+    }
+
+    public function update_hotel()
+    {
+        $hotel = ModelHotels::all();
+        return view('/hotels/update');
+    }
 }

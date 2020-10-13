@@ -57,4 +57,10 @@ class GaleriHotels extends Controller
         $galeri = ModelGaleriHotels::find($id);
         return $galeri;
     }
+
+    public function galeri_hotel()
+    {
+        $galeri = ModelGaleriHotels::all();
+        return view('/hotels/gallery');
+    }
 }

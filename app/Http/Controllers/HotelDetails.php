@@ -62,4 +62,10 @@ class HotelDetails extends Controller
         $detail = ModelHotelDetails::find($id);
         return $detail;
     }
+
+    public function detail_hotel()
+    {
+        $detail = ModelHotelDetails::all();
+        return view('/hotels/detail');
+    }
 }

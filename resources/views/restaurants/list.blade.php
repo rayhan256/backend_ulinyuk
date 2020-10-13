@@ -10,11 +10,8 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/restaurants" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/restaurant" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
-                        <td>  </td>
-                        <a href="/restaurant-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
-                            class="fa fa-bars"></i> </a>
                     </div>
                 </div>
             </div>
@@ -26,7 +23,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label class="col-form-label" for="order_id">Cari Data</label>
-                            <input type="text" id="order_id" name="order_id" value="" placeholder="" class="form-control">
+                            <input type="text" placeholder="" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -43,29 +40,33 @@
                                 <tr>
 
                                     <th class="footable-visible footable-sortable footable-first-column">
+                                        ID Restaurant
+                                        <span class="footable-sort-indicator"></span>
+                                    </th>
+                                    <th class="footable-visible footable-sortable">
                                         Nama Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Kategori Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Area Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Telepon Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Alamat Restaurant
                                         <span class="footable-sort-indicator"></span>
-                                    </th>                                    
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    </th>
+                                    <th class="footable-visible footable-sortable">
                                         Jadwal Restaurant
                                         <span class="footable-sort-indicator"></span>
-                                    </th>                                    
+                                    </th>
                                     <th class="text-right footable-visible footable-sortable footable-last-column">
                                         Action
                                         <span class="footable-sort-indicator"></span>
@@ -77,10 +78,13 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        Restaurant A
-                                    </td>                                    
+                                        1
+                                    </td>
                                     <td class="footable-visible">
-                                        Best Family
+                                        Restaurant A
+                                    </td>
+                                    <td class="footable-visible">
+                                        001 - Best Restaurant
                                     </td>
                                     <td class="footable-visible">
                                         Bandung
@@ -89,15 +93,15 @@
                                         0987654334567
                                     </td>
                                     <td class="footable-visible">
-                                        Cihampelas, Bandung
-                                    </td>                                    
+                                        Chihampelas
+                                    </td>
                                     <td class="footable-visible">
-                                        Open Everyday 10.00 AM - 10.00 PM
-                                    </td>                                    
+                                        Open Everyday, 10.00 AM - 10.00 PM
+                                    </td>
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <button class="btn-white btn btn-xs">View</button>
-                                            <button class="btn-white btn btn-xs">Edit</button>
+                                            <a href="/detail-restaurant" class="btn-white btn btn-xs">View</a>
+                                            <a href="/edit-data-restaurant" class="btn-white btn btn-xs">Edit</a>
                                         </div>
                                     </td>
                                 </tr>

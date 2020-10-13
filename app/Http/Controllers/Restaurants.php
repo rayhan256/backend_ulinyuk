@@ -63,4 +63,28 @@ class Restaurants extends Controller
         $restaurant = ModelCustomers::find($id);
         return $restaurant;
     }
+
+    public function index()
+    {
+        $restaurant = ModelRestaurants::all();
+        return view('/restaurants/dashboard');
+    }
+
+    public function list_restaurant()
+    {
+        $restaurant = ModelRestaurants::all();
+        return view('/restaurants/list');
+    }
+
+    public function add_restaurant()
+    {
+        $restaurant = ModelRestaurants::all();
+        return view('/restaurants/add');
+    }
+
+    public function update_restaurant()
+    {
+        $restaurant = ModelRestaurants::all();
+        return view('/restaurants/update');
+    }
 }

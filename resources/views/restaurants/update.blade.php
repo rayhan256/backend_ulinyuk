@@ -92,7 +92,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-sm" style="background-color: #0096C7; color:white" class="btn" id="submit_update_resto" type="submit">Simpan</button>
+                                        <button class="btn btn-primary btn-sm" id="submit_update_resto" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>

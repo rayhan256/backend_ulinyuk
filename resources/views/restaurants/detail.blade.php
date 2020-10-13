@@ -10,10 +10,10 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/restaurants" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/restaurant" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                         <td>  </td>
-                        <a href="/restaurant-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/list-detail-restaurant" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-bars"></i> </a>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> Open Everyday 10.00 AM - 10.00 PM
+                                        <i class="fa fa-clock-o"></i> Open Everyday, 10.00 AM - 10.00 PM
                                     </h3>                                   
                                     <hr>
                                     <h3>
@@ -93,8 +93,8 @@
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
-                                        <a href="/restaurant-update-data" class="btn btn-info">Edit Data</a>
-                                        <a href="/restaurant-gallery" class="btn" style="background-color: #0096C7; color:white" class="btn">Tambah Gambar</a>
+                                        <a href="/edit-data-restaurant" class="btn btn-primary">Edit Data</a>
+                                        <a href="/tambah-galeri-restaurant" class="btn btn-primary">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>

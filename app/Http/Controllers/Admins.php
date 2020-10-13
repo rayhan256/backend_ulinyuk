@@ -65,4 +65,16 @@ class Admins extends Controller
         $admin = ModelAdmins::find($id);
         return $admin;
     }
+
+    public function index()
+    {
+        $admin = ModelAdmins::all();
+        return view('/admins/profile');
+    }
+
+    public function update_profile()
+    {
+        $admin = ModelAdmins::all();
+        return view('/admins/update');
+    }
 }

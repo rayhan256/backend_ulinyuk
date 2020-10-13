@@ -61,4 +61,10 @@ class RestaurantOrders extends Controller
         $order = ModelRestaurantOrders::find($id);
         return $order;
     }
+
+    public function order_restaurant()
+    {
+        $order = ModelRestaurantOrders::all();
+        return view('/restaurants/order');
+    }
 }

@@ -56,4 +56,10 @@ class RestaurantDetails extends Controller
         $detail = ModelRestaurantDetails::find($id);
         return $detail;
     }
+
+    public function detail_restaurant()
+    {
+        $detail = ModelRestaurantDetails::all();
+        return view('/restaurants/detail');
+    }
 }

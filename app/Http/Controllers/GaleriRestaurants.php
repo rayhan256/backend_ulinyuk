@@ -57,4 +57,10 @@ class GaleriRestaurants extends Controller
         $galeri = ModelGaleriRestaurants::find($id);
         return $galeri;
     }
+
+    public function galeri_restaurant()
+    {
+        $galeri = ModelGaleriRestaurants::all();
+        return view('/restaurants/gallery');
+    }
 }

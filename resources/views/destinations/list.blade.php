@@ -10,11 +10,8 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/destinations" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/objek-wisata" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
-                        <td>  </td>
-                        <a href="/destination-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
-                            class="fa fa-bars"></i> </a>
                     </div>
                 </div>
             </div>
@@ -43,29 +40,33 @@
                                 <tr>
 
                                     <th class="footable-visible footable-sortable footable-first-column">
+                                        ID Objek Wisata
+                                        <span class="footable-sort-indicator"></span>
+                                    </th>
+                                    <th class="footable-visible footable-sortable">
                                         Nama Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Kategori Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Area Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Telepon Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Alamat Objek Wisata
                                         <span class="footable-sort-indicator"></span>
-                                    </th>                                    
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    </th>
+                                    <th class="footable-visible footable-sortable">
                                         Jadwal Objek Wisata
                                         <span class="footable-sort-indicator"></span>
-                                    </th>                                    
+                                    </th>
                                     <th class="text-right footable-visible footable-sortable footable-last-column">
                                         Action
                                         <span class="footable-sort-indicator"></span>
@@ -77,8 +78,11 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                       Objek Wisata A
-                                    </td>                                    
+                                       1
+                                    </td>
+                                    <td class="footable-visible">
+                                        Objek Wisata A
+                                    </td>
                                     <td class="footable-visible">
                                         Family
                                     </td>
@@ -89,15 +93,15 @@
                                         0987654334567
                                     </td>
                                     <td class="footable-visible">
-                                        Lembang, Bandung
-                                    </td>                                    
+                                        Lembang
+                                    </td>
                                     <td class="footable-visible">
-                                        Open Everyday 10.00 AM - 10.00 PM
-                                    </td>                                    
+                                        Open Everyday, 10.00 AM - 10.00 PM
+                                    </td>
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <button class="btn-white btn btn-xs">View</button>
-                                            <button class="btn-white btn btn-xs">Edit</button>
+                                            <a href="/detail-objek-wisata" class="btn-white btn btn-xs">View</a>
+                                            <a href="/edit-data-objek-wisata" class="btn-white btn btn-xs">Edit</a>
                                         </div>
                                     </td>
                                 </tr>

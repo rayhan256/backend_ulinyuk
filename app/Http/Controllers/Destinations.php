@@ -66,4 +66,28 @@ class Destinations extends Controller
         $destination = ModelDestinations::find($id);
         return $destination;
     }
+
+    public function index()
+    {
+        $destination = ModelDestinations::all();
+        return view('/destinations/dashboard');
+    }
+
+    public function list_objek_wisata()
+    {
+        $destination = ModelDestinations::all();
+        return view('/destinations/list');
+    }
+
+    public function add_objek_wisata()
+    {
+        $destination = ModelDestinations::all();
+        return view('/destinations/add');
+    }
+
+    public function update_objek_wisata()
+    {
+        $destination = ModelDestinations::all();
+        return view('/destinations/update');
+    }
 }

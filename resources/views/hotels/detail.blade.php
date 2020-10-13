@@ -10,10 +10,10 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/hotels" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/hotel" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                         <td>  </td>
-                        <a href="/hotel-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/list-detail-hotel" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-bars"></i> </a>
                     </div>
                 </div>
@@ -75,7 +75,8 @@
                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla consectetur nostrum nesciunt est temporibus deleniti quo sit iusto expedita fugit omnis quod, odit suscipit, a aspernatur! Ratione amet incidunt libero..
                                     </div>
 
-                                    <dl class="m-t-md">                                        
+                                    <dl class="m-t-md">
+                                        
                                         <dt>Hotel Facility</dt>
                                         <div class="Collapse__more__amenities">
                                             <div class="content-amenities">
@@ -98,16 +99,23 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> Soekarno Hatta, Bandung
+                                        <i class="fa fa-map-marker"></i> 
+                                        Soekarno Hatta, Bandung
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-phone"></i> 0987654334567
+                                        <i class="fa fa-phone"></i> 
+                                        0987654334567
+                                    </h3>                                   
+                                    <hr>
+                                    <h3>
+                                        <i class="fa fa-usd"></i> 
+                                        100 / <small>night</small>
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
-                                        <a href="/hotel-update-data" class="btn btn-info">Edit Data</a>
-                                        <a href="/hotel-gallery" class="btn" style="background-color: #0096C7; color:white" class="btn">Tambah Gambar</a>
+                                        <a href="/edit-data-hotel" class="btn btn-primary">Edit Data</a>
+                                        <a href="/tambah-galeri-hotel" class="btn btn-primary">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>

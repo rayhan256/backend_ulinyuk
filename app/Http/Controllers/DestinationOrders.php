@@ -66,4 +66,10 @@ class DestinationOrders extends Controller
         $order = ModelDestinationOrders::find($id);
         return $order;
     }
+
+    public function order_objek_wisata()
+    {
+        $order = ModelDestinationOrders::all();
+        return view('/destinations/order');
+    }
 }

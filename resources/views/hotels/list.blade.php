@@ -10,11 +10,8 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/hotels" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
+                        <a href="/hotel" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
-                        <td>  </td>
-                        <a href="/hotel-list" class="btn btn-sm btn-outline" style="background-color: #0096C7; color:white" class="btn"> <i
-                            class="fa fa-bars"></i> </a>
                     </div>
                 </div>
             </div>
@@ -46,26 +43,30 @@
                                         ID Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Nama Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Kategori Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Kategori Kamar Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
+                                        Area Hotel
+                                        <span class="footable-sort-indicator"></span>
+                                    </th>
+                                    <th class="footable-visible footable-sortable">
                                         Telepon Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
-                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                    <th class="footable-visible footable-sortable">
                                         Alamat Hotel
                                         <span class="footable-sort-indicator"></span>
-                                    </th>                                    
+                                    </th>
                                     <th class="text-right footable-visible footable-sortable footable-last-column">
                                         Action
                                         <span class="footable-sort-indicator"></span>
@@ -77,27 +78,31 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                       HT101
+                                       1
                                     </td>
                                     <td class="footable-visible">
                                         Hotel A
                                     </td>
                                     <td class="footable-visible">
-                                        *4
+                                        Bintang 3
                                     </td>
                                     <td class="footable-visible">
-                                        Best Family Class
+                                        Luxury
+                                    </td>
+                                    <td class="footable-visible">
+                                        Bandung
                                     </td>
                                     <td class="footable-visible">
                                         0987654334567
                                     </td>
                                     <td class="footable-visible">
-                                        Soekarno Hatta, Bandung
-                                    </td>                                    
+                                        Soekarno Hatta
+                                    </td>
+                                    
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <button class="btn-white btn btn-xs">View</button>
-                                            <button class="btn-white btn btn-xs">Edit</button>
+                                            <a href="/detail-hotel" class="btn-white btn btn-xs">View</a>
+                                            <a href="/edit-data-hotel" class="btn-white btn btn-xs">Edit</a>
                                         </div>
                                     </td>
                                 </tr>

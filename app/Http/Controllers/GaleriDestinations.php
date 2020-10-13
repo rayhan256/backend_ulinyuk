@@ -57,4 +57,10 @@ class GaleriDestinations extends Controller
         $galeri = ModelGaleriDestinations::find($id);
         return $galeri;
     }
+
+    public function galeri_objek_wisata()
+    {
+        $galeri = ModelGaleriDestinations::all();
+        return view('/destinations/gallery');
+    }
 }
