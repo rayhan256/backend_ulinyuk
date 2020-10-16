@@ -13,7 +13,7 @@ class MstRestaurantDetails extends Migration
      */
     public function up()
     {
-        Schema::table('mst_restaurant_details', function (Blueprint $table) {
+        Schema::create('mst_restaurant_details', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk            
             $table->integer('id_kategori_restaurant');
             $table->unsignedBigInteger('id_restaurant'); //fk ke table mst_restaurants

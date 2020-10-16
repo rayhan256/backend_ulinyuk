@@ -13,7 +13,7 @@ class MstHotelOrders extends Migration
      */
     public function up()
     {
-        Schema::table('mst_hotel_orders', function (Blueprint $table) {
+        Schema::create('mst_hotel_orders', function (Blueprint $table) {
             $table->bigIncrements('id'); //primary key            
             $table->integer('id_booking_kamar');
             $table->unsignedBigInteger('id_customer'); //foreign key ke mst_customers

@@ -13,7 +13,7 @@ class MstGaleriDestinations extends Migration
      */
     public function up()
     {
-        Schema::table('mst_galeri_destinations', function (Blueprint $table) {
+        Schema::create('mst_galeri_destinations', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
             $table->integer('id_galeri_objek_wisata');
             $table->unsignedBigInteger('id_objek_wisata'); //fk mst_destinations

@@ -13,7 +13,7 @@ class MstHistoriBookingRestaurants extends Migration
      */
     public function up()
     {
-        Schema::table('mst_histori_booking_restaurants', function (Blueprint $table) {
+        Schema::create('mst_histori_booking_restaurants', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
             $table->unsignedBigInteger('id_booking_restaurant'); //fk mst_restaurant_orders
             $table->unsignedBigInteger('id_customer');

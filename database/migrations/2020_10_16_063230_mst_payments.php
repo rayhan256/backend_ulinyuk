@@ -13,7 +13,7 @@ class MstPayments extends Migration
      */
     public function up()
     {
-        Schema::table('mst_payments', function (Blueprint $table) {
+        Schema::create('mst_payments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('id_pembayaran');
             $table->unsignedBigInteger('id_customer'); //fk mst_customers

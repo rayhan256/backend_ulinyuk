@@ -13,7 +13,7 @@ class MstRestaurants extends Migration
      */
     public function up()
     {
-        Schema::table('mst_restaurants', function (Blueprint $table) {
+        Schema::create('mst_restaurants', function (Blueprint $table) {
             $table->bigIncrements('id'); //primary key
             $table->integer('id_restaurant');
             $table->string('nama_restaurant');

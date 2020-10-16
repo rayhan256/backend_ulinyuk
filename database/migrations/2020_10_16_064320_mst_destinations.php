@@ -13,7 +13,7 @@ class MstDestinations extends Migration
      */
     public function up()
     {
-        Schema::table('mst_destinations', function (Blueprint $table) {
+        Schema::create('mst_destinations', function (Blueprint $table) {
             $table->bigIncrements('id'); //primary key
             $table->integer('id_objek_wisata');
             $table->string('nama_objek_wisata');

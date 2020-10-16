@@ -13,10 +13,10 @@ class MstDestinationDetails extends Migration
      */
     public function up()
     {
-        Schema::table('mst_destination_details', function (Blueprint $table) {
+        Schema::create('mst_destination_details', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk            
             $table->integer('id_kategori_objek_wisata');
-            $table->integer('id_objek_wisata'); // fk ke table mst_destinations
+            $table->unsignedBigInteger('id_objek_wisata'); // fk ke table mst_destinations
             $table->string('kategori_objek_wisata');
             $table->string('jadwal_objek_wisata');
             $table->text('wahana_objek_wisata');
