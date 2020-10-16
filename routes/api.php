@@ -71,6 +71,13 @@ Route::put('/galeri_destination/update/{id}', 'GaleriDestinations@updateData');
 Route::delete('/galeri_destination/delete/{id}', 'GaleriDestinations@deleteData');
 Route::get('/galeri_destination/{id}', 'GaleriDestinations@getDataId');
 
+//mst_histori_booking_destinations
+Route::get('/histori_destination', 'HistoriBookingDestinations@getAll');
+Route::post('/histori_destination/post', 'HistoriBookingDestinations@insertData');
+Route::put('/histori_destination/update/{id}', 'HistoriBookingDestinations@updateData');
+Route::delete('/histori_destination/delete/{id}', 'HistoriBookingDestinations@deleteData');
+Route::get('/histori_destination/{id}', 'HistoriBookingDestinations@getDataId');
+
 
 
 //mst_hotel_details
@@ -101,6 +108,13 @@ Route::put('/galeri_hotel/update/{id}', 'GaleriHotels@updateData');
 Route::delete('/galeri_hotel/delete/{id}', 'GaleriHotels@deleteData');
 Route::get('/galeri_hotel/{id}', 'GaleriHotels@getDataId');
 
+//mst_histori_booking_hotels
+Route::get('/histori_hotel', 'HistoriBookingHotels@getAll');
+Route::post('/histori_hotel/post', 'HistoriBookingHotels@insertData');
+Route::put('/histori_hotel/update/{id}', 'HistoriBookingHotels@updateData');
+Route::delete('/histori_hotel/delete/{id}', 'HistoriBookingHotels@deleteData');
+Route::get('/histori_hotel/{id}', 'HistoriBookingHotels@getDataId');
+
 
 
 //mst_restaurant_details
@@ -130,6 +144,13 @@ Route::post('/galeri_restaurant/post', 'GaleriRestaurants@insertData');
 Route::put('/galeri_restaurant/update/{id}', 'GaleriRestaurants@updateData');
 Route::delete('/galeri_restaurant/delete/{id}', 'GaleriRestaurants@deleteData');
 Route::get('/galeri_restaurant/{id}', 'GaleriRestaurants@getDataId');
+
+//mst_histori_booking_restaurants
+Route::get('/histori_restaurant', 'HistoriBookingRestaurants@getAll');
+Route::post('/histori_restaurant/post', 'HistoriBookingRestaurants@insertData');
+Route::put('/histori_restaurant/update/{id}', 'HistoriBookingRestaurants@updateData');
+Route::delete('/histori_restaurant/delete/{id}', 'HistoriBookingRestaurants@deleteData');
+Route::get('/histori_restaurant/{id}', 'HistoriBookingRestaurants@getDataId');
 
 
 //mst_payments

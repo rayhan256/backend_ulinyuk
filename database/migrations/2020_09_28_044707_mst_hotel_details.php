@@ -17,9 +17,12 @@ class MstHotelDetails extends Migration
             $table->bigIncrements('id'); //pk            
             $table->integer('id_kategori_kamar_hotel');
             $table->string('kategori_kamar_hotel');
+            $table->text('fasilitas_hotel');
+            $table->text('fasilitas_kamar_hotel');
+            $table->text('fasilitas_publik_hotel');
+            $table->text('fasilitas_terdekat_hotel');
+            $table->text('fasilitas_transportasi_hotel');
             $table->integer('harga_kamar_hotel');
-            $table->string('fasilitas_kamar_hotel');
-            $table->string('aminities_kamar_hotel');
             $table->softDeletes();
             $table->timestamps();
         });

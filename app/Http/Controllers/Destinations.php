@@ -27,6 +27,7 @@ class Destinations extends Controller
         $destination->telepon_objek_wisata = $request->telepon_objek_wisata;
         $destination->alamat_objek_wisata = $request->alamat_objek_wisata;
         $destination->jadwal_objek_wisata = $request->jadwal_objek_wisata;
+        $destination->jadwal_objek_wisata = $request->jadwal_objek_wisata;
         $destination->review_objek_wisata = $request->review_objek_wisata;
 
         $destination->save();
@@ -38,12 +39,13 @@ class Destinations extends Controller
     {
         $find_destination_by_id = ModelDestinations::find($id);
 
-        $find_destination_by_id->id_objek_wisata = $request->id_objek_wisata;
+        $find_destination_by_id->kode_objek_wisata = $request->kode_objek_wisata;
         $find_destination_by_id->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $find_destination_by_id->nama_objek_wisata = $request->nama_objek_wisata;
         $find_destination_by_id->area_objek_wisata = $request->area_objek_wisata;
         $find_destination_by_id->telepon_objek_wisata = $request->telepon_objek_wisata;
         $find_destination_by_id->alamat_objek_wisata = $request->alamat_objek_wisata;
+        $find_destination_by_id->jadwal_objek_wisata = $request->jadwal_objek_wisata;
         $find_destination_by_id->jadwal_objek_wisata = $request->jadwal_objek_wisata;
         $find_destination_by_id->review_objek_wisata = $request->review_objek_wisata;
 
@@ -83,6 +85,12 @@ class Destinations extends Controller
     {
         $destination = ModelDestinations::all();
         return view('/destinations/add');
+    }
+
+    public function add_detail_objek_wisata()
+    {
+        $destination = ModelDestinations::all();
+        return view('/destinations/add_detail');
     }
 
     public function update_objek_wisata()

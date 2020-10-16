@@ -39,9 +39,11 @@
                                     <span class="product-price">
                                         $10
                                     </span>
-                                    <a href="/detail-restaurant" class="product-name"> Restaurant A</a>
+                                    <a href="/detail-restaurant" class="product-name"> 
+                                        Restaurant Lawang Wangi
+                                    </a>
                                     <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
+                                        Jl. Dago Giri No.99, Mekarwangi, Lembang, Kabupaten Bandung Barat
                                     </div>
                                     <div class="m-t text-righ">
     

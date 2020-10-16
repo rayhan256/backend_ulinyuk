@@ -44,15 +44,15 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable"> 
-                                        Nama Customer
+                                        ID Customer
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Nama Objek Wisata
+                                        ID Kategori Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Kategori Objek Wisata
+                                        ID Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
@@ -78,19 +78,19 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                       1
+                                        1
                                     </td>
                                     <td class="footable-visible">
-                                        Customer A
+                                        1 - Customer A
                                     </td>
                                     <td class="footable-visible">
-                                        Objek Wisata A
+                                        1 - Family
                                     </td>
                                     <td class="footable-visible">
-                                        Family
+                                        1 - Orchid Forest Cikole
                                     </td>
                                     <td class="footable-visible">
-                                        03/04/2015
+                                        01/10/2020
                                     </td>
                                     <td class="footable-visible">
                                         50.000

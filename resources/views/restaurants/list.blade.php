@@ -48,7 +48,7 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="footable-visible footable-sortable">
-                                        Kategori Restaurant
+                                        ID Kategori Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="footable-visible footable-sortable">
@@ -81,22 +81,22 @@
                                         1
                                     </td>
                                     <td class="footable-visible">
-                                        Restaurant A
+                                        Restaurant Lawang Wangi
                                     </td>
                                     <td class="footable-visible">
-                                        001 - Best Restaurant
+                                        1 - Best Restaurant
                                     </td>
                                     <td class="footable-visible">
                                         Bandung
                                     </td>
                                     <td class="footable-visible">
-                                        0987654334567
+                                        08156016666
                                     </td>
                                     <td class="footable-visible">
-                                        Chihampelas
+                                        Jl. Dago Giri No.99, Mekarwangi, Lembang, Kabupaten Bandung Barat, Jawa Barat 40391
                                     </td>
                                     <td class="footable-visible">
-                                        Open Everyday, 10.00 AM - 10.00 PM
+                                        Setiap Hari, 09.00 - 22.00 WIB
                                     </td>
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">

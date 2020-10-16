@@ -17,7 +17,7 @@ class MstGaleriDestinations extends Migration
             $table->bigIncrements('id'); //pk
             $table->integer('id_galeri_objek_wisata');
             $table->unsignedBigInteger('id_objek_wisata'); //fk mst_destinations
-            $table->text('gambar_objek_wisata');
+            $table->text('foto_objek_wisata');
             $table->softDeletes();
             $table->timestamps();
 

@@ -34,14 +34,14 @@
                         <div class="ibox">
                             <div class="ibox-content product-box">
     
-                                <img src="assets/image/hotels/hotel1.jpg" alt="" width='100%'>
+                                <img src="assets/image/hotels/hotel2.jpg" alt="" width='100%'>
                                 <div class="product-desc">
                                     <span class="product-price">
-                                        $10
+                                        $50
                                     </span>
-                                    <a href="/detail-hotel" class="product-name"> Hotel A</a>
+                                    <a href="/detail-hotel" class="product-name"> Aston Hotel Pasteur</a>
                                     <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
+                                        Jl. Dr. Djunjunan No.162, Sukagalih, Kec. Sukajadi, Kota Bandung
                                     </div>
                                     <div class="m-t text-righ">
     

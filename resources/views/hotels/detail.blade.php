@@ -26,7 +26,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/hotels/hotel1.jpg" alt="" width='100%'>
+                                    <img src="assets/image/hotels/hotel2.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/hotels/hotel2.jpg" alt="" width='100%'>
+                                    <img src="assets/image/hotels/hotel1.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -63,35 +63,100 @@
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
-                                    <h3 class="font-bold">
-                                        Hotel A
+                                    <h3>
+                                        <b>Aston Hotel Pasteur</b>
                                     </h3>
                                     <hr>
-                                    <h4>Deskripsi Hotel</h4>
+                                    <h4><b>Deskripsi</b></h4>
                                     <div class="">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam quidem quibusdam nam tenetur, rerum, maxime nostrum, commodi assumenda facere illum quis. Quas pariatur libero tempore molestiae totam beatae? Dolor.
+                                        Hotel modern ini berjarak 3 km dari Bandara Internasional Husein Sastranegara dan 2 km dari mal Paris Van Java.
+                                        Kamar kelas atas dengan jendela setinggi langit-langit dilengkapi Wi-Fi gratis, TV layar datar, dan minibar, serta fasilitas pembuat teh dan kopi. Suite memiliki ruang keluarga. Layanan kamar juga tersedia.
                                         <br>
                                         <br>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla consectetur nostrum nesciunt est temporibus deleniti quo sit iusto expedita fugit omnis quod, odit suscipit, a aspernatur! Ratione amet incidunt libero..
+                                        Sarapan (berbayar) ditawarkan di restoran internasional yang trendi. Terdapat kolam renang outdoor dengan hot tub dan area anak-anak terpisah. Fasilitas lainnya meliputi lounge di atap dan gym, serta ballroom dan 8 ruang pertemuan.
                                     </div>
 
-                                    <dl class="m-t-md">
-                                        
-                                        <dt>Hotel Facility</dt>
-                                        <div class="Collapse__more__amenities">
-                                            <div class="content-amenities">
-                                                <ul>
-                                                    <li>Free self parking</li>
-                                                    <li>Free WiFi</li> 
-                                                    <li>Number of restaurants - 5</li> 
-                                                    <li>Number of outdoor pools - 3</li> 
-                                                    <li>Swimming pool</li> 
-                                                    <li>Number of poolside bars - 3</li> <li>Waterslide</li> 
-                                                    <li>Bar/lounge</li>
-                                                </ul>
-                                            </div>                                            
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Fasilitas Hotel</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>Area Parkir</li>
+                                                            <li>Restaurant</li> 
+                                                            <li>24 jam Security</li> 
+                                                            <li>Servis Ruangan</li>
+                                                            <li>Breakfast</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
                                         </div>
-                                    </dl>
+                                        <div class="col-md-4">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Fasilitas Kamar Hotel</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>WiFi</li>
+                                                            <li>Televisi</li> 
+                                                            <li>AC</li> 
+                                                            <li>Mini Bar</li>
+                                                            <li>Shower</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Fasilitas Publik Hotel</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>Area Parkir</li>
+                                                            <li>WiFi</li> 
+                                                            <li>Coffe Shop</li> 
+                                                            <li>Breakfast Restaurant</li>
+                                                            <li>Lunch Restaurant</li>
+                                                            <li>Dinner Restaurant</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Fasilitas Terdekat Hotel</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>ATM/Banking</li>
+                                                            <li>Minimarket</li> 
+                                                            <li>Salon Kecantikan</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Fasilitas Transportasi Hotel</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>Rental Kendaraan</li>
+                                                            <li>Keamanan Kendaraan</li> 
+                                                            <li>Layanan Parkir</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
 
                                 </div>
                                 
@@ -100,17 +165,27 @@
                                     <hr>
                                     <h3>
                                         <i class="fa fa-map-marker"></i> 
-                                        Soekarno Hatta, Bandung
+                                        Jl. Dr. Djunjunan No.162, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40162
                                     </h3>
                                     <hr>
                                     <h3>
+                                        <i class="fa fa-sign-in"></i> 
+                                        CheckIn Time : 14.00 WIB
+                                    </h3> 
+                                    <hr>                                  
+                                    <h3>
+                                        <i class="fa fa-sign-out"></i> 
+                                        CheckOut Time : 12.00 WIB
+                                    </h3> 
+                                    <hr>                                  
+                                    <h3>
                                         <i class="fa fa-phone"></i> 
-                                        0987654334567
+                                        (022) 82000777
                                     </h3>                                   
                                     <hr>
                                     <h3>
                                         <i class="fa fa-usd"></i> 
-                                        100 / <small>night</small>
+                                        50 / <small>night</small>
                                     </h3>                                   
                                     <hr>
                                     <div>                                                

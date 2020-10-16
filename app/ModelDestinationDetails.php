@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ModelDestinationDetails extends Model
 {
     protected $table = 'mst_destination_details';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'id_kategori_objek_wisata', 'kategori_objek_wisata', 'harga_tiket'

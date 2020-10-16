@@ -9,7 +9,7 @@ class ModelRestaurants extends Model
     protected $table = 'mst_restaurants';
 
     protected $fillable = [
-        'id_restaurant', 'id_kategori_restaurant', 'nama_restaurant', 'area_restaurant', 'telepon_restaurant', 'alamat_restaurant', 'jadwal_restaurant', 'review_restaurant',
+        'id_restaurant', 'id_kategori_restaurant', 'nama_restaurant', 'area_restaurant', 'telepon_restaurant', 'alamat_restaurant', 'jadwal_restaurant', 'deskripsi_restaurant', 'review_restaurant',
     ];
 
     //relasi agar data bisa diambil oleh mst_restaurant_orders

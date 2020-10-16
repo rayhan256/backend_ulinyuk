@@ -5,7 +5,7 @@
         <div class="mt-3">
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Update Data Objek Wisata</h2>                
+                    <h2>Tambah Data Objek Wisata</h2>                
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Form Update Data Objek Wisata</h5>
+                            <h5>Form Tambah Detail Objek Wisata</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -24,22 +24,22 @@
                         </div>
                         <div class="ibox-content">
                             <form method="get">
-                                <div class="form-group row">
+                                <div class="form-group row">                                    
                                     <label class="col-sm-2 col-form-label">ID Kategori Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_kategori_objek_wisata">
+                                        <input type="text" class="form-control" id="id_kategori_objek_wisata" />
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Telepon Objek Wisata</label>
+                                    <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="telepon_objek_wisata">
+                                        <input type="text" class="form-control" id="id_objek_wisata" />
                                     </div>
                                     <div class="hr-line-dashed"></div>
-
-                                    <label class="col-sm-2 col-form-label">Alamat Objek Wisata</label>
+                                    
+                                    <label class="col-sm-2 col-form-label">Kategori Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="alamat_objek_wisata">
+                                        <input type="text" class="form-control" id="kategori_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -51,19 +51,19 @@
 
                                     <label class="col-sm-2 col-form-label">Wahana Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <textarea name="wahana_objek_wisata" id="wahana_objek_wisata" cols="63" rows="5"></textarea>
+                                        <textarea name="wahana_objek_wisata" id="wahana_objek_wisata" cols="53" rows="5"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <textarea name="fasilitas_objek_wisata" id="fasilitas_objek_wisata" cols="63" rows="5"></textarea>
+                                        <textarea name="fasilitas_objek_wisata" id="fasilitas_objek_wisata" cols="53" rows="5"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Deskripsi Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <textarea name="deskripsi_objek_wisata" id="deskripsi_objek_wisata" cols="63" rows="5"></textarea>
+                                        <textarea name="deskripsi_objek_wisata" id="deskripsi_objek_wisata" cols="53" rows="5"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -72,13 +72,12 @@
                                         <input type="text" class="form-control" id="harga_tiket">
                                     </div>
                                     <div class="hr-line-dashed"></div>
-
                                     
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="submit_update_obwis" type="submit">Simpan</button>
+                                        <button class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>
@@ -93,21 +92,18 @@
     </div>
 
 </div>
-
 <script>
-    const id_obwis = document.querySelector('#id_objek_wisata').value
-    const kategori_obwis = document.querySelector('#id_kategori_objek_wisata').value
-    const nama_obwis = document.querySelector('#nama_objek_wisata').value
-    //const area_obwis = document.querySelector('#area_objek_wisata').value
-    const telepon_obwis = document.querySelector('#telepon_objek_wisata').value
-    const alamat_obwis = document.querySelector('#alamat_objek_wisata').value
-    const jadwal_obwis = document.querySelector('#jadwal_objek_wisata').value
-    const btn_submit = document.querySelector('#submit_update_obwis')
+    const id_kategori_resto = document.querySelector('#id_kategori_restaurant').value
+    const id_resto = document.querySelector('#id_restaurant').value
+    const kategori_resto = document.querySelector('#kategori_restaurant').value
+    const jadwal_resto = document.querySelector('#jadwal_restaurant').value
+    const fasilitas_resto = document.querySelector('#fasilitas_restaurant').value
+    const deskripsi_resto = document.querySelector('#deskripsi_restaurant').value
+    const btn_submit = document.querySelector('#submit_add_resto')
 
     btn_submit.addEventListener('click', () => {
-        if (id_obwis == "" && kategori_obwis == "" && nama_obwis == "" && telepon_obwis == "" && alamat_obwis == "" && jadwal_obwis == "" ) alert("Data Tidak Boleh Kosong!")
+        if (id_kategori_resto == "" && id_resto == "" && kategori_resto == "" && jadwal_resto == "" && fasilitas_resto == "" && deskripsi_resto == "" ) alert("Data Tidak Boleh Kosong!")
     })
-
 </script>
-@include('layouts/js')
 
+@include('layouts/js')

@@ -44,15 +44,19 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable"> 
-                                        Nama Customer
+                                        ID Customer
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Nama Restaurant
+                                        ID Kategori Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Kategori Restaurant
+                                        ID Restaurant
+                                        <span class="footable-sort-indicator"></span>
+                                    </th>
+                                    <th data-hide="phone" class="footable-visible footable-sortable">
+                                        Jumlah Orang
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
@@ -69,16 +73,19 @@
                                         1
                                     </td>
                                     <td class="footable-visible">
-                                        Customer A
+                                        1 - Customer A
                                     </td>
                                     <td class="footable-visible">
-                                        Restaurant A
+                                        1 - Restaurant A
                                     </td>
                                     <td class="footable-visible">
-                                        001 - Best Restaurant
+                                        1 - Best Restaurant
                                     </td>
                                     <td class="footable-visible">
-                                        03/04/2015
+                                        5
+                                    </td>
+                                    <td class="footable-visible">
+                                        01/10/2020
                                     </td>
                                     
                                 </tr>

@@ -48,12 +48,6 @@
                                         </select>
                                     </div>
 
-                                    <label class="col-sm-2 col-form-label">Kategori Kamar Hotel</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" placeholder="Room 101" class="form-control" id="id_kategori_kamar_hotel">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-
                                     <label class="col-sm-2 col-form-label">Area Hotel</label>
                                     <div class="col-sm-10">
                                         <select class="form-control m-b">
@@ -91,13 +85,12 @@
                                         <input type="text" class="form-control" id="alamat_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
-
                                     
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="submit_add_hotel" type="submit">Simpan</button>
+                                        <a href="/tambah-detail-hotel" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a>
                                     </div>
                                 </div>
                             </form>

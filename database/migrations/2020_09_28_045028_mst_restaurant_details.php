@@ -17,6 +17,7 @@ class MstRestaurantDetails extends Migration
             $table->bigIncrements('id'); //pk            
             $table->integer('id_kategori_restaurant');
             $table->string('kategori_restaurant');
+            $table->string('fasilitas_restaurant');
             $table->softDeletes();
             $table->timestamps();
         });

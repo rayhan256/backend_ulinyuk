@@ -44,15 +44,7 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="footable-visible footable-sortable">
-                                        Nama Hotel
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th class="footable-visible footable-sortable">
-                                        Kategori Hotel
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th class="footable-visible footable-sortable">
-                                        Kategori Kamar Hotel
+                                        ID Kategori Kamar Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="footable-visible footable-sortable">
@@ -78,25 +70,19 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                       1
+                                        1 - Aston Hotel Pasteur
                                     </td>
                                     <td class="footable-visible">
-                                        Hotel A
-                                    </td>
-                                    <td class="footable-visible">
-                                        Bintang 3
-                                    </td>
-                                    <td class="footable-visible">
-                                        Luxury
+                                        Bintang 3 - Luxury
                                     </td>
                                     <td class="footable-visible">
                                         Bandung
                                     </td>
                                     <td class="footable-visible">
-                                        0987654334567
+                                        (022) 82000777
                                     </td>
                                     <td class="footable-visible">
-                                        Soekarno Hatta
+                                        Jl. Dr. Djunjunan No.162, Sukagalih, Kec. Sukajadi, Kota Bandung
                                     </td>
                                     
                                     <td class="text-right footable-visible footable-last-column">

@@ -30,12 +30,6 @@
                                         <input type="text" class="form-control" id="id_restaurant" />
                                     </div>
                                     <div class="hr-line-dashed"></div>
-
-                                    <label class="col-sm-2 col-form-label">Kategori Restaurant</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" placeholder="Resto 101-Best Restaurants" class="form-control" id="id_kategori_restaurant">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
                                     
                                     <label class="col-sm-2 col-form-label">Nama Restaurant</label>
                                     <div class="col-sm-10">
@@ -82,18 +76,13 @@
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Jadwal Restaurant</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jadwal_restaurant">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-
                                     
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Simpan</button>
+                                        
+                                        <a href="/tambah-detail-restaurant" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a>
                                     </div>
                                 </div>
                             </form>
@@ -110,16 +99,10 @@
 </div>
 <script>
     const id_resto = document.querySelector('#id_restaurant').value
-    const id_kategori_resto = document.querySelector('#id_kategori_restaurant').value
     const nama_resto = document.querySelector('#nama_restaurant').value
     const telepon_resto = document.querySelector('#telepon_restaurant').value
     const alamat_resto = document.querySelector('#alamat_restaurant').value
-    const jadwal_resto = document.querySelector('#jadwal_restaurant').value
-    const btn_submit = document.querySelector('#submit_add_resto')
-
-    btn_submit.addEventListener('click', () => {
-        if (id_resto == "" && id_kategori_resto == "" && nama_resto == "" && telepon_resto == "" && alamat_resto == "" && jadwal_resto == "" ) alert("Data Tidak Boleh Kosong!")
-    })
+    
 </script>
 
 @include('layouts/js')

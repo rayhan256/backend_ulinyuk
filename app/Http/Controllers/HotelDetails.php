@@ -21,9 +21,12 @@ class HotelDetails extends Controller
 
         $detail->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
         $detail->kategori_kamar_hotel = $request->kategori_kamar_hotel;
-        $detail->harga_kamar_hotel = $request->harga_kamar_hotel;
+        $detail->fasilitas_hotel = $request->fasilitas_hotel;
         $detail->fasilitas_kamar_hotel = $request->fasilitas_kamar_hotel;
-        $detail->aminities_kamar_hotel = $request->aminities_kamar_hotel;
+        $detail->fasilitas_publik_hotel = $request->fasilitas_publik_hotel;
+        $detail->fasilitas_terdekat_hotel = $request->fasilitas_terdekat_hotel;
+        $detail->fasilitas_transportasi_hotel = $request->fasilitas_transportasi_hotel;
+        $detail->harga_kamar_hotel = $request->harga_kamar_hotel;
 
         $detail->save();
 
@@ -38,9 +41,12 @@ class HotelDetails extends Controller
 
         $find_detail_by_id->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
         $find_detail_by_id->kategori_kamar_hotel = $request->kategori_kamar_hotel;
-        $find_detail_by_id->harga_kamar_hotel = $request->harga_kamar_hotel;
+        $find_detail_by_id->fasilitas_hotel = $request->fasilitas_hotel;
         $find_detail_by_id->fasilitas_kamar_hotel = $request->fasilitas_kamar_hotel;
-        $find_detail_by_id->aminities_kamar_hotel = $request->aminities_kamar_hotel;
+        $find_detail_by_id->fasilitas_publik_hotel = $request->fasilitas_publik_hotel;
+        $find_detail_by_id->fasilitas_terdekat_hotel = $request->fasilitas_terdekat_hotel;
+        $find_detail_by_id->fasilitas_transportasi_hotel = $request->fasilitas_transportasi_hotel;
+        $find_detail_by_id->harga_kamar_hotel = $request->harga_kamar_hotel;
 
         $find_detail_by_id->save();
 

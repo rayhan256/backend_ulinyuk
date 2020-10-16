@@ -20,7 +20,7 @@ class GaleriRestaurants extends Controller
 
         $galeri->id_galeri_restaurant = $request->id_galeri_restaurant;
         $galeri->id_restaurant = $request->id_restaurant;
-        $galeri->gambar_restaurant = $request->gambar_restaurant;
+        $galeri->foto_restaurant = $request->foto_restaurant;
 
         $galeri->save();
 

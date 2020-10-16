@@ -37,11 +37,11 @@
                                 <img src="assets/image/destinations/destination1.jpg" alt="" width='100%'>
                                 <div class="product-desc">
                                     <span class="product-price">
-                                        $10
+                                        $4
                                     </span>
-                                    <a href="/detail-objek-wisata" class="product-name"> Objek Wisata A</a>
+                                    <a href="/detail-objek-wisata" class="product-name"> Orchid Forest Cikole</a>
                                     <div class="small m-t-xs">
-                                        Many desktop publishing packages and web page editors now.
+                                        Lembang, Kabupaten Bandung Barat
                                     </div>
                                     <div class="m-t text-righ">
     

@@ -44,15 +44,15 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable"> 
-                                        Nama Customer
+                                        ID Customer
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Nama Hotel
+                                        ID Kategori Kamar Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
-                                        Kategori Kamar Hotel
+                                        ID Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th data-hide="phone" class="footable-visible footable-sortable">
@@ -85,13 +85,13 @@
                                        1
                                     </td>
                                     <td class="footable-visible">
-                                        Customer A
+                                        1 - Customer A
                                     </td>
                                     <td class="footable-visible">
-                                        Hotel A
+                                        1 - Luxury
                                     </td>
                                     <td class="footable-visible">
-                                        Luxury
+                                        1 - Hotel A
                                     </td>
                                     <td class="footable-visible">
                                         1.000.000

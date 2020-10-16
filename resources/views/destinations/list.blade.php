@@ -44,11 +44,7 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="footable-visible footable-sortable">
-                                        Nama Objek Wisata
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th class="footable-visible footable-sortable">
-                                        Kategori Objek Wisata
+                                        ID Kategori Objek Wisata
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="footable-visible footable-sortable">
@@ -78,25 +74,22 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                       1
+                                        1 - Orchih Forest Cikole
                                     </td>
                                     <td class="footable-visible">
-                                        Objek Wisata A
-                                    </td>
-                                    <td class="footable-visible">
-                                        Family
+                                        1 - Family
                                     </td>
                                     <td class="footable-visible">
                                         Bandung
                                     </td>
                                     <td class="footable-visible">
-                                        0987654334567
+                                        081220003438
                                     </td>
                                     <td class="footable-visible">
-                                        Lembang
+                                        Genteng, Cikole, Lembang, Kabupaten Bandung Barat
                                     </td>
                                     <td class="footable-visible">
-                                        Open Everyday, 10.00 AM - 10.00 PM
+                                        Setiap Hari, 09.00 - 18.00 WIB
                                     </td>
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">

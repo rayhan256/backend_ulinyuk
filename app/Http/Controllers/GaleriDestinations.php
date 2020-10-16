@@ -20,7 +20,7 @@ class GaleriDestinations extends Controller
 
         $galeri->id_galeri_objek_wisata = $request->id_galeri_objek_wisata;
         $galeri->id_objek_wisata = $request->id_objek_wisata;
-        $galeri->gambar_objek_wisata = $request->gambar_objek_wisata;
+        $galeri->foto_objek_wisata = $request->foto_objek_wisata;
 
         $galeri->save();
 

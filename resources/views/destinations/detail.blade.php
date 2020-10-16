@@ -63,17 +63,53 @@
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
-                                    <h3 class="font-bold">
-                                        Objek Wisata A
+                                    <h3>
+                                        <b>Orchid Forest Cikole</b>
                                     </h3>
                                     <hr>
-                                    <h4>Deskripsi Objek Wisata</h4>
+                                    <h4><b>Deskripsi</b></h4>
                                     <div class="">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam quidem quibusdam nam tenetur, rerum, maxime nostrum, commodi assumenda facere illum quis. Quas pariatur libero tempore molestiae totam beatae? Dolor.
+                                        Orchid Forest Cikole Lembang baru dibuka sekitar Agustus tahun 2017. Tempat ini merupakan taman anggrek terluas di Indonesia. Berada di tengah kawasan hutan lindung dan terbentang seluas 12 hektar. Tidak kurang ada 157 jenis bunga anggrek beraneka macam dikembangkan disini.
                                         <br>
                                         <br>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla consectetur nostrum nesciunt est temporibus deleniti quo sit iusto expedita fugit omnis quod, odit suscipit, a aspernatur! Ratione amet incidunt libero..
+                                        Orchid Forest Cikole Bandung memfokuskan diri untuk memperkenalkan dan membudidayakan berbagai tanaman anggrek. Menggunakan metode lokal maupun internasional. Tidak hanya berasal dari Indonesia yang merupakan negara kedua terbanyak varian anggrek. Tanaman anggrek di Orchid Forest juga berasal dari negara lain, seperti Venezuela, Argentina, Filipina, Peru, dan Amerika serikat.
+                                        <br>
+                                        <br>
+                                        Wisatawan bisa menggunakan transportasi pribadi untuk menjangkau tempat ini dengan jarak sekitar 20 kilometer dari Kota Bandung.
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Jenis Wahana</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>Sky Bridge</li>
+                                                            <li>Kegiatan Outbond</li> 
+                                                            <li>Spot Foto</li> 
+                                                            <li>Camping Ground</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Fasilitas</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>Mobil Golf</li>
+                                                            <li>Tribun Stage</li> 
+                                                            <li>Cafe</li> 
+                                                            <li>Camping Ground</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    
 
                                 </div>
                                 
@@ -81,15 +117,15 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> Lembang, Bandung
+                                        <i class="fa fa-map-marker"></i> Genteng, Cikole, Lembang, Kabupaten Bandung Barat, Jawa Barat 40391
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> Open Everyday, 10.00 AM - 10.00 PM
+                                        <i class="fa fa-clock-o"></i> Setiap Hari, 09.00 - 18.00 WIB
                                     </h3>                                   
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-phone"></i> 0987654334567
+                                        <i class="fa fa-phone"></i> 081220003438
                                     </h3>                                   
                                     <hr>
                                     <div>                                                

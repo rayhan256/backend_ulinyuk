@@ -27,6 +27,7 @@ class Restaurants extends Controller
         $restaurant->telepon_restaurant = $request->telepon_restaurant;
         $restaurant->alamat_restaurant = $request->alamat_restaurant;
         $restaurant->jadwal_restaurant = $request->jadwal_restaurant;
+        $restaurant->deskripsi_restaurant = $request->deskripsi_restaurant;
         $restaurant->review_restaurant = $request->review_restaurant;
 
         $restaurant->save();
@@ -44,6 +45,7 @@ class Restaurants extends Controller
         $find_restaurant_by_id->telepon_restaurant = $request->telepon_restaurant;
         $find_restaurant_by_id->alamat_restaurant = $request->alamat_restaurant;
         $find_restaurant_by_id->jadwal_restaurant = $request->jadwal_restaurant;
+        $find_restaurant_by_id->deskripsi_restaurant = $request->deskripsi_restaurant;
         $find_restaurant_by_id->review_restaurant = $request->review_restaurant;
 
         $find_restaurant_by_id->save();
@@ -80,6 +82,12 @@ class Restaurants extends Controller
     {
         $restaurant = ModelRestaurants::all();
         return view('/restaurants/add');
+    }
+
+    public function add_detail_restaurant()
+    {
+        $restaurant = ModelRestaurants::all();
+        return view('/restaurants/add_detail');
     }
 
     public function update_restaurant()

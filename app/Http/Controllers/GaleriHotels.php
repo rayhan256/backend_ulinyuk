@@ -20,7 +20,7 @@ class GaleriHotels extends Controller
 
         $galeri->id_galeri_hotel = $request->id_galeri_hotel;
         $galeri->id_hotel = $request->id_hotel;
-        $galeri->gambar_hotel = $request->gambar_hotel;
+        $galeri->foto_hotel = $request->foto_hotel;
 
         $galeri->save();
 

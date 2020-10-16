@@ -22,6 +22,7 @@ class MstHotels extends Migration
             $table->string('area_hotel');
             $table->string('telepon_hotel');
             $table->string('alamat_hotel');
+            $table->text('deskripsi_hotel');
             $table->text('review_hotel');
             $table->softDeletes();
             $table->timestamps();

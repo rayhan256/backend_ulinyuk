@@ -63,16 +63,33 @@
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
-                                    <h3 class="font-bold">
-                                        Restaurant A
+                                    <h3>
+                                        <b>Restaurant Lawang Wangi</b>
                                     </h3>
                                     <hr>
-                                    <h4>Deskripsi Restaurant</h4>
+                                    <h4>Deskripsi</h4>
                                     <div class="">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam quidem quibusdam nam tenetur, rerum, maxime nostrum, commodi assumenda facere illum quis. Quas pariatur libero tempore molestiae totam beatae? Dolor.
-                                        <br>
-                                        <br>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla consectetur nostrum nesciunt est temporibus deleniti quo sit iusto expedita fugit omnis quod, odit suscipit, a aspernatur! Ratione amet incidunt libero..
+                                        Lawang Wangi tidak hanya terkenal di mata seniman, banyak pula foodies yang tertarik kulineran di sini berkat desain restorannya yang modern dan minimalis. Tempatnya artistik sekali, bahkan di beberapa titik, kamu bisa menikmati instalasi-instalasi seni yang sangat artsy. Soal makanan, tak ada yang mengalahkan pedasnya Chicken Lawangwangi yang fenomenal itu. Tersaji dalam balutan sambal merah segar, Ayam Goreng ini terasa makin dahsyat saat disantap bersama nasi hangat, emping, dan sayur lalapan.
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <dl class="m-t-md">  
+                                                <h4><b>Fasilitas</b></h4>
+                                                <div class="Collapse__more__amenities">
+                                                    <div class="content-amenities">
+                                                        <ul>
+                                                            <li>WiFi</li>
+                                                            <li>Area Merokok</li> 
+                                                            <li>Outdoor</li>
+                                                            <li>Ruangan VIP</li>
+                                                            <li>Area Parkir</li>
+                                                            <li>Alkohol</li>
+                                                        </ul>
+                                                    </div>                                            
+                                                </div>
+                                            </dl>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -81,15 +98,15 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> Cihampelas, Bandung
+                                        <i class="fa fa-map-marker"></i> Jl. Dago Giri No.99, Mekarwangi, Lembang, Kabupaten Bandung Barat, Jawa Barat 40391
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> Open Everyday, 10.00 AM - 10.00 PM
+                                        <i class="fa fa-clock-o"></i> Setiap Hari, 09.00 - 22.00 WIB
                                     </h3>                                   
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-phone"></i> 0987654334567
+                                        <i class="fa fa-phone"></i> 08156016666
                                     </h3>                                   
                                     <hr>
                                     <div>                                                

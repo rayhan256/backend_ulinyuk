@@ -19,6 +19,7 @@ class MstRestaurantOrders extends Migration
             $table->unsignedBigInteger('id_customer'); //fk mst_customers
             $table->unsignedBigInteger('id_restaurant'); //fk mst_restaurants
             $table->unsignedBigInteger('id_kategori_restaurant');
+            $table->integer('jumlah_orang');
             $table->date('tanggal_booking');
             $table->softDeletes();
             $table->timestamps();

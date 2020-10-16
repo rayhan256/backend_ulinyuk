@@ -22,6 +22,7 @@ class MstRestaurants extends Migration
             $table->string('telepon_restaurant');
             $table->string('alamat_restaurant');
             $table->string('jadwal_restaurant');
+            $table->text('deskripsi_restaurant');
             $table->text('review_restaurant');
             $table->softDeletes();
             $table->timestamps();

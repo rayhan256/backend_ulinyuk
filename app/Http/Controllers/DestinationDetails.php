@@ -19,7 +19,7 @@ class DestinationDetails extends Controller
     {
         $detail = new ModelDestinationDetails();
 
-        $detail->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
+        $detail->kode_kategori_objek_wisata = $request->kode_kategori_objek_wisata;
         $detail->kategori_objek_wisata = $request->kategori_objek_wisata;
         $detail->harga_tiket = $request->harga_tiket;
 
