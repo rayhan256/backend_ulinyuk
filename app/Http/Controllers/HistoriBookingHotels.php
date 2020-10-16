@@ -20,8 +20,9 @@ class HistoriBookingHotels extends Controller
         $histori = new ModelHistoriBookingHotels();
 
         $histori->id_booking_kamar = $request->id_booking_kamar;
-        $histori->id_hotel = $request->id_hotel;
+        $histori->id_customer = $request->id_customer;
         $histori->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
+        $histori->id_hotel = $request->id_hotel;
         $histori->jumlah_booking_kamar = $request->jumlah_booking_kamar;
         $histori->tanggal_checkin = $request->tanggal_checkin;
         $histori->tanggal_checkout = $request->tanggal_checkout;
@@ -40,8 +41,9 @@ class HistoriBookingHotels extends Controller
         $find_histori_by_id = ModelHistoriBookingHotels::find($id);
 
         $find_histori_by_id->id_booking_kamar = $request->id_booking_kamar;
-        $find_histori_by_id->id_hotel = $request->id_hotel;
+        $find_histori_by_id->id_customer = $request->id_customer;
         $find_histori_by_id->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
+        $find_histori_by_id->id_hotel = $request->id_hotel;
         $find_histori_by_id->jumlah_booking_kamar = $request->jumlah_booking_kamar;
         $find_histori_by_id->tanggal_checkin = $request->tanggal_checkin;
         $find_histori_by_id->tanggal_checkout = $request->tanggal_checkout;

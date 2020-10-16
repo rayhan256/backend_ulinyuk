@@ -35,7 +35,7 @@ class GaleriHotels extends Controller
 
         $find_galeri_by_id->id_galeri_hotel = $request->id_galeri_hotel;
         $find_galeri_by_id->id_hotel = $request->id_hotel;
-        $find_galeri_by_id->gambar_hotel = $request->gambar_hotel;
+        $find_galeri_by_id->foto_hotel = $request->foto_hotel;
 
         $find_galeri_by_id->save();
 

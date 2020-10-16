@@ -35,7 +35,7 @@ class GaleriRestaurants extends Controller
 
         $find_galeri_by_id->id_galeri_restaurant = $request->id_galeri_restaurant;
         $find_galeri_by_id->id_restaurant = $request->id_restaurant;
-        $find_galeri_by_id->gambar_restaurant = $request->gambar_restaurant;
+        $find_galeri_by_id->foto_restaurant = $request->foto_restaurant;
 
         $find_galeri_by_id->save();
 

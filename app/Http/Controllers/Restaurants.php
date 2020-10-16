@@ -21,13 +21,10 @@ class Restaurants extends Controller
         $restaurant = new ModelRestaurants();
 
         $restaurant->id_restaurant = $request->id_restaurant;
-        $restaurant->id_kategori_restaurant = $request->id_kategori_restaurant;
         $restaurant->nama_restaurant = $request->nama_restaurant;
         $restaurant->area_restaurant = $request->area_restaurant;
         $restaurant->telepon_restaurant = $request->telepon_restaurant;
         $restaurant->alamat_restaurant = $request->alamat_restaurant;
-        $restaurant->jadwal_restaurant = $request->jadwal_restaurant;
-        $restaurant->deskripsi_restaurant = $request->deskripsi_restaurant;
         $restaurant->review_restaurant = $request->review_restaurant;
 
         $restaurant->save();
@@ -39,13 +36,10 @@ class Restaurants extends Controller
         $find_restaurant_by_id = ModelRestaurants::find($id);
 
         $find_restaurant_by_id->id_restaurant = $request->id_restaurant;
-        $find_restaurant_by_id->id_kategori_restaurant = $request->id_kategori_restaurant;
         $find_restaurant_by_id->nama_restaurant = $request->nama_restaurant;
         $find_restaurant_by_id->area_restaurant = $request->area_restaurant;
         $find_restaurant_by_id->telepon_restaurant = $request->telepon_restaurant;
         $find_restaurant_by_id->alamat_restaurant = $request->alamat_restaurant;
-        $find_restaurant_by_id->jadwal_restaurant = $request->jadwal_restaurant;
-        $find_restaurant_by_id->deskripsi_restaurant = $request->deskripsi_restaurant;
         $find_restaurant_by_id->review_restaurant = $request->review_restaurant;
 
         $find_restaurant_by_id->save();

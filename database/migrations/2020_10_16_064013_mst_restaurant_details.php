@@ -13,13 +13,18 @@ class MstRestaurantDetails extends Migration
      */
     public function up()
     {
-        Schema::create('mst_restaurant_details', function (Blueprint $table) {
+        Schema::table('mst_restaurant_details', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk            
             $table->integer('id_kategori_restaurant');
+            $table->unsignedBigInteger('id_restaurant'); //fk ke table mst_restaurants
             $table->string('kategori_restaurant');
-            $table->string('fasilitas_restaurant');
+            $table->string('jadwal_restaurant');
+            $table->text('fasilitas_restaurant');
+            $table->text('deskripsi_restaurant');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_restaurant')->references('id')->on('mst_restaurants');
         });
     }
 

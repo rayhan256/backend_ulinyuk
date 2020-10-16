@@ -12,7 +12,7 @@ class RestaurantOrders extends Controller
     //
     public function getAll()
     {
-        $data = ModelRestaurantOrders::with('customer', 'restaurant')->get();
+        $data = ModelRestaurantOrders::with('customer', 'restaurant_detail')->get();
         return $data;
     }
 
@@ -23,8 +23,9 @@ class RestaurantOrders extends Controller
 
         $order->id_booking_restaurant = $request->id_booking_restaurant;
         $order->id_customer = $request->id_customer;
-        $order->id_restaurant = $request->id_restaurant;
         $order->id_kategori_restaurant = $request->id_kategori_restaurant;
+        $order->id_restaurant = $request->id_restaurant;
+        $order->jumlah_orang = $request->jumlah_orang;
         $order->tanggal_booking = $request->tanggal_booking;
 
         $order->save();
@@ -38,8 +39,9 @@ class RestaurantOrders extends Controller
 
         $find_order_by_id->id_booking_restaurant = $request->id_booking_restaurant;
         $find_order_by_id->id_customer = $request->id_customer;
-        $find_order_by_id->id_restaurant = $request->id_restaurant;
         $find_order_by_id->id_kategori_restaurant = $request->id_kategori_restaurant;
+        $find_order_by_id->id_restaurant = $request->id_restaurant;
+        $find_order_by_id->jumlah_orang = $request->jumlah_orang;
         $find_order_by_id->tanggal_booking = $request->tanggal_booking;
 
         $find_order_by_id->save();

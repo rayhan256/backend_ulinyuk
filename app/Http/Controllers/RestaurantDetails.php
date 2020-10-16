@@ -10,7 +10,7 @@ class RestaurantDetails extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $detail = ModelRestaurantDetails::all();
+        $detail = ModelRestaurantDetails::with('restaurant')->get();
         return $detail;
     }
 
@@ -20,7 +20,11 @@ class RestaurantDetails extends Controller
         $detail = new ModelRestaurantDetails();
 
         $detail->id_kategori_restaurant = $request->id_kategori_restaurant;
+        $detail->id_restaurant = $request->id_restaurant;
         $detail->kategori_restaurant = $request->kategori_restaurant;
+        $detail->jadwal_restaurant = $request->jadwal_restaurant;
+        $detail->fasilitas_restaurant = $request->fasilitas_restaurant;
+        $detail->deskripsi_restaurant = $request->deskripsi_restaurant;
 
         $detail->save();
 
@@ -34,7 +38,11 @@ class RestaurantDetails extends Controller
         $find_detail_by_id = ModelRestaurantDetails::find($id);
 
         $find_detail_by_id->id_kategori_restaurant = $request->id_kategori_restaurant;
+        $find_detail_by_id->id_restaurant = $request->id_restaurant;
         $find_detail_by_id->kategori_restaurant = $request->kategori_restaurant;
+        $find_detail_by_id->jadwal_restaurant = $request->jadwal_restaurant;
+        $find_detail_by_id->fasilitas_restaurant = $request->fasilitas_restaurant;
+        $find_detail_by_id->deskripsi_restaurant = $request->deskripsi_restaurant;
 
         $find_detail_by_id->save();
 

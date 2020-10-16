@@ -9,7 +9,7 @@ class ModelGaleriRestaurants extends Model
     protected $table = 'mst_galeri_restaurants';
 
     protected $fillable = [
-        'id_galeri_restaurant', 'id_restaurant', 'gambar_restaurant'
+        'id_galeri_restaurant', 'id_restaurant', 'foto_restaurant'
     ];
 
     //ambil data id mst_restaurants

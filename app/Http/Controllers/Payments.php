@@ -21,7 +21,7 @@ class Payments extends Controller
         $payment->id_pembayaran = $request->id_pembayaran;
         $payment->id_customer = $request->id_customer;
         $payment->foto_bukti_pembayaran = $request->foto_bukti_pembayaran;
-        $payment->via_bank = $request->via_bank;
+        $payment->pembayaran_via = $request->pembayaran_via;
 
         $payment->save();
 
@@ -37,7 +37,7 @@ class Payments extends Controller
         $find_payment_by_id->id_pembayaran = $request->id_pembayaran;
         $find_payment_by_id->id_customer = $request->id_customer;
         $find_payment_by_id->foto_bukti_pembayaran = $request->foto_bukti_pembayaran;
-        $find_payment_by_id->via_bank = $request->via_bank;
+        $find_payment_by_id->pambayaran_via = $request->pambayaran_via;
 
         $find_payment_by_id->save();
 

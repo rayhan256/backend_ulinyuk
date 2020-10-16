@@ -13,18 +13,24 @@ class MstHotelDetails extends Migration
      */
     public function up()
     {
-        Schema::create('mst_hotel_details', function (Blueprint $table) {
+        Schema::table('mst_hotel_details', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk            
             $table->integer('id_kategori_kamar_hotel');
+            $table->unsignedBigInteger('id_hotel'); //fk ke table mst_hotels
             $table->string('kategori_kamar_hotel');
+            $table->integer('harga_kamar_hotel');
+            $table->string('jadwal_checkin_hotel');
+            $table->string('jadwal_checkout_hotel');
             $table->text('fasilitas_hotel');
             $table->text('fasilitas_kamar_hotel');
             $table->text('fasilitas_publik_hotel');
             $table->text('fasilitas_terdekat_hotel');
             $table->text('fasilitas_transportasi_hotel');
-            $table->integer('harga_kamar_hotel');
+            $table->text('deskripsi_hotel');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_hotel')->references('id')->on('mst_hotels');
         });
     }
 

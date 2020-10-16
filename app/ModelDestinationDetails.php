@@ -10,12 +10,18 @@ class ModelDestinationDetails extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id_kategori_objek_wisata', 'kategori_objek_wisata', 'harga_tiket'
+        'id_kategori_objek_wisata', 'id_objek_wisata', 'kategori_objek_wisata', 'jadwal_objek_wisata', 'wahana_objek_wisata', 'fasilitas_objek_wisata', 'deskripsi_objek_wisata', 'id_objek_wisata', 'harga_tiket'
     ];
 
-    //relasi agar bisa di ambil oleh mst_destinations
+    //relasi agar data bisa diambil oleh mst_destination_orders
+    public function destination_order()
+    {
+        return $this->hasMany(ModelDestinationOrders::class, 'id_kategori_objek_wisata', 'id');
+    }
+
+    //ambil data id mst_destination
     public function destination()
     {
-        return $this->hasMany(ModelDestinations::class, 'id_kategori_objek_wisata', 'id');
+        return $this->hasMany(ModelDestinations::class, 'id_objek_wisata', 'id');
     }
 }

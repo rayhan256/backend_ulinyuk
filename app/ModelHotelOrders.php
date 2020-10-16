@@ -24,9 +24,9 @@ class ModelHotelOrders extends Model
         return $this->hasMany(ModelCustomers::class,  'id_customer', 'id');
     }
 
-    //ambil data id mst_hotels
-    public function hotel()
+    //ambil data id mst_hotel_details
+    public function hotel_detail()
     {
-        return $this->hasMany(ModelHotels::class, 'id_hotel', 'id');
+        return $this->hasMany(ModelHotelDetails::class, 'id_kategori_kamar_hotel', 'id');
     }
 }

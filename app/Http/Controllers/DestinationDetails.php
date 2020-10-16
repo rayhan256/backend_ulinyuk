@@ -10,7 +10,7 @@ class DestinationDetails extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $detail = ModelDestinationDetails::all();
+        $detail = ModelDestinationDetails::with('destination')->get();
         return $detail;
     }
 
@@ -19,8 +19,13 @@ class DestinationDetails extends Controller
     {
         $detail = new ModelDestinationDetails();
 
-        $detail->kode_kategori_objek_wisata = $request->kode_kategori_objek_wisata;
+        $detail->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
+        $detail->id_objek_wisata = $request->id_objek_wisata;
         $detail->kategori_objek_wisata = $request->kategori_objek_wisata;
+        $detail->jadwal_objek_wisata = $request->jadwal_objek_wisata;
+        $detail->wahana_objek_wisata = $request->wahana_objek_wisata;
+        $detail->fasilitas_objek_wisata = $request->fasilitas_objek_wisata;
+        $detail->deskripsi_objek_wisata = $request->deskripsi_objek_wisata;
         $detail->harga_tiket = $request->harga_tiket;
 
         $detail->save();
@@ -35,7 +40,12 @@ class DestinationDetails extends Controller
         $find_detail_by_id = ModelDestinationDetails::find($id);
 
         $find_detail_by_id->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
+        $find_detail_by_id->id_objek_wisata = $request->id_objek_wisata;
         $find_detail_by_id->kategori_objek_wisata = $request->kategori_objek_wisata;
+        $find_detail_by_id->jadwal_objek_wisata = $request->jadwal_objek_wisata;
+        $find_detail_by_id->wahana_objek_wisata = $request->wahana_objek_wisata;
+        $find_detail_by_id->fasilitas_objek_wisata = $request->fasilitas_objek_wisata;
+        $find_detail_by_id->deskripsi_objek_wisata = $request->deskripsi_objek_wisata;
         $find_detail_by_id->harga_tiket = $request->harga_tiket;
 
         $find_detail_by_id->save();

@@ -35,7 +35,7 @@ class GaleriDestinations extends Controller
 
         $find_galeri_by_id->id_galeri_objek_wisata = $request->id_galeri_objek_wisata;
         $find_galeri_by_id->id_objek_wisata = $request->id_objek_wisata;
-        $find_galeri_by_id->gambar_objek_wisata = $request->gambar_objek_wisata;
+        $find_galeri_by_id->foto_objek_wisata = $request->foto_objek_wisata;
 
         $find_galeri_by_id->save();
 
