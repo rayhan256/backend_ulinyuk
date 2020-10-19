@@ -1,0 +1,77 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
+
+
+class AuthController extends Controller
+{
+
+    public function signup(Request $req)
+    {
+        // $req->validate([
+        //     'email' => 'required|string|email|unique:users',
+        //     'password' => 'required|string|confirm',
+        // ]);
+
+        $user = new User([
+            'email' => $req->email,
+            'password' => bcrypt($req->password)
+        ]);
+
+        $user->save();
+
+        return response()->json(['message' => 'User Berhasil Sign Up'], 200);
+    }
+
+    public function login(Request $req)
+    {
+
+        //buat user
+
+        // $req->validate([
+        //     'email' => 'required|string',
+        //     'password' => 'required|string',
+        //     'remember_me' => 'boolean'
+        // ]);
+
+        //data yang akan diinput oleh user
+        $kredensial = request(['email', 'password']);
+
+        if (!Auth::attempt($kredensial)) {
+            return response()->json(['message' => 'Data Tidak Ada'], 400);
+        };
+        $user = $req->user();
+
+        //untuk tokennya
+        $bikinToken = $user->createToken("Personal Access Token");
+        $hasilToken = $bikinToken->token;
+
+        if ($req->remember_me) {
+            $hasilToken->expires_at = Carbon::now()->addWeeks(1);
+        }
+
+        $hasilToken->save();
+
+        return response()->json([
+            'token' => $bikinToken->accessToken,
+            'token_type' => "Bearer",
+            'sampai_kapan' => Carbon::parse($bikinToken->token->expires_at)->toDateTimeString()
+        ], 200);
+    }
+
+    public function user(Request $req)
+    {
+        return response()->json($req->user());
+    }
+
+    public function logout(Request $req)
+    {
+        $req->user()->token()->revoke();
+        return response()->json(['Message' => 'User Berhasil Logout'], 200);
+    }
+}

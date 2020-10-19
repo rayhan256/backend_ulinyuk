@@ -31,13 +31,13 @@
                                     </div>                                    
                                     <label class="col-sm-2 col-form-label">Nama Lengkap</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Example Admin" class="form-control">
+                                        <input type="text" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="1999, July 26" class="form-control">
+                                        <input type="text" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -51,25 +51,25 @@
 
                                     <label class="col-sm-2 col-form-label">Alamat</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Arcamanik Permai No. E9" class="form-control">
+                                        <input type="text" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Kota</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="Bandung" class="form-control">
+                                        <input type="text" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Telepon</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="098765456756" class="form-control">
+                                        <input type="text" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="text" placeholder="email_example@gmail.com" class="form-control">
+                                        <input type="text" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
