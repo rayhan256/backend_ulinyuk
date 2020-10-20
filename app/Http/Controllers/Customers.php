@@ -18,22 +18,38 @@ class Customers extends Controller
     public function insertData(Request $request)
     {
         //dd($request);
-        $customer = new ModelCustomers();
+        $request->validate([
+            'id_customer' => 'required',
+            'nama_customer' => 'required',
+            'tanggal_lahir_customer' => 'required',
+            'jenis_kelamin_customer' => 'required',
+            'alamat_customer' => 'required',
+            'kota_customer' => 'required',
+            'negara_customer' => 'required',
+            'telepon_customer' => 'required',
+            'email_customer' => 'required',
+            'foto_customer' => 'required'
+        ]);
 
-        $customer->id_customer = $request->id_customer;
-        $customer->nama_customer = $request->nama_customer;
-        $customer->tanggal_lahir_customer = $request->tanggal_lahir_customer;
-        $customer->jenis_kelamin_customer = $request->jenis_kelamin_customer;
-        $customer->alamat_customer = $request->alamat_customer;
-        $customer->kota_customer = $request->kota_customer;
-        $customer->negara_customer = $request->negara_customer;
-        $customer->telepon_customer = $request->telepon_customer;
-        $customer->email_customer = $request->email_customer;
-        $customer->foto_customer = $request->foto_customer;
+        $data = new ModelCustomers([
+            'id_customer' => $request->id_customer,
+            'nama_customer' => $request->nama_customer,
+            'tanggal_lahir_customer' => $request->tanggal_lahir_customer,
+            'jenis_kelamin_customer' => $request->jenis_kelamin_customer,
+            'alamat_customer' => $request->alamat_customer,
+            'kota_customer' => $request->kota_customer,
+            'negara_customer' => $request->negara_customer,
+            'telepon_customer' => $request->telepon_customer,
+            'email_customer' => $request->email_customer,
+            'foto_customer' => $request->foto_customer
+        ]);
 
-        $customer->save();
+        $data->save();
 
-        return "Data Berhasil Diinput!";
+        return response()->json([
+            'data' => $data,
+            'message' => 'Data Berhasil Ditambahkan!'
+        ]);
     }
 
     //Update Data 

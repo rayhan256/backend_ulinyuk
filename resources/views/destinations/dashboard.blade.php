@@ -27,6 +27,7 @@
             </div>
         </div>
 
+        @foreach($data_destination as $destination)
         <div class="wrapper wrapper-content">
             <div class="wrapper wrapper-content animated fadeInRight">
                 <div class="row">
@@ -34,14 +35,14 @@
                         <div class="ibox">
                             <div class="ibox-content product-box">
     
-                                <img src="assets/image/destinations/destination1.jpg" alt="" width='100%'>
+                                <img src="assets/image/destinations/orchid2.png" alt="" width='100%'>
                                 <div class="product-desc">
                                     <span class="product-price">
                                         $4
                                     </span>
-                                    <a href="/detail-objek-wisata" class="product-name"> Orchid Forest Cikole</a>
+                                    <a href="/detail-objek-wisata" class="product-name"> {{$destination->nama_objek_wisata}}</a>
                                     <div class="small m-t-xs">
-                                        Lembang, Kabupaten Bandung Barat
+                                        {{$destination->alamat_objek_wisata}}
                                     </div>
                                     <div class="m-t text-righ">
     
@@ -56,5 +57,6 @@
             </div>
             @include('layouts/footer')
         </div>
+        @endforeach
 
     @include('layouts/js')

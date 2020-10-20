@@ -10,24 +10,24 @@ class Admins extends Controller
     //Ambil data
     public function getAll()
     {
-        $admin = ModelAdmins::all();
-        return $admin;
+        $data_admin = ModelAdmins::all();
+        return $data_admin;
     }
 
     //insert data
     public function insertData(Request $request)
     {
-        $admin = new ModelAdmins();
+        $data_admin = new ModelAdmins();
 
-        $admin->nama_admin = $request->nama_admin;
-        $admin->tanggal_lahir_admin = $request->tanggal_lahir_admin;
-        $admin->jenis_kelamin_admin = $request->jenis_kelamin_admin;
-        $admin->alamat_admin = $request->alamat_admin;
-        $admin->kota_admin = $request->kota_admin;
-        $admin->telepon_admin = $request->telepon_admin;
-        $admin->email_admin = $request->email_admin;
-        $admin->foto_admin = $request->foto_admin;
-        $admin->save();
+        $data_admin->nama_admin = $request->nama_admin;
+        $data_admin->tanggal_lahir_admin = $request->tanggal_lahir_admin;
+        $data_admin->jenis_kelamin_admin = $request->jenis_kelamin_admin;
+        $data_admin->alamat_admin = $request->alamat_admin;
+        $data_admin->kota_admin = $request->kota_admin;
+        $data_admin->telepon_admin = $request->telepon_admin;
+        $data_admin->email_admin = $request->email_admin;
+        $data_admin->foto_admin = $request->foto_admin;
+        $data_admin->save();
 
         return "Data Berhasil Diinput!";
     }
@@ -62,19 +62,19 @@ class Admins extends Controller
     //mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $admin = ModelAdmins::find($id);
-        return $admin;
+        $data_admin = ModelAdmins::find($id);
+        return $data_admin;
     }
 
     public function index()
     {
-        $admin = ModelAdmins::all();
-        return view('/admins/profile');
+        $data_admin = ModelAdmins::all();
+        return view('/admins/profile', ['data_admin' => $data_admin]);
     }
 
     public function update_profile()
     {
-        $admin = ModelAdmins::all();
+        $data_admin = ModelAdmins::all();
         return view('/admins/update');
     }
 }

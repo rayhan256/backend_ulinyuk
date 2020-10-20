@@ -34,7 +34,7 @@
                         <div class="ibox">
                             <div class="ibox-content product-box">
     
-                                <img src="assets/image/restaurants/resto1.jpg" alt="" width='100%'>
+                                <img src="assets/image/restaurants/lawangwangi3.jpg" alt="" width='100%'>
                                 <div class="product-desc">
                                     <span class="product-price">
                                         $10

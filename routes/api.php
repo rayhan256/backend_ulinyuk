@@ -20,6 +20,19 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+//auth user
+
+Route::group(['prefix' => 'auth'], function () {
+    Route::post('signup', 'AuthController@signup');
+    Route::post('login', 'AuthController@login');
+
+
+    Route::group(['middleware' => ['auth:api']], function () {
+        Route::get('logout', 'AuthController@logout');
+        Route::get('user', 'AuthController@user');
+    });
+});
+
 //mst_accounts
 Route::get('/account', 'Accounts@getAll');
 Route::post('/account/post', 'Accounts@insertData');
@@ -159,17 +172,3 @@ Route::post('/payment/post', 'Payments@insertData');
 Route::put('/payment/update/{id}', 'Payments@updateData');
 Route::delete('/payment/delete/{id}', 'Payments@deleteData');
 Route::get('/payment/{id}', 'Payments@getDataId');
-
-
-//auth user
-
-Route::group(['prefix' => 'auth'], function () {
-    Route::post('signup', 'AuthController@signup');
-    Route::post('login', 'AuthController@login');
-
-
-    Route::group(['middleware' => ['auth:api']], function () {
-        Route::get('logout', 'AuthController@logout');
-        Route::get('user', 'AuthController@user');
-    });
-});

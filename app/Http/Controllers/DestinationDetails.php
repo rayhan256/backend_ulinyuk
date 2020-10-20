@@ -10,25 +10,25 @@ class DestinationDetails extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $detail = ModelDestinationDetails::with('destination')->get();
-        return $detail;
+        $data_detail = ModelDestinationDetails::with('destination')->get();
+        return $data_detail;
     }
 
     //Insert data
     public function insertData(Request $request)
     {
-        $detail = new ModelDestinationDetails();
+        $data_detail = new ModelDestinationDetails();
 
-        $detail->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
-        $detail->id_objek_wisata = $request->id_objek_wisata;
-        $detail->kategori_objek_wisata = $request->kategori_objek_wisata;
-        $detail->jadwal_objek_wisata = $request->jadwal_objek_wisata;
-        $detail->wahana_objek_wisata = $request->wahana_objek_wisata;
-        $detail->fasilitas_objek_wisata = $request->fasilitas_objek_wisata;
-        $detail->deskripsi_objek_wisata = $request->deskripsi_objek_wisata;
-        $detail->harga_tiket = $request->harga_tiket;
+        $data_detail->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
+        $data_detail->id_objek_wisata = $request->id_objek_wisata;
+        $data_detail->kategori_objek_wisata = $request->kategori_objek_wisata;
+        $data_detail->jadwal_objek_wisata = $request->jadwal_objek_wisata;
+        $data_detail->wahana_objek_wisata = $request->wahana_objek_wisata;
+        $data_detail->fasilitas_objek_wisata = $request->fasilitas_objek_wisata;
+        $data_detail->deskripsi_objek_wisata = $request->deskripsi_objek_wisata;
+        $data_detail->harga_tiket = $request->harga_tiket;
 
-        $detail->save();
+        $data_detail->save();
 
         return "Data Berhasil Diinput!";
     }
@@ -65,13 +65,13 @@ class DestinationDetails extends Controller
     //Mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $detail = ModelDestinationDetails::find($id);
-        return $detail;
+        $data_detail = ModelDestinationDetails::find($id);
+        return $data_detail;
     }
 
     public function detail_objek_wisata()
     {
-        $detail = ModelDestinationDetails::all();
-        return view('/destinations/detail');
+        $data_detail = ModelDestinationDetails::all();
+        return view('/destinations/detail', ['data_detail' => $data_detail]);
     }
 }

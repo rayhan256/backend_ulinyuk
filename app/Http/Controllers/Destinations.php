@@ -18,16 +18,16 @@ class Destinations extends Controller
     //Insert data
     public function insertData(Request $request)
     {
-        $destination = new ModelDestinations();
+        $data_destination = new ModelDestinations();
 
-        $destination->id_objek_wisata = $request->id_objek_wisata;
-        $destination->nama_objek_wisata = $request->nama_objek_wisata;
-        $destination->area_objek_wisata = $request->area_objek_wisata;
-        $destination->telepon_objek_wisata = $request->telepon_objek_wisata;
-        $destination->alamat_objek_wisata = $request->alamat_objek_wisata;
-        $destination->review_objek_wisata = $request->review_objek_wisata;
+        $data_destination->id_objek_wisata = $request->id_objek_wisata;
+        $data_destination->nama_objek_wisata = $request->nama_objek_wisata;
+        $data_destination->area_objek_wisata = $request->area_objek_wisata;
+        $data_destination->telepon_objek_wisata = $request->telepon_objek_wisata;
+        $data_destination->alamat_objek_wisata = $request->alamat_objek_wisata;
+        $data_destination->review_objek_wisata = $request->review_objek_wisata;
 
-        $destination->save();
+        $data_destination->save();
         return "Data Berhasil Diinput!";
     }
 
@@ -59,14 +59,14 @@ class Destinations extends Controller
     //get data by id
     public function getDataId($id)
     {
-        $destination = ModelDestinations::find($id);
-        return $destination;
+        $data_destination = ModelDestinations::find($id);
+        return $data_destination;
     }
 
     public function index()
     {
-        $destination = ModelDestinations::all();
-        return view('/destinations/dashboard');
+        $data_destination = ModelDestinations::all();
+        return view('/destinations/dashboard', ['data_destination' => $data_destination]);
     }
 
     public function list_objek_wisata()

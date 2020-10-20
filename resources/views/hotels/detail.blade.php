@@ -26,7 +26,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/hotels/hotel2.jpg" alt="" width='100%'>
+                                    <img src="assets/image/hotels/aston1.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/hotels/hotel1.jpg" alt="" width='100%'>
+                                    <img src="assets/image/hotels/aston2.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/hotels/hotel3.jpg" alt="" width='100%'>
+                                    <img src="assets/image/hotels/aston3.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/hotels/hotel4.jpg" alt="" width='100%'>
+                                    <img src="assets/image/hotels/aston4.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>

@@ -20,13 +20,14 @@
             </div>
         </div>
 
+        @foreach($data_detail as $detail)
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/destinations/destination1.jpg" alt="" width='100%'>
+                                    <img src="assets/image/destinations/orchid1.png" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +36,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/destinations/destination2.jpg" alt="" width='100%'>
+                                    <img src="assets/image/destinations/orchid3.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +45,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/destinations/destination3.jpg" alt="" width='100%'>
+                                    <img src="assets/image/destinations/orchid4.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +54,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/destinations/destination4.jpg" alt="" width='100%'>
+                                    <img src="assets/image/destinations/orchid5.png" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -64,18 +65,12 @@
                             <div class="row">
                                 <div class="col-md-7">
                                     <h3>
-                                        <b>Orchid Forest Cikole</b>
+                                        <b>{{$detail->nama_objek_wisata}}</b>
                                     </h3>
                                     <hr>
                                     <h4><b>Deskripsi</b></h4>
                                     <div class="">
-                                        Orchid Forest Cikole Lembang baru dibuka sekitar Agustus tahun 2017. Tempat ini merupakan taman anggrek terluas di Indonesia. Berada di tengah kawasan hutan lindung dan terbentang seluas 12 hektar. Tidak kurang ada 157 jenis bunga anggrek beraneka macam dikembangkan disini.
-                                        <br>
-                                        <br>
-                                        Orchid Forest Cikole Bandung memfokuskan diri untuk memperkenalkan dan membudidayakan berbagai tanaman anggrek. Menggunakan metode lokal maupun internasional. Tidak hanya berasal dari Indonesia yang merupakan negara kedua terbanyak varian anggrek. Tanaman anggrek di Orchid Forest juga berasal dari negara lain, seperti Venezuela, Argentina, Filipina, Peru, dan Amerika serikat.
-                                        <br>
-                                        <br>
-                                        Wisatawan bisa menggunakan transportasi pribadi untuk menjangkau tempat ini dengan jarak sekitar 20 kilometer dari Kota Bandung.
+                                        {{$detail->deskripsi_objek_wisata}}
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -84,10 +79,7 @@
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
                                                         <ul>
-                                                            <li>Sky Bridge</li>
-                                                            <li>Kegiatan Outbond</li> 
-                                                            <li>Spot Foto</li> 
-                                                            <li>Camping Ground</li>
+                                                            {{$detail->wahana_objek_wisata}}
                                                         </ul>
                                                     </div>                                            
                                                 </div>
@@ -99,12 +91,9 @@
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
                                                         <ul>
-                                                            <li>Mobil Golf</li>
-                                                            <li>Tribun Stage</li> 
-                                                            <li>Cafe</li> 
-                                                            <li>Camping Ground</li>
+                                                            {{$detail->fasilitas_objek_wisata}}
                                                         </ul>
-                                                    </div>                                            
+                                                    <div>  
                                                 </div>
                                             </dl>
                                         </div>
@@ -117,15 +106,15 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> Genteng, Cikole, Lembang, Kabupaten Bandung Barat, Jawa Barat 40391
+                                        <i class="fa fa-map-marker"></i> {{$detail->alamat_objek_wisata}}
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> Setiap Hari, 09.00 - 18.00 WIB
+                                        <i class="fa fa-clock-o"></i> {{$detail->jadwal_objek_wisata}}
                                     </h3>                                   
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-phone"></i> 081220003438
+                                        <i class="fa fa-phone"></i> {{$detail->telepon_objek_wisata}}
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
@@ -136,14 +125,9 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
             </div>
         </div>
+        @endforeach
         
         @include('layouts/footer')
 

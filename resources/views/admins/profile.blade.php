@@ -10,6 +10,7 @@
             </div>
         </div>
 
+        @foreach($data_admin as $admin)
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row m-b-lg m-t-lg">
                 <div class="col-md-6">
@@ -21,7 +22,7 @@
                         <div class="">
                             <div>
                                 <h2 class="no-margins">
-                                    <b>Nama Admin </b>
+                                    <b>{{$admin->nama_admin}}</b>
                                 </h2>
                                 <h4>Administrator</h4>
                                 <small>
@@ -40,7 +41,7 @@
                                 <strong>Tanggal Lahir</strong>
                             </td>
                             <td>
-                                26 Juli 1999
+                                {{$admin->tanggal_lahir_admin}}
                             </td>
 
                         </tr>
@@ -49,7 +50,7 @@
                                 <strong>Jenis Kelamin</strong>
                             </td>
                             <td>
-                                Laki-Laki
+                                {{$admin->jenis_kelamin_admin}}
                             </td>
                         </tr>
                         <tr>
@@ -57,7 +58,7 @@
                                 <strong>Alamat</strong>
                             </td>
                             <td>
-                                Arcamanik Permai No. E9
+                                {{$admin->alamat_admin}}
                             </td>
                         </tr>
                         <tr>
@@ -65,7 +66,7 @@
                                 <strong>Kota</strong>
                             </td>
                             <td>
-                                Bandung
+                                {{$admin->kota_admin}}
                             </td>
                         </tr>
                         <tr>
@@ -73,7 +74,7 @@
                                 <strong>Telepon</strong>
                             </td>
                             <td>
-                                098765456756
+                                {{$admin->telepon_admin}}
                             </td>
                         </tr>
                         <tr>
@@ -81,7 +82,7 @@
                                 <strong>Email</strong>
                             </td>
                             <td>
-                                example_email@gmail.com
+                                {{$admin->email_admin}}
                             </td>
                         </tr>
                         </tbody>
@@ -95,6 +96,7 @@
             </div>
 
         </div>
+        @endforeach
 
         @include('layouts/footer')
 

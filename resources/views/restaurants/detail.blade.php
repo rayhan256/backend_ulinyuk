@@ -26,7 +26,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/restaurants/resto1.jpg" alt="" width='100%'>
+                                    <img src="assets/image/restaurants/lawangwangi3.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/restaurants/resto2.jpg" alt="" width='100%'>
+                                    <img src="assets/image/restaurants/lawangwangi1.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/restaurants/resto3.jpg" alt="" width='100%'>
+                                    <img src="assets/image/restaurants/lawangwangi2.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/restaurants/resto4.jpg" alt="" width='100%'>
+                                    <img src="assets/image/restaurants/lawangwangi4.jpg" alt="" width='100%'>
                                 </div>
                             </div>
                         </div>
