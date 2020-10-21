@@ -10,29 +10,29 @@ class HotelDetails extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $detail = ModelHotelDetails::with('hotel')->get();
-        return $detail;
+        $data_detail = ModelHotelDetails::with('hotel')->get();
+        return $data_detail;
     }
 
     //Insert data
     public function insertData(Request $request)
     {
-        $detail = new ModelHotelDetails();
+        $data_detail = new ModelHotelDetails();
 
-        $detail->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
-        $detail->id_hotel = $request->id_hotel;
-        $detail->kategori_kamar_hotel = $request->kategori_kamar_hotel;
-        $detail->harga_kamar_hotel = $request->harga_kamar_hotel;
-        $detail->jadwal_checkin_hotel = $request->jadwal_checkin_hotel;
-        $detail->jadwal_checkout_hotel = $request->jadwal_checkout_hotel;
-        $detail->fasilitas_hotel = $request->fasilitas_hotel;
-        $detail->fasilitas_kamar_hotel = $request->fasilitas_kamar_hotel;
-        $detail->fasilitas_publik_hotel = $request->fasilitas_publik_hotel;
-        $detail->fasilitas_terdekat_hotel = $request->fasilitas_terdekat_hotel;
-        $detail->fasilitas_transportasi_hotel = $request->fasilitas_transportasi_hotel;
-        $detail->deskripsi_hotel = $request->deskripsi_hotel;
+        $data_detail->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
+        $data_detail->id_hotel = $request->id_hotel;
+        $data_detail->kategori_kamar_hotel = $request->kategori_kamar_hotel;
+        $data_detail->harga_kamar_hotel = $request->harga_kamar_hotel;
+        $data_detail->jadwal_checkin_hotel = $request->jadwal_checkin_hotel;
+        $data_detail->jadwal_checkout_hotel = $request->jadwal_checkout_hotel;
+        $data_detail->fasilitas_hotel = $request->fasilitas_hotel;
+        $data_detail->fasilitas_kamar_hotel = $request->fasilitas_kamar_hotel;
+        $data_detail->fasilitas_publik_hotel = $request->fasilitas_publik_hotel;
+        $data_detail->fasilitas_terdekat_hotel = $request->fasilitas_terdekat_hotel;
+        $data_detail->fasilitas_transportasi_hotel = $request->fasilitas_transportasi_hotel;
+        $data_detail->deskripsi_hotel = $request->deskripsi_hotel;
 
-        $detail->save();
+        $data_detail->save();
 
         return "Data Berhasil Diinput!";
     }
@@ -73,13 +73,13 @@ class HotelDetails extends Controller
     //Mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $detail = ModelHotelDetails::find($id);
-        return $detail;
+        $data_detail = ModelHotelDetails::find($id);
+        return $data_detail;
     }
 
     public function detail_hotel()
     {
-        $detail = ModelHotelDetails::all();
-        return view('/hotels/detail');
+        $data_detail = ModelHotelDetails::all();
+        return view('/hotels/detail', ['data_detail' => $data_detail]);
     }
 }

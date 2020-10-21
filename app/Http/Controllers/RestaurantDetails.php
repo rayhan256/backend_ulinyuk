@@ -10,23 +10,23 @@ class RestaurantDetails extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $detail = ModelRestaurantDetails::with('restaurant')->get();
-        return $detail;
+        $data_detail = ModelRestaurantDetails::with('restaurant')->get();
+        return $data_detail;
     }
 
     //Insert data
     public function insertData(Request $request)
     {
-        $detail = new ModelRestaurantDetails();
+        $data_detail = new ModelRestaurantDetails();
 
-        $detail->id_kategori_restaurant = $request->id_kategori_restaurant;
-        $detail->id_restaurant = $request->id_restaurant;
-        $detail->kategori_restaurant = $request->kategori_restaurant;
-        $detail->jadwal_restaurant = $request->jadwal_restaurant;
-        $detail->fasilitas_restaurant = $request->fasilitas_restaurant;
-        $detail->deskripsi_restaurant = $request->deskripsi_restaurant;
+        $data_detail->id_kategori_restaurant = $request->id_kategori_restaurant;
+        $data_detail->id_restaurant = $request->id_restaurant;
+        $data_detail->kategori_restaurant = $request->kategori_restaurant;
+        $data_detail->jadwal_restaurant = $request->jadwal_restaurant;
+        $data_detail->fasilitas_restaurant = $request->fasilitas_restaurant;
+        $data_detail->deskripsi_restaurant = $request->deskripsi_restaurant;
 
-        $detail->save();
+        $data_detail->save();
 
         return "Data Berhasil Diinput!";
     }
@@ -61,13 +61,13 @@ class RestaurantDetails extends Controller
     //Mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $detail = ModelRestaurantDetails::find($id);
-        return $detail;
+        $data_detail = ModelRestaurantDetails::find($id);
+        return $data_detail;
     }
 
     public function detail_restaurant()
     {
-        $detail = ModelRestaurantDetails::all();
-        return view('/restaurants/detail');
+        $data_detail = ModelRestaurantDetails::all();
+        return view('/restaurants/detail', ['data_detail' => $data_detail]);
     }
 }

@@ -65,7 +65,9 @@
                             <div class="row">
                                 <div class="col-md-7">
                                     <h3>
-                                        <b>{{$detail->nama_objek_wisata}}</b>
+                                        @foreach($detail->destination as $destin)
+                                        <b>{{$destin->nama_objek_wisata}}</b>
+                                        @endforeach
                                     </h3>
                                     <hr>
                                     <h4><b>Deskripsi</b></h4>
@@ -78,9 +80,7 @@
                                                 <h4><b>Jenis Wahana</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            {{$detail->wahana_objek_wisata}}
-                                                        </ul>
+                                                        {{$detail->wahana_objek_wisata}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -90,10 +90,8 @@
                                                 <h4><b>Fasilitas</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            {{$detail->fasilitas_objek_wisata}}
-                                                        </ul>
-                                                    <div>  
+                                                        {{$detail->fasilitas_objek_wisata}}
+                                                    </div>                                            
                                                 </div>
                                             </dl>
                                         </div>
@@ -106,7 +104,10 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> {{$detail->alamat_objek_wisata}}
+                                        @foreach($detail->destination as $destin)
+                                        <i class="fa fa-map-marker"></i> 
+                                        {{$destin->alamat_objek_wisata}}
+                                        @endforeach
                                     </h3>
                                     <hr>
                                     <h3>
@@ -114,7 +115,10 @@
                                     </h3>                                   
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-phone"></i> {{$detail->telepon_objek_wisata}}
+                                        @foreach($detail->destination as $destin)
+                                        <i class="fa fa-phone"></i> 
+                                        {{$destin->telepon_objek_wisata}}
+                                        @endforeach
                                     </h3>                                   
                                     <hr>
                                     <div>                                                

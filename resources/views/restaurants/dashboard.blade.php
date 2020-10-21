@@ -27,6 +27,7 @@
             </div>
         </div>
 
+        @foreach($data_restaurant as $restaurant)
         <div class="wrapper wrapper-content">
             <div class="wrapper wrapper-content animated fadeInRight">
                 <div class="row">
@@ -40,10 +41,10 @@
                                         $10
                                     </span>
                                     <a href="/detail-restaurant" class="product-name"> 
-                                        Restaurant Lawang Wangi
+                                        {{$restaurant->nama_restaurant}}
                                     </a>
                                     <div class="small m-t-xs">
-                                        Jl. Dago Giri No.99, Mekarwangi, Lembang, Kabupaten Bandung Barat
+                                        {{$restaurant->alamat_restaurant}}
                                     </div>
                                     <div class="m-t text-righ">
     
@@ -58,5 +59,6 @@
             </div>
             @include('layouts/footer')
         </div>
+        @endforeach
 
     @include('layouts/js')

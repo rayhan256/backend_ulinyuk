@@ -6,7 +6,7 @@
                     <div class="dropdown profile-element">
                         <img alt="image" class="rounded-circle" src="assets/img/profile_small.jpg"/>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="block m-t-xs font-bold">Chaidir Ishaq</span>
+                            <span class="block m-t-xs font-bold">Example Admin</span>
                             <span class="text-muted text-xs block">Administrator <b class="caret"></b></span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">

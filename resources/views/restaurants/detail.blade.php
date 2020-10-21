@@ -59,33 +59,29 @@
                         </div>
                     </div>
 
+                    @foreach($data_detail as $detail)
                     <div class="ibox product-detail">
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
                                     <h3>
-                                        <b>Restaurant Lawang Wangi</b>
+                                        @foreach($detail->restaurant as $resto)
+                                        <b>{{$resto->nama_restaurant}}</b>
+                                        @endforeach
                                     </h3>
                                     <hr>
                                     <h4>Deskripsi</h4>
                                     <div class="">
-                                        Lawang Wangi tidak hanya terkenal di mata seniman, banyak pula foodies yang tertarik kulineran di sini berkat desain restorannya yang modern dan minimalis. Tempatnya artistik sekali, bahkan di beberapa titik, kamu bisa menikmati instalasi-instalasi seni yang sangat artsy. Soal makanan, tak ada yang mengalahkan pedasnya Chicken Lawangwangi yang fenomenal itu. Tersaji dalam balutan sambal merah segar, Ayam Goreng ini terasa makin dahsyat saat disantap bersama nasi hangat, emping, dan sayur lalapan.
+                                        {{$detail->deskripsi_restaurant}}
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-4">
                                             <dl class="m-t-md">  
-                                                <h4><b>Fasilitas</b></h4>
+                                                <h4><b>Fasilitas Restaurant</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            <li>WiFi</li>
-                                                            <li>Area Merokok</li> 
-                                                            <li>Outdoor</li>
-                                                            <li>Ruangan VIP</li>
-                                                            <li>Area Parkir</li>
-                                                            <li>Alkohol</li>
-                                                        </ul>
+                                                        {{$detail->fasilitas_restaurant}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -98,15 +94,19 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> Jl. Dago Giri No.99, Mekarwangi, Lembang, Kabupaten Bandung Barat, Jawa Barat 40391
+                                        @foreach($detail->restaurant as $resto)
+                                        <i class="fa fa-map-marker"></i> {{$resto->alamat_restaurant}}
+                                        @endforeach
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> Setiap Hari, 09.00 - 22.00 WIB
+                                        <i class="fa fa-clock-o"></i> {{$detail->jadwal_restaurant}}
                                     </h3>                                   
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-phone"></i> 08156016666
+                                        @foreach($detail->restaurant as $resto)
+                                        <i class="fa fa-phone"></i> {{$resto->telepon_restaurant}}
+                                        @endforeach
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
@@ -117,6 +117,7 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
 
 

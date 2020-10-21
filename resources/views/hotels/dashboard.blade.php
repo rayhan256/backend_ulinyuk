@@ -27,6 +27,7 @@
             </div>
         </div>
 
+        @foreach($data_hotel as $hotel)
         <div class="wrapper wrapper-content">
             <div class="wrapper wrapper-content animated fadeInRight">
                 <div class="row">
@@ -39,9 +40,9 @@
                                     <span class="product-price">
                                         $50
                                     </span>
-                                    <a href="/detail-hotel" class="product-name"> Aston Hotel Pasteur</a>
+                                    <a href="/detail-hotel" class="product-name"> {{$hotel->nama_hotel}}</a>
                                     <div class="small m-t-xs">
-                                        Jl. Dr. Djunjunan No.162, Sukagalih, Kec. Sukajadi, Kota Bandung
+                                        {{$hotel->alamat_hotel}}
                                     </div>
                                     <div class="m-t text-righ">
     
@@ -56,5 +57,6 @@
             </div>
             @include('layouts/footer')
         </div>
+        @endforeach
 
     @include('layouts/js')

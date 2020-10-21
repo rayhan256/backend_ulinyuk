@@ -11,23 +11,23 @@ class Restaurants extends Controller
     //Ambil data
     public function getAll()
     {
-        $restaurant = ModelRestaurants::all();
-        return $restaurant;
+        $data_restaurant = ModelRestaurants::all();
+        return $data_restaurant;
     }
 
     //Insert data
     public function insertData(Request $request)
     {
-        $restaurant = new ModelRestaurants();
+        $data_restaurant = new ModelRestaurants();
 
-        $restaurant->id_restaurant = $request->id_restaurant;
-        $restaurant->nama_restaurant = $request->nama_restaurant;
-        $restaurant->area_restaurant = $request->area_restaurant;
-        $restaurant->telepon_restaurant = $request->telepon_restaurant;
-        $restaurant->alamat_restaurant = $request->alamat_restaurant;
-        $restaurant->review_restaurant = $request->review_restaurant;
+        $data_restaurant->id_restaurant = $request->id_restaurant;
+        $data_restaurant->nama_restaurant = $request->nama_restaurant;
+        $data_restaurant->area_restaurant = $request->area_restaurant;
+        $data_restaurant->telepon_restaurant = $request->telepon_restaurant;
+        $data_restaurant->alamat_restaurant = $request->alamat_restaurant;
+        $data_restaurant->review_restaurant = $request->review_restaurant;
 
-        $restaurant->save();
+        $data_restaurant->save();
         return "Data Berhasil Diinput!";
     }
 
@@ -56,37 +56,37 @@ class Restaurants extends Controller
 
     public function getDataId($id)
     {
-        $restaurant = ModelCustomers::find($id);
-        return $restaurant;
+        $data_restaurant = ModelCustomers::find($id);
+        return $data_restaurant;
     }
 
     public function index()
     {
-        $restaurant = ModelRestaurants::all();
-        return view('/restaurants/dashboard');
+        $data_restaurant = ModelRestaurants::all();
+        return view('/restaurants/dashboard', ['data_restaurant' => $data_restaurant]);
     }
 
     public function list_restaurant()
     {
-        $restaurant = ModelRestaurants::all();
+        $data_restaurant = ModelRestaurants::all();
         return view('/restaurants/list');
     }
 
     public function add_restaurant()
     {
-        $restaurant = ModelRestaurants::all();
+        $data_restaurant = ModelRestaurants::all();
         return view('/restaurants/add');
     }
 
     public function add_detail_restaurant()
     {
-        $restaurant = ModelRestaurants::all();
+        $data_restaurant = ModelRestaurants::all();
         return view('/restaurants/add_detail');
     }
 
     public function update_restaurant()
     {
-        $restaurant = ModelRestaurants::all();
+        $data_restaurant = ModelRestaurants::all();
         return view('/restaurants/update');
     }
 }

@@ -10,24 +10,24 @@ class Hotels extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $hotel = ModelHotels::all();
-        return $hotel;
+        $data_hotel = ModelHotels::all();
+        return $data_hotel;
     }
 
     //Insert data
     public function insertData(Request $request)
     {
-        $hotel = new ModelHotels();
+        $data_hotel = new ModelHotels();
 
-        $hotel->id_hotel = $request->id_hotel;
-        $hotel->nama_hotel = $request->nama_hotel;
-        $hotel->kategori_hotel = $request->kategori_hotel;
-        $hotel->area_hotel = $request->area_hotel;
-        $hotel->telepon_hotel = $request->telepon_hotel;
-        $hotel->alamat_hotel = $request->alamat_hotel;
-        $hotel->review_hotel = $request->review_hotel;
+        $data_hotel->id_hotel = $request->id_hotel;
+        $data_hotel->nama_hotel = $request->nama_hotel;
+        $data_hotel->kategori_hotel = $request->kategori_hotel;
+        $data_hotel->area_hotel = $request->area_hotel;
+        $data_hotel->telepon_hotel = $request->telepon_hotel;
+        $data_hotel->alamat_hotel = $request->alamat_hotel;
+        $data_hotel->review_hotel = $request->review_hotel;
 
-        $hotel->save();
+        $data_hotel->save();
 
         return "Data Berhasil Diinput!";
     }
@@ -63,31 +63,31 @@ class Hotels extends Controller
     //Mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $hotel = ModelHotels::find($id);
-        return $hotel;
+        $data_hotel = ModelHotels::find($id);
+        return $data_hotel;
     }
 
     public function index()
     {
-        $hotel = ModelHotels::all();
-        return view('/hotels/dashboard');
+        $data_hotel = ModelHotels::all();
+        return view('/hotels/dashboard', ['data_hotel' => $data_hotel]);
     }
 
     public function list_hotel()
     {
-        $hotel = ModelHotels::all();
+        $data_hotel = ModelHotels::all();
         return view('/hotels/list');
     }
 
     public function add_hotel()
     {
-        $hotel = ModelHotels::all();
+        $data_hotel = ModelHotels::all();
         return view('/hotels/add');
     }
 
     public function add_detail_hotel()
     {
-        $hotel = ModelHotels::all();
+        $data_hotel = ModelHotels::all();
         return view('/hotels/add_detail');
     }
 

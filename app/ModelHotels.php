@@ -12,15 +12,15 @@ class ModelHotels extends Model
         'id_hotel', 'nama_hotel', 'kategori_hotel', 'area_hotel', 'telepon_hotel', 'alamat_hotel', 'review_hotel'
     ];
 
-    //relasi agar data bisa diambil oleh mst_galeri_hotels
-    public function galeri_hotel()
-    {
-        return $this->hasMany(ModelGaleriHotels::class, 'id_hotel', 'id');
-    }
-
     //relasi agar bisa di ambil oleh mst_hotel_details
     public function hotel_detail()
     {
         return $this->hasMany(ModelHotelDetails::class, 'id_hotel', 'id');
+    }
+
+    //relasi agar data bisa diambil oleh mst_galeri_hotels
+    public function galeri_hotel()
+    {
+        return $this->hasMany(ModelGaleriHotels::class, 'id_hotel', 'id');
     }
 }

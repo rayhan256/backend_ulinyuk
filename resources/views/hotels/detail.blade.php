@@ -59,21 +59,20 @@
                         </div>
                     </div>
 
+                    @foreach($data_detail as $detail)
                     <div class="ibox product-detail">
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
                                     <h3>
-                                        <b>Aston Hotel Pasteur</b>
+                                        @foreach($detail->hotel as $ho)
+                                        <b>{{$ho->nama_hotel}}</b>
+                                        @endforeach
                                     </h3>
                                     <hr>
                                     <h4><b>Deskripsi</b></h4>
                                     <div class="">
-                                        Hotel modern ini berjarak 3 km dari Bandara Internasional Husein Sastranegara dan 2 km dari mal Paris Van Java.
-                                        Kamar kelas atas dengan jendela setinggi langit-langit dilengkapi Wi-Fi gratis, TV layar datar, dan minibar, serta fasilitas pembuat teh dan kopi. Suite memiliki ruang keluarga. Layanan kamar juga tersedia.
-                                        <br>
-                                        <br>
-                                        Sarapan (berbayar) ditawarkan di restoran internasional yang trendi. Terdapat kolam renang outdoor dengan hot tub dan area anak-anak terpisah. Fasilitas lainnya meliputi lounge di atap dan gym, serta ballroom dan 8 ruang pertemuan.
+                                        {{$detail->deskripsi_hotel}}
                                     </div>
 
                                     <div class="row">
@@ -82,13 +81,7 @@
                                                 <h4><b>Fasilitas Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            <li>Area Parkir</li>
-                                                            <li>Restaurant</li> 
-                                                            <li>24 jam Security</li> 
-                                                            <li>Servis Ruangan</li>
-                                                            <li>Breakfast</li>
-                                                        </ul>
+                                                        {{$detail->fasilitas_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -98,13 +91,7 @@
                                                 <h4><b>Fasilitas Kamar Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            <li>WiFi</li>
-                                                            <li>Televisi</li> 
-                                                            <li>AC</li> 
-                                                            <li>Mini Bar</li>
-                                                            <li>Shower</li>
-                                                        </ul>
+                                                        {{$detail->fasilitas_kamar_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -114,14 +101,7 @@
                                                 <h4><b>Fasilitas Publik Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            <li>Area Parkir</li>
-                                                            <li>WiFi</li> 
-                                                            <li>Coffe Shop</li> 
-                                                            <li>Breakfast Restaurant</li>
-                                                            <li>Lunch Restaurant</li>
-                                                            <li>Dinner Restaurant</li>
-                                                        </ul>
+                                                        {{$detail->fasilitas_publik_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -133,11 +113,7 @@
                                                 <h4><b>Fasilitas Terdekat Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            <li>ATM/Banking</li>
-                                                            <li>Minimarket</li> 
-                                                            <li>Salon Kecantikan</li>
-                                                        </ul>
+                                                        {{$detail->fasilitas_terdekat_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -147,11 +123,7 @@
                                                 <h4><b>Fasilitas Transportasi Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        <ul>
-                                                            <li>Rental Kendaraan</li>
-                                                            <li>Keamanan Kendaraan</li> 
-                                                            <li>Layanan Parkir</li>
-                                                        </ul>
+                                                        {{$detail->fasilitas_transportasi_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -164,28 +136,32 @@
                                     <br>
                                     <hr>
                                     <h3>
+                                        @foreach($detail->hotel as $ho)
                                         <i class="fa fa-map-marker"></i> 
-                                        Jl. Dr. Djunjunan No.162, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40162
+                                        {{$ho->alamat_hotel}}
+                                        @endforeach
                                     </h3>
                                     <hr>
                                     <h3>
                                         <i class="fa fa-sign-in"></i> 
-                                        CheckIn Time : 14.00 WIB
+                                        {{$detail->jadwal_checkin_hotel}}
                                     </h3> 
                                     <hr>                                  
                                     <h3>
                                         <i class="fa fa-sign-out"></i> 
-                                        CheckOut Time : 12.00 WIB
+                                        {{$detail->jadwal_checkout_hotel}}
                                     </h3> 
                                     <hr>                                  
                                     <h3>
+                                        @foreach($detail->hotel as $ho)
                                         <i class="fa fa-phone"></i> 
-                                        (022) 82000777
+                                        {{$ho->telepon_hotel}}
+                                        @endforeach
                                     </h3>                                   
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-usd"></i> 
-                                        50 / <small>night</small>
+                                        Rp. 
+                                        {{$detail->harga_kamar_hotel}} / <small>night</small>
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
@@ -196,6 +172,7 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
 
 
