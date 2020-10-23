@@ -9,12 +9,12 @@ class ModelPayments extends Model
     protected $table = 'mst_payments';
 
     protected $fillable = [
-        'id_pembayaran', 'id_customer', 'foto_bukti_pembayaran', 'pembayaran_via'
+        'id_pembayaran', 'id_user', 'foto_bukti_pembayaran', 'pembayaran_via'
     ];
 
-    //ambil data id mst_customers
-    public function customer()
+    //ambil data id users
+    public function user()
     {
-        return $this->hasMany(ModelCustomers::class,  'id_customer', 'id');
+        return $this->hasMany(User::class,  'id_user', 'id');
     }
 }

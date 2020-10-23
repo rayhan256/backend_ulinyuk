@@ -19,7 +19,7 @@ class HistoriBookingDestinations extends Controller
         $histori = new ModelHistoriBookingDestinations();
 
         $histori->id_booking_tiket = $request->id_booking_tiket;
-        $histori->id_customer = $request->id_customer;
+        $histori->id_user = $request->id_user;
         $histori->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $histori->id_objek_wisata = $request->id_objek_wisata;
         $histori->tanggal_booking_tiket = $request->tanggal_booking_tiket;
@@ -37,7 +37,7 @@ class HistoriBookingDestinations extends Controller
         $find_histori_by_id = ModelHistoriBookingDestinations::find($id);
 
         $find_histori_by_id->id_booking_tiket = $request->id_booking_tiket;
-        $find_histori_by_id->id_customer = $request->id_customer;
+        $find_histori_by_id->id_user = $request->id_user;
         $find_histori_by_id->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $find_histori_by_id->id_objek_wisata = $request->id_objek_wisata;
         $find_histori_by_id->tanggal_booking_tiket = $request->tanggal_booking_tiket;

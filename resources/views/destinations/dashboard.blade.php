@@ -10,7 +10,7 @@
                 <div class="col-lg-2">
                     <div style="float: right">
                         <div class="col mt-3">                       
-                            <a href="/tambah-data-objek-wisata" class="btn btn-sm btn-primary"><i class="fa fa-plus-square"></i> Tambah Data</a>                        
+                        <a href="{{ url('/tambah-data-objek-wisata')}}" class="btn btn-sm btn-primary">Tambah Data</a>                        
                         </div>
                         <br>
                         <div style="float: right">

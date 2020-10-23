@@ -59,6 +59,14 @@
                                         Alamat Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
+                                    <th class="footable-visible footable-sortable">
+                                        CheckIn Time Hotel
+                                        <span class="footable-sort-indicator"></span>
+                                    </th>
+                                    <th class="footable-visible footable-sortable">
+                                        CheckOut Time Hotel
+                                        <span class="footable-sort-indicator"></span>
+                                    </th>
                                     <th class="text-right footable-visible footable-sortable footable-last-column">
                                         Action
                                         <span class="footable-sort-indicator"></span>
@@ -66,24 +74,48 @@
 
                                 </tr>
                                 </thead>
+
+                                @foreach($data_detail as $detail)
                                 <tbody>
                                 <tr>
+                                    @foreach($detail->hotel as $ho)
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        1 - Aston Hotel Pasteur
+                                        {{$ho->id_hotel}} - {{$ho->nama_hotel}}
                                     </td>
+                                    @endforeach
+
+                                    
                                     <td class="footable-visible">
-                                        Bintang 3 - Luxury
+                                        {{$detail->id_kategori_kamar_hotel}} - {{$detail->kategori_kamar_hotel}}
                                     </td>
+
+                                    @foreach($detail->hotel as $ho)
                                     <td class="footable-visible">
-                                        Bandung
+                                        {{$ho->area_hotel}}
                                     </td>
+                                    @endforeach
+
+                                    @foreach($detail->hotel as $ho)
                                     <td class="footable-visible">
-                                        (022) 82000777
+                                        {{$ho->telepon_hotel}}
                                     </td>
+                                    @endforeach
+
+                                    @foreach($detail->hotel as $ho)
                                     <td class="footable-visible">
-                                        Jl. Dr. Djunjunan No.162, Sukagalih, Kec. Sukajadi, Kota Bandung
+                                        {{$ho->alamat_hotel}}
                                     </td>
+                                    @endforeach
+
+                                    <td class="footable-visible">
+                                        {{$detail->jadwal_checkin_hotel}}
+                                    </td>
+
+                                    <td class="footable-visible">
+                                        {{$detail->jadwal_checkout_hotel}}
+                                    </td>
+
                                     
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
@@ -93,6 +125,8 @@
                                     </td>
                                 </tr>
                                 </tbody>
+                                @endforeach
+
                                 <tfoot>
                                 <tr>
                                     <td colspan="12" class="footable-visible">

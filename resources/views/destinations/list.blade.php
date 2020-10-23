@@ -30,6 +30,7 @@
 
             </div>
 
+            
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox">
@@ -70,27 +71,43 @@
 
                                 </tr>
                                 </thead>
+
+                                @foreach($data_detail as $detail)
                                 <tbody>
                                 <tr>
+                                    @foreach($detail->destination as $destin)
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        1 - Orchih Forest Cikole
+                                        {{$destin->id_objek_wisata}} - {{$destin->nama_objek_wisata}}
                                     </td>
+                                    @endforeach
+
                                     <td class="footable-visible">
-                                        1 - Family
+                                        {{$detail->id_kategori_objek_wisata}} - {{$detail->kategori_objek_wisata}}
                                     </td>
+
+                                    @foreach($detail->destination as $destin)
                                     <td class="footable-visible">
-                                        Bandung
+                                        {{$destin->area_objek_wisata}}
                                     </td>
+                                    @endforeach
+
+                                    @foreach($detail->destination as $destin)
                                     <td class="footable-visible">
-                                        081220003438
+                                        {{$destin->telepon_objek_wisata}}
                                     </td>
+                                    @endforeach
+
+                                    @foreach($detail->destination as $destin)
                                     <td class="footable-visible">
-                                        Genteng, Cikole, Lembang, Kabupaten Bandung Barat
+                                        {{$destin->alamat_objek_wisata}}
                                     </td>
+                                    @endforeach
+
                                     <td class="footable-visible">
-                                        Setiap Hari, 09.00 - 18.00 WIB
+                                        {{$detail->jadwal_objek_wisata}}
                                     </td>
+
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
                                             <a href="/detail-objek-wisata" class="btn-white btn btn-xs">View</a>
@@ -99,6 +116,8 @@
                                     </td>
                                 </tr>
                                 </tbody>
+                                @endforeach
+
                                 <tfoot>
                                 <tr>
                                     <td colspan="12" class="footable-visible">
@@ -134,6 +153,7 @@
                     </div>
                 </div>
             </div>
+            
 
 
         </div>

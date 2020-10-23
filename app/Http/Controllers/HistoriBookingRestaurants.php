@@ -19,7 +19,7 @@ class HistoriBookingRestaurants extends Controller
         $histori = new ModelHistoriBookingRestaurants();
 
         $histori->id_booking_restaurant = $request->id_booking_restaurant;
-        $histori->id_customer = $request->id_customer;
+        $histori->id_user = $request->id_user;
         $histori->id_kategori_restaurant = $request->id_kategori_restaurant;
         $histori->id_restaurant = $request->id_restaurant;
         $histori->jumlah_orang = $request->jumlah_orang;
@@ -37,7 +37,7 @@ class HistoriBookingRestaurants extends Controller
         $find_histori_by_id = ModelHistoriBookingRestaurants::find($id);
 
         $find_histori_by_id->id_booking_restaurant = $request->id_booking_restaurant;
-        $find_histori_by_id->id_customer = $request->id_customer;
+        $find_histori_by_id->id_user = $request->id_user;
         $find_histori_by_id->id_kategori_restaurant = $request->id_kategori_restaurant;
         $find_histori_by_id->id_restaurant = $request->id_restaurant;
         $find_histori_by_id->jumlah_orang = $request->jumlah_orang;

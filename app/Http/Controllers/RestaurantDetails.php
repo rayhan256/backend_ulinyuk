@@ -70,4 +70,10 @@ class RestaurantDetails extends Controller
         $data_detail = ModelRestaurantDetails::all();
         return view('/restaurants/detail', ['data_detail' => $data_detail]);
     }
+
+    public function list_restaurant()
+    {
+        $data_detail = ModelRestaurantDetails::all();
+        return view('/restaurants/list', ['data_detail' => $data_detail]);
+    }
 }

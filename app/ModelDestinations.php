@@ -10,7 +10,7 @@ class ModelDestinations extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id_objek_wisata', 'nama_objek_wisata', 'area_objek_wisata', 'telepon_objek_wisata', 'alamat_objek_wisata', 'review_objek_wisata'
+        'id_objek_wisata', 'nama_objek_wisata', 'area_objek_wisata', 'telepon_objek_wisata', 'alamat_objek_wisata'
     ];
 
     //relasi agar bisa di ambil oleh mst_destination_details
@@ -19,7 +19,7 @@ class ModelDestinations extends Model
         return $this->hasMany(ModelDestinationDetails::class, 'id_objek_wisata', 'id');
     }
 
-    //relasi agar data bisa diambil oleh mst_destination_orders
+    //relasi agar data bisa diambil oleh mst_galeri_destinations
     public function galeri_destination()
     {
         return $this->hasMany(ModelGaleriDestinations::class, 'id_objek_wisata', 'id');

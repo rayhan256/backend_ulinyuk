@@ -73,11 +73,7 @@ class Hotels extends Controller
         return view('/hotels/dashboard', ['data_hotel' => $data_hotel]);
     }
 
-    public function list_hotel()
-    {
-        $data_hotel = ModelHotels::all();
-        return view('/hotels/list');
-    }
+
 
     public function add_hotel()
     {

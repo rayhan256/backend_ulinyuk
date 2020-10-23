@@ -16,9 +16,35 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'mst_users';
+
     protected $fillable = [
-        'email', 'password',
+        'nama_user', 'tanggal_lahir_user', 'jenis_kelamin_user', 'alamat_user', 'kota_user', 'negara_user', 'telepon_user', 'email', 'password', 'foto_user',
     ];
+
+    //relasi agar bisa di ambil oleh mst_destination_orders
+    public function destination_order()
+    {
+        return $this->belongsTo(ModelHotelOrders::class);
+    }
+
+    //relasi agar bisa di ambil oleh mst_hotel_orders
+    public function hotel_order()
+    {
+        return $this->belongsTo(ModelHotelOrders::class);
+    }
+
+    //relasi agar bisa di ambil oleh mst_restaurant_orders
+    public function restaurant_order()
+    {
+        return $this->belongsTo(ModelHotelOrders::class);
+    }
+
+    //relasi agar bisa di ambil oleh mst_payments
+    public function payment()
+    {
+        return $this->belongsTo(ModelPayments::class);
+    }
 
     /**
      * The attributes that should be hidden for arrays.

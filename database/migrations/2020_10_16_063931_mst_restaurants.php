@@ -20,7 +20,6 @@ class MstRestaurants extends Migration
             $table->string('area_restaurant');
             $table->string('telepon_restaurant');
             $table->string('alamat_restaurant');
-            $table->text('review_restaurant');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -66,11 +66,7 @@ class Restaurants extends Controller
         return view('/restaurants/dashboard', ['data_restaurant' => $data_restaurant]);
     }
 
-    public function list_restaurant()
-    {
-        $data_restaurant = ModelRestaurants::all();
-        return view('/restaurants/list');
-    }
+
 
     public function add_restaurant()
     {

@@ -9,7 +9,7 @@ class ModelHotelOrders extends Model
     protected $table = 'mst_hotel_orders';
 
     protected $fillable = [
-        'id_booking_kamar', 'id_customer', 'id_hotel', 'id_kategori_kamar_hotel', 'harga_kamar_hotel', 'jumlah_booking_kamar', 'tanggal_checkin', 'tanggal_checkout', 'total_bayar'
+        'id_booking_kamar', 'id_user', 'id_hotel', 'id_kategori_kamar_hotel', 'harga_kamar_hotel', 'jumlah_booking_kamar', 'tanggal_checkin', 'tanggal_checkout', 'total_bayar'
     ];
 
     //relasi agar bisa di ambil oleh mst_histori_booking_hotels
@@ -18,10 +18,10 @@ class ModelHotelOrders extends Model
         return $this->hasMany(ModelHotelOrders::class, 'id_booking_kamar', 'id');
     }
 
-    //ambil data id mst_customers
-    public function customer()
+    //ambil data id users
+    public function user()
     {
-        return $this->hasMany(ModelCustomers::class,  'id_customer', 'id');
+        return $this->hasMany(User::class,  'id_user', 'id');
     }
 
     //ambil data id mst_hotel_details

@@ -9,7 +9,7 @@ class Payments extends Controller
 {
     public function getAll()
     {
-        $payment = ModelPayments::with('customer')->get();
+        $payment = ModelPayments::with('user')->get();
         return $payment;
     }
 
@@ -19,7 +19,7 @@ class Payments extends Controller
         $payment = new ModelPayments();
 
         $payment->id_pembayaran = $request->id_pembayaran;
-        $payment->id_customer = $request->id_customer;
+        $payment->id_user = $request->id_user;
         $payment->foto_bukti_pembayaran = $request->foto_bukti_pembayaran;
         $payment->pembayaran_via = $request->pembayaran_via;
 
@@ -35,7 +35,7 @@ class Payments extends Controller
         $find_payment_by_id = ModelPayments::find($id);
 
         $find_payment_by_id->id_pembayaran = $request->id_pembayaran;
-        $find_payment_by_id->id_customer = $request->id_customer;
+        $find_payment_by_id->id_user = $request->id_user;
         $find_payment_by_id->foto_bukti_pembayaran = $request->foto_bukti_pembayaran;
         $find_payment_by_id->pambayaran_via = $request->pambayaran_via;
 

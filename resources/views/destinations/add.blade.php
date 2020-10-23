@@ -23,23 +23,24 @@
                             </div>
                         </div>
                         <div action="" class="ibox-content">
-                            <form method="get">
+                            <form action="{{ url('/tambah-data')}}" method="post">
+                                @csrf
                                 <div class="form-group row">                                    
                                     <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_objek_wisata">
+                                        <input type="text" class="form-control" name="id_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     
                                     <label class="col-sm-2 col-form-label">Nama Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nama_objek_wisata">
+                                        <input type="text" class="form-control" name="nama_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Area Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" id="area_objek_wisata">
+                                        <select class="form-control m-b" name="area_objek_wisata">
                                             <option value="Bandung">Bandung</option>
                                             <option value="Banjar">Banjar</option>
                                             <option value="Bekasi">Bekasi</option>
@@ -65,13 +66,19 @@
 
                                     <label class="col-sm-2 col-form-label">Telepon Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="telepon_objek_wisata">
+                                        <input type="text" class="form-control" name="telepon_objek_wisata">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Alamat Objek Wisata</label>
+                                    <div class="col-sm-10 mb-2">
+                                        <textarea class="form-control" name="alamat_objek_wisata" name="alamat_objek_wisata"></textarea>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+
+                                    <label class="col-sm-2 col-form-label">Review Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="alamat_objek_wisata">
+                                        <textarea class="form-control" name="review_objek_wisata"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -80,7 +87,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <a href="/tambah-detail-objek-wisata" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a>
+                                        <button class="btn btn-primary btn-sm" type="submit">Selanjutnya</button>
                                     </div>
                                 </div>
                             </form>
@@ -98,7 +105,6 @@
 
 <script>
     const id_obwis = document.querySelector('#id_objek_wisata').value 
-    const id_kategori_obwis = document.querySelector('#id_kategori_objek_wisata').value
     const nama_obwis = document.querySelector('#nama_objek_wisata').value
     const telepon_obwis = document.querySelector('#telepon_objek_wisata').value
     const alamat_obwis = document.querySelector('#alamat_objek_wisata').value

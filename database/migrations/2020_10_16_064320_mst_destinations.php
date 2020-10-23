@@ -20,7 +20,6 @@ class MstDestinations extends Migration
             $table->string('area_objek_wisata');
             $table->string('telepon_objek_wisata');
             $table->string('alamat_objek_wisata');
-            $table->text('review_objek_wisata');
             $table->softDeletes();
             $table->timestamps();
         });

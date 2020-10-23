@@ -16,6 +16,7 @@ class MstHistoriBookingHotels extends Migration
         Schema::create('mst_histori_booking_hotels', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
             $table->unsignedBigInteger('id_booking_kamar'); //fk mst_hotel_orders
+            $table->unsignedBigInteger('id_user'); //fk mst_hotel_orders
             $table->unsignedBigInteger('id_kategori_kamar_hotel');
             $table->unsignedBigInteger('id_hotel');
             $table->integer('jumlah_booking_kamar');

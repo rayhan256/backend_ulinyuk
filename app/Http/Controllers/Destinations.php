@@ -69,22 +69,24 @@ class Destinations extends Controller
         return view('/destinations/dashboard', ['data_destination' => $data_destination]);
     }
 
-    public function list_objek_wisata()
-    {
-        $destination = ModelDestinations::all();
-        return view('/destinations/list');
-    }
-
     public function add_objek_wisata()
     {
         $destination = ModelDestinations::all();
         return view('/destinations/add');
     }
-
-    public function add_detail_objek_wisata()
+    public function add_proses_objek_wisata(Request $request)
     {
-        $destination = ModelDestinations::all();
-        return view('/destinations/add_detail');
+        $destination = new ModelDestinations([
+            'id_objek_wisata' => $request->input('id_objek_wisata'),
+            'nama_objek_wisata' => $request->input('nama_objek_wisata'),
+            'area_objek_wisata' => $request->input('area_objek_wisata'),
+            'telepon_objek_wisata' => $request->input('telepon_objek_wisata'),
+            'alamat_objek_wisata' => $request->input('alamat_objek_wisata'),
+            'review_objek_wisata' => $request->input('review_objek_wisata')
+        ]);
+        $destination->save();
+
+        return redirect('/tambah-detail-objek-wisata/' . $request->input('id_objek_wisata'));
     }
 
     public function update_objek_wisata()

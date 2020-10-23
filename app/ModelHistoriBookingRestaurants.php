@@ -9,7 +9,7 @@ class ModelHistoriBookingRestaurants extends Model
     protected $table = 'mst_histori_booking_restaurants';
 
     protected $fillable = [
-        'id_booking_restaurant', 'id_customer', 'id_kategori_restaurant', 'id_restaurant', 'tanggal_booking_restaurant'
+        'id_booking_restaurant', 'id_user', 'id_kategori_restaurant', 'id_restaurant', 'tanggal_booking_restaurant'
     ];
 
     //ambil data id mst_restaurant_orders

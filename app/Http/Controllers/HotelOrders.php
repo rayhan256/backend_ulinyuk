@@ -10,7 +10,7 @@ class HotelOrders extends Controller
     //
     public function getAll()
     {
-        $data = ModelHotelOrders::with('customer', 'hotel_detail')->get();
+        $data = ModelHotelOrders::with('user', 'hotel_detail')->get();
         return $data;
     }
 
@@ -20,7 +20,7 @@ class HotelOrders extends Controller
         $order = new ModelHotelOrders();
 
         $order->id_booking_kamar = $request->id_booking_kamar;
-        $order->id_customer = $request->id_customer;
+        $order->id_user = $request->id_user;
         $order->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
         $order->id_hotel = $request->id_hotel;
         $order->harga_kamar_hotel = $request->harga_kamar_hotel;
@@ -39,7 +39,7 @@ class HotelOrders extends Controller
         $find_order_by_id = ModelHotelOrders::find($id);
 
         $find_order_by_id->id_booking_kamar = $request->id_booking_kamar;
-        $find_order_by_id->id_customer = $request->id_customer;
+        $find_order_by_id->id_user = $request->id_user;
         $find_order_by_id->id_hotel = $request->id_hotel;
         $find_order_by_id->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
         $find_order_by_id->harga_kamar_hotel = $request->harga_kamar_hotel;

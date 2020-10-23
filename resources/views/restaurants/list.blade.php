@@ -44,10 +44,6 @@
                                         <span class="footable-sort-indicator"></span>
                                     </th>
                                     <th class="footable-visible footable-sortable">
-                                        Nama Restaurant
-                                        <span class="footable-sort-indicator"></span>
-                                    </th>
-                                    <th class="footable-visible footable-sortable">
                                         ID Kategori Restaurant
                                         <span class="footable-sort-indicator"></span>
                                     </th>
@@ -74,30 +70,43 @@
 
                                 </tr>
                                 </thead>
+
+                                @foreach($data_detail as $detail)
                                 <tbody>
                                 <tr>
+                                    @foreach($detail->restaurant as $resto)
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        1
+                                        {{$resto->id_restaurant}} - {{$resto->nama_restaurant}}
                                     </td>
+                                    @endforeach
+                                    
                                     <td class="footable-visible">
-                                        Restaurant Lawang Wangi
+                                        {{$detail->id_kategori_restaurant}} - {{$detail->kategori_restaurant}}
                                     </td>
+
+                                    @foreach($detail->restaurant as $resto)
                                     <td class="footable-visible">
-                                        1 - Best Restaurant
+                                        {{$resto->area_restaurant}}
                                     </td>
+                                    @endforeach
+
+                                    @foreach($detail->restaurant as $resto)
                                     <td class="footable-visible">
-                                        Bandung
+                                        {{$resto->telepon_restaurant}}
                                     </td>
+                                    @endforeach
+
+                                    @foreach($detail->restaurant as $resto)
                                     <td class="footable-visible">
-                                        08156016666
+                                        {{$resto->alamat_restaurant}}
                                     </td>
+                                    @endforeach
+
                                     <td class="footable-visible">
-                                        Jl. Dago Giri No.99, Mekarwangi, Lembang, Kabupaten Bandung Barat, Jawa Barat 40391
+                                        {{$detail->jadwal_restaurant}}
                                     </td>
-                                    <td class="footable-visible">
-                                        Setiap Hari, 09.00 - 22.00 WIB
-                                    </td>
+                                    
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
                                             <a href="/detail-restaurant" class="btn-white btn btn-xs">View</a>
@@ -106,6 +115,8 @@
                                     </td>
                                 </tr>
                                 </tbody>
+                                @endforeach
+
                                 <tfoot>
                                 <tr>
                                     <td colspan="12" class="footable-visible">

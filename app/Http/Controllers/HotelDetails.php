@@ -82,4 +82,10 @@ class HotelDetails extends Controller
         $data_detail = ModelHotelDetails::all();
         return view('/hotels/detail', ['data_detail' => $data_detail]);
     }
+
+    public function list_hotel()
+    {
+        $data_detail = ModelHotelDetails::all();
+        return view('/hotels/list', ['data_detail' => $data_detail]);
+    }
 }
