@@ -16,7 +16,7 @@ class MstHistoriBookingRestaurants extends Migration
         Schema::create('mst_histori_booking_restaurants', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
             $table->unsignedBigInteger('id_booking_restaurant'); //fk mst_restaurant_orders
-            $table->unsignedBigInteger('id_customer');
+            $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger('id_kategori_restaurant');
             $table->unsignedBigInteger('id_restaurant');
             $table->date('tanggal_booking_restaurant');

@@ -11,7 +11,7 @@ class DestinationOrders extends Controller
     //Ambil data
     public function getAll()
     {
-        $order = ModelDestinationOrders::with('customer', 'destination_detail')->get();
+        $order = ModelDestinationOrders::with('user', 'destination_detail')->get();
         return $order;
     }
 
@@ -21,7 +21,7 @@ class DestinationOrders extends Controller
         $order = new ModelDestinationOrders();
 
         $order->id_booking_tiket = $request->id_booking_tiket;
-        $order->id_customer = $request->id_customer;
+        $order->id_user = $request->id_user;
         $order->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $order->id_objek_wisata = $request->id_objek_wisata;
         $order->tanggal_booking_tiket = $request->tanggal_booking_tiket;
@@ -39,7 +39,7 @@ class DestinationOrders extends Controller
         $find_order_by_id = ModelDestinationOrders::find($id);
 
         $find_order_by_id->id_booking_tiket = $request->id_booking_tiket;
-        $find_order_by_id->id_customer = $request->id_customer;
+        $find_order_by_id->id_user = $request->id_user;
         $find_order_by_id->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $find_order_by_id->id_objek_wisata = $request->id_objek_wisata;
         $find_order_by_id->tanggal_booking_tiket = $request->tanggal_booking_tiket;

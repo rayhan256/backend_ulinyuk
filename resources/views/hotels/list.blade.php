@@ -87,7 +87,7 @@
 
                                     
                                     <td class="footable-visible">
-                                        {{$detail->id_kategori_kamar_hotel}} - {{$detail->kategori_kamar_hotel}}
+                                        {{$detail->id_kategori_kamar_hotel}}
                                     </td>
 
                                     @foreach($detail->hotel as $ho)

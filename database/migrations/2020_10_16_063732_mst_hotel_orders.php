@@ -16,7 +16,7 @@ class MstHotelOrders extends Migration
         Schema::create('mst_hotel_orders', function (Blueprint $table) {
             $table->bigIncrements('id'); //primary key            
             $table->integer('id_booking_kamar');
-            $table->unsignedBigInteger('id_customer'); //foreign key ke mst_customers
+            $table->unsignedBigInteger('id_user'); //foreign key ke users
             $table->unsignedBigInteger('id_kategori_kamar_hotel'); //foreign key ke mst_hotel_details
             $table->unsignedBigInteger('id_hotel');
             $table->integer('harga_kamar_hotel');
@@ -27,7 +27,7 @@ class MstHotelOrders extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('id_customer')->references('id')->on('mst_customers');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->foreign('id_kategori_kamar_hotel')->references('id')->on('mst_hotel_details');
         });
     }

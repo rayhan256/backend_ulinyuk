@@ -84,6 +84,13 @@ Route::put('/galeri_destination/update/{id}', 'GaleriDestinations@updateData');
 Route::delete('/galeri_destination/delete/{id}', 'GaleriDestinations@deleteData');
 Route::get('/galeri_destination/{id}', 'GaleriDestinations@getDataId');
 
+//mst_review_destinations
+Route::get('/review_destination', 'ReviewDestinations@getAll');
+Route::post('/review_destination/post', 'ReviewDestinations@insertData');
+Route::put('/review_destination/update/{id}', 'ReviewDestinations@updateData');
+Route::delete('/review_destination/delete/{id}', 'ReviewDestinations@deleteData');
+Route::get('/review_destination/{id}', 'ReviewDestinations@getDataId');
+
 //mst_histori_booking_destinations
 Route::get('/histori_destination', 'HistoriBookingDestinations@getAll');
 Route::post('/histori_destination/post', 'HistoriBookingDestinations@insertData');
@@ -121,6 +128,13 @@ Route::put('/galeri_hotel/update/{id}', 'GaleriHotels@updateData');
 Route::delete('/galeri_hotel/delete/{id}', 'GaleriHotels@deleteData');
 Route::get('/galeri_hotel/{id}', 'GaleriHotels@getDataId');
 
+//mst_review_hotels
+Route::get('/review_hotel', 'ReviewHotels@getAll');
+Route::post('/review_hotel/post', 'ReviewHotels@insertData');
+Route::put('/review_hotel/update/{id}', 'ReviewHotels@updateData');
+Route::delete('/review_hotel/delete/{id}', 'ReviewHotels@deleteData');
+Route::get('/review_hotel/{id}', 'ReviewHotels@getDataId');
+
 //mst_histori_booking_hotels
 Route::get('/histori_hotel', 'HistoriBookingHotels@getAll');
 Route::post('/histori_hotel/post', 'HistoriBookingHotels@insertData');
@@ -157,6 +171,13 @@ Route::post('/galeri_restaurant/post', 'GaleriRestaurants@insertData');
 Route::put('/galeri_restaurant/update/{id}', 'GaleriRestaurants@updateData');
 Route::delete('/galeri_restaurant/delete/{id}', 'GaleriRestaurants@deleteData');
 Route::get('/galeri_restaurant/{id}', 'GaleriRestaurants@getDataId');
+
+//mst_review_restaurants
+Route::get('/review_restaurant', 'ReviewRestaurants@getAll');
+Route::post('/review_restaurant/post', 'ReviewRestaurants@insertData');
+Route::put('/review_restaurant/update/{id}', 'ReviewRestaurants@updateData');
+Route::delete('/review_restaurant/delete/{id}', 'ReviewRestaurants@deleteData');
+Route::get('/review_restaurant/{id}', 'ReviewRestaurants@getDataId');
 
 //mst_histori_booking_restaurants
 Route::get('/histori_restaurant', 'HistoriBookingRestaurants@getAll');

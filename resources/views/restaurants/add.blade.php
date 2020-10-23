@@ -65,14 +65,14 @@
                                     </div>
 
                                     <label class="col-sm-2 col-form-label">Telepon Restaurant</label>
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-10 mb-2">
                                         <input type="text" class="form-control" id="telepon_restaurant">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Alamat Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="alamat_restaurant">
+                                        <textarea name="alamat_restaurant" id="alamat_restaurant" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 

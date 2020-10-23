@@ -36,7 +36,7 @@ class Destinations extends Controller
     {
         $find_destination_by_id = ModelDestinations::find($id);
 
-        $find_destination_by_id->kode_objek_wisata = $request->kode_objek_wisata;
+        $find_destination_by_id->id_objek_wisata = $request->id_objek_wisata;
         $find_destination_by_id->nama_objek_wisata = $request->nama_objek_wisata;
         $find_destination_by_id->area_objek_wisata = $request->area_objek_wisata;
         $find_destination_by_id->telepon_objek_wisata = $request->telepon_objek_wisata;

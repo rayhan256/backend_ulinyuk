@@ -16,7 +16,7 @@ class MstRestaurantOrders extends Migration
         Schema::create('mst_restaurant_orders', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
             $table->integer('id_booking_restaurant');
-            $table->unsignedBigInteger('id_customer'); //fk mst_customers
+            $table->unsignedBigInteger('id_user'); //fk users
             $table->unsignedBigInteger('id_kategori_restaurant'); //fk mst_restaurant_details
             $table->unsignedBigInteger('id_restaurant');
             $table->integer('jumlah_orang');
@@ -24,7 +24,7 @@ class MstRestaurantOrders extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('id_customer')->references('id')->on('mst_customers');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->foreign('id_kategori_restaurant')->references('id')->on('mst_restaurant_details');
         });
     }

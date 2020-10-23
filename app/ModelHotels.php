@@ -23,4 +23,10 @@ class ModelHotels extends Model
     {
         return $this->hasMany(ModelGaleriHotels::class, 'id_hotel', 'id');
     }
+
+    //relasi agar data bisa diambil oleh mst_review_hotels
+    public function review_hotel()
+    {
+        return $this->hasMany(ModelReviewHotels::class, 'id_hotel', 'id');
+    }
 }

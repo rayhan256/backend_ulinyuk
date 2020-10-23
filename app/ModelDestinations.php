@@ -24,4 +24,10 @@ class ModelDestinations extends Model
     {
         return $this->hasMany(ModelGaleriDestinations::class, 'id_objek_wisata', 'id');
     }
+
+    //relasi agar data bisa diambil oleh mst_review_destinations
+    public function review_destination()
+    {
+        return $this->hasMany(ModelReviewDestinations::class, 'id_objek_wisata', 'id');
+    }
 }

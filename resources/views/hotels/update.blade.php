@@ -67,38 +67,38 @@
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Hotel</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="fasilitas_hotel" id="fasilitas_hotel" cols="63" rows="5"></textarea>
+                                    <div class="col-sm-10 mb-2">
+                                        <textarea name="fasilitas_hotel" id="fasilitas_hotel" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Kamar</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="fasilitas_kamar_hotel" id="fasilitas_kamar_hotel" cols="63" rows="5"></textarea>
+                                    <div class="col-sm-10 mb-2">
+                                        <textarea name="fasilitas_kamar_hotel" id="fasilitas_kamar_hotel" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Publik</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="fasilitas_publik_hotel" id="fasilitas_publik_hotel" cols="63" rows="5"></textarea>
+                                    <div class="col-sm-10 mb-2">
+                                        <textarea name="fasilitas_publik_hotel" id="fasilitas_publik_hotel" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Terdekat</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="fasilitas_terdekat_hotel" id="fasilitas_terdekat_hotel" cols="63" rows="5"></textarea>
+                                    <div class="col-sm-10 mb-2">
+                                        <textarea name="fasilitas_terdekat_hotel" id="fasilitas_terdekat_hotel" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Transportasi</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="fasilitas_transportasi_hotel" id="fasilitas_transportasi_hotel" cols="63" rows="5"></textarea>
+                                    <div class="col-sm-10 mb-2">
+                                        <textarea name="fasilitas_transportasi_hotel" id="fasilitas_transportasi_hotel" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Deskripsi Hotel</label>
                                     <div class="col-sm-10">
-                                        <textarea name="deskripsi_hotel" id="deskripsi_hotel" cols="63" rows="5"></textarea>
+                                        <textarea name="deskripsi_hotel" id="deskripsi_hotel" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 

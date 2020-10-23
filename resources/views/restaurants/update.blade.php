@@ -51,14 +51,14 @@
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Restaurant</label>
-                                    <div class="col-sm-10">
-                                        <textarea name="fasilitas_restaurant" id="fasilitas_restaurant" cols="63" rows="5"></textarea>
+                                    <div class="col-sm-10 mb-2">
+                                        <textarea name="fasilitas_restaurant" id="fasilitas_restaurant" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Deskripsi Restaurant</label>
                                     <div class="col-sm-10">
-                                        <textarea name="deskripsi_restaurant" id="deskripsi_restaurant" cols="63" rows="5"></textarea>
+                                        <textarea name="deskripsi_restaurant" id="deskripsi_restaurant" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 

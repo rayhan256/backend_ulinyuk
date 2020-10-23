@@ -16,7 +16,7 @@ class MstHistoriBookingDestinations extends Migration
         Schema::create('mst_histori_booking_destinations', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
             $table->unsignedBigInteger('id_booking_tiket'); //fk mst_destination_orders
-            $table->unsignedBigInteger('id_customer');
+            $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger('id_kategori_objek_wisata');
             $table->unsignedBigInteger('id_objek_wisata');
             $table->date('tanggal_booking_tiket');

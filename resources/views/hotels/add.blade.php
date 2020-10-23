@@ -82,7 +82,7 @@
 
                                     <label class="col-sm-2 col-form-label">Alamat Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="alamat_hotel">
+                                        <textarea class="form-control" name="alamat_hotel" id="alamat_hotel"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     
