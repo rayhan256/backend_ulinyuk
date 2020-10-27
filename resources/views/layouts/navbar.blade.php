@@ -26,7 +26,7 @@
 
 
             <li>
-                <a href="/login">
+            <a href="/">
                     <i class="fa fa-sign-out"></i> Log out
                 </a>
             </li>

@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 //LOGIN
-Route::get('/', function () {
-    return view('logins/login');
-});
+// Route::get('/', function () {
+//     return view('logins/login');
+// });
+// Route::get('/login', 'AuthController@login_admin');
+// Route::post('/postlogin', 'AuthController@postlogin');
+
+Route::get('/', 'otentikasi\OtentikasiController@index')->name('index');
+Route::post('/login', 'otentikasi\OtentikasiController@login')->name('login');
+Route::get('/logout', 'otentikasi\OtentikasiController@logout')->name('logout');
 
 //HOME-DASHBOARD
 Route::get('/dashboard', function () {
@@ -34,8 +40,8 @@ Route::get('/list-detail-objek-wisata', 'DestinationDetails@list_objek_wisata');
 Route::get('/tambah-data-objek-wisata', 'Destinations@add_objek_wisata');
 Route::post('/tambah-data', 'Destinations@add_proses_objek_wisata');
 
-Route::get('/tambah-detail-objek-wisata/{id}', 'DestinationDetails@add_detail_objek_wisata');
-Route::get('/tambah-detail', 'DestinationDetails@add_proses_detail_objek_wisata');
+Route::get('/tambah-detail-objek-wisata', 'DestinationDetails@add_detail_objek_wisata');
+// Route::get('/tambah-detail', 'DestinationDetails@add_detail_objek_wisata');
 
 Route::get('/edit-data-objek-wisata', 'Destinations@update_objek_wisata');
 

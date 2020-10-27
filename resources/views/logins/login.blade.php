@@ -24,13 +24,26 @@
                         <h3>Welcome to UlinYuk</h3> <br>                    
                             <div>
                                 <p>Please login your account.</p>
-                                <form class="m-t" role="form" action="index.html">
+                            <form class="m-t" method="POST" action="{{ route('login') }}">
+                                    @csrf
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Username" required="">
+                                        <input name="email" type="email" class="form-control" placeholder="example@gmail.com" required="">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" required="">
+                                        <input name="password" type="password" class="form-control" placeholder="Password" required="">
                                     </div>
+
+                                    @if (session('message'))
+                                        <div class="alert alert-danger show fade">
+                                            <div class="alert-body">
+                                                <button class="close" data-dismiss="alert">
+                                                </button>
+                                                {{session('message')}}
+                                            </div>
+                                        </div>
+                                    @endif
+                                    
+
                                     <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
                                 </form>                                
                             </div>

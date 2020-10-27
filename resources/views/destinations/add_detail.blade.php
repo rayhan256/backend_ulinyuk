@@ -30,15 +30,11 @@
                                         <input type="text" class="form-control" id="id_kategori_objek_wisata" name="id_kategori_objek_wisata"/>
                                     </div>
                                     <div class="hr-line-dashed"></div>
-
-                                   
                                         <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                         <div class="col-sm-10">
-                                        <input type="text" class="form-control" value="{{$data_detail->id}}"/>
+                                        <input type="text" class="form-control"/>
                                         </div>
                                         <div class="hr-line-dashed"></div>
-                                   
-
                                     <label class="col-sm-2 col-form-label">Kategori Objek Wisata</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="kategori_objek_wisata" name="kategori_objek_wisata">
@@ -64,7 +60,7 @@
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Deskripsi Objek Wisata</label>
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-10 mb-2">
                                         <textarea name="deskripsi_objek_wisata" id="deskripsi_objek_wisata" class="form-control"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
@@ -79,7 +75,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Simpan</button>
+                                        <button class="btn btn-primary btn-sm" id="submit_add_objek_wisata" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>

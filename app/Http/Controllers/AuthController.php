@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\AccountAdmins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -11,6 +12,29 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
 
+    /*LOGIN ADMIN
+    public function login_admin()
+    {
+        return view('/logins/login');
+    }
+
+    public function postlogin(Request $request)
+    {
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $kredensial = request([$email, $password]);
+
+        if (Auth::attempt($kredensial)) {
+            $account_admins = $request->account_admins();
+            return redirect('/dashboard');
+        } else {
+            return redirect('/logins/login');
+        }
+    }*/
+
+
+    //USER API
     public function signup(Request $req)
     {
         // $req->validate([

@@ -12,7 +12,7 @@
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a class="dropdown-item" href="/profile">Profile</a></li>
                             <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/login">Logout</a></li>
+                            <li><a class="dropdown-item" href="/">Logout</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
