@@ -35,19 +35,21 @@ Route::get('/update-profile', 'Admins@update_profile');
 
 //DESTINATIONS
 Route::get('/objek-wisata', 'Destinations@index');
-Route::get('/list-detail-objek-wisata', 'DestinationDetails@list_objek_wisata');
+Route::get('/list-detail-objek-wisata', 'Destinations@list_objek_wisata');
 //tambah data master
 Route::get('/tambah-data-objek-wisata', 'Destinations@add_objek_wisata');
 Route::post('/tambah-data', 'Destinations@add_proses_objek_wisata');
-
-Route::get('/tambah-detail-objek-wisata', 'DestinationDetails@add_detail_objek_wisata');
-// Route::get('/tambah-detail', 'DestinationDetails@add_detail_objek_wisata');
+//tambah data detail
+Route::get('/tambah-detail-objek-wisata/{id}', 'DestinationDetails@add_detail_objek_wisata');
+Route::post('/tambah-detail', 'DestinationDetails@add_proses_detail_objek_wisata');
 
 Route::get('/edit-data-objek-wisata', 'Destinations@update_objek_wisata');
 
-Route::get('/detail-objek-wisata', 'DestinationDetails@detail_objek_wisata');
+Route::get('/detail-objek-wisata/{id}', 'DestinationDetails@detail_objek_wisata');
 Route::get('/data-order-objek-wisata', 'DestinationOrders@order_objek_wisata');
-Route::get('/tambah-galeri-objek-wisata', 'GaleriDestinations@galeri_objek_wisata');
+//tamba data galeri
+Route::get('/tambah-galeri-objek-wisata/{id}', 'GaleriDestinations@galeri_objek_wisata');
+Route::post('/tambah-galeri', 'GaleriDestinations@add_galeri_objek_wisata');
 
 //HOTELS
 Route::get('/hotel', 'Hotels@index');

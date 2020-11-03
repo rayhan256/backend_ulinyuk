@@ -16,12 +16,12 @@ class ModelDestinationDetails extends Model
     //relasi agar data bisa diambil oleh mst_destination_orders
     public function destination_order()
     {
-        return $this->hasMany(ModelDestinationOrders::class, 'id_kategori_objek_wisata', 'id');
+        return $this->belongsTo(ModelDestinationOrders::class, 'id_kategori_objek_wisata', 'id');
     }
 
     //ambil data id mst_destination
     public function destination()
     {
-        return $this->hasMany(ModelDestinations::class, 'id_objek_wisata', 'id');
+        return $this->belongsTo(ModelDestinations::class, 'id_objek_wisata', 'id');
     }
 }

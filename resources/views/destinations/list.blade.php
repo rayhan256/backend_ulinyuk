@@ -10,7 +10,7 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/objek-wisata" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="{{ url('/objek-wisata') }}" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                     </div>
                 </div>
@@ -75,42 +75,44 @@
                                 @foreach($data_detail as $detail)
                                 <tbody>
                                 <tr>
-                                    @foreach($detail->destination as $destin)
+                                    
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        {{$destin->id_objek_wisata}} - {{$destin->nama_objek_wisata}}
+                                        {{$detail->id_objek_wisata}} - {{$detail->nama_objek_wisata}}
+                                    </td>
+                                    
+                                    @foreach($detail->destination_detail as $dest)
+                                    <td class="footable-visible">
+                                        {{$dest->id_kategori_objek_wisata}} - {{$dest->kategori_objek_wisata}}
                                     </td>
                                     @endforeach
 
+                                    
                                     <td class="footable-visible">
-                                        {{$detail->id_kategori_objek_wisata}} - {{$detail->kategori_objek_wisata}}
+                                        {{$detail->area_objek_wisata}}
                                     </td>
+                                    
 
-                                    @foreach($detail->destination as $destin)
+                                    
                                     <td class="footable-visible">
-                                        {{$destin->area_objek_wisata}}
+                                        {{$detail->telepon_objek_wisata}}
+                                    </td>
+                                    
+
+                                    
+                                    <td class="footable-visible">
+                                        {{$detail->alamat_objek_wisata}}
+                                    </td>
+                                    
+                                    @foreach($detail->destination_detail as $dest)
+                                    <td class="footable-visible">
+                                        {{$dest->jadwal_objek_wisata}}
                                     </td>
                                     @endforeach
-
-                                    @foreach($detail->destination as $destin)
-                                    <td class="footable-visible">
-                                        {{$destin->telepon_objek_wisata}}
-                                    </td>
-                                    @endforeach
-
-                                    @foreach($detail->destination as $destin)
-                                    <td class="footable-visible">
-                                        {{$destin->alamat_objek_wisata}}
-                                    </td>
-                                    @endforeach
-
-                                    <td class="footable-visible">
-                                        {{$detail->jadwal_objek_wisata}}
-                                    </td>
 
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <a href="/detail-objek-wisata" class="btn-white btn btn-xs">View</a>
+                                            <a href="{{ url('/detail-objek-wisata') }}" class="btn-white btn btn-xs">View</a>
                                             <a href="/edit-data-objek-wisata" class="btn-white btn btn-xs">Edit</a>
                                         </div>
                                     </td>

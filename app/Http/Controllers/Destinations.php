@@ -74,24 +74,30 @@ class Destinations extends Controller
         $destination = ModelDestinations::all();
         return view('/destinations/add');
     }
-    // public function add_proses_objek_wisata(Request $request)
-    // {
-    //     $destination = new ModelDestinations([
-    //         'id_objek_wisata' => $request->input('id_objek_wisata'),
-    //         'nama_objek_wisata' => $request->input('nama_objek_wisata'),
-    //         'area_objek_wisata' => $request->input('area_objek_wisata'),
-    //         'telepon_objek_wisata' => $request->input('telepon_objek_wisata'),
-    //         'alamat_objek_wisata' => $request->input('alamat_objek_wisata'),
-    //         'review_objek_wisata' => $request->input('review_objek_wisata')
-    //     ]);
-    //     $destination->save();
+    public function add_proses_objek_wisata(Request $request)
+    {
+        $destination = new ModelDestinations([
+            'id_objek_wisata' => $request->input('id_objek_wisata'),
+            'nama_objek_wisata' => $request->input('nama_objek_wisata'),
+            'area_objek_wisata' => $request->input('area_objek_wisata'),
+            'telepon_objek_wisata' => $request->input('telepon_objek_wisata'),
+            'alamat_objek_wisata' => $request->input('alamat_objek_wisata'),
+            'review_objek_wisata' => $request->input('review_objek_wisata')
+        ]);
+        $destination->save();
 
-    //     return redirect('/tambah-detail-objek-wisata/' . $request->input('id_objek_wisata'));
-    // }
+        return redirect('/tambah-detail-objek-wisata/' . $request->input('id_objek_wisata'));
+    }
 
     public function update_objek_wisata()
     {
         $destination = ModelDestinations::all();
         return view('/destinations/update');
+    }
+
+    public function list_objek_wisata()
+    {
+        $data_detail = ModelDestinations::all();
+        return view('/destinations/list', ['data_detail' => $data_detail]);
     }
 }

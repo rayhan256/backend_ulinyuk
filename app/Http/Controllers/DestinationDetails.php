@@ -71,38 +71,42 @@ class DestinationDetails extends Controller
     }
 
     //insert ke table mst_destination_details
-    public function add_detail_objek_wisata()
+    public function add_detail_objek_wisata($id)
     {
-        $data_detail = ModelDestinationDetails::all();
+        $data_detail = ModelDestinations::where('id_objek_wisata', $id)->first();
         return view('/destinations/add_detail', ['data_detail' => $data_detail]);
+        //echo var_dump($data_detail);
     }
 
-    // public function add_proses_detail_objek_wisata(Request $request)
+    public function add_proses_detail_objek_wisata(Request $request)
+    {
+        $detail = new ModelDestinationDetails([
+            'id_kategori_objek_wisata' => $request->input('id_kategori_objek_wisata'),
+            'id_objek_wisata' => $request->input('id_objek_wisata'),
+            'kategori_objek_wisata' => $request->input('kategori_objek_wisata'),
+            'jadwal_objek_wisata' => $request->input('jadwal_objek_wisata'),
+            'wahana_objek_wisata' => $request->input('wahana_objek_wisata'),
+            'fasilitas_objek_wisata' => $request->input('fasilitas_objek_wisata'),
+            'deskripsi_objek_wisata' => $request->input('deskripsi_objek_wisata'),
+            'harga_tiket' => $request->input('harga_tiket')
+        ]);
+        $detail->save();
+
+        return redirect('/list-detail-objek-wisata');
+    }
+
+    public function detail_objek_wisata($id)
+    {
+        //$data_detail = ModelDestinations::find($id);
+        $data_detail = ModelDestinations::with(['destination_detail', 'galeri_destination'])->firstWhere('id', $id);
+        //dd($data_detail);
+        return view('/destinations/detail', ['detail' => $data_detail]);
+        //return response()->json($data_detail, 200);
+    }
+
+    // public function list_objek_wisata()
     // {
-    //     $detail = new ModelDestinationDetails([
-    //         'id_kategori_objek_wisata' => $request->input('id_kategori_objek_wisata'),
-    //         'id_objek_wisata' => $request->input('id_objek_wisata'),
-    //         'kategori_objek_wisata' => $request->input('kategori_objek_wisata'),
-    //         'jadwal_objek_wisata' => $request->input('jadwal_objek_wisata'),
-    //         'wahana_objek_wisata' => $request->input('wahana_objek_wisata'),
-    //         'fasilitas_objek_wisata' => $request->input('fasilitas_objek_wisata'),
-    //         'deskripsi_objek_wisata' => $request->input('deskripsi_objek_wisata'),
-    //         'harga_tiket' => $request->input('harga_tiket')
-    //     ]);
-    //     $detail->save();
-
-    //     return redirect('/list-detail-objek-wisata');
+    //     $data_detail = ModelDestinationDetails::all();
+    //     return view('/destinations/list', ['data_detail' => $data_detail]);
     // }
-
-    public function detail_objek_wisata()
-    {
-        $data_detail = ModelDestinationDetails::all();
-        return view('/destinations/detail', ['data_detail' => $data_detail]);
-    }
-
-    public function list_objek_wisata()
-    {
-        $data_detail = ModelDestinationDetails::all();
-        return view('/destinations/list', ['data_detail' => $data_detail]);
-    }
 }

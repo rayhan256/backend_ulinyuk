@@ -15,10 +15,10 @@
                         <br>
                         <div style="float: right">
                             <div class="mr-3">
-                                <a href="/objek-wisata" class="btn btn-sm btn-outline btn-primary"> <i
+                                <a href="{{ url('/objek-wisata') }}" class="btn btn-sm btn-outline btn-primary"> <i
                                     class="fa fa-th-large"></i> </a>
                                 <td>  </td>
-                                <a href="/list-detail-objek-wisata" class="btn btn-sm btn-outline btn-primary"> <i
+                                <a href="{{ url('/list-detail-objek-wisata') }}" class="btn btn-sm btn-outline btn-primary"> <i
                                     class="fa fa-bars"></i> </a>
                             </div>
                         </div>
@@ -35,18 +35,18 @@
                         <div class="ibox">
                             <div class="ibox-content product-box">
     
-                                <img src="assets/image/destinations/orchid2.png" alt="" width='100%'>
+                                <img src="{{ asset('assets/image/destinations/orchid2.png') }}" alt="" width='100%'>
                                 <div class="product-desc">
                                     <span class="product-price">
                                         $4
                                     </span>
-                                    <a href="/detail-objek-wisata" class="product-name"> {{$destination->nama_objek_wisata}}</a>
+                                    <a href="{{ url('/detail-objek-wisata') }}" class="product-name"> {{$destination->nama_objek_wisata}}</a>
                                     <div class="small m-t-xs">
                                         {{$destination->alamat_objek_wisata}}
                                     </div>
                                     <div class="m-t text-righ">
     
-                                        <a href="/detail-objek-wisata" class="btn btn-xs btn-outline btn-primary">Info <i
+                                        <a href="{{ url('/detail-objek-wisata').'/'.$destination->id }}" class="btn btn-xs btn-outline btn-primary">Info <i
                                                 class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>

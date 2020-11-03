@@ -7,13 +7,6 @@
                 <div class="col-lg-10">
                     <h2>Gallery Objek Wisata</h2>                
                 </div>
-                <div class="col-md-2">
-                    <br>
-                    <div style="float: right">
-                        <a href="/detail-objek-wisata" class="btn btn-sm btn-outline btn-primary"> <i
-                            class="fa fa-chevron-left"></i> </a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -30,27 +23,25 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form method="post" action="{{ url('/tambah-galeri') }}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="form-group row">
 
                                     <label class="col-sm-2 col-form-label">ID Galeri Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" id="id_galeri_objek_wisata" class="form-control">
+                                        <input type="text" name="id_galeri_objek_wisata" id="id_galeri_objek_wisata" class="form-control">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" id="id_objek_wisata" class="form-control">
+                                    <input type="text" name="id_objek_wisata" id="id_objek_wisata" class="form-control" value="{{$galeri->id == null ? '' : $galeri->id}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Gambar Hotel</label>
                                     <div class="col-sm-10">
-                                        <div class="custom-file">
-                                            <input id="gambar" type="file" class="custom-file-input">
-                                            <label for="gambar" class="custom-file-label">Choose file...</label>
-                                        </div> 
+                                            <input id="gambar" name="foto_objek_wisata" type="file" class="form-control">
                                     </div>
 
                                 </div>

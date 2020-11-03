@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\ModelGaleriDestinations;
+use App\ModelDestinations;
+use App\ModelDestinationDetails;
 use Illuminate\Http\Request;
 
 class GaleriDestinations extends Controller
@@ -58,9 +60,30 @@ class GaleriDestinations extends Controller
         return $galeri;
     }
 
-    public function galeri_objek_wisata()
+    public function galeri_objek_wisata($id)
     {
-        $galeri = ModelGaleriDestinations::all();
-        return view('/destinations/gallery');
+        $galeri = ModelDestinations::where('id', $id)->first();
+        return view('/destinations/gallery', ['galeri' => $galeri]);
+        //return response()->json($galeri, 200);
+    }
+
+    public function add_galeri_objek_wisata(Request $request)
+    {
+        $request->validate([
+            'foto_objek_wisata' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $namaImage = time() . '.' . $request->foto_objek_wisata->extension();
+        $request->foto_objek_wisata->move(public_path('galeri'), $namaImage);
+
+
+
+        $galeri = new ModelGaleriDestinations([
+            'id_galeri_objek_wisata' => $request->input('id_galeri_objek_wisata'),
+            'id_objek_wisata' => $request->input('id_objek_wisata'),
+            'foto_objek_wisata' => public_path('galeri') . '/' . $namaImage,
+        ]);
+        $galeri->save();
+
+        return redirect('/detail-objek-wisata/' . $request->input('id_objek_wisata'));
     }
 }

@@ -15,6 +15,12 @@ class ModelGaleriDestinations extends Model
     //ambil data id mst_destinations
     public function destination()
     {
-        return $this->belongsTo(ModelGaleriDestinations::class, 'id_objek_wisata', 'id');
+        return $this->belongsTo(ModelDestinations::class, 'id_objek_wisata', 'id');
+    }
+
+    //ambil data id mst_destination_details
+    public function destination_detail()
+    {
+        return $this->belongsTo(ModelDestinationDetails::class, 'id_objek_wisata', 'id');
     }
 }

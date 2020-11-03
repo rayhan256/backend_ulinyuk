@@ -76,18 +76,13 @@
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Review Objek Wisata</label>
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" name="review_objek_wisata"></textarea>
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-
                                     
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <a href="/tambah-detail-objek-wisata" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a>
+                                        <button class="btn btn-primary btn-sm" id="btn_submit" type="submit">Selanjutnya</button>
+                                        {{-- <a href="/tambah-detail-objek-wisata" class="btn btn-primary btn-sm" id="btn_submit" type="submit">Selanjutnya</a> --}}
                                     </div>
                                 </div>
                             </form>

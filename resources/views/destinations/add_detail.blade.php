@@ -2,6 +2,8 @@
     @include('layouts/sidebar')
 
         @include('layouts/navbar')
+
+
         <div class="mt-3">
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
@@ -23,18 +25,23 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form action="{{ url('/tambah-detail')}}" method="post">
+                                @csrf
                                 <div class="form-group row">                                    
                                     <label class="col-sm-2 col-form-label">ID Kategori Objek Wisata</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="id_kategori_objek_wisata" name="id_kategori_objek_wisata"/>
                                     </div>
                                     <div class="hr-line-dashed"></div>
+
+                                    
                                         <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                         <div class="col-sm-10">
-                                        <input type="text" class="form-control"/>
+                                        <input type="text" name="id_objek_wisata" class="form-control" value="{{$data_detail->id}}"/>
                                         </div>
-                                        <div class="hr-line-dashed"></div>
+                                   
+                                    <div class="hr-line-dashed"></div>
+
                                     <label class="col-sm-2 col-form-label">Kategori Objek Wisata</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="kategori_objek_wisata" name="kategori_objek_wisata">
@@ -75,7 +82,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="submit_add_objek_wisata" type="submit">Simpan</button>
+                                        <button class="btn btn-primary btn-sm" id="btn_submit" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>
