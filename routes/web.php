@@ -43,11 +43,12 @@ Route::post('/tambah-data', 'Destinations@add_proses_objek_wisata');
 Route::get('/tambah-detail-objek-wisata/{id}', 'DestinationDetails@add_detail_objek_wisata');
 Route::post('/tambah-detail', 'DestinationDetails@add_proses_detail_objek_wisata');
 
-Route::get('/edit-data-objek-wisata', 'Destinations@update_objek_wisata');
+Route::get('/edit-data-objek-wisata/{id}', 'DestinationDetails@update_objek_wisata');
+Route::post('/edit-data', 'DestinationDetails@update_proses_objek_wisata');
 
 Route::get('/detail-objek-wisata/{id}', 'DestinationDetails@detail_objek_wisata');
 Route::get('/data-order-objek-wisata', 'DestinationOrders@order_objek_wisata');
-//tamba data galeri
+//tambah data galeri
 Route::get('/tambah-galeri-objek-wisata/{id}', 'GaleriDestinations@galeri_objek_wisata');
 Route::post('/tambah-galeri', 'GaleriDestinations@add_galeri_objek_wisata');
 

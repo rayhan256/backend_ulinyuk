@@ -100,8 +100,8 @@ class DestinationDetails extends Controller
         //$data_detail = ModelDestinations::find($id);
         $data_detail = ModelDestinations::with(['destination_detail', 'galeri_destination'])->firstWhere('id', $id);
         //dd($data_detail);
-        return view('/destinations/detail', ['detail' => $data_detail]);
-        //return response()->json($data_detail, 200);
+        //return view('/destinations/detail', ['detail' => $data_detail]);
+        return response()->json($data_detail, 200);
     }
 
     // public function list_objek_wisata()
@@ -109,4 +109,23 @@ class DestinationDetails extends Controller
     //     $data_detail = ModelDestinationDetails::all();
     //     return view('/destinations/list', ['data_detail' => $data_detail]);
     // }
+
+    public function update_objek_wisata($id)
+    {
+        $data_detail = ModelDestinations::with(['destination_detail', 'galeri_destination'])->firstWhere('id', $id);
+        return view('/destinations/update', ['detail' => $data_detail]);
+        // dd($data_detail);
+        // return response()->json($data_detail, 200);
+    }
+
+    public function update_proses_objek_wisata(Request $request)
+    {
+        $id = $request->input('id');
+        $data_detail = ModelDestinationDetails::find($id);
+
+        $data_detail->update($request->all());
+        return redirect('/detail-objek-wisata' . '/' . $id);
+        //return response()->json($data_detail, 200);
+        // dd($data_detail);
+    }
 }

@@ -89,12 +89,6 @@ class Destinations extends Controller
         return redirect('/tambah-detail-objek-wisata/' . $request->input('id_objek_wisata'));
     }
 
-    public function update_objek_wisata()
-    {
-        $destination = ModelDestinations::all();
-        return view('/destinations/update');
-    }
-
     public function list_objek_wisata()
     {
         $data_detail = ModelDestinations::all();

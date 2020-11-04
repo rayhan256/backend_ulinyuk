@@ -23,54 +23,69 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form action="{{url('/edit-data')}}" method="post">
+                                @csrf
+
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">ID Kategori Objek Wisata</label>
+                                    @foreach($detail->destination_detail as $data)
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_kategori_objek_wisata">
+                                        <input type="text" class="form-control" id="id_kategori_objek_wisata" name="id_kategori_objek_wisata" value="{{$data->id_kategori_objek_wisata}}">
+                                    </div>
+                                        <input type="hidden" class="form-control" id="id" name="id" value="{{$data->id}}">
+                                    @endforeach
+                                    <div class="hr-line-dashed"></div>
+
+                                    <label class="col-sm-2 col-form-label">Alamat Objek Wisata</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="alamat_objek_wisata" name="alamat_objek_wisata" value="{{$detail->alamat_objek_wisata}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Telepon Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="telepon_objek_wisata">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-
-                                    <label class="col-sm-2 col-form-label">Alamat Objek Wisata</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="alamat_objek_wisata">
+                                        <input type="text" class="form-control" id="telepon_objek_wisata" name="telepon_objek_wisata" value="{{$detail->telepon_objek_wisata}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Jadwal Objek Wisata</label>
+                                    @foreach($detail->destination_detail as $data)
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jadwal_objek_wisata">
+                                        <input type="text" class="form-control" id="jadwal_objek_wisata" name="jadwal_objek_wisata" value="{{$data->jadwal_objek_wisata}}">
                                     </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Wahana Objek Wisata</label>
+                                    @foreach($detail->destination_detail as $data)
                                     <div class="col-sm-10 mb-2">
-                                        <textarea name="wahana_objek_wisata" id="wahana_objek_wisata" class="form-control"></textarea>
+                                        <textarea name="wahana_objek_wisata" id="wahana_objek_wisata" class="form-control">{{$data->wahana_objek_wisata}}</textarea>
                                     </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Objek Wisata</label>
+                                    @foreach($detail->destination_detail as $data)
                                     <div class="col-sm-10 mb-2">
-                                        <textarea name="fasilitas_objek_wisata" id="fasilitas_objek_wisata" class="form-control"></textarea>
+                                        <textarea name="fasilitas_objek_wisata" id="fasilitas_objek_wisata" class="form-control">{{$data->fasilitas_objek_wisata}}</textarea>
                                     </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Deskripsi Objek Wisata</label>
+                                    @foreach($detail->destination_detail as $data)
                                     <div class="col-sm-10 mb-2">
-                                        <textarea name="deskripsi_objek_wisata" id="deskripsi_objek_wisata" class="form-control"></textarea>
+                                        <textarea name="deskripsi_objek_wisata" id="deskripsi_objek_wisata" class="form-control">{{$data->deskripsi_objek_wisata}}</textarea>
                                     </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Harga Tiket</label>
+                                    @foreach($detail->destination_detail as $data)
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="harga_tiket">
+                                        <input type="text" class="form-control" id="harga_tiket" name="harga_tiket" value="{{$data->harga_tiket}}">
                                     </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     
@@ -78,7 +93,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="submit_update_obwis" type="submit">Simpan</button>
+                                        <button class="btn btn-primary btn-sm" id="btn_submit" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>

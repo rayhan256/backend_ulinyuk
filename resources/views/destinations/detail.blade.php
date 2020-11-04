@@ -22,7 +22,7 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                    @foreach ($detail->galeri_destination as $item)                 
+                    @foreach ($detail->galeri_destination as $item) 
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     @endforeach
-                    <!-- <div class="col-md-3">
+                    {{-- <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
                                 <div>
@@ -59,21 +59,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div> --> --}}
 
                     <div class="ibox product-detail">
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
-                                    <h3>
-                                        
-                                        <b>{{$detail->nama_objek_wisata}}</b>
-                                        
+                                    <h3>                                        
+                                        <b>{{$detail->nama_objek_wisata}}</b>                                        
                                     </h3>
                                     <hr>
+                                    @foreach($detail->destination_detail as $data)
                                     <h4><b>Deskripsi</b></h4>
                                     <div class="">
-                                        {{$detail->destination_detail->deskripsi_objek_wisata}}
+                                        {{$data->deskripsi_objek_wisata}}
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -81,7 +80,7 @@
                                                 <h4><b>Jenis Wahana</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->destination_detail->wahana_objek_wisata}}
+                                                        {{$data->wahana_objek_wisata}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -91,12 +90,13 @@
                                                 <h4><b>Fasilitas</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->destination_detail->fasilitas_objek_wisata}}
+                                                        {{$data->fasilitas_objek_wisata}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
                                         </div>
                                     </div>
+                                    @endforeach
                                     
 
                                 </div>
@@ -111,9 +111,11 @@
                                         
                                     </h3>
                                     <hr>
+                                    @foreach($detail->destination_detail as $data)
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> {{$detail->destination_detail->jadwal_objek_wisata}}
-                                    </h3>                                   
+                                        <i class="fa fa-clock-o"></i> {{$data->jadwal_objek_wisata}}
+                                    </h3>  
+                                    @endforeach                                 
                                     <hr>
                                     <h3>
                                     
@@ -123,8 +125,8 @@
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
-                                        <a href="{{ url('/edit-data-objek-wisata') }}" class="btn btn-primary btn-sm">Edit Data</a>
-                            <a href="/tambah-galeri-objek-wisata/{{$detail->destination->id}}" class="btn btn-primary btn-sm">Tambah Gambar</a>
+                                        <a href="/edit-data-objek-wisata/{{$detail->id}}" class="btn btn-primary btn-sm">Edit Data</a>
+                                        <a href="/tambah-galeri-objek-wisata/{{$detail->id}}" class="btn btn-primary btn-sm">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>

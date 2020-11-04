@@ -41,7 +41,7 @@
 
                                     <label class="col-sm-2 col-form-label">Gambar Hotel</label>
                                     <div class="col-sm-10">
-                                            <input id="gambar" name="foto_objek_wisata" type="file" class="form-control">
+                                        <input id="gambar" name="foto_objek_wisata" type="file" class="form-control">
                                     </div>
 
                                 </div>

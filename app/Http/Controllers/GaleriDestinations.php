@@ -80,7 +80,7 @@ class GaleriDestinations extends Controller
         $galeri = new ModelGaleriDestinations([
             'id_galeri_objek_wisata' => $request->input('id_galeri_objek_wisata'),
             'id_objek_wisata' => $request->input('id_objek_wisata'),
-            'foto_objek_wisata' => public_path('galeri') . '/' . $namaImage,
+            'foto_objek_wisata' => $request->foto_objek_wisata->storeAs(public_path('galeri'), $namaImage),
         ]);
         $galeri->save();
 
