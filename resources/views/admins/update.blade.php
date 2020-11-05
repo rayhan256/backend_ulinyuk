@@ -75,10 +75,7 @@
 
                                     <label class="col-sm-2 col-form-label">Photo</label>
                                     <div class="col-sm-10">
-                                        <div class="custom-file">
-                                            <input id="logo" type="file" class="custom-file-input">
-                                            <label for="logo" class="custom-file-label">Choose file...</label>
-                                        </div> 
+                                        <input id="gambar" name="foto_admin" type="file" class="form-control">
                                     </div>
 
                                 </div>

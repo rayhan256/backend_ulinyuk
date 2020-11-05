@@ -27,19 +27,11 @@
                         <div class="ibox-content">
                             <form action="{{ url('/tambah-detail')}}" method="post">
                                 @csrf
-                                <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">ID Kategori Objek Wisata</label>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_kategori_objek_wisata" name="id_kategori_objek_wisata"/>
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-
-                                    
-                                        <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
-                                        <div class="col-sm-10">
-                                        <input type="text" name="id_objek_wisata" class="form-control" value="{{$data_detail->id}}"/>
-                                        </div>
-                                   
+                                    <input type="text" name="id_objek_wisata" class="form-control" value="{{$data_detail->id}}"/>
+                                    </div>                                   
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Kategori Objek Wisata</label>

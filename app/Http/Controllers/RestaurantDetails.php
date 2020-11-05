@@ -19,7 +19,6 @@ class RestaurantDetails extends Controller
     {
         $data_detail = new ModelRestaurantDetails();
 
-        $data_detail->id_kategori_restaurant = $request->id_kategori_restaurant;
         $data_detail->id_restaurant = $request->id_restaurant;
         $data_detail->kategori_restaurant = $request->kategori_restaurant;
         $data_detail->jadwal_restaurant = $request->jadwal_restaurant;
@@ -37,7 +36,6 @@ class RestaurantDetails extends Controller
         //dd($request);
         $find_detail_by_id = ModelRestaurantDetails::find($id);
 
-        $find_detail_by_id->id_kategori_restaurant = $request->id_kategori_restaurant;
         $find_detail_by_id->id_restaurant = $request->id_restaurant;
         $find_detail_by_id->kategori_restaurant = $request->kategori_restaurant;
         $find_detail_by_id->jadwal_restaurant = $request->jadwal_restaurant;

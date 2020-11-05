@@ -20,7 +20,6 @@ class GaleriDestinations extends Controller
     {
         $galeri = new ModelGaleriDestinations();
 
-        $galeri->id_galeri_objek_wisata = $request->id_galeri_objek_wisata;
         $galeri->id_objek_wisata = $request->id_objek_wisata;
         $galeri->foto_objek_wisata = $request->foto_objek_wisata;
 
@@ -35,7 +34,6 @@ class GaleriDestinations extends Controller
         //dd($request);
         $find_galeri_by_id = ModelGaleriDestinations::find($id);
 
-        $find_galeri_by_id->id_galeri_objek_wisata = $request->id_galeri_objek_wisata;
         $find_galeri_by_id->id_objek_wisata = $request->id_objek_wisata;
         $find_galeri_by_id->foto_objek_wisata = $request->foto_objek_wisata;
 
@@ -78,12 +76,11 @@ class GaleriDestinations extends Controller
 
 
         $galeri = new ModelGaleriDestinations([
-            'id_galeri_objek_wisata' => $request->input('id_galeri_objek_wisata'),
             'id_objek_wisata' => $request->input('id_objek_wisata'),
-            'foto_objek_wisata' => $request->foto_objek_wisata->storeAs(public_path('galeri'), $namaImage),
+            'foto_objek_wisata' => url('galeri') . '/' . $namaImage,
         ]);
         $galeri->save();
 
-        return redirect('/detail-objek-wisata/' . $request->input('id_objek_wisata'));
+        return redirect('/detail-objek-wisata/' . $request->input('id_objek_wisata'))->with('sukses', 'Foto Berhasil Ditambahkan!');
     }
 }

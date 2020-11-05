@@ -27,13 +27,17 @@
                                 @csrf
 
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">ID Kategori Objek Wisata</label>
-                                    @foreach($detail->destination_detail as $data)
+                                    <input type="hidden" class="form-control" id="id" name="id_objek_wisata" value="{{$detail->id}}">
+                                    
+                                    
+                                    {{-- @foreach($detail->destination_detail as $data)
+                                        <input type="hidden" class="form-control" id="id_kategori_objek_wisata" name="id" value="{{$data->id}}">
+                                    @endforeach --}}
+
+                                    <label class="col-sm-2 col-form-label">Nama Objek Wisata</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_kategori_objek_wisata" name="id_kategori_objek_wisata" value="{{$data->id_kategori_objek_wisata}}">
+                                        <input type="text" class="form-control" id="nama_objek_wisata" name="nama_objek_wisata" value="{{$detail->nama_objek_wisata}}">
                                     </div>
-                                        <input type="hidden" class="form-control" id="id" name="id" value="{{$data->id}}">
-                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Alamat Objek Wisata</label>

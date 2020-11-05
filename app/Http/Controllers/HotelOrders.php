@@ -19,7 +19,6 @@ class HotelOrders extends Controller
     {
         $order = new ModelHotelOrders();
 
-        $order->id_booking_kamar = $request->id_booking_kamar;
         $order->id_user = $request->id_user;
         $order->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
         $order->id_hotel = $request->id_hotel;
@@ -38,7 +37,6 @@ class HotelOrders extends Controller
     {
         $find_order_by_id = ModelHotelOrders::find($id);
 
-        $find_order_by_id->id_booking_kamar = $request->id_booking_kamar;
         $find_order_by_id->id_user = $request->id_user;
         $find_order_by_id->id_hotel = $request->id_hotel;
         $find_order_by_id->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;

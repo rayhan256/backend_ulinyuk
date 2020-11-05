@@ -3,6 +3,11 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
+            @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+            @endif
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Daftar Detail Objek Wisata</h2>                
@@ -78,12 +83,12 @@
                                     
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        {{$detail->id_objek_wisata}} - {{$detail->nama_objek_wisata}}
+                                        {{$detail->id}} - {{$detail->nama_objek_wisata}}
                                     </td>
                                     
                                     @foreach($detail->destination_detail as $dest)
                                     <td class="footable-visible">
-                                        {{$dest->id_kategori_objek_wisata}} - {{$dest->kategori_objek_wisata}}
+                                        {{$dest->id}} - {{$dest->kategori_objek_wisata}}
                                     </td>
                                     @endforeach
 
@@ -112,15 +117,16 @@
 
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <a href="{{ url('/detail-objek-wisata') }}" class="btn-white btn btn-xs">View</a>
-                                            <a href="/edit-data-objek-wisata" class="btn-white btn btn-xs">Edit</a>
+                                            <a href="{{ url('/detail-objek-wisata').'/'.$detail->id }}" class="btn-white btn btn-xs">View</a>
+                                            <a href="/edit-data-objek-wisata/{{$detail->id}}" class="btn-white btn btn-xs">Edit</a>
+                                            <a href="/hapus-data-objek-wisata/{{$detail->id}}" class="btn-white btn btn-xs" onclick="return confirm('Hapus Data ini ?')">Hapus</a>
                                         </div>
                                     </td>
                                 </tr>
                                 </tbody>
                                 @endforeach
 
-                                <tfoot>
+                                {{-- <tfoot>
                                 <tr>
                                     <td colspan="12" class="footable-visible">
                                         <ul class="pagination float-right">
@@ -148,7 +154,7 @@
                                         </ul>
                                     </td>
                                 </tr>
-                                </tfoot>
+                                </tfoot> --}}
                             </table>
 
                         </div>

@@ -15,7 +15,6 @@ class MstRestaurants extends Migration
     {
         Schema::create('mst_restaurants', function (Blueprint $table) {
             $table->bigIncrements('id'); //primary key
-            $table->integer('id_restaurant');
             $table->string('nama_restaurant');
             $table->string('area_restaurant');
             $table->string('telepon_restaurant');

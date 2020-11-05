@@ -9,8 +9,18 @@ class ModelGaleriDestinations extends Model
     protected $table = 'mst_galeri_destinations';
 
     protected $fillable = [
-        'id_galeri_objek_wisata', 'id_objek_wisata', 'foto_objek_wisata'
+        'id_objek_wisata', 'foto_objek_wisata'
     ];
+
+    public function getImage()
+    {
+        if (!$this->foto_objek_wisata) {
+            return asset('galeri/default.jpg');
+        }
+
+        return asset('galeri/' . $this->foto_objek_wisata);
+    }
+
 
     //ambil data id mst_destinations
     public function destination()

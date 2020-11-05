@@ -18,7 +18,6 @@ class GaleriHotels extends Controller
     {
         $galeri = new ModelGaleriHotels();
 
-        $galeri->id_galeri_hotel = $request->id_galeri_hotel;
         $galeri->id_hotel = $request->id_hotel;
         $galeri->foto_hotel = $request->foto_hotel;
 
@@ -33,7 +32,6 @@ class GaleriHotels extends Controller
         //dd($request);
         $find_galeri_by_id = ModelGaleriHotels::find($id);
 
-        $find_galeri_by_id->id_galeri_hotel = $request->id_galeri_hotel;
         $find_galeri_by_id->id_hotel = $request->id_hotel;
         $find_galeri_by_id->foto_hotel = $request->foto_hotel;
 

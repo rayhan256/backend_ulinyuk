@@ -9,7 +9,7 @@ class ModelRestaurantOrders extends Model
     protected $table = 'mst_restaurant_orders';
 
     protected $fillable = [
-        'id_booking_restaurant', 'id_user', 'id_kategori_restaurant', 'id_restaurant', 'jumlah_orang', 'tanggal_booking'
+        'id_user', 'id_kategori_restaurant', 'id_restaurant', 'jumlah_orang', 'tanggal_booking'
     ];
 
     //relasi agar bisa di ambil oleh mst_histori_booking_restaurants
@@ -21,12 +21,12 @@ class ModelRestaurantOrders extends Model
     //ambil data id mst_users
     public function user()
     {
-        return $this->hasMany(User::class,  'id_user', 'id');
+        return $this->belongsTo(User::class,  'id_user', 'id');
     }
 
     //ambil data id mst_restaurant_details
     public function restaurant_detail()
     {
-        return $this->hasMany(ModelRestaurantDetails::class, 'id_kategori_restaurant', 'id');
+        return $this->belongsTo(ModelRestaurantDetails::class, 'id_kategori_restaurant', 'id');
     }
 }

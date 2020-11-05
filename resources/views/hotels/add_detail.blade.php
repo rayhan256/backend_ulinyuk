@@ -24,13 +24,7 @@
                         </div>
                         <div class="ibox-content">
                             <form method="get">
-                                <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">ID Kategori Kamar Hotel</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_kategori_kamar_hotel" />
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-
+                                <div class="form-group row">      
                                     <label class="col-sm-2 col-form-label">ID Hotel</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="id_hotel" />

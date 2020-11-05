@@ -20,7 +20,6 @@ class DestinationDetails extends Controller
     {
         $data_detail = new ModelDestinationDetails();
 
-        $data_detail->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $data_detail->id_objek_wisata = $request->id_objek_wisata;
         $data_detail->kategori_objek_wisata = $request->kategori_objek_wisata;
         $data_detail->jadwal_objek_wisata = $request->jadwal_objek_wisata;
@@ -40,7 +39,6 @@ class DestinationDetails extends Controller
         //dd($request);
         $find_detail_by_id = ModelDestinationDetails::find($id);
 
-        $find_detail_by_id->id_kategori_objek_wisata = $request->id_kategori_objek_wisata;
         $find_detail_by_id->id_objek_wisata = $request->id_objek_wisata;
         $find_detail_by_id->kategori_objek_wisata = $request->kategori_objek_wisata;
         $find_detail_by_id->jadwal_objek_wisata = $request->jadwal_objek_wisata;
@@ -73,7 +71,7 @@ class DestinationDetails extends Controller
     //insert ke table mst_destination_details
     public function add_detail_objek_wisata($id)
     {
-        $data_detail = ModelDestinations::where('id_objek_wisata', $id)->first();
+        $data_detail = ModelDestinations::where('id', $id)->first();
         return view('/destinations/add_detail', ['data_detail' => $data_detail]);
         //echo var_dump($data_detail);
     }
@@ -81,7 +79,6 @@ class DestinationDetails extends Controller
     public function add_proses_detail_objek_wisata(Request $request)
     {
         $detail = new ModelDestinationDetails([
-            'id_kategori_objek_wisata' => $request->input('id_kategori_objek_wisata'),
             'id_objek_wisata' => $request->input('id_objek_wisata'),
             'kategori_objek_wisata' => $request->input('kategori_objek_wisata'),
             'jadwal_objek_wisata' => $request->input('jadwal_objek_wisata'),
@@ -92,16 +89,15 @@ class DestinationDetails extends Controller
         ]);
         $detail->save();
 
-        return redirect('/list-detail-objek-wisata');
+        return redirect('/detail-objek-wisata' . '/' . $request->input('id_objek_wisata'))->with('sukses', 'Data Berhasil Ditambahkan!');
     }
 
     public function detail_objek_wisata($id)
     {
         //$data_detail = ModelDestinations::find($id);
         $data_detail = ModelDestinations::with(['destination_detail', 'galeri_destination'])->firstWhere('id', $id);
-        //dd($data_detail);
-        //return view('/destinations/detail', ['detail' => $data_detail]);
-        return response()->json($data_detail, 200);
+        return view('/destinations/detail', ['detail' => $data_detail]);
+        // return response()->json($data_detail, 200);
     }
 
     // public function list_objek_wisata()
@@ -120,12 +116,21 @@ class DestinationDetails extends Controller
 
     public function update_proses_objek_wisata(Request $request)
     {
-        $id = $request->input('id');
+        //update untuk detail
+        $id = $request->input('id_objek_wisata');
         $data_detail = ModelDestinationDetails::find($id);
 
         $data_detail->update($request->all());
-        return redirect('/detail-objek-wisata' . '/' . $id);
+        return redirect('/detail-objek-wisata' . '/' . $id)->with('sukses', 'Data Berhasil Diupdate!');
         //return response()->json($data_detail, 200);
         // dd($data_detail);
+    }
+
+    public function delete_objek_wisata($id)
+    {
+        $data_detail = ModelDestinationDetails::find($id);
+        $data_detail->delete($data_detail);
+
+        return redirect('/list-detail-objek-wisata')->with('sukses', 'Data Berhasil Dihapus!');
     }
 }

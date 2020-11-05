@@ -15,7 +15,6 @@ class MstDestinationOrders extends Migration
     {
         Schema::create('mst_destination_orders', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
-            $table->integer('id_booking_tiket');
             $table->unsignedBigInteger('id_user'); //fk users
             $table->unsignedBigInteger('id_kategori_objek_wisata'); //fk mst_destination_details
             $table->unsignedBigInteger('id_objek_wisata');

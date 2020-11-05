@@ -19,7 +19,6 @@ class Hotels extends Controller
     {
         $data_hotel = new ModelHotels();
 
-        $data_hotel->id_hotel = $request->id_hotel;
         $data_hotel->nama_hotel = $request->nama_hotel;
         $data_hotel->kategori_hotel = $request->kategori_hotel;
         $data_hotel->area_hotel = $request->area_hotel;
@@ -38,7 +37,6 @@ class Hotels extends Controller
         //dd($request);
         $find_hotel_by_id = ModelHotels::find($id);
 
-        $find_hotel_by_id->id_hotel = $request->id_hotel;
         $find_hotel_by_id->nama_hotel = $request->nama_hotel;
         $find_hotel_by_id->kategori_hotel = $request->kategori_hotel;
         $find_hotel_by_id->area_hotel = $request->area_hotel;

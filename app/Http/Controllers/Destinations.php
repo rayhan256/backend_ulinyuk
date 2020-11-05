@@ -20,7 +20,6 @@ class Destinations extends Controller
     {
         $data_destination = new ModelDestinations();
 
-        $data_destination->id_objek_wisata = $request->id_objek_wisata;
         $data_destination->nama_objek_wisata = $request->nama_objek_wisata;
         $data_destination->area_objek_wisata = $request->area_objek_wisata;
         $data_destination->telepon_objek_wisata = $request->telepon_objek_wisata;
@@ -36,7 +35,6 @@ class Destinations extends Controller
     {
         $find_destination_by_id = ModelDestinations::find($id);
 
-        $find_destination_by_id->id_objek_wisata = $request->id_objek_wisata;
         $find_destination_by_id->nama_objek_wisata = $request->nama_objek_wisata;
         $find_destination_by_id->area_objek_wisata = $request->area_objek_wisata;
         $find_destination_by_id->telepon_objek_wisata = $request->telepon_objek_wisata;
@@ -65,8 +63,9 @@ class Destinations extends Controller
 
     public function index()
     {
-        $data_destination = ModelDestinations::all();
+        $data_destination = ModelDestinations::with('galeri_destination')->get();
         return view('/destinations/dashboard', ['data_destination' => $data_destination]);
+        //return response()->json($data_destination);
     }
 
     public function add_objek_wisata()
@@ -77,7 +76,6 @@ class Destinations extends Controller
     public function add_proses_objek_wisata(Request $request)
     {
         $destination = new ModelDestinations([
-            'id_objek_wisata' => $request->input('id_objek_wisata'),
             'nama_objek_wisata' => $request->input('nama_objek_wisata'),
             'area_objek_wisata' => $request->input('area_objek_wisata'),
             'telepon_objek_wisata' => $request->input('telepon_objek_wisata'),
@@ -86,7 +84,7 @@ class Destinations extends Controller
         ]);
         $destination->save();
 
-        return redirect('/tambah-detail-objek-wisata/' . $request->input('id_objek_wisata'));
+        return redirect('/list-detail-objek-wisata')->with('sukses', 'Data Berhasil Ditambahkan!');
     }
 
     public function list_objek_wisata()
@@ -94,4 +92,12 @@ class Destinations extends Controller
         $data_detail = ModelDestinations::all();
         return view('/destinations/list', ['data_detail' => $data_detail]);
     }
+
+    // public function delete_objek_wisata($id)
+    // {
+    //     $data_detail = ModelDestinations::find($id);
+    //     $data_detail->delete();
+
+    //     return redirect('/objek_wisata' . '/' . $id)->with('sukses', 'Data Berhasil Dihapus!');
+    // }
 }

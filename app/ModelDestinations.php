@@ -10,8 +10,9 @@ class ModelDestinations extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id_objek_wisata', 'nama_objek_wisata', 'area_objek_wisata', 'telepon_objek_wisata', 'alamat_objek_wisata'
+        'nama_objek_wisata', 'area_objek_wisata', 'telepon_objek_wisata', 'alamat_objek_wisata'
     ];
+
 
     //relasi agar bisa di ambil oleh mst_destination_details
     public function destination_detail()

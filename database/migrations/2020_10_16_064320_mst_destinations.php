@@ -15,7 +15,6 @@ class MstDestinations extends Migration
     {
         Schema::create('mst_destinations', function (Blueprint $table) {
             $table->bigIncrements('id'); //primary key
-            $table->integer('id_objek_wisata');
             $table->string('nama_objek_wisata');
             $table->string('area_objek_wisata');
             $table->string('telepon_objek_wisata');

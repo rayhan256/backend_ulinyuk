@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ModelAdmins;
+use App\Admin;
 use Illuminate\Http\Request;
 
 class Admins extends Controller
@@ -10,14 +11,14 @@ class Admins extends Controller
     //Ambil data
     public function getAll()
     {
-        $data_admin = ModelAdmins::all();
+        $data_admin = Admin::all();
         return $data_admin;
     }
 
     //insert data
     public function insertData(Request $request)
     {
-        $data_admin = new ModelAdmins();
+        $data_admin = new Admin();
 
         $data_admin->nama_admin = $request->nama_admin;
         $data_admin->tanggal_lahir_admin = $request->tanggal_lahir_admin;
@@ -35,7 +36,7 @@ class Admins extends Controller
     //update data
     public function updateData(Request $request, $id)
     {
-        $find_admin_by_id = ModelAdmins::find($id);
+        $find_admin_by_id = Admin::find($id);
 
         $find_admin_by_id->nama_admin = $request->nama_admin;
         $find_admin_by_id->tanggal_lahir_admin = $request->tanggal_lahir_admin;
@@ -53,7 +54,7 @@ class Admins extends Controller
     //delete data
     public function deleteData($id)
     {
-        $find_admin_by_id = ModelAdmins::find($id);
+        $find_admin_by_id = Admin::find($id);
         $find_admin_by_id->delete();
 
         return "Data Berhasil Dihapus!";
@@ -62,19 +63,19 @@ class Admins extends Controller
     //mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $data_admin = ModelAdmins::find($id);
+        $data_admin = Admin::find($id);
         return $data_admin;
     }
 
     public function index()
     {
-        $data_admin = ModelAdmins::all();
+        $data_admin = Admin::all();
         return view('/admins/profile', ['data_admin' => $data_admin]);
     }
 
     public function update_profile()
     {
-        $data_admin = ModelAdmins::all();
+        $data_admin = Admin::all();
         return view('/admins/update');
     }
 }

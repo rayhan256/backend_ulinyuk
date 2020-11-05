@@ -20,7 +20,6 @@ class Restaurants extends Controller
     {
         $data_restaurant = new ModelRestaurants();
 
-        $data_restaurant->id_restaurant = $request->id_restaurant;
         $data_restaurant->nama_restaurant = $request->nama_restaurant;
         $data_restaurant->area_restaurant = $request->area_restaurant;
         $data_restaurant->telepon_restaurant = $request->telepon_restaurant;
@@ -35,7 +34,6 @@ class Restaurants extends Controller
     {
         $find_restaurant_by_id = ModelRestaurants::find($id);
 
-        $find_restaurant_by_id->id_restaurant = $request->id_restaurant;
         $find_restaurant_by_id->nama_restaurant = $request->nama_restaurant;
         $find_restaurant_by_id->area_restaurant = $request->area_restaurant;
         $find_restaurant_by_id->telepon_restaurant = $request->telepon_restaurant;

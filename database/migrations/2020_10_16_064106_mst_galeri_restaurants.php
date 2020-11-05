@@ -14,8 +14,7 @@ class MstGaleriRestaurants extends Migration
     public function up()
     {
         Schema::create('mst_galeri_restaurants', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('id_galeri_restaurant');
+            $table->bigIncrements('id'); //pk
             $table->unsignedBigInteger('id_restaurant'); //fk ke mst_restaurants
             $table->text('foto_restaurant');
             $table->softDeletes();

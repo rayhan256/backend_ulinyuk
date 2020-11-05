@@ -19,7 +19,6 @@ class HotelDetails extends Controller
     {
         $data_detail = new ModelHotelDetails();
 
-        $data_detail->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
         $data_detail->id_hotel = $request->id_hotel;
         $data_detail->kategori_kamar_hotel = $request->kategori_kamar_hotel;
         $data_detail->harga_kamar_hotel = $request->harga_kamar_hotel;
@@ -43,7 +42,6 @@ class HotelDetails extends Controller
         //dd($request);
         $find_detail_by_id = ModelHotelDetails::find($id);
 
-        $find_detail_by_id->id_kategori_kamar_hotel = $request->id_kategori_kamar_hotel;
         $find_detail_by_id->id_hotel = $request->id_hotel;
         $find_detail_by_id->kategori_kamar_hotel = $request->kategori_kamar_hotel;
         $find_detail_by_id->harga_kamar_hotel = $request->harga_kamar_hotel;

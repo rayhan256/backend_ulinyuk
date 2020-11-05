@@ -15,7 +15,6 @@ class MstGaleriDestinations extends Migration
     {
         Schema::create('mst_galeri_destinations', function (Blueprint $table) {
             $table->bigIncrements('id'); //pk
-            $table->integer('id_galeri_objek_wisata');
             $table->unsignedBigInteger('id_objek_wisata'); //fk mst_destinations
             $table->text('foto_objek_wisata');
             $table->softDeletes();

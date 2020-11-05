@@ -15,9 +15,8 @@ class MstHotels extends Migration
     {
         Schema::create('mst_hotels', function (Blueprint $table) {
             $table->bigIncrements('id'); // primary key
-            $table->integer('id_hotel');
             $table->string('nama_hotel');
-            $table->string('kategori_hotel');
+            $table->integer('kategori_hotel');
             $table->string('area_hotel');
             $table->string('telepon_hotel');
             $table->string('alamat_hotel');

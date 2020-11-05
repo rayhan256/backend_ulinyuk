@@ -26,12 +26,6 @@
                             <form action="{{ url('/tambah-data')}}" method="post">
                                 @csrf
                                 <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">ID Objek Wisata</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="id_objek_wisata">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    
                                     <label class="col-sm-2 col-form-label">Nama Objek Wisata</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" name="nama_objek_wisata">
@@ -81,7 +75,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="btn_submit" type="submit">Selanjutnya</button>
+                                        <button class="btn btn-primary btn-sm" id="btn_submit" type="submit">Simpan</button>
                                         {{-- <a href="/tambah-detail-objek-wisata" class="btn btn-primary btn-sm" id="btn_submit" type="submit">Selanjutnya</a> --}}
                                     </div>
                                 </div>

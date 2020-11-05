@@ -9,7 +9,7 @@ class ModelHotels extends Model
     protected $table = 'mst_hotels';
 
     protected $fillable = [
-        'id_hotel', 'nama_hotel', 'kategori_hotel', 'area_hotel', 'telepon_hotel', 'alamat_hotel', 'review_hotel'
+        'nama_hotel', 'kategori_hotel', 'area_hotel', 'telepon_hotel', 'alamat_hotel', 'review_hotel'
     ];
 
     //relasi agar bisa di ambil oleh mst_hotel_details

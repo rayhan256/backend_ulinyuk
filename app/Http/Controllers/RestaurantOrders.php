@@ -21,7 +21,6 @@ class RestaurantOrders extends Controller
     {
         $order = new ModelRestaurantOrders();
 
-        $order->id_booking_restaurant = $request->id_booking_restaurant;
         $order->id_user = $request->id_user;
         $order->id_kategori_restaurant = $request->id_kategori_restaurant;
         $order->id_restaurant = $request->id_restaurant;
@@ -37,7 +36,6 @@ class RestaurantOrders extends Controller
     {
         $find_order_by_id = ModelRestaurantOrders::find($id);
 
-        $find_order_by_id->id_booking_restaurant = $request->id_booking_restaurant;
         $find_order_by_id->id_user = $request->id_user;
         $find_order_by_id->id_kategori_restaurant = $request->id_kategori_restaurant;
         $find_order_by_id->id_restaurant = $request->id_restaurant;

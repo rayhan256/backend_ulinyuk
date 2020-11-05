@@ -14,8 +14,7 @@ class MstHotelDetails extends Migration
     public function up()
     {
         Schema::create('mst_hotel_details', function (Blueprint $table) {
-            $table->bigIncrements('id'); //pk            
-            $table->integer('id_kategori_kamar_hotel');
+            $table->bigIncrements('id'); //pk
             $table->unsignedBigInteger('id_hotel'); //fk ke table mst_hotels
             $table->string('kategori_kamar_hotel');
             $table->integer('harga_kamar_hotel');

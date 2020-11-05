@@ -3,6 +3,11 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
+            @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+            @endif
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Detail Objek Wisata</h2>                
@@ -61,7 +66,7 @@
                         </div>
                     </div> --> --}}
 
-                    <div class="ibox product-detail">
+                    <div class="ibox product-detail col-12">
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
@@ -81,7 +86,7 @@
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
                                                         {{$data->wahana_objek_wisata}}
-                                                    </div>                                            
+                                                    </div>              
                                                 </div>
                                             </dl>
                                         </div>
@@ -105,10 +110,8 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        
                                         <i class="fa fa-map-marker"></i> 
                                         {{$detail->alamat_objek_wisata}}
-                                        
                                     </h3>
                                     <hr>
                                     @foreach($detail->destination_detail as $data)
@@ -118,14 +121,16 @@
                                     @endforeach                                 
                                     <hr>
                                     <h3>
-                                    
                                         <i class="fa fa-phone"></i> 
                                         {{$detail->telepon_objek_wisata}}
-                                    
                                     </h3>                                   
                                     <hr>
-                                    <div>                                                
+                                    <div>  
+                                        @if($detail->destination_detail->count() <= 0)                                              
+                                        <a href="/tambah-detail-objek-wisata/{{$detail->id}}" class="btn btn-primary btn-sm">Tambah Detail</a>
+                                        @else
                                         <a href="/edit-data-objek-wisata/{{$detail->id}}" class="btn btn-primary btn-sm">Edit Data</a>
+                                        @endif
                                         <a href="/tambah-galeri-objek-wisata/{{$detail->id}}" class="btn btn-primary btn-sm">Tambah Gambar</a>
                                     </div>
                                 </div>
@@ -134,10 +139,7 @@
                     </div>
             </div>
         </div>
-       
-        
         @include('layouts/footer')
-
     </div>
 
 </div>

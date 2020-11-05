@@ -18,7 +18,6 @@ class GaleriRestaurants extends Controller
     {
         $galeri = new ModelGaleriRestaurants();
 
-        $galeri->id_galeri_restaurant = $request->id_galeri_restaurant;
         $galeri->id_restaurant = $request->id_restaurant;
         $galeri->foto_restaurant = $request->foto_restaurant;
 
@@ -33,7 +32,6 @@ class GaleriRestaurants extends Controller
         //dd($request);
         $find_galeri_by_id = ModelGaleriRestaurants::find($id);
 
-        $find_galeri_by_id->id_galeri_restaurant = $request->id_galeri_restaurant;
         $find_galeri_by_id->id_restaurant = $request->id_restaurant;
         $find_galeri_by_id->foto_restaurant = $request->foto_restaurant;
 
