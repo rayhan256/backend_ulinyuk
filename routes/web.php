@@ -31,7 +31,8 @@ Route::get('/dashboard', function () {
 
 //ADMINS
 Route::get('/profile', 'Admins@index');
-Route::get('/update-profile', 'Admins@update_profile');
+Route::get('/update-profile/{id}', 'Admins@update_profile');
+Route::post('/update', 'Admins@update_proses_profile');
 
 //DESTINATIONS
 Route::get('/objek-wisata', 'Destinations@index');

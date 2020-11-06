@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ModelDestinationDetails;
 use App\ModelDestinations;
+use App\ModelGaleriDestinations;
 use Illuminate\Http\Request;
 
 class DestinationDetails extends Controller
@@ -11,7 +12,7 @@ class DestinationDetails extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $data_detail = ModelDestinationDetails::with('destination')->get();
+        $data_detail = ModelDestinationDetails::with(['destination', 'galeri_destination'])->get();
         return $data_detail;
     }
 
@@ -68,6 +69,12 @@ class DestinationDetails extends Controller
         return $data_detail;
     }
 
+
+
+
+
+    //CRUD
+
     //insert ke table mst_destination_details
     public function add_detail_objek_wisata($id)
     {
@@ -111,12 +118,20 @@ class DestinationDetails extends Controller
         $data_detail = ModelDestinations::with(['destination_detail', 'galeri_destination'])->firstWhere('id', $id);
         return view('/destinations/update', ['detail' => $data_detail]);
         // dd($data_detail);
-        // return response()->json($data_detail, 200);
+        //return response()->json($data_detail, 200);
     }
 
     public function update_proses_objek_wisata(Request $request)
     {
-        //update untuk detail
+        $id_master = $request->input('id_master');
+        $data_master = ModelDestinations::find($id_master);
+        $data_master->update([
+            'nama_objek_wisata' => $request->input('nama_objek_wisata'),
+            'alamat_objek_wisata' => $request->input('alamat_objek_wisata'),
+            'telepon_objek_wisata' => $request->input('telepon_objek_wisata'),
+        ]);
+
+
         $id = $request->input('id_objek_wisata');
         $data_detail = ModelDestinationDetails::find($id);
 
@@ -128,9 +143,16 @@ class DestinationDetails extends Controller
 
     public function delete_objek_wisata($id)
     {
-        $data_detail = ModelDestinationDetails::find($id);
-        $data_detail->delete($data_detail);
+        $data_galeri = ModelGaleriDestinations::find($id);
+        $data_galeri->delete();
 
-        return redirect('/list-detail-objek-wisata')->with('sukses', 'Data Berhasil Dihapus!');
+        $data_detail = ModelDestinationDetails::find($id);
+        $data_detail->delete();
+
+        $data_master = ModelDestinations::find($id);
+        $data_master->delete();
+
+
+        return redirect('/objek-wisata')->with('sukses', 'Data Berhasil Dihapus!');
     }
 }

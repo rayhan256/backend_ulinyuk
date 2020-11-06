@@ -11,8 +11,9 @@ class Destinations extends Controller
     //Ambil data
     public function getAll()
     {
-        $destination = ModelDestinations::all();
-        return $destination;
+        $destination = ModelDestinations::with(['galeri_destination', 'destination_detail'])->get();
+        // return $destination;
+        return response()->json($destination, 200);
     }
 
     //Insert data

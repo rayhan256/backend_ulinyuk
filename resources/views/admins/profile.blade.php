@@ -71,6 +71,14 @@
                         </tr>
                         <tr>
                             <td>
+                                <strong>Negara</strong>
+                            </td>
+                            <td>
+                                {{$admin->negara_admin}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <strong>Telepon</strong>
                             </td>
                             <td>
@@ -82,13 +90,13 @@
                                 <strong>Email</strong>
                             </td>
                             <td>
-                                {{$admin->email_admin}}
+                                {{$admin->email}}
                             </td>
                         </tr>
                         </tbody>
                         <tr>
                             <td>
-                                <a href="/update-profile" class="btn btn-primary">Edit Profile</a>
+                                <a href="/update-profile/{{$admin->id}}" class="btn btn-primary">Edit Profile</a>
                             </td>
                         </tr>
                     </table>

@@ -26,7 +26,7 @@ class Admins extends Controller
         $data_admin->alamat_admin = $request->alamat_admin;
         $data_admin->kota_admin = $request->kota_admin;
         $data_admin->telepon_admin = $request->telepon_admin;
-        $data_admin->email_admin = $request->email_admin;
+        $data_admin->email = $request->email;
         $data_admin->foto_admin = $request->foto_admin;
         $data_admin->save();
 
@@ -44,7 +44,7 @@ class Admins extends Controller
         $find_admin_by_id->alamat_admin = $request->alamat_admin;
         $find_admin_by_id->kota_admin = $request->kota_admin;
         $find_admin_by_id->telepon_admin = $request->telepon_admin;
-        $find_admin_by_id->email_admin = $request->email_admin;
+        $find_admin_by_id->email = $request->email;
         $find_admin_by_id->foto_admin = $request->foto_admin;
         $find_admin_by_id->save();
 
@@ -73,9 +73,31 @@ class Admins extends Controller
         return view('/admins/profile', ['data_admin' => $data_admin]);
     }
 
-    public function update_profile()
+    public function update_profile($id)
     {
-        $data_admin = Admin::all();
-        return view('/admins/update');
+        $data_admin = Admin::find($id);
+        return view('/admins/update', ['admin' => $data_admin]);
+    }
+
+    public function update_proses_profile(Request $request)
+    {
+        $id = $request->input('id');
+        $data_admin = Admin::find($id);
+
+        $data_admin = new Admin([
+            'nama_admin' => $request->input('nama_admin'),
+            'tanggal_lahir_admin' => $request->input('tanggal_lahir_admin'),
+            'jenis_kelamin_admin' => $request->input('jenis_kelamin_admin'),
+            'alamat_admin' => $request->input('alamat_admin'),
+            'kota_admin' => $request->input('kota_admin'),
+            'negara_admin' => $request->input('negara_admin'),
+            'telepon_admin' => $request->input('telepon_admin'),
+            'email' => $request->input('email'),
+            'foto_admin' => $request->input('foto_admin')
+        ]);
+        $data_admin->update();
+        //return redirect('/profile')->with('sukses', 'Data Berhasil Diupdate!');
+        return response()->json($data_admin, 200);
+        // dd($data_admin);
     }
 }

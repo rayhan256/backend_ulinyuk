@@ -34,6 +34,7 @@
                                         <input type="hidden" class="form-control" id="id_kategori_objek_wisata" name="id" value="{{$data->id}}">
                                     @endforeach --}}
 
+                                    <input type="hidden" name="id_master" value="{{$detail->id}}">
                                     <label class="col-sm-2 col-form-label">Nama Objek Wisata</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="nama_objek_wisata" name="nama_objek_wisata" value="{{$detail->nama_objek_wisata}}">
@@ -50,6 +51,14 @@
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="telepon_objek_wisata" name="telepon_objek_wisata" value="{{$detail->telepon_objek_wisata}}">
                                     </div>
+                                    <div class="hr-line-dashed"></div>
+
+                                    <label class="col-sm-2 col-form-label">Kategori Objek Wisata</label>
+                                    @foreach($detail->destination_detail as $data)
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="kategori_objek_wisata" name="kategori_objek_wisata" value="{{$data->kategori_objek_wisata}}">
+                                    </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Jadwal Objek Wisata</label>
