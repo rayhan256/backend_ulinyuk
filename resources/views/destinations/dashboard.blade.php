@@ -31,15 +31,16 @@
                 </div>
             </div>
         </div>
+
         <div class="wrapper wrapper-content">
             <div class="wrapper wrapper-content animated fadeInRight">
                 <div class="row">
                 @foreach($data_destination as $destination)
-                    @foreach ($destination->galeri_destination as $item)
+                    
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="ibox-content product-box">
-                                <img src="{{  $item->foto_objek_wisata }}" width="100%">
+                                <img src="{{ url('/galeri'). '/'. $destination->galeri_destination[0]->foto_objek_wisata }}" width="100%">
                                 <div class="product-desc">
                                     <span class="product-price">
                                         $4
@@ -57,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    
                 @endforeach
                 </div>
             </div>

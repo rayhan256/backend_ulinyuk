@@ -12,8 +12,8 @@ class Destinations extends Controller
     public function getAll()
     {
         $destination = ModelDestinations::with(['galeri_destination', 'destination_detail'])->get();
-        // return $destination;
-        return response()->json($destination, 200);
+        return $destination;
+        //return response()->json($destination, 200);
     }
 
     //Insert data
@@ -62,6 +62,11 @@ class Destinations extends Controller
         return $data_destination;
     }
 
+
+
+
+    //CRUD
+
     public function index()
     {
         $data_destination = ModelDestinations::with('galeri_destination')->get();
@@ -81,7 +86,6 @@ class Destinations extends Controller
             'area_objek_wisata' => $request->input('area_objek_wisata'),
             'telepon_objek_wisata' => $request->input('telepon_objek_wisata'),
             'alamat_objek_wisata' => $request->input('alamat_objek_wisata'),
-            'review_objek_wisata' => $request->input('review_objek_wisata')
         ]);
         $destination->save();
 

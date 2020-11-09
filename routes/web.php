@@ -57,22 +57,43 @@ Route::get('hapus-data-objek-wisata/{id}', 'DestinationDetails@delete_objek_wisa
 
 //HOTELS
 Route::get('/hotel', 'Hotels@index');
-Route::get('/list-detail-hotel', 'HotelDetails@list_hotel');
+Route::get('/list-detail-hotel', 'Hotels@list_hotel');
+//tambah data master
 Route::get('/tambah-data-hotel', 'Hotels@add_hotel');
-Route::get('/tambah-detail-hotel', 'Hotels@add_detail_hotel');
-Route::get('/edit-data-hotel', 'Hotels@update_hotel');
-
-Route::get('/detail-hotel', 'HotelDetails@detail_hotel');
+Route::post('tambah-data', 'Hotels@add_proses_hotel');
+//tambah data detail
+Route::get('/tambah-detail-hotel/{id}', 'HotelDetails@add_detail_hotel');
+Route::post('/tambah-detail', 'HotelDetails@add_proses_detail_hotel');
+//tambah data galeri
+Route::get('/tambah-galeri-hotel/{id}', 'GaleriHotels@galeri_hotel');
+Route::post('/tambah-galeri', 'GaleriHotels@add_galeri_hotel');
+//view data detail
+Route::get('/detail-hotel/{id}', 'HotelDetails@detail_hotel');
 Route::get('/data-order-hotel', 'HotelOrders@order_hotel');
-Route::get('/tambah-galeri-hotel', 'GaleriHotels@galeri_hotel');
+//edit data detail
+Route::get('/edit-data-hotel/{id}', 'HotelDetails@update_hotel');
+Route::post('/edit-data', 'HotelDetails@update_proses_hotel');
+//hapus data
+Route::get('hapus-data-hotel/{id}', 'HotelDetails@delete_hotel');
+
 
 //RESTAURANTS
 Route::get('/restaurant', 'Restaurants@index');
-Route::get('/list-detail-restaurant', 'RestaurantDetails@list_restaurant');
+Route::get('/list-detail-restaurant', 'Restaurants@list_restaurant');
+//tambah data master
 Route::get('/tambah-data-restaurant', 'Restaurants@add_restaurant');
-Route::get('/tambah-detail-restaurant', 'Restaurants@add_detail_restaurant');
-Route::get('/edit-data-restaurant', 'Restaurants@update_restaurant');
-
-Route::get('/detail-restaurant', 'RestaurantDetails@detail_restaurant');
+Route::post('/tambah-data', 'Restaurants@add_proses_restaurant');
+//tambah data detail
+Route::get('/tambah-detail-restaurant/{id}', 'RestaurantDetails@add_detail_restaurant');
+Route::post('/tambah-detail', 'RestaurantDetails@add_proses_detail_restaurant');
+//tambah data galeri
+Route::get('/tambah-galeri-restaurant/{id}', 'GaleriRestaurants@galeri_restaurant');
+Route::post('/tambah-galeri', 'GaleriRestaurants@add_galeri_restaurant');
+//view data detail
+Route::get('/detail-restaurant/{id}', 'RestaurantDetails@detail_restaurant');
 Route::get('/data-order-restaurant', 'RestaurantOrders@order_restaurant');
-Route::get('/tambah-galeri-restaurant', 'GaleriRestaurants@galeri_restaurant');
+//edit data detail
+Route::get('/edit-data-restaurant/{id}', 'RestaurantDetails@update_restaurant');
+Route::post('/edit-data}', 'RestaurantDetails@update_proses_restaurant');
+//hapus data
+Route::get('hapus-data-restaurant/{id}', 'RestaurantDetails@delete_restaurant');

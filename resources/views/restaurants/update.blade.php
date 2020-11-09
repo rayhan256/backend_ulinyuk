@@ -23,42 +23,52 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form action="{{ url('/edit-data') }}" method="post">
+                                @csrf
                                 <div class="form-group row">
-                                    
-                                    <label class="col-sm-2 col-form-label">ID Kategori Restaurant</label>
+                                    <input type="hidden" class="form-control" id="id" name="id_restaurant" value="{{$detail->id}}">                                    
+
+                                    <input type="hidden" name="id_master" value="{{$detail->id}}">
+
+                                    <label class="col-sm-2 col-form-label">Nama Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" id="id_kategori_restoran" class="form-control">
+                                        <input type="text" class="form-control" id="nama_restaurant" name="nama_restaurant" value="{{$detail->nama_restaurant}}">
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+
+                                    <label class="col-sm-2 col-form-label">Kategori Restaurant</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="kategori_restaurant" name="kategori_restaurant" value="{{$detail->kategori_restaurant}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Telepon Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="telepon_restaurant">
+                                        <input type="text" class="form-control" id="telepon_restaurant" name="telepon_restaurant" value="{{$detail->telepon_restaurant}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Alamat Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="alamat_restaurant">
+                                        <input type="text" class="form-control" id="alamat_restaurant" name="alamat_restaurant" value="{{$detail->alamat_restaurant}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Jadwal Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jadwal_restaurant">
+                                        <input type="text" class="form-control" id="jadwal_restaurant" name="jadwal_restaurant" value="{{$detail->jadwal_restaurant}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Restaurant</label>
                                     <div class="col-sm-10 mb-2">
-                                        <textarea name="fasilitas_restaurant" id="fasilitas_restaurant" class="form-control"></textarea>
+                                        <textarea name="fasilitas_restaurant" id="fasilitas_restaurant" class="form-control">{{$detail->fasilitas_restaurant}}</textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Deskripsi Restaurant</label>
                                     <div class="col-sm-10">
-                                        <textarea name="deskripsi_restaurant" id="deskripsi_restaurant" class="form-control"></textarea>
+                                        <textarea name="deskripsi_restaurant" id="deskripsi_restaurant" class="form-control">{{$detail->deskripsi_restaurant}}</textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 

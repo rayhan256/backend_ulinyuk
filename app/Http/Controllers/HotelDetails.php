@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\ModelGaleriHotels;
+use App\ModelHistoriBookingHotels;
 use App\ModelHotelDetails;
+use App\ModelHotels;
 use Illuminate\Http\Request;
 
 class HotelDetails extends Controller
@@ -75,15 +78,77 @@ class HotelDetails extends Controller
         return $data_detail;
     }
 
-    public function detail_hotel()
+
+    //CRUD
+
+    public function add_detail_hotel($id)
     {
-        $data_detail = ModelHotelDetails::all();
-        return view('/hotels/detail', ['data_detail' => $data_detail]);
+        $data_detail = ModelHotels::where('id', $id)->first();
+        return view('/hotels/add_detail', ['data_detail' => $data_detail]);
     }
 
-    public function list_hotel()
+    public function add_proses_detail_hotel(Request $request)
     {
-        $data_detail = ModelHotelDetails::all();
-        return view('/hotels/list', ['data_detail' => $data_detail]);
+        $detail = new ModelHotelDetails([
+            'id_hotel' => $request->input('id_hotel'),
+            'kategori_kamar_hotel' => $request->input('kategori_kamar_hotel'),
+            'harga_kamar_hotel' => $request->input('harga_kamar_hotel'),
+            'jadwal_checkin_hotel' => $request->input('jadwal_checkin_hotel'),
+            'jadwal_checkout_hotel' => $request->input('jadwal_checkout_hotel'),
+            'fasilitas_hotel' => $request->input('fasilitas_hotel'),
+            'fasilitas_kamar_hotel' => $request->input('fasilitas_kamar_hotel'),
+            'fasilitas_publik_hotel' => $request->input('fasilitas_publik_hotel'),
+            'fasilitas_terdekat_hotel' => $request->input('fasilitas_terdekat_hotel'),
+            'fasilitas_transportasi_hotel' => $request->input('fasilitas_transportasi_hotel'),
+            'deskripsi_hotel' => $request->input('deskripsi_hotel'),
+        ]);
+        $detail->save();
+
+        return redirect('/detail-hotel' . '/' . $request->input('id_hotel'))->with('sukses', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function detail_hotel($id)
+    {
+        $data_detail = ModelHotels::with(['hotel_detail', 'galeri_hotel'])->firstWhere('id', $id);
+        return view('/hotels/detail', ['detail' => $data_detail]);
+        // return response()->json($data_detail, 200);
+    }
+
+    public function update_hotel($id)
+    {
+        $data_detail = ModelHotels::with(['hotel_detail', 'galeri_hotel'])->firstWhere('id', $id);
+        return view('/hotels/update', ['detail' => $data_detail]);
+        //return response()->json($data_detail, 200);
+    }
+
+    public function update_proses_hotel(Request $request)
+    {
+        $id_master = $request->input('id_master');
+        $data_master = ModelHotels::find($id_master);
+        $data_master->update([
+            'nama_hotel' => $request->input('nama_hotel'),
+            'telepon_hotel' => $request->input('telepon_hotel'),
+            'alamat_hotel' => $request->input('alamat_hotel'),
+        ]);
+
+        $id = $request->input('id_hotel');
+        $data_detail = ModelHotelDetails::find($id);
+
+        $data_detail->update($request->all());
+        return redirect('/detail-hotel' . '/' . $id)->with('sukses', 'Data Berhasil Diupdate!');
+    }
+
+    public function delete_hotel($id)
+    {
+        $data_galeri = ModelGaleriHotels::find($id);
+        $data_galeri->delete();
+
+        $data_detail = ModelHotelDetails::find($id);
+        $data_detail->delete();
+
+        $data_master = ModelHotels::find($id);
+        $data_master->delete();
+
+        return redirect('/hotel')->with('sukses', 'Data Berhasil Dihapus!');
     }
 }

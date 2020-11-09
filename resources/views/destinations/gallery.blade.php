@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
-                                    <label class="col-sm-2 col-form-label">Gambar Hotel</label>
+                                    <label class="col-sm-2 col-form-label">Gambar Objek Wisata</label>
                                     <div class="col-sm-10">
                                         <input id="gambar" name="foto_objek_wisata" type="file" class="form-control">
                                     </div>

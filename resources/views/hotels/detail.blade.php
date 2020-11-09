@@ -3,6 +3,11 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
+            @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+            @endif
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Detail Hotel</h2>                
@@ -10,10 +15,10 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/hotel" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="{{ url('/hotel') }}" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                         <td>  </td>
-                        <a href="/list-detail-hotel" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="{{ url('/list-detail-hotel') }}" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-bars"></i> </a>
                     </div>
                 </div>
@@ -22,16 +27,18 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
+                @foreach($detail->galeri_hotel as $item)
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/hotels/aston1.jpg" alt="" width='100%'>
+                                    <img src="{{ url('/galeri').'/'.$item->foto_hotel }}" width='100%'>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                @endforeach
+                    {{-- <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
                                 <div>
@@ -57,22 +64,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    @foreach($data_detail as $detail)
-                    <div class="ibox product-detail">
+                    <div class="ibox product-detail col-12">
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
                                     <h3>
-                                        @foreach($detail->hotel as $ho)
-                                        <b>{{$ho->nama_hotel}}</b>
-                                        @endforeach
+                                        <b>{{$detail->nama_hotel}}</b>
                                     </h3>
                                     <hr>
+                                    @foreach($detail->hotel_detail as $data)
                                     <h4><b>Deskripsi</b></h4>
                                     <div class="">
-                                        {{$detail->deskripsi_hotel}}
+                                        {{$data->deskripsi_hotel}}
                                     </div>
 
                                     <div class="row">
@@ -81,7 +86,7 @@
                                                 <h4><b>Fasilitas Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->fasilitas_hotel}}
+                                                        {{$data->fasilitas_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -91,7 +96,7 @@
                                                 <h4><b>Fasilitas Kamar Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->fasilitas_kamar_hotel}}
+                                                        {{$data->fasilitas_kamar_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -101,7 +106,7 @@
                                                 <h4><b>Fasilitas Publik Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->fasilitas_publik_hotel}}
+                                                        {{$data->fasilitas_publik_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -113,7 +118,7 @@
                                                 <h4><b>Fasilitas Terdekat Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->fasilitas_terdekat_hotel}}
+                                                        {{$data->fasilitas_terdekat_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
@@ -123,12 +128,13 @@
                                                 <h4><b>Fasilitas Transportasi Hotel</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->fasilitas_transportasi_hotel}}
+                                                        {{$data->fasilitas_transportasi_hotel}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
                                         </div>
                                     </div>
+                                    @endforeach
 
                                 </div>
                                 
@@ -136,49 +142,46 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        @foreach($detail->hotel as $ho)
                                         <i class="fa fa-map-marker"></i> 
-                                        {{$ho->alamat_hotel}}
-                                        @endforeach
+                                        {{$detail->alamat_hotel}}
                                     </h3>
                                     <hr>
+                                    @foreach($detail->hotel_detail as $data)
                                     <h3>
                                         <i class="fa fa-sign-in"></i> 
-                                        {{$detail->jadwal_checkin_hotel}}
+                                        {{$data->jadwal_checkin_hotel}}
                                     </h3> 
                                     <hr>                                  
                                     <h3>
                                         <i class="fa fa-sign-out"></i> 
-                                        {{$detail->jadwal_checkout_hotel}}
+                                        {{$data->jadwal_checkout_hotel}}
                                     </h3> 
+                                    @endforeach
                                     <hr>                                  
                                     <h3>
-                                        @foreach($detail->hotel as $ho)
                                         <i class="fa fa-phone"></i> 
-                                        {{$ho->telepon_hotel}}
-                                        @endforeach
+                                        {{$detail->telepon_hotel}}
                                     </h3>                                   
                                     <hr>
+                                    @foreach($detail->hotel_detail as $data)
                                     <h3>
                                         Rp. 
-                                        {{$detail->harga_kamar_hotel}} / <small>night</small>
-                                    </h3>                                   
+                                        {{$data->harga_kamar_hotel}} / <small>night</small>
+                                    </h3> 
+                                    @endforeach                                  
                                     <hr>
-                                    <div>                                                
-                                        <a href="/edit-data-hotel" class="btn btn-primary">Edit Data</a>
-                                        <a href="/tambah-galeri-hotel" class="btn btn-primary">Tambah Gambar</a>
+                                    <div> 
+                                        @if($detail->hotel_detail->count() <= 0)                                               
+                                        <a href="/tambah-detail-hotel/{{$detail->id}}" class="btn btn-primary btn-sm">Tambah Detail</a>
+                                        @else
+                                        <a href="/edit-data-hotel/{{$detail->id}}" class="btn btn-primary btn-sm">Edit Data</a>
+                                        @endif
+                                        <a href="/tambah-galeri-hotel/{{$detail->id}}" class="btn btn-primary btn-sm">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-
-
-
-
-
-
             </div>
         </div>
 

@@ -66,7 +66,7 @@
 
                                     <label class="col-sm-2 col-form-label">Alamat Objek Wisata</label>
                                     <div class="col-sm-10 mb-2">
-                                        <textarea class="form-control" name="alamat_objek_wisata" name="alamat_objek_wisata"></textarea>
+                                        <textarea class="form-control"name="alamat_objek_wisata"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 

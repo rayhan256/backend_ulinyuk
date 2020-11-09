@@ -17,7 +17,7 @@ class ModelDestinations extends Model
     //relasi agar bisa di ambil oleh mst_destination_details
     public function destination_detail()
     {
-        return $this->hasOne(ModelDestinationDetails::class, 'id_objek_wisata', 'id');
+        return $this->hasMany(ModelDestinationDetails::class, 'id_objek_wisata', 'id');
     }
 
     //relasi agar data bisa diambil oleh mst_galeri_destinations

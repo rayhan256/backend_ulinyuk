@@ -23,35 +23,36 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form action="{{ url('/tambah-detail') }}" method="post">
+                                @csrf
                                 <div class="form-group row">      
                                     <label class="col-sm-2 col-form-label">ID Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_hotel" />
+                                        <input type="text" name="id_hotel" class="form-control" value="{{$data_detail->id}}" />
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     
                                     <label class="col-sm-2 col-form-label">Kategori Kamar Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="kategori_kamar_hotel">
+                                        <input type="text" class="form-control" id="kategori_kamar_hotel" name="kategori_kamar_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Harga Kamar Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="harga_kamar_hotel">
+                                        <input type="text" class="form-control" id="harga_kamar_hotel" name="harga_kamar_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Jadwal CheckIn Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jadwal_checkin_hotel">
+                                        <input type="text" class="form-control" id="jadwal_checkin_hotel" name="jadwal_checkin_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Jadwal CheckOut Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jadwal_checkout_hotel">
+                                        <input type="text" class="form-control" id="jadwal_checkout_hotel" name="jadwal_checkout_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -95,7 +96,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <button class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Simpan</button>
+                                        <button class="btn btn-primary btn-sm" type="submit">Simpan</button>
                                     </div>
                                 </div>
                             </form>

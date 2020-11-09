@@ -58,6 +58,9 @@ class GaleriDestinations extends Controller
         return $galeri;
     }
 
+
+    //CRUD
+
     public function galeri_objek_wisata($id)
     {
         $galeri = ModelDestinations::where('id', $id)->first();
@@ -77,7 +80,7 @@ class GaleriDestinations extends Controller
 
         $galeri = new ModelGaleriDestinations([
             'id_objek_wisata' => $request->input('id_objek_wisata'),
-            'foto_objek_wisata' => url('galeri') . '/' . $namaImage,
+            'foto_objek_wisata' => $namaImage,
         ]);
         $galeri->save();
 

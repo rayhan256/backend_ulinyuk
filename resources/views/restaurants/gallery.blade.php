@@ -7,13 +7,6 @@
                 <div class="col-lg-10">
                     <h2>Gallery Restaurant</h2>                
                 </div>
-                <div class="col-md-2">
-                    <br>
-                    <div style="float: right">
-                        <a href="/detail-restaurant" class="btn btn-sm btn-outline btn-primary"> <i
-                            class="fa fa-chevron-left"></i> </a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -30,27 +23,19 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form action="{{ url('/tambah-galeri') }}" method="post" enctype="multipart/form-data">
+                                @csrf
                                 <div class="form-group row">
-
-                                    <label class="col-sm-2 col-form-label">ID Galeri Restaurant</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_galeri_restaurant">
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">ID Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_restaurant">
+                                        <input type="text" class="form-control" name="id_restaurant" value="{{$galeri->id == null ? '' : $galeri->id}}">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Gambar Restaurant</label>
                                     <div class="col-sm-10">
-                                        <div class="custom-file">
-                                            <input id="gambar" type="file" class="custom-file-input">
-                                            <label for="gambar" class="custom-file-label">Choose file...</label>
-                                        </div> 
+                                        <input id="gambar" name="foto_restaurant" type="file" class="form-control">
                                     </div>
 
                                 </div>

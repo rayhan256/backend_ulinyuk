@@ -3,6 +3,11 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
+            @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+            @endif
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Daftar Detail Hotel</h2>                
@@ -10,7 +15,7 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/hotel" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="{{ url('/hotel') }}" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                     </div>
                 </div>
@@ -67,6 +72,10 @@
                                         CheckOut Time Hotel
                                         <span class="footable-sort-indicator"></span>
                                     </th>
+                                    <th class="footable-visible footable-sortable">
+                                        Harga Kamar Hotel
+                                        <span class="footable-sort-indicator"></span>
+                                    </th>
                                     <th class="text-right footable-visible footable-sortable footable-last-column">
                                         Action
                                         <span class="footable-sort-indicator"></span>
@@ -78,49 +87,49 @@
                                 @foreach($data_detail as $detail)
                                 <tbody>
                                 <tr>
-                                    @foreach($detail->hotel as $ho)
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        {{$ho->id_hotel}} - {{$ho->nama_hotel}}
-                                    </td>
-                                    @endforeach
-
-                                    
-                                    <td class="footable-visible">
-                                        {{$detail->id_kategori_kamar_hotel}}
+                                        {{$detail->id}} - {{$detail->nama_hotel}}
                                     </td>
 
-                                    @foreach($detail->hotel as $ho)
+                                    @foreach($detail->hotel_detail as $det)
                                     <td class="footable-visible">
-                                        {{$ho->area_hotel}}
-                                    </td>
-                                    @endforeach
-
-                                    @foreach($detail->hotel as $ho)
-                                    <td class="footable-visible">
-                                        {{$ho->telepon_hotel}}
-                                    </td>
-                                    @endforeach
-
-                                    @foreach($detail->hotel as $ho)
-                                    <td class="footable-visible">
-                                        {{$ho->alamat_hotel}}
+                                        {{$det->id}} - {{$det->kategori_kamar_hotel}}
                                     </td>
                                     @endforeach
 
                                     <td class="footable-visible">
-                                        {{$detail->jadwal_checkin_hotel}}
+                                        {{$detail->area_hotel}}
                                     </td>
 
                                     <td class="footable-visible">
-                                        {{$detail->jadwal_checkout_hotel}}
+                                        {{$detail->telepon_hotel}}
                                     </td>
+
+                                    <td class="footable-visible">
+                                        {{$detail->alamat_hotel}}
+                                    </td>
+
+                                    @foreach($detail->hotel_detail as $det)
+                                    <td class="footable-visible">
+                                        {{$det->jadwal_checkin_hotel}}
+                                    </td>
+
+                                    <td class="footable-visible">
+                                        {{$det->jadwal_checkout_hotel}}
+                                    </td>
+
+                                    <td class="footable-visible">
+                                        {{$det->harga_kamar_hotel}}
+                                    </td>
+                                    @endforeach
 
                                     
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <a href="/detail-hotel" class="btn-white btn btn-xs">View</a>
-                                            <a href="/edit-data-hotel" class="btn-white btn btn-xs">Edit</a>
+                                            <a href="{{ url('/detail-hotel').'/'.$detail->id }}" class="btn-white btn btn-xs">View</a>
+                                            <a href="/edit-data-hotel/{{$detail->id}}" class="btn-white btn btn-xs">Edit</a>
+                                            <a href="/hapus-data-hotel/{{$detail->id}}" class="btn-white btn btn-xs" onclick="return confirm('Hapus Data ini ?')">Hapus</a>
                                         </div>
                                     </td>
                                 </tr>

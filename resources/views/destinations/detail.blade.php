@@ -32,7 +32,7 @@
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="{{ $item->foto_objek_wisata }}" alt="" width='100%'>
+                                    <img src="{{ url('/galeri'). '/'. $item->foto_objek_wisata }}" width='100%'>
                                 </div>
                             </div>
                         </div>

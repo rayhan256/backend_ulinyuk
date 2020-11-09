@@ -23,29 +23,24 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
-                                <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">ID Kategori Restaurant</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_kategori_restaurant" />
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-
+                            <form action="{{ url('/tambah-detail') }}" method="post">
+                                @csrf
+                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">ID Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_restaurant" />
+                                        <input type="text" class="form-control" id="id_restaurant" name="id_restaurant" value="{{$data_detail->id}}" />
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     
                                     <label class="col-sm-2 col-form-label">Kategori Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="kategori_restaurant">
+                                        <input type="text" class="form-control" id="kategori_restaurant" name="kategori_restaurant">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Jadwal Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jadwal_restaurant">
+                                        <input type="text" class="form-control" id="jadwal_restaurant" name="jadwal_restaurant">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 

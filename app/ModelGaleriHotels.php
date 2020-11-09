@@ -12,6 +12,15 @@ class ModelGaleriHotels extends Model
         'id_hotel', 'foto_hotel'
     ];
 
+    public function getImage()
+    {
+        if (!$this->foto_hotel) {
+            return asset('galeri/default.jpg');
+        }
+
+        return asset('galeri/' . $this->foto_hotel);
+    }
+
     //ambil data id mst_hotels
     public function hotel()
     {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ModelGaleriHotels;
+use App\ModelHotels;
 use Illuminate\Http\Request;
 
 class GaleriHotels extends Controller
@@ -56,9 +57,31 @@ class GaleriHotels extends Controller
         return $galeri;
     }
 
-    public function galeri_hotel()
+
+
+    //CRUD
+
+    public function galeri_hotel($id)
     {
-        $galeri = ModelGaleriHotels::all();
-        return view('/hotels/gallery');
+        $galeri = ModelHotels::where('id', $id)->first();
+        return view('/hotels/gallery', ['galeri' => $galeri]);
+        //return response()->json($galeri, 200);
+    }
+
+    public function add_galeri_hotel(Request $request)
+    {
+        $request->validate([
+            'foto_hotel' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $namaImage = time() . '.' . $request->foto_hotel->extension();
+        $request->foto_hotel->move(public_path('galeri'), $namaImage);
+
+        $galeri = new ModelGaleriHotels([
+            'id_hotel' => $request->input('id_hotel'),
+            'foto_hotel' => $namaImage,
+        ]);
+        $galeri->save();
+
+        return redirect('/detail-hotel/' . $request->input('id_hotel'))->with('sukses', 'Foto Berhasil Ditambahkan!');
     }
 }

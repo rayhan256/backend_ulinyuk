@@ -23,28 +23,29 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form action="{{ url('/tambah-data')}}" method="post">
+                                @csrf
                                 <div class="form-group row"> 
                                     <label class="col-sm-2 col-form-label">Nama Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nama_hotel">
+                                        <input type="text" class="form-control" name="nama_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Kategori Hotel</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" id="kategori_hotel">
-                                            <option value="Bintang 1">*1</option>
-                                            <option value="Bintang 2">*2</option>
-                                            <option value="Bintang 3">*3</option>
-                                            <option value="Bintang 4">*4</option>
-                                            <option value="Bintang 5">*5</option>
+                                        <select class="form-control m-b" name="kategori_hotel">
+                                            <option value="1">*1</option>
+                                            <option value="2">*2</option>
+                                            <option value="3">*3</option>
+                                            <option value="4">*4</option>
+                                            <option value="5">*5</option>
                                         </select>
                                     </div>
 
                                     <label class="col-sm-2 col-form-label">Area Hotel</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b">
+                                        <select class="form-control m-b" name="area_hotel">
                                             <option value="Bandung">Bandung</option>
                                             <option value="Banjar">Banjar</option>
                                             <option value="Bekasi">Bekasi</option>
@@ -70,13 +71,13 @@
 
                                     <label class="col-sm-2 col-form-label">Telepon Hotel</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="telepon_hotel">
+                                        <input type="text" class="form-control" name="telepon_hotel">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Alamat Hotel</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" name="alamat_hotel" id="alamat_hotel"></textarea>
+                                        <textarea class="form-control" name="alamat_hotel"></textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     
@@ -84,7 +85,8 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
-                                        <a href="/tambah-detail-hotel" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a>
+                                        <button class="btn btn-primary btn-sm" id="btn_submit" type="submit">Simpan</button>
+                                        {{-- <a href="/tambah-detail-hotel" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a> --}}
                                     </div>
                                 </div>
                             </form>

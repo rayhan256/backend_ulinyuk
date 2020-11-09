@@ -3,6 +3,11 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
+            @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+            @endif
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Daftar Detail Restaurant</h2>                
@@ -10,7 +15,7 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/restaurant" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="{{ url('/restaurant') }}" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                     </div>
                 </div>
@@ -74,43 +79,40 @@
                                 @foreach($data_detail as $detail)
                                 <tbody>
                                 <tr>
-                                    @foreach($detail->restaurant as $resto)
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        {{$resto->id_restaurant}} - {{$resto->nama_restaurant}}
+                                        {{$detail->id_restaurant}} - {{$detail->nama_restaurant}}
                                     </td>
-                                    @endforeach
                                     
+                                    @foreach($detail->restaurant_detail as $det)
                                     <td class="footable-visible">
-                                        {{$detail->id_kategori_restaurant}} - {{$detail->kategori_restaurant}}
-                                    </td>
-
-                                    @foreach($detail->restaurant as $resto)
-                                    <td class="footable-visible">
-                                        {{$resto->area_restaurant}}
-                                    </td>
-                                    @endforeach
-
-                                    @foreach($detail->restaurant as $resto)
-                                    <td class="footable-visible">
-                                        {{$resto->telepon_restaurant}}
-                                    </td>
-                                    @endforeach
-
-                                    @foreach($detail->restaurant as $resto)
-                                    <td class="footable-visible">
-                                        {{$resto->alamat_restaurant}}
+                                        {{$det->id_kategori_restaurant}} - {{$det->kategori_restaurant}}
                                     </td>
                                     @endforeach
 
                                     <td class="footable-visible">
-                                        {{$detail->jadwal_restaurant}}
+                                        {{$detail->area_restaurant}}
                                     </td>
+
+                                    <td class="footable-visible">
+                                        {{$detail->telepon_restaurant}}
+                                    </td>
+
+                                    <td class="footable-visible">
+                                        {{$detail->alamat_restaurant}}
+                                    </td>
+
+                                    @foreach($detail->restaurant_detail as $det)
+                                    <td class="footable-visible">
+                                        {{$det->jadwal_restaurant}}
+                                    </td>
+                                    @endforeach
                                     
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <a href="/detail-restaurant" class="btn-white btn btn-xs">View</a>
-                                            <a href="/edit-data-restaurant" class="btn-white btn btn-xs">Edit</a>
+                                            <a href="{{ url('/detail-restaurant').'/'.$detail->id }}" class="btn-white btn btn-xs">View</a>
+                                            <a href="/edit-data-restaurant/{{$detail->id}}" class="btn-white btn btn-xs">Edit</a>
+                                            <a href="/hapus-data-restaurant/{{$detail->id}}" class="btn-white btn btn-xs" onclick="return confirm('Hapus Data ini ?')">Hapus</a>
                                         </div>
                                     </td>
                                 </tr>

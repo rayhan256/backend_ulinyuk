@@ -3,6 +3,11 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
+            @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+            @endif
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Dashboard Restaurant</h2>                
@@ -10,15 +15,15 @@
                 <div class="col-lg-2">
                     <div style="float: right">
                         <div class="col mt-3">                       
-                            <a href="/tambah-data-restaurant" class="btn btn-sm btn-primary">Tambah Data</a>                        
+                            <a href="{{ url('/tambah-data-restaurant') }}" class="btn btn-sm btn-primary">Tambah Data</a>                        
                         </div>
                         <br>
                         <div style="float: right">
                             <div class="mr-3">
-                                <a href="/restaurant" class="btn btn-sm btn-outline btn-primary"> <i
+                                <a href="{{ url('/restaurant') }}" class="btn btn-sm btn-outline btn-primary"> <i
                                     class="fa fa-th-large"></i> </a>
                                 <td>  </td>
-                                <a href="/list-detail-restaurant" class="btn btn-sm btn-outline btn-primary"> <i
+                                <a href="{{ url('/list-detail-restaurant') }}" class="btn btn-sm btn-outline btn-primary"> <i
                                     class="fa fa-bars"></i> </a>
                             </div>
                         </div>
@@ -27,20 +32,20 @@
             </div>
         </div>
 
-        @foreach($data_restaurant as $restaurant)
         <div class="wrapper wrapper-content">
             <div class="wrapper wrapper-content animated fadeInRight">
                 <div class="row">
+                @foreach($data_restaurant as $restaurant)
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="ibox-content product-box">
     
-                                <img src="assets/image/restaurants/lawangwangi3.jpg" alt="" width='100%'>
+                                <img src="{{ url('/galeri').'/'.$restaurant->galeri_restaurant[0]->foto_restaurant }}" width="100%">
                                 <div class="product-desc">
                                     <span class="product-price">
-                                        $10
+                                        $5
                                     </span>
-                                    <a href="/detail-restaurant" class="product-name"> 
+                                    <a href="{{ url('/detail-restaurant').'/'.$restaurant->id }}" class="product-name"> 
                                         {{$restaurant->nama_restaurant}}
                                     </a>
                                     <div class="small m-t-xs">
@@ -48,17 +53,18 @@
                                     </div>
                                     <div class="m-t text-righ">
     
-                                        <a href="/detail-restaurant" class="btn btn-xs btn-outline btn-primary">Info <i
+                                        <a href="{{ url('/detail-restaurant') }}" class="btn btn-xs btn-outline btn-primary">Detail <i
                                                 class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                @endforeach
                 </div>
             </div>
             @include('layouts/footer')
         </div>
-        @endforeach
 
     @include('layouts/js')

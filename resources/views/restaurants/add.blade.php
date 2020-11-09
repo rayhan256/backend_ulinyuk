@@ -23,24 +23,18 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
-                                <div class="form-group row">                                    
-                                    <label class="col-sm-2 col-form-label">ID Restaurant</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="id_restaurant" />
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    
+                            <form action="{{ url('/tambah-data') }}" method="post">
+                                @csrf
+                                <div class="form-group row">    
                                     <label class="col-sm-2 col-form-label">Nama Restaurant</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nama_restaurant">
+                                        <input type="text" class="form-control" id="nama_restaurant" name="nama_restaurant">
                                     </div>
                                     <div class="hr-line-dashed"></div>
-
 
                                     <label class="col-sm-2 col-form-label">Area Restaurant</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control m-b" id="area_restaurant">
+                                        <select class="form-control m-b" id="area_restaurant" name="area_restaurant">
                                             <option value="Bandung">Bandung</option>
                                             <option value="Banjar">Banjar</option>
                                             <option value="Bekasi">Bekasi</option>
@@ -66,7 +60,7 @@
 
                                     <label class="col-sm-2 col-form-label">Telepon Restaurant</label>
                                     <div class="col-sm-10 mb-2">
-                                        <input type="text" class="form-control" id="telepon_restaurant">
+                                        <input type="text" class="form-control" id="telepon_restaurant" name="telepon_restaurant">
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
@@ -81,8 +75,9 @@
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
                                         <button class="btn btn-white btn-sm" type="reset">Batal</button>
+                                        <button class="btn btn-primary btn-sm" id="btn_submit" type="submit">Simpan</button>
                                         
-                                        <a href="/tambah-detail-restaurant" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a>
+                                        {{-- <a href="/tambah-detail-restaurant" class="btn btn-primary btn-sm" id="submit_add_resto" type="submit">Selanjutnya</a> --}}
                                     </div>
                                 </div>
                             </form>

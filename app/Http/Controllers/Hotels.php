@@ -65,13 +65,15 @@ class Hotels extends Controller
         return $data_hotel;
     }
 
+
+    //CRUD
+
     public function index()
     {
-        $data_hotel = ModelHotels::all();
+        $data_hotel = ModelHotels::with('galeri_hotel')->get();
         return view('/hotels/dashboard', ['data_hotel' => $data_hotel]);
+        //return response()->json($data_destination);
     }
-
-
 
     public function add_hotel()
     {
@@ -79,15 +81,23 @@ class Hotels extends Controller
         return view('/hotels/add');
     }
 
-    public function add_detail_hotel()
+    public function add_proses_hotel(Request $request)
     {
-        $data_hotel = ModelHotels::all();
-        return view('/hotels/add_detail');
+        $hotel = new ModelHotels([
+            'nama_hotel' => $request->input('nama_hotel'),
+            'kategori_hotel' => $request->input('kategori_hotel'),
+            'area_hotel' => $request->input('area_hotel'),
+            'telepon_hotel' => $request->input('telepon_hotel'),
+            'alamat_hotel' => $request->input('alamat_hotel'),
+        ]);
+        $hotel->save();
+
+        return redirect('/list-detail-hotel')->with('sukses', 'Data Berhasil Ditambahkan!');
     }
 
-    public function update_hotel()
+    public function list_hotel()
     {
-        $hotel = ModelHotels::all();
-        return view('/hotels/update');
+        $data_detail = ModelHotels::all();
+        return view('hotels/list', ['data_detail' => $data_detail]);
     }
 }

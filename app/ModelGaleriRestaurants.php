@@ -12,6 +12,15 @@ class ModelGaleriRestaurants extends Model
         'id_restaurant', 'foto_restaurant'
     ];
 
+    public function getImage()
+    {
+        if (!$this->foto_restaurant) {
+            return asset('galeri/default.jpg');
+        }
+
+        return asset('galeri/' . $this->foto_restaurant);
+    }
+
     //ambil data id mst_restaurants
     public function restaurant()
     {

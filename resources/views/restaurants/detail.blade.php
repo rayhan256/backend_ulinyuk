@@ -3,6 +3,11 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
+            @if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+            @endif
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Detail Restaurant</h2>                
@@ -10,10 +15,10 @@
                 <div class="col-md-2">
                     <br>
                     <div style="float: right">
-                        <a href="/restaurant" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="{{ url('/restaurant') }}" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-th-large"></i> </a>
                         <td>  </td>
-                        <a href="/list-detail-restaurant" class="btn btn-sm btn-outline btn-primary"> <i
+                        <a href="{{ url('/list-detail-restaurant') }}" class="btn btn-sm btn-outline btn-primary"> <i
                             class="fa fa-bars"></i> </a>
                     </div>
                 </div>
@@ -22,16 +27,18 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
+                @foreach($detail->galeri_restaurant as $item)
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
                                 <div>
-                                    <img src="assets/image/restaurants/lawangwangi3.jpg" alt="" width='100%'>
+                                    <img src="{{ url('/galeri').'/'.$item->foto_restaurant }}" width='100%'>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    @endforeach
+                    {{-- <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
                                 <div>
@@ -57,22 +64,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    @foreach($data_detail as $detail)
-                    <div class="ibox product-detail">
+                    <div class="ibox product-detail col-12">
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-md-7">
                                     <h3>
-                                        @foreach($detail->restaurant as $resto)
-                                        <b>{{$resto->nama_restaurant}}</b>
-                                        @endforeach
+                                        <b>{{$detail->nama_restaurant}}</b>
                                     </h3>
                                     <hr>
+                                    @foreach($detail->restaurant_detail as $data)
                                     <h4>Deskripsi</h4>
                                     <div class="">
-                                        {{$detail->deskripsi_restaurant}}
+                                        {{$data->deskripsi_restaurant}}
                                     </div>
 
                                     <div class="row">
@@ -81,12 +86,13 @@
                                                 <h4><b>Fasilitas Restaurant</b></h4>
                                                 <div class="Collapse__more__amenities">
                                                     <div class="content-amenities">
-                                                        {{$detail->fasilitas_restaurant}}
+                                                        {{$data->fasilitas_restaurant}}
                                                     </div>                                            
                                                 </div>
                                             </dl>
                                         </div>
                                     </div>
+                                    @endforeach
 
                                 </div>
                                 
@@ -94,36 +100,31 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        @foreach($detail->restaurant as $resto)
-                                        <i class="fa fa-map-marker"></i> {{$resto->alamat_restaurant}}
-                                        @endforeach
+                                        <i class="fa fa-map-marker"></i> {{$detail->alamat_restaurant}}
                                     </h3>
                                     <hr>
+                                    @foreach($detail->restaurant_detail as $data)
                                     <h3>
-                                        <i class="fa fa-clock-o"></i> {{$detail->jadwal_restaurant}}
-                                    </h3>                                   
+                                        <i class="fa fa-clock-o"></i> {{$data->jadwal_restaurant}}
+                                    </h3> 
+                                    @endforeach                                  
                                     <hr>
                                     <h3>
-                                        @foreach($detail->restaurant as $resto)
-                                        <i class="fa fa-phone"></i> {{$resto->telepon_restaurant}}
-                                        @endforeach
+                                        <i class="fa fa-phone"></i>{{$detail->telepon_restaurant}}
                                     </h3>                                   
                                     <hr>
                                     <div>                                                
-                                        <a href="/edit-data-restaurant" class="btn btn-primary">Edit Data</a>
-                                        <a href="/tambah-galeri-restaurant" class="btn btn-primary">Tambah Gambar</a>
+                                        @if($detail->restaurant_detail->count() <= 0)                                               
+                                        <a href="/tambah-detail-restaurant/{{$detail->id}}" class="btn btn-primary btn-sm">Tambah Detail</a>
+                                        @else
+                                        <a href="/edit-data-restaurant/{{$detail->id}}" class="btn btn-primary btn-sm">Edit Data</a>
+                                        @endif
+                                        <a href="/tambah-galeri-restaurant/{{$detail->id}}" class="btn btn-primary btn-sm">Tambah Gambar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-
-
-
-
-
-
             </div>
         </div>
 

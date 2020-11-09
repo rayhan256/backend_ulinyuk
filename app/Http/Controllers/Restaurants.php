@@ -58,13 +58,14 @@ class Restaurants extends Controller
         return $data_restaurant;
     }
 
+
+    //CRUD
+
     public function index()
     {
-        $data_restaurant = ModelRestaurants::all();
+        $data_restaurant = ModelRestaurants::with('galeri_restaurant')->get();
         return view('/restaurants/dashboard', ['data_restaurant' => $data_restaurant]);
     }
-
-
 
     public function add_restaurant()
     {
@@ -72,15 +73,22 @@ class Restaurants extends Controller
         return view('/restaurants/add');
     }
 
-    public function add_detail_restaurant()
+    public function add_proses_restaurant(Request $request)
     {
-        $data_restaurant = ModelRestaurants::all();
-        return view('/restaurants/add_detail');
+        $restaurant = new ModelRestaurants([
+            'nama_restaurant' => $request->input('nama_restaurant'),
+            'area_restaurant' => $request->input('area_restaurant'),
+            'telepon_restaurant' => $request->input('telepon_restaurant'),
+            'alamat_restaurant' => $request->input('alamat_restaurant'),
+        ]);
+        $restaurant->save();
+
+        return redirect('/list-detail-restaurant')->with('sukses', 'Data Berhasil Ditambahkan!');
     }
 
-    public function update_restaurant()
+    public function list_restaurant()
     {
-        $data_restaurant = ModelRestaurants::all();
-        return view('/restaurants/update');
+        $data_detail = ModelRestaurants::all();
+        return view('restaurants/list', ['data_detail' => $data_detail]);
     }
 }

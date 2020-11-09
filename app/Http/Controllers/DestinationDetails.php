@@ -127,8 +127,8 @@ class DestinationDetails extends Controller
         $data_master = ModelDestinations::find($id_master);
         $data_master->update([
             'nama_objek_wisata' => $request->input('nama_objek_wisata'),
-            'alamat_objek_wisata' => $request->input('alamat_objek_wisata'),
             'telepon_objek_wisata' => $request->input('telepon_objek_wisata'),
+            'alamat_objek_wisata' => $request->input('alamat_objek_wisata'),
         ]);
 
 
