@@ -89,7 +89,7 @@ class Destinations extends Controller
         ]);
         $destination->save();
 
-        return redirect('/list-detail-objek-wisata')->with('sukses', 'Data Berhasil Ditambahkan!');
+        return redirect('/list-detail-objek-wisata')->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function list_objek_wisata()
@@ -103,6 +103,6 @@ class Destinations extends Controller
     //     $data_detail = ModelDestinations::find($id);
     //     $data_detail->delete();
 
-    //     return redirect('/objek_wisata' . '/' . $id)->with('sukses', 'Data Berhasil Dihapus!');
+    //     return redirect('/objek_wisata' . '/' . $id)->with('pesan', 'Data Berhasil Dihapus!');
     // }
 }

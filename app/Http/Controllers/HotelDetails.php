@@ -104,7 +104,7 @@ class HotelDetails extends Controller
         ]);
         $detail->save();
 
-        return redirect('/detail-hotel' . '/' . $request->input('id_hotel'))->with('sukses', 'Data Berhasil Ditambahkan!');
+        return redirect('/detail-hotel' . '/' . $request->input('id_hotel'))->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function detail_hotel($id)
@@ -135,7 +135,7 @@ class HotelDetails extends Controller
         $data_detail = ModelHotelDetails::find($id);
 
         $data_detail->update($request->all());
-        return redirect('/detail-hotel' . '/' . $id)->with('sukses', 'Data Berhasil Diupdate!');
+        return redirect('/detail-hotel' . '/' . $id)->with('pesan', 'Data Berhasil Diupdate!');
     }
 
     public function delete_hotel($id)
@@ -149,6 +149,6 @@ class HotelDetails extends Controller
         $data_master = ModelHotels::find($id);
         $data_master->delete();
 
-        return redirect('/hotel')->with('sukses', 'Data Berhasil Dihapus!');
+        return redirect('/hotel')->with('pesan', 'Data Berhasil Dihapus!');
     }
 }

@@ -84,6 +84,6 @@ class GaleriDestinations extends Controller
         ]);
         $galeri->save();
 
-        return redirect('/detail-objek-wisata/' . $request->input('id_objek_wisata'))->with('sukses', 'Foto Berhasil Ditambahkan!');
+        return redirect('/detail-objek-wisata/' . $request->input('id_objek_wisata'))->with('pesan', 'Foto Berhasil Ditambahkan!');
     }
 }

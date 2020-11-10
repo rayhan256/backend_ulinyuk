@@ -3,9 +3,9 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
-            @if(session('sukses'))
+            @if(session('pesan'))
                 <div class="alert alert-success" role="alert">
-                    {{session('sukses')}}
+                    {{session('pesan')}}
                 </div>
             @endif
             <div class="row wrapper border-bottom white-bg page-heading">
@@ -23,16 +23,11 @@
         </div>
 
         <div class="wrapper wrapper-content animated fadeInRight ecommerce">
-            <div class="ibox-content m-b-sm border-bottom">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label class="col-form-label" for="order_id">Cari Data</label>
-                            <input type="text" placeholder="" class="form-control">
-                        </div>
-                    </div>
-                </div>
-
+            <div class="row mb-3 col-lg-12">
+                <form class="form-inline my-2  my-lg-0" method="get" action="/restaurant">
+                    <input type="search" name="cari" class="form-control mr-sm-2" placeholder="Search..">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
 
             <div class="row">
@@ -81,12 +76,12 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column">
                                         <span class="footable-toggle"></span>
-                                        {{$detail->id_restaurant}} - {{$detail->nama_restaurant}}
+                                        {{$detail->id}} - {{$detail->nama_restaurant}}
                                     </td>
                                     
                                     @foreach($detail->restaurant_detail as $det)
                                     <td class="footable-visible">
-                                        {{$det->id_kategori_restaurant}} - {{$det->kategori_restaurant}}
+                                        {{$det->id}} - {{$det->kategori_restaurant}}
                                     </td>
                                     @endforeach
 

@@ -37,9 +37,11 @@
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Kategori Restaurant</label>
+                                    @foreach($detail->restaurant_detail as $data)
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="kategori_restaurant" name="kategori_restaurant" value="{{$detail->kategori_restaurant}}">
+                                        <input type="text" class="form-control" id="kategori_restaurant" name="kategori_restaurant" value="{{$data->kategori_restaurant}}">
                                     </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Telepon Restaurant</label>
@@ -55,21 +57,23 @@
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Jadwal Restaurant</label>
+                                    @foreach($detail->restaurant_detail as $data)
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jadwal_restaurant" name="jadwal_restaurant" value="{{$detail->jadwal_restaurant}}">
-                                    </div>
+                                        <input type="text" class="form-control" id="jadwal_restaurant" name="jadwal_restaurant" value="{{$data->jadwal_restaurant}}">
+                                    </div>                                    
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Fasilitas Restaurant</label>
                                     <div class="col-sm-10 mb-2">
-                                        <textarea name="fasilitas_restaurant" id="fasilitas_restaurant" class="form-control">{{$detail->fasilitas_restaurant}}</textarea>
+                                        <textarea name="fasilitas_restaurant" id="fasilitas_restaurant" class="form-control">{{$data->fasilitas_restaurant}}</textarea>
                                     </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <label class="col-sm-2 col-form-label">Deskripsi Restaurant</label>
                                     <div class="col-sm-10">
-                                        <textarea name="deskripsi_restaurant" id="deskripsi_restaurant" class="form-control">{{$detail->deskripsi_restaurant}}</textarea>
+                                        <textarea name="deskripsi_restaurant" id="deskripsi_restaurant" class="form-control">{{$data->deskripsi_restaurant}}</textarea>
                                     </div>
+                                    @endforeach
                                     <div class="hr-line-dashed"></div>
 
                                     

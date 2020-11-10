@@ -86,7 +86,7 @@ class RestaurantDetails extends Controller
         ]);
         $detail->save();
 
-        return redirect('/detail-restaurant' . '/' . $request->input('id_restaurant'))->with('sukses', 'Data Berhasil Ditambahkan!');
+        return redirect('/detail-restaurant' . '/' . $request->input('id_restaurant'))->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function detail_restaurant($id)
@@ -115,7 +115,7 @@ class RestaurantDetails extends Controller
         $data_detail = ModelRestaurantDetails::find($id);
 
         $data_detail->update($request->all());
-        return redirect('/detail-restaurant' . '/' . $id)->with('sukses', 'Data Berhasil Diupdate!');
+        return redirect('/detail-restaurant' . '/' . $id)->with('pesan', 'Data Berhasil Diupdate!');
     }
 
     public function detele_restaurant($id)
@@ -129,6 +129,6 @@ class RestaurantDetails extends Controller
         $data_master = ModelRestaurants::find($id);
         $data_master->delete();
 
-        return redirect('/restaurant')->with('sukses', 'Data Berhasil Dihapus!');
+        return redirect('/restaurant')->with('pesan', 'Data Berhasil Dihapus!');
     }
 }

@@ -18,16 +18,11 @@
         </div>
 
         <div class="wrapper wrapper-content animated fadeInRight ecommerce">
-            <div class="ibox-content m-b-sm border-bottom">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label class="col-form-label" for="order_id">Cari Data</label>
-                            <input type="text" id="order_id" name="order_id" value="" placeholder="" class="form-control">
-                        </div>
-                    </div>
-                </div>
-
+            <div class="row mb-3 col-lg-12">
+                <form class="form-inline my-2  my-lg-0" method="get" action="">
+                    <input type="search" name="cari" class="form-control mr-sm-2" placeholder="Search..">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
 
             <div class="row">

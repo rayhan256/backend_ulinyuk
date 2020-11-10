@@ -3,9 +3,9 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
-            @if(session('sukses'))
+            @if(session('pesan'))
                 <div class="alert alert-success" role="alert">
-                    {{session('sukses')}}
+                    {{session('pesan')}}
                 </div>
             @endif
             <div class="row wrapper border-bottom white-bg page-heading">
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="m-t text-righ">
     
-                                        <a href="{{ url('/detail-restaurant') }}" class="btn btn-xs btn-outline btn-primary">Detail <i
+                                        <a href="{{ url('/detail-restaurant').'/'.$restaurant->id }}" class="btn btn-xs btn-outline btn-primary">Detail <i
                                                 class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>

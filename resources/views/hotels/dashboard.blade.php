@@ -3,9 +3,9 @@
 
         @include('layouts/navbar')
         <div class="mt-3">
-            @if(session('sukses'))
+            @if(session('pesan'))
                 <div class="alert alert-success" role="alert">
-                    {{session('sukses')}}
+                    {{session('pesan')}}
                 </div>
             @endif
             <div class="row wrapper border-bottom white-bg page-heading">

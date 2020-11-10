@@ -20,7 +20,7 @@ class OtentikasiController extends Controller
         $data = Admin::where('email', $request->email)->firstOrFail();
         if ($data) {
             if (Hash::check($request->password, $data->password)) {
-                session(['berhasil-login' => true]);
+                session(['login' => true]);
                 return redirect('/dashboard');
             }
         }

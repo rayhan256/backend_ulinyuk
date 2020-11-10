@@ -92,7 +92,7 @@ class Hotels extends Controller
         ]);
         $hotel->save();
 
-        return redirect('/list-detail-hotel')->with('sukses', 'Data Berhasil Ditambahkan!');
+        return redirect('/list-detail-hotel')->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function list_hotel()

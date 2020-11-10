@@ -83,7 +83,7 @@ class Restaurants extends Controller
         ]);
         $restaurant->save();
 
-        return redirect('/list-detail-restaurant')->with('sukses', 'Data Berhasil Ditambahkan!');
+        return redirect('/list-detail-restaurant')->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function list_restaurant()

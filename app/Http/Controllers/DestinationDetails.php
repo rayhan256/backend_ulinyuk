@@ -96,7 +96,7 @@ class DestinationDetails extends Controller
         ]);
         $detail->save();
 
-        return redirect('/detail-objek-wisata' . '/' . $request->input('id_objek_wisata'))->with('sukses', 'Data Berhasil Ditambahkan!');
+        return redirect('/detail-objek-wisata' . '/' . $request->input('id_objek_wisata'))->with('pesan', 'Data Berhasil Ditambahkan!');
     }
 
     public function detail_objek_wisata($id)
@@ -136,7 +136,7 @@ class DestinationDetails extends Controller
         $data_detail = ModelDestinationDetails::find($id);
 
         $data_detail->update($request->all());
-        return redirect('/detail-objek-wisata' . '/' . $id)->with('sukses', 'Data Berhasil Diupdate!');
+        return redirect('/detail-objek-wisata' . '/' . $id)->with('pesan', 'Data Berhasil Diupdate!');
         //return response()->json($data_detail, 200);
         // dd($data_detail);
     }
@@ -153,6 +153,6 @@ class DestinationDetails extends Controller
         $data_master->delete();
 
 
-        return redirect('/objek-wisata')->with('sukses', 'Data Berhasil Dihapus!');
+        return redirect('/objek-wisata')->with('pesan', 'Data Berhasil Dihapus!');
     }
 }

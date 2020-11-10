@@ -82,6 +82,6 @@ class GaleriRestaurants extends Controller
         ]);
         $galeri->save();
 
-        return redirect('/detail-restaurant/' . $request->input('id_restaurant'))->with('sukses', 'Foto Berhasil Ditambahkan!');
+        return redirect('/detail-restaurant/' . $request->input('id_restaurant'))->with('pesan', 'Foto Berhasil Ditambahkan!');
     }
 }

@@ -82,6 +82,6 @@ class GaleriHotels extends Controller
         ]);
         $galeri->save();
 
-        return redirect('/detail-hotel/' . $request->input('id_hotel'))->with('sukses', 'Foto Berhasil Ditambahkan!');
+        return redirect('/detail-hotel/' . $request->input('id_hotel'))->with('pesan', 'Foto Berhasil Ditambahkan!');
     }
 }
