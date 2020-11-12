@@ -66,7 +66,36 @@ class DestinationDetails extends Controller
     public function getDataId($id)
     {
         $data_detail = ModelDestinationDetails::find($id);
-        return $data_detail;
+        $data_destinasi = ModelDestinations::find($id);
+        $data_gambar = ModelGaleriDestinations::where('id_objek_wisata', $id)->get();
+
+        foreach ($data_gambar as $g) {
+            $galeri[] = [
+                'id' => $g->id,
+                'foto_tempat' => url('galeri') . '/' . $g->foto_objek_wisata,
+            ];
+        }
+        $dest[] = [
+            'id' => $data_destinasi->id,
+            'id_objek_wisata' => $data_detail->id_objek_wisata,
+            'nama_wisata' => $data_destinasi->nama_objek_wisata,
+            'telepon' => $data_destinasi->telepon_objek_wisata,
+            'alamat' => $data_destinasi->alamat_objek_wisata,
+            'area' => $data_destinasi->area_objek_wisata,
+            'kategori' => $data_detail->kategori_objek_wisata,
+            'jadwal' => $data_detail->jadwal_objek_wisata,
+            'wahana' => $data_detail->wahana_objek_wisata,
+            'fasilitas' => $data_detail->fasilitas_objek_wisata,
+            'deskripsi' => $data_detail->deskripsi_objek_wisata,
+            'harga_tiket' => $data_detail->harga_tiket,
+            'galeri' => $galeri,
+        ];
+
+        $response = ['data' => $dest];
+        return response()->json($response, 200);
+
+
+        //return $data_detail;
     }
 
 

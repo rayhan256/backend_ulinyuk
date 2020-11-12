@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form action="{{ url('/tambah-detail')}}" method="post">
+                            <form action="{{ url('/tambah-detail-ow')}}" method="post">
                                 @csrf
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">ID Objek Wisata</label>

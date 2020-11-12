@@ -23,4 +23,10 @@ class ModelRestaurantDetails extends Model
     {
         return $this->belongsTo(ModelRestaurants::class, 'id_restaurant', 'id');
     }
+
+    //ambil data id mst_restaurants
+    public function galeri_restaurant()
+    {
+        return $this->belongsTo(ModelGaleriRestaurants::class, 'id_restaurant', 'id');
+    }
 }

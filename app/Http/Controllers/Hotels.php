@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\ModelHotels;
+use App\ModelGaleriHotels;
+use App\ModelHotelDetails;
 use Illuminate\Http\Request;
 
 class Hotels extends Controller
@@ -10,8 +12,33 @@ class Hotels extends Controller
     //Ambil data dari model
     public function getAll()
     {
-        $data_hotel = ModelHotels::all();
-        return $data_hotel;
+        $hotel = ModelHotels::with(['galeri_hotel'])->get();
+
+        foreach ($hotel as $ho) {
+            foreach ($ho->galeri_hotel as $galeri) {
+                $data_galeri[] = [
+                    'id_galeri' => $galeri->id,
+                    'foto' => url('galeri') . '/' . $galeri->foto_hotel,
+                ];
+            }
+            foreach ($ho->hotel_detail as $detail) {
+                $data_detail = [
+                    'kategori' => $detail->kategori_kamar_hotel,
+                ];
+            }
+            $data_hotel[] = [
+                'hotel_id' => $ho->id,
+                'nama_hotel' => $ho->nama_hotel,
+                'alamat' => $ho->alamat_hotel,
+                'kategori_hotel' => $data_detail,
+                'telepon' => $ho->telepon_hotel,
+                'galeri' => $data_galeri,
+            ];
+        }
+        $response = ['data' => $data_hotel];
+        return response()->json($response, 200);
+
+        //return $data_hotel;
     }
 
     //Insert data
@@ -61,8 +88,29 @@ class Hotels extends Controller
     //Mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $data_hotel = ModelHotels::find($id);
-        return $data_hotel;
+        $data_hotel = ModelHotelDetails::find($id);
+        $data_ho = ModelHotels::find($id);
+        $data_gambar = ModelGaleriHotels::where('id_hotel', $id)->get();
+
+        foreach ($data_gambar as $g) {
+            $galeri[] = [
+                'id' => $g->id,
+                'foto_hotel' => url('galeri') . '/' . $g->foto_hotel,
+            ];
+        }
+        $detail[] = [
+            'id' => $data_hotel->id,
+            'nama_hotel' => $data_hotel->nama_hotel,
+            'alamat' => $data_hotel->alamat_hotel,
+            'kategori' => $data_hotel->kategori_hotel,
+            'area' => $data_hotel->area_hotel,
+            'galeri' => $galeri,
+        ];
+
+        $response = ['data' => $detail];
+        return response()->json($response, 200);
+
+        //return $data_hotel;
     }
 
 

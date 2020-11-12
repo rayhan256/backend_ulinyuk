@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form action="{{url('/edit-data')}}" method="post">
+                            <form action="{{url('/edit-data-ow')}}" method="post">
                                 @csrf
 
                                 <div class="form-group row">

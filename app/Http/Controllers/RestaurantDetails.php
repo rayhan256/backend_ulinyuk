@@ -63,7 +63,32 @@ class RestaurantDetails extends Controller
     public function getDataId($id)
     {
         $data_detail = ModelRestaurantDetails::find($id);
-        return $data_detail;
+        $data_restaurant = ModelRestaurants::find($id);
+        $data_gambar = ModelGaleriRestaurants::where('id_restaurant', $id)->get();
+
+        foreach ($data_gambar as $g) {
+            $galeri[] = [
+                'id' => $g->id,
+                'foto_tempat' => url('galeri') . '/' . $g->foto_restaurant,
+            ];
+        }
+        $dest[] = [
+            'id' => $data_restaurant->id,
+            'id_restaurant' => $data_detail->id_restaurant,
+            'nama_restaurant' => $data_restaurant->nama_restaurant,
+            'area' => $data_restaurant->area_restaurant,
+            'telepon' => $data_restaurant->telepon_restaurant,
+            'alamat' => $data_restaurant->alamat_restaurant,
+            'jadwal' => $data_detail->jadwal_restaurant,
+            'fasilitas' => $data_detail->fasilitas_restaurant,
+            'deskripsi' => $data_detail->deskripsi_restaurant,
+            'galeri' => $galeri,
+        ];
+
+        $response = ['data' => $dest];
+        return response()->json($response, 200);
+
+        //return $data_detail;
     }
 
 

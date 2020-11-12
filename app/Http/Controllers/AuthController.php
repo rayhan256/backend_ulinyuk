@@ -43,8 +43,16 @@ class AuthController extends Controller
         // ]);
 
         $user = new User([
+            'nama_user' => $req->nama_user,
+            'tanggal_lahir_user' => $req->tanggal_lahir_user,
+            'jenis_kelamin_user' => $req->jenis_kelamin_user,
+            'alamat_user' => $req->alamat_user,
+            'kota_user' => $req->kota_user,
+            'negara_user' => $req->negara_user,
+            'telepon_user' => $req->telepon_user,
             'email' => $req->email,
-            'password' => bcrypt($req->password)
+            'password' => bcrypt($req->password),
+            'foto_user' => $req->foto_user,
         ]);
 
         $user->save();

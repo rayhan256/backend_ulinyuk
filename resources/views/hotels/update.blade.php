@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form action="{{ url('/edit-data') }}" method="post">
+                            <form action="{{ url('/edit-data-ho') }}" method="post">
                                 @csrf
                                 <div class="form-group row">
                                     <input type="hidden" class="form-control" id="id" name="id_hotel" value="{{$detail->id}}">                                    

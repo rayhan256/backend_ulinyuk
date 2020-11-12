@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\ModelCustomers;
 use App\ModelRestaurants;
+use App\ModelGaleriRestaurants;
+use App\ModelRestaurantDetails;
 use Illuminate\Http\Request;
 
 class Restaurants extends Controller
@@ -11,8 +13,33 @@ class Restaurants extends Controller
     //Ambil data
     public function getAll()
     {
-        $data_restaurant = ModelRestaurants::all();
-        return $data_restaurant;
+        $restaurant = ModelRestaurants::with(['galeri_restaurant'])->get();
+
+        foreach ($restaurant as $resto) {
+            foreach ($resto->galeri_restaurant as $galeri) {
+                $data_galeri[] = [
+                    'id_galeri' => $galeri->id,
+                    'foto' => url('galeri') . '/' . $galeri->foto_restaurant,
+                ];
+            }
+            foreach ($resto->restaurant_detail as $detail) {
+                $data_detail = [
+                    'kategori' => $detail->kategori_restaurant,
+                ];
+            }
+            $data_restaurant[] = [
+                'restaurant_id' => $resto->id,
+                'nama_restaurant' => $resto->nama_restaurant,
+                'alamat' => $resto->alamat_restaurant,
+                'kategori' => $data_detail,
+                'telepon' => $resto->telepon_restaurant,
+                'galeri' => $data_galeri,
+            ];
+        }
+        $response = ['data' => $data_restaurant];
+        return response()->json($response, 200);
+
+        //return $data_restaurant;
     }
 
     //Insert data
@@ -54,8 +81,30 @@ class Restaurants extends Controller
 
     public function getDataId($id)
     {
-        $data_restaurant = ModelCustomers::find($id);
-        return $data_restaurant;
+        $data_detail = ModelRestaurantDetails::find($id);
+        $data_restaurant = ModelRestaurants::find($id);
+        $data_gambar = ModelGaleriRestaurants::where('id_restaurant', $id)->get();
+
+        foreach ($data_gambar as $g) {
+            $galeri[] = [
+                'id' => $g->id,
+                'foto_tempat' => url('galeri') . '/' . $g->foto_restaurant,
+            ];
+        }
+        $detail[] = [
+            'id' => $data_detail->id,
+            'nama_restaurant' => $data_detail->nama_restaurant,
+            'area' => $data_detail->area_restaurant,
+            'alamat' => $data_detail->alamat_restaurant,
+            'kategori' => $data_detail->kategori_restaurant,
+            'jadwal' => $data_detail->jadwal_restaurant,
+            'galeri' => $galeri,
+        ];
+
+        $response = ['data' => $detail];
+        return response()->json($response, 200);
+
+        //return $data_restaurant;
     }
 
 

@@ -34,13 +34,13 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 //mst_accounts
-Route::get('/account', 'Accounts@getAll');
-Route::post('/account/post', 'Accounts@insertData');
-Route::put('/account/update/{id}', 'Accounts@updateData');
-Route::delete('/account/delete/{id}', 'Accounts@deleteData');
-Route::get('/account/{id}', 'Accounts@getDataId');
+// Route::get('/account', 'Accounts@getAll');
+// Route::post('/account/post', 'Accounts@insertData');
+// Route::put('/account/update/{id}', 'Accounts@updateData');
+// Route::delete('/account/delete/{id}', 'Accounts@deleteData');
+// Route::get('/account/{id}', 'Accounts@getDataId');
 
-//mst_admins
+//admins
 Route::get('/admin', 'Admins@getAll');
 Route::post('/admin/post', 'Admins@insertData');
 Route::put('/admin/update/{id}', 'Admins@updateData');

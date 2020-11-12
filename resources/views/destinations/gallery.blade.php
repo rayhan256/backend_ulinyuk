@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="post" action="{{ url('/tambah-galeri') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ url('/tambah-galeri-ow') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row">
                                     

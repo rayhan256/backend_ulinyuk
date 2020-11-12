@@ -75,7 +75,37 @@ class HotelDetails extends Controller
     public function getDataId($id)
     {
         $data_detail = ModelHotelDetails::find($id);
-        return $data_detail;
+        $data_hotel = ModelHotels::find($id);
+        $data_gambar = ModelGaleriHotels::where('id_hotel', $id)->get();
+
+        foreach ($data_gambar as $g) {
+            $galeri[] = [
+                'id' => $g->id,
+                'foto_hotel' => url('galeri') . '/' . $g->foto_hotel,
+            ];
+        }
+        $ho[] = [
+            'id' => $data_hotel->id,
+            'id_hotel' => $data_detail->id_hotel,
+            'nama_hotel' => $data_hotel->nama_hotel,
+            'telepon' => $data_hotel->telepon_hotel,
+            'alamat' => $data_hotel->alamat_hotel,
+            'harga_kamar' => $data_hotel->harga_kamar_hotel,
+            'jadwal_checkin' => $data_hotel->jadwal_checkin_hotel,
+            'jadwal_checkout' => $data_hotel->jadwal_checkout_hotel,
+            'fasilitas' => $data_hotel->fasilitas_hotel,
+            'fasilitas_kamar' => $data_hotel->fasilitas_kamar_hotel,
+            'fasilitas_publik' => $data_hotel->fasilitas_publik_hotel,
+            'fasilitas_terdekat' => $data_hotel->fasilitas_terdekat_hotel,
+            'fasilitas_transportasi' => $data_hotel->fasilitas_transportasi_hotel,
+            'deskripsi' => $data_hotel->deskripsi_hotel,
+            'galeri' => $galeri,
+        ];
+
+        $response = ['data' => $ho];
+        return response()->json($response, 200);
+
+        //return $data_detail;
     }
 
 

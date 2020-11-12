@@ -23,4 +23,10 @@ class ModelHotelDetails extends Model
     {
         return $this->belongsTo(ModelHotels::class, 'id_hotel', 'id');
     }
+
+    //ambil data id mst_hotels
+    public function galeri_hotel()
+    {
+        return $this->belongsTo(ModelGaleriHotels::class, 'id_hotel', 'id');
+    }
 }

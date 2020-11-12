@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\ModelDestinationDetails;
 use App\ModelDestinations;
+use App\ModelGaleriDestinations;
 use App\ModelRestaurants;
 use Illuminate\Http\Request;
 
@@ -12,7 +14,33 @@ class Destinations extends Controller
     public function getAll()
     {
         $destination = ModelDestinations::with(['galeri_destination', 'destination_detail'])->get();
-        return $destination;
+
+        foreach ($destination as $dest) {
+            foreach ($dest->galeri_destination as $galeri) {
+                $data_galeri[] = [
+                    'id_galeri' => $galeri->id,
+                    'foto' => url('galeri') . '/' . $galeri->foto_objek_wisata,
+                ];
+            }
+            foreach ($dest->destination_detail as $detail) {
+                $data_detail = [
+                    'kategori' => $detail->kategori_objek_wisata,
+                ];
+            }
+            $data_destinasi[] = [
+                'destination_id' => $dest->id,
+                'tempat_wisata' => $dest->nama_objek_wisata,
+                'area' => $dest->area_objek_wisata,
+                'kategori_wisata' => $data_detail,
+                'alamat' => $dest->alamat_objek_wisata,
+                'telepon' => $dest->telepon_objek_wisata,
+                'galeri' => $data_galeri,
+            ];
+        }
+        $response = ['data' => $data_destinasi];
+        return response()->json($response, 200);
+
+        // return $destination;
         //return response()->json($destination, 200);
     }
 
@@ -58,8 +86,33 @@ class Destinations extends Controller
     //get data by id
     public function getDataId($id)
     {
-        $data_destination = ModelDestinations::find($id);
-        return $data_destination;
+        $data_detail = ModelDestinationDetails::find($id);
+        $data_destinasi = ModelDestinations::find($id);
+        $data_gambar = ModelGaleriDestinations::where('id_objek_wisata', $id)->get();
+
+        foreach ($data_gambar as $g) {
+            $galeri[] = [
+                'id' => $g->id,
+                'foto_tempat' => url('galeri') . '/' . $g->foto_objek_wisata,
+            ];
+        }
+        $detail[] = [
+            'id' => $data_detail->id,
+            'nama_wisata' => $data_detail->nama_objek_wisata,
+            'area' => $data_detail->area_objek_wisata,
+            'alamat' => $data_detail->alamat_objek_wisata,
+            'kategori' => $data_detail->kategori_objek_wisata,
+            'wahana' => $data_detail->wahana_objek_wisata,
+            'fasilitas' => $data_detail->fasilitas_objek_wisata,
+            'deskripsi' => $data_detail->deskripsi_objek_wisata,
+            'harga_tiket' => $data_detail->harga_tiket,
+            'galeri' => $galeri,
+        ];
+
+        $response = ['data' => $detail];
+        return response()->json($response, 200);
+
+        //return $data_destination;
     }
 
 

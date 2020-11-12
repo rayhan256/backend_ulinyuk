@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div action="" class="ibox-content">
-                            <form action="{{ url('/tambah-data')}}" method="post">
+                            <form action="{{ url('/tambah-data-ow')}}" method="post">
                                 @csrf
                                 <div class="form-group row">                                    
                                     <label class="col-sm-2 col-form-label">Nama Objek Wisata</label>
