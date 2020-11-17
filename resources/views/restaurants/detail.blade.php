@@ -110,7 +110,7 @@
                                     @endforeach                                  
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-phone"></i>{{$detail->telepon_restaurant}}
+                                        <i class="fa fa-phone"></i> {{$detail->telepon_restaurant}}
                                     </h3>                                   
                                     <hr>
                                     <div>                                                

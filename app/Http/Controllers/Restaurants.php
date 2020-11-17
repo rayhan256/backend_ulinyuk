@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\ModelCustomers;
+use App\ModelRestaurantDetails;
 use App\ModelRestaurants;
 use App\ModelGaleriRestaurants;
-use App\ModelRestaurantDetails;
 use Illuminate\Http\Request;
 
 class Restaurants extends Controller
@@ -33,6 +33,7 @@ class Restaurants extends Controller
                 'alamat' => $resto->alamat_restaurant,
                 'kategori' => $data_detail,
                 'telepon' => $resto->telepon_restaurant,
+                'area' => $resto->area_restaurant,
                 'galeri' => $data_galeri,
             ];
         }
@@ -92,10 +93,10 @@ class Restaurants extends Controller
             ];
         }
         $detail[] = [
-            'id' => $data_detail->id,
-            'nama_restaurant' => $data_detail->nama_restaurant,
-            'area' => $data_detail->area_restaurant,
-            'alamat' => $data_detail->alamat_restaurant,
+            'id' => $data_restaurant->id,
+            'nama_restaurant' => $data_restaurant->nama_restaurant,
+            'area' => $data_restaurant->area_restaurant,
+            'alamat' => $data_restaurant->alamat_restaurant,
             'kategori' => $data_detail->kategori_restaurant,
             'jadwal' => $data_detail->jadwal_restaurant,
             'galeri' => $galeri,

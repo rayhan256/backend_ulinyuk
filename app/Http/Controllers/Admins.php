@@ -67,6 +67,9 @@ class Admins extends Controller
         return $data_admin;
     }
 
+
+    //CRUD
+
     public function index()
     {
         $data_admin = Admin::all();

@@ -23,15 +23,19 @@ class Hotels extends Controller
             }
             foreach ($ho->hotel_detail as $detail) {
                 $data_detail = [
-                    'kategori' => $detail->kategori_kamar_hotel,
+                    'kategori_kamar_hotel' => $detail->kategori_kamar_hotel,
+                    'harga_kamar_hotel' => $detail->harga_kamar_hotel,
                 ];
             }
             $data_hotel[] = [
                 'hotel_id' => $ho->id,
                 'nama_hotel' => $ho->nama_hotel,
                 'alamat' => $ho->alamat_hotel,
-                'kategori_hotel' => $data_detail,
+                'kategori_hotel' => $ho->kategori_hotel,
+                'kategori_kamar_hotel' => $detail->kategori_kamar_hotel,
+                'harga_kamar' => $detail->harga_kamar_hotel,
                 'telepon' => $ho->telepon_hotel,
+                'area' => $ho->area_hotel,
                 'galeri' => $data_galeri,
             ];
         }
@@ -99,11 +103,13 @@ class Hotels extends Controller
             ];
         }
         $detail[] = [
-            'id' => $data_hotel->id,
-            'nama_hotel' => $data_hotel->nama_hotel,
-            'alamat' => $data_hotel->alamat_hotel,
-            'kategori' => $data_hotel->kategori_hotel,
-            'area' => $data_hotel->area_hotel,
+            'id' => $data_ho->id,
+            'nama_hotel' => $data_ho->nama_hotel,
+            'alamat' => $data_ho->alamat_hotel,
+            'kategori' => $data_ho->kategori_hotel,
+            'kategori_kamar' => $data_hotel->kategori_kamar_hotel,
+            'harga_kamar' => $data_hotel->harga_kamar_hotel,
+            'area' => $data_ho->area_hotel,
             'galeri' => $galeri,
         ];
 

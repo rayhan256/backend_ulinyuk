@@ -100,5 +100,12 @@ Route::group(['middleware' => 'CekLoginMiddleware'], function () {
     //hapus data
     Route::get('hapus-data-restaurant/{id}', 'RestaurantDetails@delete_restaurant');
 
+
+    //NEWS
+    Route::get('/berita', 'News@index');
+    Route::get('/update-berita/{id}', 'News@update_berita');
+    Route::post('/update', 'News@update_proses_berita');
+    Route::get('/hapus-berita/{id}', 'News@delete_berita');
+
     Route::get('/logout', 'otentikasi\OtentikasiController@logout')->name('logout');
 });

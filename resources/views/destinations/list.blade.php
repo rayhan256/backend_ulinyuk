@@ -12,11 +12,18 @@
                 <div class="col-lg-10">
                     <h2>Daftar Detail Objek Wisata</h2>                
                 </div>
-                <div class="col-md-2">
-                    <br>
+                <div class="col-lg-2">
                     <div style="float: right">
-                        <a href="{{ url('/objek-wisata') }}" class="btn btn-sm btn-outline btn-primary"> <i
-                            class="fa fa-th-large"></i> </a>
+                        <div class="col mt-3">                       
+                        <a href="{{ url('/tambah-data-objek-wisata')}}" class="btn btn-sm btn-primary">Tambah Data</a>                        
+                        </div>
+                        <br>
+                        <div style="float: right">
+                            <div class="mr-3">
+                                <a href="{{ url('/objek-wisata') }}" class="btn btn-sm btn-outline btn-primary"> <i
+                                    class="fa fa-th-large"></i> </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

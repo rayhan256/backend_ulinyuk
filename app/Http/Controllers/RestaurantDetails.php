@@ -62,7 +62,7 @@ class RestaurantDetails extends Controller
     //Mengambil data berdasarkan id
     public function getDataId($id)
     {
-        $data_detail = ModelRestaurantDetails::find($id);
+        $data_detail = ModelRestaurantDetails::where('id_restaurant', $id)->first();
         $data_restaurant = ModelRestaurants::find($id);
         $data_gambar = ModelGaleriRestaurants::where('id_restaurant', $id)->get();
 
@@ -73,9 +73,9 @@ class RestaurantDetails extends Controller
             ];
         }
         $dest[] = [
-            'id' => $data_restaurant->id,
-            'id_restaurant' => $data_detail->id_restaurant,
+            'id_restaurant' => $data_restaurant->id,
             'nama_restaurant' => $data_restaurant->nama_restaurant,
+            'kategori_restaurant' => $data_detail->kategori_restaurant,
             'area' => $data_restaurant->area_restaurant,
             'telepon' => $data_restaurant->telepon_restaurant,
             'alamat' => $data_restaurant->alamat_restaurant,
@@ -137,9 +137,14 @@ class RestaurantDetails extends Controller
         ]);
 
         $id = $request->input('id_restaurant');
-        $data_detail = ModelRestaurantDetails::find($id);
+        $data_detail = ModelRestaurantDetails::where('id_restaurant', $id_master);
 
-        $data_detail->update($request->all());
+        $data_detail->update([
+            'kategori_restaurant' => $request->input('kategori_restaurant'),
+            'jadwal_restaurant' => $request->input('jadwal_restaurant'),
+            'fasilitas_restaurant' => $request->input('fasilitas_restaurant'),
+            'deskripsi_restaurant' => $request->input('deskripsi_restaurant'),
+        ]);
         return redirect('/detail-restaurant' . '/' . $id)->with('pesan', 'Data Berhasil Diupdate!');
     }
 

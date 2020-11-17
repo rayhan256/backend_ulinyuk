@@ -76,8 +76,8 @@ class DestinationDetails extends Controller
             ];
         }
         $dest[] = [
-            'id' => $data_destinasi->id,
-            'id_objek_wisata' => $data_detail->id_objek_wisata,
+            'id' => $data_detail->id,
+            'id_objek_wisata' => $data_destinasi->id,
             'nama_wisata' => $data_destinasi->nama_objek_wisata,
             'telepon' => $data_destinasi->telepon_objek_wisata,
             'alamat' => $data_destinasi->alamat_objek_wisata,

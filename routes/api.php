@@ -187,6 +187,14 @@ Route::delete('/histori_restaurant/delete/{id}', 'HistoriBookingRestaurants@dele
 Route::get('/histori_restaurant/{id}', 'HistoriBookingRestaurants@getDataId');
 
 
+//news
+Route::get('/news', 'News@getAll');
+Route::post('/news/post', 'News@insertData');
+Route::put('/news/update/{id}', 'News@updateData');
+Route::delete('/news/delete/{id}', 'News@deleteData');
+Route::get('/news/{id}', 'News@getDataId');
+
+
 //mst_payments
 Route::get('/payment', 'Payments@getAll');
 Route::post('/payment/post', 'Payments@insertData');

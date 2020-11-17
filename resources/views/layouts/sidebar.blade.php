@@ -44,6 +44,11 @@
                 <li>
                     <a href="/data-order-restaurant"><i class="fa fa-database"></i> <span class="nav-label">Data Order Restaurant</span></a>
                 </li>
+
+                <li class="dropdown-divider"></li>
+                <li>
+                    <a href="/berita"><i class="fa fa-database"></i> <span class="nav-label">Berita</span></a>
+                </li>
             </ul>
 
         </div>

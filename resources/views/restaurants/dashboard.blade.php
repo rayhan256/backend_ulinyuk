@@ -42,9 +42,6 @@
     
                                 <img src="{{ url('/galeri').'/'.$restaurant->galeri_restaurant[0]->foto_restaurant }}" width="100%">
                                 <div class="product-desc">
-                                    <span class="product-price">
-                                        $5
-                                    </span>
                                     <a href="{{ url('/detail-restaurant').'/'.$restaurant->id }}" class="product-name"> 
                                         {{$restaurant->nama_restaurant}}
                                     </a>

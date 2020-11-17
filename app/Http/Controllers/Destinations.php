@@ -25,13 +25,15 @@ class Destinations extends Controller
             foreach ($dest->destination_detail as $detail) {
                 $data_detail = [
                     'kategori' => $detail->kategori_objek_wisata,
+                    'harga_tiket' => $detail->harga_tiket,
                 ];
             }
             $data_destinasi[] = [
                 'destination_id' => $dest->id,
                 'tempat_wisata' => $dest->nama_objek_wisata,
                 'area' => $dest->area_objek_wisata,
-                'kategori_wisata' => $data_detail,
+                'kategori_wisata' => $detail->kategori_objek_wisata,
+                'harga_tiket' => $detail->harga_tiket,
                 'alamat' => $dest->alamat_objek_wisata,
                 'telepon' => $dest->telepon_objek_wisata,
                 'galeri' => $data_galeri,
@@ -86,8 +88,8 @@ class Destinations extends Controller
     //get data by id
     public function getDataId($id)
     {
-        $data_detail = ModelDestinationDetails::find($id);
         $data_destinasi = ModelDestinations::find($id);
+        $data_detail = ModelDestinationDetails::find($id);
         $data_gambar = ModelGaleriDestinations::where('id_objek_wisata', $id)->get();
 
         foreach ($data_gambar as $g) {
@@ -97,10 +99,10 @@ class Destinations extends Controller
             ];
         }
         $detail[] = [
-            'id' => $data_detail->id,
-            'nama_wisata' => $data_detail->nama_objek_wisata,
-            'area' => $data_detail->area_objek_wisata,
-            'alamat' => $data_detail->alamat_objek_wisata,
+            'id' => $data_destinasi->id,
+            'nama_wisata' => $data_destinasi->nama_objek_wisata,
+            'area' => $data_destinasi->area_objek_wisata,
+            'alamat' => $data_destinasi->alamat_objek_wisata,
             'kategori' => $data_detail->kategori_objek_wisata,
             'wahana' => $data_detail->wahana_objek_wisata,
             'fasilitas' => $data_detail->fasilitas_objek_wisata,

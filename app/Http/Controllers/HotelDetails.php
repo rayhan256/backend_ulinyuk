@@ -85,20 +85,22 @@ class HotelDetails extends Controller
             ];
         }
         $ho[] = [
-            'id' => $data_hotel->id,
-            'id_hotel' => $data_detail->id_hotel,
+            'id' => $data_detail->id,
+            'id_hotel' => $data_hotel->id,
             'nama_hotel' => $data_hotel->nama_hotel,
             'telepon' => $data_hotel->telepon_hotel,
             'alamat' => $data_hotel->alamat_hotel,
-            'harga_kamar' => $data_hotel->harga_kamar_hotel,
-            'jadwal_checkin' => $data_hotel->jadwal_checkin_hotel,
-            'jadwal_checkout' => $data_hotel->jadwal_checkout_hotel,
-            'fasilitas' => $data_hotel->fasilitas_hotel,
-            'fasilitas_kamar' => $data_hotel->fasilitas_kamar_hotel,
-            'fasilitas_publik' => $data_hotel->fasilitas_publik_hotel,
-            'fasilitas_terdekat' => $data_hotel->fasilitas_terdekat_hotel,
-            'fasilitas_transportasi' => $data_hotel->fasilitas_transportasi_hotel,
-            'deskripsi' => $data_hotel->deskripsi_hotel,
+            'kategori' => $data_hotel->kategori_hotel,
+            'kategori_kamar_hotel' => $data_detail->kategori_kamar_hotel,
+            'harga_kamar' => $data_detail->harga_kamar_hotel,
+            'jadwal_checkin' => $data_detail->jadwal_checkin_hotel,
+            'jadwal_checkout' => $data_detail->jadwal_checkout_hotel,
+            'fasilitas' => $data_detail->fasilitas_hotel,
+            'fasilitas_kamar' => $data_detail->fasilitas_kamar_hotel,
+            'fasilitas_publik' => $data_detail->fasilitas_publik_hotel,
+            'fasilitas_terdekat' => $data_detail->fasilitas_terdekat_hotel,
+            'fasilitas_transportasi' => $data_detail->fasilitas_transportasi_hotel,
+            'deskripsi' => $data_detail->deskripsi_hotel,
             'galeri' => $galeri,
         ];
 

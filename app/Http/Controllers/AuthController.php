@@ -37,11 +37,6 @@ class AuthController extends Controller
     //USER API
     public function signup(Request $req)
     {
-        // $req->validate([
-        //     'email' => 'required|string|email|unique:users',
-        //     'password' => 'required|string|confirm',
-        // ]);
-
         $user = new User([
             'nama_user' => $req->nama_user,
             'tanggal_lahir_user' => $req->tanggal_lahir_user,
@@ -105,5 +100,31 @@ class AuthController extends Controller
     {
         $req->user()->token()->revoke();
         return response()->json(['Message' => 'User Berhasil Logout'], 200);
+    }
+
+    //UPDATE
+    // public function update($id){
+    //     $data_user = User::find($id);
+    //     return 
+    // }
+
+    public function update_proses(Request $req, $id)
+    {
+        $update = User::find($id);
+
+        $update->nama_user = $req->nama_user;
+        $update->tanggal_lahir_user = $req->tanggal_lahir_user;
+        $update->jenis_kelamin_user = $req->jenis_kelamin_user;
+        $update->alamat_user = $req->alamat_user;
+        $update->kota_user = $req->kota_user;
+        $update->negara_user = $req->negara_user;
+        $update->telepon_user = $req->telepon_user;
+        $update->email = $req->email;
+        $update->password = $req->password;
+        $update->foto_user = $req->foto_user;
+
+        $update->save();
+
+        return response()->json(['message' => 'Update Berhasil!'], 200);
     }
 }
