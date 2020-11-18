@@ -27,7 +27,7 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                @foreach($detail->galeri_restaurant as $item)
+                    @foreach($detail->galeri_restaurant as $item)
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="">

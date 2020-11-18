@@ -99,8 +99,8 @@ class Admins extends Controller
             'foto_admin' => $request->input('foto_admin')
         ]);
         $data_admin->update();
-        //return redirect('/profile')->with('sukses', 'Data Berhasil Diupdate!');
-        return response()->json($data_admin, 200);
+        return redirect('/profile')->with('sukses', 'Data Berhasil Diupdate!');
+        //return response()->json($data_admin, 200);
         // dd($data_admin);
     }
 }

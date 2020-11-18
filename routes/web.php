@@ -103,8 +103,20 @@ Route::group(['middleware' => 'CekLoginMiddleware'], function () {
 
     //NEWS
     Route::get('/berita', 'News@index');
-    Route::get('/update-berita/{id}', 'News@update_berita');
-    Route::post('/update', 'News@update_proses_berita');
+    Route::get('/list-berita', 'News@list_berita');
+
+    Route::get('/tambah-berita', 'News@add_berita');
+    Route::post('/tambah', 'News@add_proses_berita');
+
+    Route::get('/detail-berita/{id}', 'News@detail_berita');
+
+    //tambah data galeri
+    Route::get('/tambah-galeri-berita/{id}', 'GaleriNews@galeri_berita');
+    Route::post('/tambah-galeri', 'GaleriNews@add_galeri_berita');
+
+    Route::get('/edit-berita/{id}', 'News@update_berita');
+    Route::post('/edit', 'News@update_proses_berita');
+
     Route::get('/hapus-berita/{id}', 'News@delete_berita');
 
     Route::get('/logout', 'otentikasi\OtentikasiController@logout')->name('logout');

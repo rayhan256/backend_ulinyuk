@@ -15,7 +15,7 @@ class ModelNews extends Model
     //relasi agar data bisa diambil oleh mst_galeri_news
     public function galeri_berita()
     {
-        return $this->hasMany(ModelNews::class, 'id_berita', 'id');
+        return $this->hasMany(ModelGaleriNews::class, 'id_berita', 'id');
     }
 
     //relasi agar data bisa diambil oleh mst_galeri_news

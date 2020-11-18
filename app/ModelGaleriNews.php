@@ -24,6 +24,6 @@ class ModelGaleriNews extends Model
     //ambil data id mst_news
     public function news()
     {
-        return $this->belongsTo(ModelNews::class, 'id_berita', 'id');
+        return $this->belongsTo(ModelNews::class, 'id', 'id_berita');
     }
 }

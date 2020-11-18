@@ -126,7 +126,7 @@ class Hotels extends Controller
     {
         $data_hotel = ModelHotels::with('galeri_hotel')->get();
         return view('/hotels/dashboard', ['data_hotel' => $data_hotel]);
-        //return response()->json($data_destination);
+        //return response()->json($data_hotel);
     }
 
     public function add_hotel()

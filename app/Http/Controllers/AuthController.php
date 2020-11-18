@@ -48,6 +48,7 @@ class AuthController extends Controller
             'email' => $req->email,
             'password' => bcrypt($req->password),
             'foto_user' => $req->foto_user,
+            'role' => 'user',
         ]);
 
         $user->save();
