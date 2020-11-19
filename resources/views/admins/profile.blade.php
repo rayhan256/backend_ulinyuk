@@ -10,7 +10,6 @@
             </div>
         </div>
 
-        @foreach($data_admin as $admin)
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row m-b-lg m-t-lg">
                 <div class="col-md-6">
@@ -22,7 +21,7 @@
                         <div class="">
                             <div>
                                 <h2 class="no-margins">
-                                    <b>{{$admin->nama_admin}}</b>
+                                    <b id="nama_admin"></b>
                                 </h2>
                                 <h4>Administrator</h4>
                                 <small>
@@ -41,7 +40,7 @@
                                 <strong>Tanggal Lahir</strong>
                             </td>
                             <td>
-                                {{$admin->tanggal_lahir_admin}}
+                                <h5 id="tanggal_lahir"></h5>
                             </td>
 
                         </tr>
@@ -50,7 +49,7 @@
                                 <strong>Jenis Kelamin</strong>
                             </td>
                             <td>
-                                {{$admin->jenis_kelamin_admin}}
+                                <h5 id="jenis_kelamin"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -58,7 +57,7 @@
                                 <strong>Alamat</strong>
                             </td>
                             <td>
-                                {{$admin->alamat_admin}}
+                                <h5 id="alamat"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -66,7 +65,7 @@
                                 <strong>Kota</strong>
                             </td>
                             <td>
-                                {{$admin->kota_admin}}
+                                <h5 id="kota"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -74,7 +73,7 @@
                                 <strong>Negara</strong>
                             </td>
                             <td>
-                                {{$admin->negara_admin}}
+                                <h5 id="negara"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -82,7 +81,7 @@
                                 <strong>Telepon</strong>
                             </td>
                             <td>
-                                {{$admin->telepon_admin}}
+                                <h5 id="telepon"></h5>
                             </td>
                         </tr>
                         <tr>
@@ -90,21 +89,46 @@
                                 <strong>Email</strong>
                             </td>
                             <td>
-                                {{$admin->email}}
+                                <h5 id="email"></h5>
                             </td>
                         </tr>
                         </tbody>
                         <tr>
                             <td>
-                                <a href="/update-profile/{{$admin->id}}" class="btn btn-primary">Edit Profile</a>
+                                <a href="/update-profile/" class="btn btn-primary">Edit Profile</a>
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
+            <script>
+                const nama_admin = document.querySelector('#nama_admin')
+                const tanggal_lahir = document.querySelector('#tanggal_lahir')
+                const jenis_kelamin = document.querySelector('#jenis_kelamin')
+                const alamat = document.querySelector('#alamat')
+                const kota = document.querySelector('#kota')
+                const negara = document.querySelector('#negara')
+                const telepon = document.querySelector('#telepon')
+                const email = document.querySelector('#email')
 
+
+                fetch('http://localhost:8000/api/auth/user', {
+                    headers: {
+                        'Authorization' : `Bearer ${localStorage.getItem('token')}`
+                    }
+                }).then(response => response.json())
+                .then(data => {
+                    nama_admin.innerHTML = data.nama_user;
+                    tanggal_lahir.innerHTML = data.tanggal_lahir_user;
+                    jenis_kelamin.innerHTML = data.jenis_kelamin_user;
+                    alamat.innerHTML = data.alamat_user;
+                    kota.innerHTML = data.kota_user;
+                    negara.innerHTML = data.negara_user;
+                    telepon.innerHTML = data.telepon_user;
+                    email.innerHTML = data.email;
+                })
+            </script>
         </div>
-        @endforeach
 
         @include('layouts/footer')
 

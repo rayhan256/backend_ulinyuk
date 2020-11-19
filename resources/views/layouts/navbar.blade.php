@@ -34,3 +34,8 @@
 
     </nav>
     </div>
+    <script>
+    if (localStorage.getItem('token') == null && localStorage.getItem('role') != "admin") {
+        window.location.replace("http://localhost:8000");
+    }
+    </script>

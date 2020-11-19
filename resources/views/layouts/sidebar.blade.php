@@ -47,7 +47,7 @@
 
                 <li class="dropdown-divider"></li>
                 <li>
-                    <a href="/berita"><i class="fa fa-database"></i> <span class="nav-label">Berita</span></a>
+                    <a href="/berita"><i class="fa fa-bullseye"></i> <span class="nav-label">Berita</span></a>
                 </li>
             </ul>
 

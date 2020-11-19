@@ -31,7 +31,6 @@
                     <div class="col-md-3">
                         <div class="ibox">
                             <div class="">
-                                {{$item->foto_berita}}
                                 <div>
                                     <img src="{{ url('/galeri').'/'.$item->foto_berita }}" width='100%'>
                                 </div>
@@ -60,11 +59,11 @@
                                     <br>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> {{$detail->penerbit_berita}}
+                                        <i class="fa fa-copyright"></i> {{$detail->penerbit_berita}}
                                     </h3>
                                     <hr>
                                     <h3>
-                                        <i class="fa fa-map-marker"></i> {{$detail->tanggal_berita}}
+                                        <i class="fa fa-calendar"></i> {{$detail->tanggal_berita}}
                                     </h3>
                                     <hr>
                                     

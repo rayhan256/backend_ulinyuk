@@ -19,7 +19,7 @@ class User extends Authenticatable
     protected $table = 'users';
 
     protected $fillable = [
-        'nama_user', 'tanggal_lahir_user', 'jenis_kelamin_user', 'alamat_user', 'kota_user', 'negara_user', 'telepon_user', 'email', 'password', 'foto_user',
+        'nama_user', 'tanggal_lahir_user', 'jenis_kelamin_user', 'alamat_user', 'kota_user', 'negara_user', 'telepon_user', 'email', 'password', 'foto_user', 'role'
     ];
 
     //relasi agar bisa di ambil oleh mst_destination_orders

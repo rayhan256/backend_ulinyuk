@@ -21,7 +21,7 @@ class AuthController extends Controller
     public function postlogin(Request $request)
     {
         $email = $request->input('email');
-        $password = $request->input('password');
+        $password = $request->input('password'); 
 
         $kredensial = request([$email, $password]);
 
@@ -48,7 +48,7 @@ class AuthController extends Controller
             'email' => $req->email,
             'password' => bcrypt($req->password),
             'foto_user' => $req->foto_user,
-            'role' => 'user',
+            'role' => $req->role,
         ]);
 
         $user->save();
@@ -73,8 +73,8 @@ class AuthController extends Controller
         if (!Auth::attempt($kredensial)) {
             return response()->json(['message' => 'Data Tidak Ada'], 400);
         };
-        $user = $req->user();
 
+        $user = $req->user();
         //untuk tokennya
         $bikinToken = $user->createToken("Personal Access Token");
         $hasilToken = $bikinToken->token;
@@ -85,11 +85,33 @@ class AuthController extends Controller
 
         $hasilToken->save();
 
-        return response()->json([
-            'token' => $bikinToken->accessToken,
-            'token_type' => "Bearer",
-            'sampai_kapan' => Carbon::parse($bikinToken->token->expires_at)->toDateTimeString()
-        ], 200);
+        switch ($user->role) {
+            case 'user':
+                return response()->json([
+                    'token' => $bikinToken->accessToken,
+                    'token_type' => "Bearer",
+                    'sampai_kapan' => Carbon::parse($bikinToken->token->expires_at)->toDateTimeString(),
+                    'role' => $user->role
+                ], 200);
+                break;
+            case 'admin':
+                return response()->json([
+                    'token' => $bikinToken->accessToken,
+                    'token_type' => "Bearer",
+                    'sampai_kapan' => Carbon::parse($bikinToken->token->expires_at)->toDateTimeString(),
+                    'role' => $user->role
+                ], 200);
+            case 'merchant_hotel':
+                return response()->json([
+                    'token' => $bikinToken->accessToken,
+                    'token_type' => "Bearer",
+                    'sampai_kapan' => Carbon::parse($bikinToken->token->expires_at)->toDateTimeString(),
+                    'role' => $user->role
+                ], 200);
+            default:
+                # code...
+                break;
+        }
     }
 
     public function user(Request $req)

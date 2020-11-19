@@ -18,19 +18,19 @@
                     <div>
                         <div>
             
-                            <h1 class="logo-name"><i class="fa fa-google-wallet"></i></h1>
+                            <h1 class="logo-name"><i class="fa fa-sign-in"></i></h1>
             
                         </div>
                         <h3>Welcome to UlinYuk</h3> <br>                    
                             <div>
                                 <p>Please login your account.</p>
-                            <form class="m-t" method="POST" action="{{ route('login') }}">
+                            <form class="m-t" id="form-login">
                                     @csrf
                                     <div class="form-group">
-                                        <input name="email" type="email" class="form-control" placeholder="example@gmail.com" required="">
+                                        <input name="email" id="email" type="email" class="form-control" placeholder="example@gmail.com" required="">
                                     </div>
                                     <div class="form-group">
-                                        <input name="password" type="password" class="form-control" placeholder="Password" required="">
+                                        <input name="password" id="password" type="password" class="form-control" placeholder="Password" required="">
                                     </div>
 
                                     @if (session('message'))
@@ -53,5 +53,31 @@
                     </div>
                 </div>
             </body>
+            <script>
+                const form = document.getElementById('form-login')    
 
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault()
+                    const emailAdmin = document.querySelector('#email').value;
+                    const passwordAdmin = document.querySelector('#password').value;
+                    const loginData = {
+                    email : emailAdmin,
+                    password : passwordAdmin
+                }
+                    fetch('http://localhost:8000/api/auth/login', {
+                        method: 'POST',
+                        headers: {
+                                'Content-Type': 'application/json'
+                                },
+                        body: JSON.stringify(loginData)
+                     })
+                    .then(response => response.json())
+                    .then(data => {
+                        localStorage.setItem('token', data.token)
+                        localStorage.setItem('role', data.role)
+                        window.location.replace("http://localhost:8000/dashboard");
+                        //console.log(localStorage.getItem('role'))
+                    }) 
+                })
+            </script>
 @include('layouts/js')

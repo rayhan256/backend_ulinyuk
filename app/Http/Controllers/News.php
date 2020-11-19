@@ -26,7 +26,7 @@ class News extends Controller
                 ];
             }
             $data_berita[] = [
-                'berita_id' => $b->id,
+                'id' => $b->id,
                 'judul_berita' => $b->judul_berita,
                 'tanggal_berita' => $b->tanggal_berita,
                 'penerbit_berita' => $b->penerbit_berita,
@@ -54,7 +54,7 @@ class News extends Controller
             ];
         }
         $detail_berita[] = [
-            'id' => $data_berita->id,
+            'id_berita' => $data_berita->id,
             'judul_berita' => $data_berita->judul_berita,
             'tanggal_berita' => $data_berita->tanggal_berita,
             'penerbit_berita' => $data_berita->penerbit_berita,
