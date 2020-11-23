@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ModelAdmins;
 use App\Admin;
+use App\User;
 use Illuminate\Http\Request;
 
 class Admins extends Controller
@@ -76,27 +77,32 @@ class Admins extends Controller
         return view('/admins/profile', ['data_admin' => $data_admin]);
     }
 
+    public function list_data()
+    {
+        $data_admin = User::all();
+        return view('/admins/list', ['data_admin' => $data_admin]);
+    }
+
     public function update_profile($id)
     {
-        $data_admin = Admin::find($id);
-        return view('/admins/update', ['admin' => $data_admin]);
+        //$data_admin = Admin::find($id);
+        return view('/admins/update');
     }
 
     public function update_proses_profile(Request $request)
     {
         $id = $request->input('id');
-        $data_admin = Admin::find($id);
-
-        $data_admin = new Admin([
-            'nama_admin' => $request->input('nama_admin'),
-            'tanggal_lahir_admin' => $request->input('tanggal_lahir_admin'),
-            'jenis_kelamin_admin' => $request->input('jenis_kelamin_admin'),
-            'alamat_admin' => $request->input('alamat_admin'),
-            'kota_admin' => $request->input('kota_admin'),
-            'negara_admin' => $request->input('negara_admin'),
-            'telepon_admin' => $request->input('telepon_admin'),
+        $data_admin = User::find($id);
+        $data_admin = new User([
+            'nama_user' => $request->input('nama_admin'),
+            'tanggal_lahir_user' => $request->input('tanggal_lahir_admin'),
+            'jenis_kelamin_user' => $request->input('jenis_kelamin_admin'),
+            'alamat_user' => $request->input('alamat_admin'),
+            'kota_user' => $request->input('kota_admin'),
+            'negara_user' => $request->input('negara_admin'),
+            'telepon_user' => $request->input('telepon_admin'),
             'email' => $request->input('email'),
-            'foto_admin' => $request->input('foto_admin')
+            'foto_user' => $request->input('foto_user')
         ]);
         $data_admin->update();
         return redirect('/profile')->with('sukses', 'Data Berhasil Diupdate!');

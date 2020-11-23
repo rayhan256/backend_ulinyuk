@@ -73,6 +73,7 @@ class RestaurantDetails extends Controller
             ];
         }
         $dest[] = [
+            'id' => $data_detail->id,
             'id_restaurant' => $data_restaurant->id,
             'nama_restaurant' => $data_restaurant->nama_restaurant,
             'kategori_restaurant' => $data_detail->kategori_restaurant,

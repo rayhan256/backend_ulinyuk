@@ -64,7 +64,7 @@
                     email : emailAdmin,
                     password : passwordAdmin
                 }
-                    fetch('http://localhost:8000/api/auth/login', {
+                    fetch("{{env('APP_API_URL')}}login", {
                         method: 'POST',
                         headers: {
                                 'Content-Type': 'application/json'
@@ -75,7 +75,7 @@
                     .then(data => {
                         localStorage.setItem('token', data.token)
                         localStorage.setItem('role', data.role)
-                        window.location.replace("http://localhost:8000/dashboard");
+                        window.location.replace("{{env('APP_API_BASEURL')}}/dashboard");
                         //console.log(localStorage.getItem('role'))
                     }) 
                 })

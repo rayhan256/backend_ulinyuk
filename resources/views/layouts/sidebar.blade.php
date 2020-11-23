@@ -6,7 +6,9 @@
                     <div class="dropdown profile-element">
                         <img alt="image" class="rounded-circle" src="{{ asset('assets/img/profile_small.jpg') }}"/>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="block m-t-xs font-bold">Dany Darmawan</span>
+                            <span class="block m-t-xs font-bold">
+                                <b id="admin"></b>
+                            </span>
                             <span class="text-muted text-xs block">Administrator <b class="caret"></b></span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -20,6 +22,10 @@
                     </div>
                 </li>
                 
+                <li>
+                    <a href="/admin"><i class="fa fa-plus"></i> <span class="nav-label">Tambah Admin</span></a>
+                </li>
+                <li class="dropdown-divider"></li>
                 <li>
                     <a href="/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
                 </li>
@@ -53,3 +59,22 @@
 
         </div>
     </nav>
+
+    <script>
+        const nama = document.querySelector('#admin')
+    
+
+
+        fetch("{{env('APP_API_URL')}}user", {
+            headers: {
+                'Authorization' : `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then(response => response.json())
+        .then(data => {
+            console.log(data.id)
+            nama.innerHTML = data.nama_user;
+
+        })
+
+       
+    </script>

@@ -143,7 +143,6 @@ class AuthController extends Controller
         $update->negara_user = $req->negara_user;
         $update->telepon_user = $req->telepon_user;
         $update->email = $req->email;
-        $update->password = $req->password;
         $update->foto_user = $req->foto_user;
 
         $update->save();

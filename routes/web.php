@@ -33,6 +33,7 @@ Route::get('/dashboard', function () {
 
 //ADMINS
 Route::get('/profile', 'Admins@index');
+Route::get('/admin', 'Admins@list_data');
 Route::get('/update-profile/{id}', 'Admins@update_profile');
 Route::post('/update', 'Admins@update_proses_profile');
 

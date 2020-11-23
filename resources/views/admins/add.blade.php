@@ -5,7 +5,7 @@
         <div class="mt-3">
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Update Data Admin</h2>                
+                    <h2>Tambah Data Admin</h2>                
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Form Update Admin</h5>
+                            <h5>Form Tambah Admin</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>

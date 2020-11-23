@@ -95,14 +95,14 @@
                         </tbody>
                         <tr>
                             <td>
-                                <a href="/update-profile/" class="btn btn-primary">Edit Profile</a>
+                                <button class="btn btn-primary" id="edit_profile">Edit Profile</button>
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
             <script>
-                const nama_admin = document.querySelector('#nama_admin')
+                const admin = document.querySelector('#nama_admin')
                 const tanggal_lahir = document.querySelector('#tanggal_lahir')
                 const jenis_kelamin = document.querySelector('#jenis_kelamin')
                 const alamat = document.querySelector('#alamat')
@@ -110,15 +110,17 @@
                 const negara = document.querySelector('#negara')
                 const telepon = document.querySelector('#telepon')
                 const email = document.querySelector('#email')
+                const updateProfile = document.querySelector('#edit_profile');
 
 
-                fetch('http://localhost:8000/api/auth/user', {
+                fetch("{{env('APP_API_URL')}}user", {
                     headers: {
                         'Authorization' : `Bearer ${localStorage.getItem('token')}`
                     }
                 }).then(response => response.json())
                 .then(data => {
-                    nama_admin.innerHTML = data.nama_user;
+                    console.log(data.id)
+                    admin.innerHTML = data.nama_user;
                     tanggal_lahir.innerHTML = data.tanggal_lahir_user;
                     jenis_kelamin.innerHTML = data.jenis_kelamin_user;
                     alamat.innerHTML = data.alamat_user;
@@ -126,7 +128,12 @@
                     negara.innerHTML = data.negara_user;
                     telepon.innerHTML = data.telepon_user;
                     email.innerHTML = data.email;
+                    updateProfile.addEventListener('click', () => {
+                        window.location.replace(`{{env('APP_API_BASEURL')}}/update-profile/${data.id}`)
+                    })
                 })
+
+               
             </script>
         </div>
 
