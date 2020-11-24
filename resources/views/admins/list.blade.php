@@ -15,15 +15,9 @@
                 <div class="col-lg-2">
                     <div style="float: right">
                         <div class="col mt-3">                       
-                        <a href="{{ url('/tambah-data-admin')}}" class="btn btn-sm btn-primary">Tambah Data</a>                        
+                        <a href="{{ url('/signup')}}" class="btn btn-sm btn-primary">Tambah Data</a>                        
                         </div>
-                        <br>
-                        <div style="float: right">
-                            <div class="mr-3">
-                                <a href="{{ url('/admin') }}" class="btn btn-sm btn-outline btn-primary"> <i
-                                    class="fa fa-th-large"></i> </a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -125,43 +119,15 @@
 
                                     <td class="text-right footable-visible footable-last-column">
                                         <div class="btn-group">
-                                            <a href="" class="btn-white btn btn-xs">View</a>
-                                            <a href="" class="btn-white btn btn-xs">Edit</a>
+                                            <a href="/profile" class="btn-white btn btn-xs">View</a>
+                                            <a href="" id="edit_profile" class="btn-white btn btn-xs">Edit</a>
                                             <a href="" class="btn-white btn btn-xs" onclick="return confirm('Hapus Data ini ?')">Hapus</a>
                                         </div>
                                     </td>
                                 </tr>
                                 </tbody>
 
-                                {{-- <tfoot>
-                                <tr>
-                                    <td colspan="12" class="footable-visible">
-                                        <ul class="pagination float-right">
-                                            <li class="footable-page-arrow disabled">
-                                                <a data-page="first" href="#first">«</a>
-                                            </li>
-                                            <li class="footable-page-arrow disabled">
-                                                <a data-page="prev" href="#prev">‹</a>
-                                            </li>
-                                            <li class="footable-page active">
-                                                <a data-page="0" href="#">1</a>
-                                            </li>
-                                            <li class="footable-page">
-                                                <a data-page="1" href="#">2</a>
-                                            </li>
-                                            <li class="footable-page">
-                                                <a data-page="2" href="#">3</a>
-                                            </li>
-                                            <li class="footable-page-arrow">
-                                                <a data-page="next" href="#next">›</a>
-                                            </li>
-                                            <li class="footable-page-arrow">
-                                                <a data-page="last" href="#last">»</a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                </tfoot> --}}
+                                
                             </table>
 
                         </div>

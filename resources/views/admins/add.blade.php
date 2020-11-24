@@ -111,7 +111,7 @@
             let email = document.querySelector('#email')
             let form = document.querySelector('form');    
 
-            fetch('http://192.168.1.8:8000/api/auth/user', {
+            fetch("{{env('APP_API_URL')}}user", {
                 headers: {
                     'Authorization' : `Bearer ${localStorage.getItem('token')}`
                 }

@@ -42,7 +42,9 @@
                             <div class="ibox-content product-box">
                                 <img src="{{ url('/galeri'). '/'. $destination->galeri_destination[0]->foto_objek_wisata }}" width="100%">
                                 <div class="product-desc">                                    
-                                    <a href="{{ url('/detail-objek-wisata').'/'.$destination->id }}" class="product-name"> {{$destination->nama_objek_wisata}}</a>
+                                    <a href="{{ url('/detail-objek-wisata').'/'.$destination->id }}" class="product-name"> 
+                                        {{$destination->nama_objek_wisata}}
+                                    </a>
                                     <div class="small m-t-xs">
                                         {{$destination->alamat_objek_wisata}}
                                     </div>

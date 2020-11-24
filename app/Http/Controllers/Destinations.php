@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\ModelDestinationDetails;
 use App\ModelDestinations;
 use App\ModelGaleriDestinations;
-use App\ModelRestaurants;
+use App\ModelDestinationDetails;
 use Illuminate\Http\Request;
 
 class Destinations extends Controller
@@ -127,6 +126,7 @@ class Destinations extends Controller
         $data_destination = ModelDestinations::with('galeri_destination')->get();
         return view('/destinations/dashboard', ['data_destination' => $data_destination]);
         //return response()->json($data_destination);
+        //var_dump($data_destination);
     }
 
     public function add_objek_wisata()

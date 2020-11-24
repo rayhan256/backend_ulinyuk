@@ -83,6 +83,12 @@ class Admins extends Controller
         return view('/admins/list', ['data_admin' => $data_admin]);
     }
 
+    public function add_data()
+    {
+        $data_admin = User::all();
+        return view('/admins/add', ['data_admin' => $data_admin]);
+    }
+
     public function update_profile($id)
     {
         //$data_admin = Admin::find($id);

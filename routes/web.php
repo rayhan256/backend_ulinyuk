@@ -31,11 +31,15 @@ Route::get('/dashboard', function () {
     return view('layouts/master');
 });
 
-//ADMINS
-Route::get('/profile', 'Admins@index');
-Route::get('/admin', 'Admins@list_data');
-Route::get('/update-profile/{id}', 'Admins@update_profile');
-Route::post('/update', 'Admins@update_proses_profile');
+// //ADMINS
+// Route::get('/profile', 'Admins@index');
+// Route::get('/admin', 'Admins@list_data');
+
+// Route::get('/tambah-data-admin', 'Admins@add_data');
+// Route::post('/tambah', 'AuthController@signup');
+
+// Route::get('/update-profile/{id}', 'Admins@update_profile');
+// Route::post('/update', 'Admins@update_proses_profile');
 
 //DESTINATIONS
 Route::get('/objek-wisata', 'Destinations@index');
